@@ -1,0 +1,442 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>48.17. Zend_Service_Audioscrobbler</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="prev" href="zend.service.amazon.sqs.html" title="48.16. Zend_Service_Amazon_Sqs">
+<link rel="next" href="zend.service.delicious.html" title="48.18. Zend_Service_Delicious">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.introduction" title="48.17.1. Introduction">
+<link rel="subsection" href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.users" title="48.17.2. Users">
+<link rel="subsection" href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.artists" title="48.17.3. Artists">
+<link rel="subsection" href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.tracks" title="48.17.4. Tracks">
+<link rel="subsection" href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.tags" title="48.17.5. Tags">
+<link rel="subsection" href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.groups" title="48.17.6. Groups">
+<link rel="subsection" href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.forums" title="48.17.7. Forums">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">48.17. Zend_Service_Audioscrobbler</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.service.amazon.sqs.html">上一页</a> </td>
+<th width="60%" align="center">第 48 章 Zend_Service</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.service.delicious.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.service.audioscrobbler"></a>48.17. Zend_Service_Audioscrobbler</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.audioscrobbler.introduction"></a>48.17.1. Introduction</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Audioscrobbler</code> is a simple <acronym class="acronym">API</acronym> for using the Audioscrobbler REST Web Service. The
+            Audioscrobbler Web Service provides access to its database of Users, Artists, Albums, Tracks, Tags, Groups,
+            and Forums. The methods of the <code class="classname">Zend_Service_Audioscrobbler</code> class begin with one of these terms.
+            The syntax and namespaces of the Audioscrobbler Web Service are mirrored in
+            <code class="classname">Zend_Service_Audioscrobbler</code>. For more information about the Audioscrobbler REST Web Service,
+            please visit the <a href="http://www.audioscrobbler.net/data/webservices/" target="_top">Audioscrobbler Web Service
+            site</a>.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.audioscrobbler.users"></a>48.17.2. Users</h3></div></div></div>
+<p>
+            In order to retrieve information for a specific user, the <code class="methodname">setUser()</code> method is first used to
+            select the user for which data are to be retrieved. <code class="classname">Zend_Service_Audioscrobbler</code> provides
+            several methods for retrieving data specific to a single user:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <code class="methodname">userGetProfileInformation()</code>: Returns a SimpleXML object containing the current
+                        user's profile information.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetTopArtists()</code>: Returns a SimpleXML object containing a list of the current
+                        user's most listened to artists.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetTopAlbums()</code>: Returns a SimpleXML object containing a list of the current
+                        user's most listened to albums.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetTopTracks()</code>: Returns a SimpleXML object containing a list of the current
+                        user's most listened to tracks.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetTopTags()</code>: Returns a SimpleXML object containing a list of tags most applied
+                        by the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetTopTagsForArtist()</code>: Requires that an artist be set via
+                        <code class="methodname">setArtist()</code>. Returns a SimpleXML object containing the tags most applied to the
+                        current artist by the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetTopTagsForAlbum()</code>: Requires that an album be set via
+                        <code class="methodname">setAlbum()</code>. Returns a SimpleXML object containing the tags most applied to the
+                        current album by the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetTopTagsForTrack()</code>: Requires that a track be set via
+                        <code class="methodname">setTrack()</code>. Returns a SimpleXML object containing the tags most applied to the
+                        current track by the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetFriends()</code>: Returns a SimpleXML object containing the user names of the
+                        current user's friends.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetNeighbours()</code>: Returns a SimpleXML object containing the user names of
+                        people with similar listening habits to the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetRecentTracks()</code>: Returns a SimpleXML object containing the 10 tracks most
+                        recently played by the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetRecentBannedTracks()</code>: Returns a SimpleXML object containing a list of the 10
+                        tracks most recently banned by the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetRecentLovedTracks()</code>: Returns a SimpleXML object containing a list of the 10
+                        tracks most recently loved by the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetRecentJournals()</code>: Returns a SimpleXML object containing a list of the
+                        current user's most recent journal entries.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetWeeklyChartList()</code>: Returns a SimpleXML object containing a list of weeks for
+                        which there exist Weekly Charts for the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetRecentWeeklyArtistChart()</code>: Returns a SimpleXML object containing the most
+                        recent Weekly Artist Chart for the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetRecentWeeklyAlbumChart()</code>: Returns a SimpleXML object containing the most
+                        recent Weekly Album Chart for the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetRecentWeeklyTrackChart()</code>: Returns a SimpleXML object containing the most
+                        recent Weekly Track Chart for the current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetPreviousWeeklyArtistChart($fromDate, $toDate)</code>: Returns a SimpleXML object
+                        containing the Weekly Artist Chart from <code class="varname">$fromDate</code> to <code class="varname">$toDate</code> for the
+                        current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetPreviousWeeklyAlbumChart($fromDate, $toDate)</code>: Returns a SimpleXML object
+                        containing the Weekly Album Chart from <code class="varname">$fromDate</code> to <code class="varname">$toDate</code> for the
+                        current user.
+                    </p></li>
+<li><p>
+                        <code class="methodname">userGetPreviousWeeklyTrackChart($fromDate, $toDate)</code>: Returns a SimpleXML object
+                        containing the Weekly Track Chart from <code class="varname">$fromDate</code> to <code class="varname">$toDate</code> for the
+                        current user.
+                    </p></li>
+</ul></div>
+<p>
+        </p>
+<div class="example">
+<a name="zend.service.audioscrobbler.users.example.profile_information"></a><p class="title"><b>例 48.76. Retrieving User Profile Information</b></p>
+<div class="example-contents">
+<p>
+                In this example, we use the <code class="methodname">setUser()</code> and <code class="methodname">userGetProfileInformation()</code> methods
+                to retrieve a specific user's profile information:
+            </p>
+<pre class="programlisting">
+$as = new Zend_Service_Audioscrobbler();
+// Set the user whose profile information we want to retrieve
+$as-&gt;setUser('BigDaddy71');
+// Retrieve BigDaddy71's profile information
+$profileInfo = $as-&gt;userGetProfileInformation();
+// Display some of it
+print "Information for $profileInfo-&gt;realname "
+    . "can be found at $profileInfo-&gt;url";
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.service.audioscrobbler.users.example.weekly_artist_chart"></a><p class="title"><b>例 48.77. Retrieving a User's Weekly Artist Chart</b></p>
+<div class="example-contents"><pre class="programlisting">
+$as = new Zend_Service_Audioscrobbler();
+// Set the user whose profile weekly artist chart we want to retrieve
+$as-&gt;setUser('lo_fye');
+// Retrieves a list of previous weeks for which there are chart data
+$weeks = $as-&gt;userGetWeeklyChartList();
+if (count($weeks) &lt; 1) {
+    echo 'No data available';
+}
+sort($weeks); // Order the list of weeks
+
+$as-&gt;setFromDate($weeks[0]); // Set the starting date
+$as-&gt;setToDate($weeks[0]); // Set the ending date
+
+$previousWeeklyArtists = $as-&gt;userGetPreviousWeeklyArtistChart();
+
+echo 'Artist Chart For Week Of '
+   . date('Y-m-d h:i:s', $as-&gt;from_date)
+   . '&lt;br /&gt;';
+
+foreach ($previousWeeklyArtists as $artist) {
+    // Display the artists' names with links to their profiles
+    print '&lt;a href="' . $artist-&gt;url . '"&gt;' . $artist-&gt;name . '&lt;/a&gt;&lt;br /&gt;';
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.audioscrobbler.artists"></a>48.17.3. Artists</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Audioscrobbler</code> provides several methods for retrieving data about a specific
+            artist, specified via the <code class="methodname">setArtist()</code> method:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <code class="methodname">artistGetRelatedArtists()</code>: Returns a SimpleXML object containing a list of
+                        Artists similar to the current Artist.
+                    </p></li>
+<li><p>
+                        <code class="methodname">artistGetTopFans()</code>: Returns a SimpleXML object containing a list of Users who
+                        listen most to the current Artist.
+                    </p></li>
+<li><p>
+                        <code class="methodname">artistGetTopTracks()</code>: Returns a SimpleXML object containing a list of the current
+                        Artist's top-rated Tracks.
+                    </p></li>
+<li><p>
+                        <code class="methodname">artistGetTopAlbums()</code>: Returns a SimpleXML object containing a list of the current
+                        Artist's top-rated Albums.
+                    </p></li>
+<li><p>
+                        <code class="methodname">artistGetTopTags()</code>: Returns a SimpleXML object containing a list of the Tags most
+                        frequently applied to current Artist.
+                    </p></li>
+</ul></div>
+<p>
+        </p>
+<div class="example">
+<a name="zend.service.audioscrobbler.artists.example.related_artists"></a><p class="title"><b>例 48.78. Retrieving Related Artists</b></p>
+<div class="example-contents"><pre class="programlisting">
+$as = new Zend_Service_Audioscrobbler();
+// Set the artist for whom you would like to retrieve related artists
+$as-&gt;setArtist('LCD Soundsystem');
+// Retrieve the related artists
+$relatedArtists = $as-&gt;artistGetRelatedArtists();
+foreach ($relatedArtists as $artist) {
+    // Display the related artists
+    print '&lt;a href="' . $artist-&gt;url . '"&gt;' . $artist-&gt;name . '&lt;/a&gt;&lt;br /&gt;';
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.audioscrobbler.tracks"></a>48.17.4. Tracks</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Audioscrobbler</code> provides two methods for retrieving data specific to a single
+            track, specified via the <code class="methodname">setTrack()</code> method:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <code class="methodname">trackGetTopFans()</code>: Returns a SimpleXML object containing a list of Users who
+                        listen most to the current Track.
+                    </p></li>
+<li><p>
+                        <code class="methodname">trackGetTopTags()</code>: Returns a SimpleXML object containing a list of the Tags most
+                        frequently applied to the current Track.
+                    </p></li>
+</ul></div>
+<p>
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.audioscrobbler.tags"></a>48.17.5. Tags</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Audioscrobbler</code> provides several methods for retrieving data specific to a single
+            tag, specified via the <code class="methodname">setTag()</code> method:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <code class="methodname">tagGetOverallTopTags()</code>: Returns a SimpleXML object containing a list of Tags most
+                        frequently used on Audioscrobbler.
+                    </p></li>
+<li><p>
+                        <code class="methodname">tagGetTopArtists()</code>: Returns a SimpleXML object containing a list of Artists to whom
+                        the current Tag was most frequently applied.
+                    </p></li>
+<li><p>
+                        <code class="methodname">tagGetTopAlbums()</code>: Returns a SimpleXML object containing a list of Albums to which
+                        the current Tag was most frequently applied.
+                    </p></li>
+<li><p>
+                        <code class="methodname">tagGetTopTracks()</code>: Returns a SimpleXML object containing a list of Tracks to which
+                        the current Tag was most frequently applied.
+                    </p></li>
+</ul></div>
+<p>
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.audioscrobbler.groups"></a>48.17.6. Groups</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Audioscrobbler</code> provides several methods for retrieving data specific to a single
+            group, specified via the <code class="methodname">setGroup()</code> method:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <code class="methodname">groupGetRecentJournals()</code>: Returns a SimpleXML object containing a list of recent
+                        journal posts by Users in the current Group.
+                    </p></li>
+<li><p>
+                        <code class="methodname">groupGetWeeklyChart()</code>: Returns a SimpleXML object containing a list of weeks for
+                        which there exist Weekly Charts for the current Group.
+                    </p></li>
+<li><p>
+                        <code class="methodname">groupGetRecentWeeklyArtistChart()</code>: Returns a SimpleXML object containing the most
+                        recent Weekly Artist Chart for the current Group.
+                    </p></li>
+<li><p>
+                        <code class="methodname">groupGetRecentWeeklyAlbumChart()</code>: Returns a SimpleXML object containing the most
+                        recent Weekly Album Chart for the current Group.
+                    </p></li>
+<li><p>
+                        <code class="methodname">groupGetRecentWeeklyTrackChart()</code>: Returns a SimpleXML object containing the most
+                        recent Weekly Track Chart for the current Group.
+                    </p></li>
+<li><p>
+                        <code class="methodname">groupGetPreviousWeeklyArtistChart($fromDate, $toDate)</code>: Requires
+                        <code class="methodname">setFromDate()</code> and <code class="methodname">setToDate()</code>. Returns a SimpleXML object containing
+                        the Weekly Artist Chart from the current fromDate to the current toDate for the current Group.
+                    </p></li>
+<li><p>
+                        <code class="methodname">groupGetPreviousWeeklyAlbumChart($fromDate, $toDate)</code>: Requires
+                        <code class="methodname">setFromDate()</code> and <code class="methodname">setToDate()</code>. Returns a SimpleXML object containing
+                        the Weekly Album Chart from the current fromDate to the current toDate for the current Group.
+                    </p></li>
+<li><p>
+                        <code class="methodname">groupGetPreviousWeeklyTrackChart($fromDate, $toDate)</code>: Returns a SimpleXML object
+                        containing the Weekly Track Chart from the current fromDate to the current toDate for the
+                        current Group.
+                    </p></li>
+</ul></div>
+<p>
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.audioscrobbler.forums"></a>48.17.7. Forums</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Audioscrobbler</code> provides a method for retrieving data specific to a single forum,
+            specified via the <code class="methodname">setForum()</code> method:
+            </p>
+<div class="itemizedlist"><ul type="disc"><li><p>
+                        <code class="methodname">forumGetRecentPosts()</code>: Returns a SimpleXML object containing a list of recent posts
+                        in the current forum.
+                    </p></li></ul></div>
+<p>
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.service.amazon.sqs.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.service.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.service.delicious.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">48.16. Zend_Service_Amazon_Sqs </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 48.18. Zend_Service_Delicious</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

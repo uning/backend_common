@@ -1,0 +1,2033 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>12.8. 动作助手</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="prev" href="zend.controller.action.html" title="12.7. 动作控制器">
+<link rel="next" href="zend.controller.response.html" title="12.9. 响应对象">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.controller.actionhelpers.html#zend.controller.actionhelper.introduction" title="12.8.1. 介绍">
+<link rel="subsection" href="zend.controller.actionhelpers.html#zend.controller.actionhelper.initialization" title="12.8.2. 初始化助手">
+<link rel="subsection" href="zend.controller.actionhelpers.html#zend.controller.actionhelper.broker" title="12.8.3. 助手经纪人">
+<link rel="subsection" href="zend.controller.actionhelpers.html#zend.controller.actionhelper.stockhelpers" title="12.8.4. 内建的动作助手">
+<link rel="subsection" href="zend.controller.actionhelpers.html#zend.controller.actionhelper.writingyourown" title="12.8.5. 编写自己的助手">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">12.8. 动作助手</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.controller.action.html">上一页</a> </td>
+<th width="60%" align="center">第 12 章 Zend_Controller</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.controller.response.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.controller.actionhelpers"></a>12.8. 动作助手</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.actionhelper.introduction"></a>12.8.1. 介绍</h3></div></div></div>
+<p>
+           动作助手可以向任何Zend_Controller_Action的衍生动作控制器中，即时的加入功能(runtime and/or on-demand functionality)，以使得增加公共的动作控制器功能时，尽量减少衍生动作控制器类的必要。
+        </p>
+<p>
+           动作助手有多种使用方式。动作助手使用了一套经纪系统(brokerage system)，与<a href="zend.view.helpers.html" title="61.4. 视图助手（View Helper）">Zend_View_Helper</a>中使用的，也就是<a href="zend.controller.plugins.html" title="12.10. 插件">Zend_Controller_Plugin</a>的经纪系统类似。动作助手（like <code class="code">Zend_View_Helper</code>）在需要调用时加载，可以在请求的时候(bootstrap)或者动作控制器创建的时候(init())实例化。要充分了解这些细节，请阅读下面的章节。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.actionhelper.initialization"></a>12.8.2. 初始化助手</h3></div></div></div>
+<p>
+           根据需求以及助手的功能，可有几种不同的初始化方式。
+        </p>
+<p>
+           助手经纪人(broker)存储在<code class="code">Zend_Controller_Action</code>的 <code class="code">$_helper</code>成员中，可以使用经纪人来获取或者调用助手。以下是操作方法：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                   显式的调用<code class="code">getHelper()</code>方法。简单的传入助手名字，就可以返回助手对象。
+                </p>
+<pre class="programlisting">
+$flashMessenger = $this-&gt;_helper-&gt;getHelper('FlashMessenger');
+$flashMessenger-&gt;addMessage('We did something in the last request');
+
+                </pre>
+</li>
+<li>
+<p>
+                   使用助手经纪人的<code class="code">__get()</code>方法，就像获取经纪人的成员属性一样获取助手。
+                </p>
+<pre class="programlisting">
+$flashMessenger = $this-&gt;_helper-&gt;FlashMessenger;
+$flashMessenger-&gt;addMessage('We did something in the last request');
+
+                </pre>
+</li>
+<li>
+<p>
+                   最后，大部分动作助手实现了<code class="code">direct()</code>方法，它将调用助手的一个特定的，默认的方法。以<code class="code">FlashMessenger</code>为例，它调用了方法<code class="code">addMessage()</code>：
+                </p>
+<pre class="programlisting">
+$this-&gt;_helper-&gt;FlashMessenger('We did something in the last request');
+
+                </pre>
+</li>
+</ul></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>上面的例子在功能上是等价的。</p></td></tr>
+</table></div>
+<p>
+           也可以显式的实例化助手。如果你要在动作控制器之外使用助手，或者给助手经纪人传入一个助手供所有的动作使用，你可能希望直接这么做。实例化助手和实例化其他PHP类的方法一样。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.actionhelper.broker"></a>12.8.3. 助手经纪人</h3></div></div></div>
+<p>
+            <code class="code">Zend_Controller_Action_HelperBroker</code>处理注册助手对象和助手路径，即时的获取助手等细节。
+        </p>
+<p>
+           使用<code class="code">addHelper</code>来注册助手：
+        </p>
+<pre class="programlisting">
+Zend_Controller_Action_HelperBroker::addHelper($helper);
+
+        </pre>
+<p>
+           实例化助手并传入经纪人有点耗费时间和资源，不过<code class="code">addPrefix()</code>和<code class="code">addPath()</code>两个方法能够很容易的自动完成这些工作：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <code class="code">addPrefix()</code>方法带有一个类前缀参数，用来加入自定义助手类的路径。它假定前缀遵循Zend Framework的类命名惯例。
+                </p>
+<pre class="programlisting">
+// Add helpers prefixed with My_Action_Helpers in My/Action/Helpers/
+Zend_Controller_Action_HelperBroker::addPrefix('My_Action_Helpers');
+
+                </pre>
+</li>
+<li>
+<p>
+                    <code class="code">addPath()</code>方法第一个参数为一个目录，第二个为类前缀(默认为'Zend_Controller_Action_Helper')。用来将自己的类前缀映射到指定的目录。
+                </p>
+<pre class="programlisting">
+// Add helpers prefixed with Helper in Plugins/Helpers/
+Zend_Controller_Action_HelperBroker::addPath('./Plugins/Helpers',
+                                             'Helper');
+
+                </pre>
+</li>
+</ul></div>
+<p>
+           这些方法是静态的，因而可以根据需要在控制器链中的任何位置调用动态的加载助手。
+        </p>
+<p>
+           使用<code class="code">hasHelper($name)</code>方法来判定助手经纪人中是否存在某助手，<code class="code">$name</code>是助手的短名称（去掉前缀的）：
+        </p>
+<pre class="programlisting">
+// Check if 'redirector' helper is registered with the broker:
+if (Zend_Controller_Action_HelperBroker::hasHelper('redirector')) {
+    echo 'Redirector helper registered';
+}
+
+        </pre>
+<p>
+            从助手经纪人中获取助手有两个静态方法：<code class="code">getExistingHelper()</code> 和 <code class="code">getStaticHelper()</code> 。<code class="code">getExistingHelper()</code>将获取助手仅当它以前调用过或者显性地通过助手经纪人注册过，否则就抛出一个异常。<code class="code">getStaticHelper()</code> 的做法和<code class="code">getExistingHelper()</code>一样，但如果还没有注册助手堆栈，它将尝试初始化助手，为获取你要配置的的助手，<code class="code">getStaticHelper()</code>是一个好的选择。
+        </p>
+<p>
+            两个方法都带一个参数，<code class="code">$name</code>，它是助手的短名称（去掉前缀）。
+        </p>
+<pre class="programlisting">
+// Check if 'redirector' helper is registered with the broker, and fetch:
+if (Zend_Controller_Action_HelperBroker::hasHelper('redirector')) {
+    $redirector =
+        Zend_Controller_Action_HelperBroker::getExistingHelper('redirector');
+}
+
+// Or, simply retrieve it, not worrying about whether or not it was
+// previously registered:
+$redirector =
+    Zend_Controller_Action_HelperBroker::getStaticHelper('redirector');
+}
+
+        </pre>
+<p>
+           最后，使用<code class="code">removeHelper($name)</code>来删除助手经纪人中的某个助手，<code class="code">$name</code>是助手的短名称。
+        </p>
+<pre class="programlisting">
+// Conditionally remove the 'redirector' helper from the broker:
+if (Zend_Controller_Action_HelperBroker::hasHelper('redirector')) {
+    Zend_Controller_Action_HelperBroker::removeHelper('redirector')
+}
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.actionhelper.stockhelpers"></a>12.8.4. 内建的动作助手</h3></div></div></div>
+<p>
+           Zend Framework 默认包含若干个动作助手：<code class="code">AutoComplete</code> 自动响应 AJAX 的自动完成；<code class="code">ContextSwitch</code> 和 <code class="code">AjaxContext</code> 为你的动作提供替代响应格式；<code class="code">FlashMessenger</code> 用来处理Flash Messenger会话；<code class="code">Json</code> 用来解码和发送 JSON 响应；<code class="code">Redirector</code> 提供另一种实现方式，帮助程序重定向到内部或者外部页面；<code class="code">ViewRenderer</code> 自动的完成在控制器内建立视图对象并渲染视图的过程。
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.actionhelpers.actionstack"></a>12.8.4.1. 动作堆栈（助手）</h4></div></div></div>
+<p>
+        <code class="code">动作堆栈</code>助手允许把请求压到<a href="zend.controller.plugins.html#zend.controller.plugins.standard.actionstack" title="12.10.5.1. 动作堆栈">动作堆栈</a>前端控制器插件，有效地帮助你在请求期间创建一个动作队列来执行。（动作堆栈）助手允许你通过指定新的请求对象或通过“动作/控制器/模块”集合来添加动作。
+    </p>
+<div class="note"><table border="0" summary="Note: 调用动作堆栈助手来初始化动作堆栈插件">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">调用动作堆栈助手来初始化动作堆栈插件</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            调用<code class="code">动作堆栈</code> 助手暗中注册<code class="code">动作堆栈</code> 插件 -- 这就意味着你不需要显性地注册<code class="code">动作堆栈</code> 插件来用这个功能。
+        </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.controller.actionhelpers.actionstack.simple"></a><p class="title"><b>例 12.2. 用动作、控制器和模块名来添加一个任务</b></p>
+<div class="example-contents">
+<p>
+            经常地，仅仅指定动作、控制器和模块（和可选的参数）最简单，和调用<code class="code">Zend_Controller_Action::_forward()</code>一样：
+        </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public function barAction()
+    {
+        // Add two actions to the stack
+        // Add call to /foo/baz/bar/baz
+        // (FooController::bazAction() with request var bar == baz)
+        $this-&gt;_helper-&gt;actionStack('baz',
+                                    'foo',
+                                    'default',
+                                    array('bar' =&gt; 'baz'));
+
+        // Add call to /bar/bat
+        // (BarController::batAction())
+        $this-&gt;_helper-&gt;actionStack('bat', 'bar');
+    }
+}
+
+        </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.controller.actionhelpers.actionstack.simple2"></a><p class="title"><b>例 12.3. 使用请求对象添加一个任务</b></p>
+<div class="example-contents">
+<p>
+            有时候请求对象的OOP本性很有用；你也可以传递这样一个对象给<code class="code">动作堆栈</code>助手。
+        </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public function barAction()
+    {
+        // Add two actions to the stack
+        // Add call to /foo/baz/bar/baz
+        // (FooController::bazAction() with request var bar == baz)
+        $request = clone $this-&gt;getRequest();
+        // Don't set controller or module; use current values
+        $request-&gt;setActionName('baz')
+                -&gt;setParams(array('bar' =&gt; 'baz'));
+        $this-&gt;_helper-&gt;actionStack($request);
+
+        // Add call to /bar/bat
+        // (BarController::batAction())
+        $request = clone $this-&gt;getRequest();
+        // don't set module; use current value
+        $request-&gt;setActionName('bat')
+                -&gt;setControllerName('bar');
+        $this-&gt;_helper-&gt;actionStack($request);
+    }
+}
+
+        </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.actionhelpers.autocomplete"></a>12.8.4.2. AutoComplete</h4></div></div></div>
+<p>
+        许多 AJAX javascript 函数库提供了以潜在地匹配结果的选择列表作为用户类别显示的自动完成。<code class="code">AutoComplete</code> 助手简化返回可接受的响应给这样的方法。
+    </p>
+<p>
+        因为并非所有的 JS 库用同样的方法实现自动完成，<code class="code">AutoComplete</code> 助手提供了一些必要的基本的摘要函数给这些库并对个别库提供了具体实现。返回类型一般是 JSON 字符串数组、JSON 数组的数组 （每个成员的数组是一个用于创建选择列表的元数据（metadata）的关联数组） 或 HTML。
+    </p>
+<p>
+        每个实现的基本用法都一样：
+    </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public function barAction()
+    {
+        // Perform some logic...
+
+        // Encode and send response;
+        $this-&gt;_helper-&gt;autoCompleteDojo($data);
+
+        // Or explicitly:
+        $response = $this-&gt;_helper-&gt;autoCompleteDojo
+                                  -&gt;sendAutoCompletion($data);
+
+        // Or simply prepare autocompletion response:
+        $response = $this-&gt;_helper-&gt;autoCompleteDojo
+                                  -&gt;prepareAutoCompletion($data);
+    }
+}
+
+        </pre>
+<p>
+        缺省地，自动完成做这些工作：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                关闭布局（layouts）和视图解析器（ViewRenderer）。
+        </p></li>
+<li><p>
+                设置合适的响应头。
+        </p></li>
+<li><p>
+                用编码的/格式化的自动完成数据设置响应体。
+        </p></li>
+<li><p>
+                发送响应。
+        </p></li>
+</ul></div>
+<p>
+        可用的助手方法包括：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                <code class="code">disableLayouts()</code> 用来关闭布局和视图解析器。一般地，在 <code class="code">prepareAutoCompletion()</code> 里调用它。
+        </p></li>
+<li><p>
+                <code class="code">encodeJson($data, $keepLayouts = false)</code> 给 JSON 编码，可选打开或关闭布局。一般地，在 <code class="code">prepareAutoCompletion()</code> 里调用它。
+        </p></li>
+<li><p>
+                <code class="code">prepareAutoCompletion($data, $keepLayouts = false)</code> 用来为具体实现以响应格式准备数据，可选地打开或关闭布局，返回值因不同的实现而不同。
+        </p></li>
+<li><p>
+                <code class="code">sendAutoCompletion($data, $keepLayouts = false)</code> 用来为具体实现发送响应格式的数据，它调用 <code class="code">prepareAutoCompletion()</code>，然后发送响应。
+        </p></li>
+<li><p>
+                当把助手作为助手代理的方法来调用，使用 <code class="code">direct($data, $sendNow = true, $keepLayouts = false)</code> 。The <code class="code">$sendNow</code> flag 用来决定是否分别调用 <code class="code">sendAutoCompletion()</code> 或 <code class="code">prepareAutoCompletion()</code>。
+        </p></li>
+</ul></div>
+<p>
+        目前 <code class="code">AutoComplete</code> 支持 Dojo 和 Scriptaculous AJAX 库。
+    </p>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.autocomplete.dojo"></a>12.8.4.2.1. AutoCompletion with Dojo</h5></div></div></div>
+<p>
+            Dojo 本身没有 AutoCompletion 小部件，但有两个小部件可以执行 AutoCompletion：ComboBox 和 FilteringSelect。对于这两者，都要求实现 QueryReadStore 的数据存储，关于这话题的更多信息参见 <a href="http://dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/data-retrieval-dojo-data-0" target="_top">dojo.data</a> 文档。
+        </p>
+<p>
+            在 Zend Framework 中，可以传递简单的索引的数组给 AutoCompleteDojo 助手，它将返回一个适合和这样一个存储一起使用的 JSON 响应：
+        </p>
+<pre class="programlisting">
+// within a controller action:
+$this-&gt;_helper-&gt;autoCompleteDojo($data);
+
+        </pre>
+<div class="example">
+<a name="zend.controller.actionhelpers.autocomplete.dojo.example1"></a><p class="title"><b>例 12.4. AutoCompletion with Dojo Using Zend MVC</b></p>
+<div class="example-contents">
+<p>
+                AutoCompletion with Dojo 通过 Zend MVC 需要若干事项：为你想要 AutoCompletion 的 ComboBox 生成一个表单对象，服务于 AutoCompletion 结果的控制器动作，生成定制的 QueryReadStore 来连接到 AutoCompletion 动作和 javascript 的生成用于在服务器端初始化 AutoCompletion。
+             </p>
+<p>
+                首先，看一下必需的 javascript 。Dojo 为生成 OOP javascript 提供一个完整的框架，很像 Zend Framework 对于 PHP。它的部分功能是使用目录等级结构生成假的命名空间（pseudo-namespaces ）。 我们将在和 Dojo 同一级目录创建一个 'custom' 目录，那是 Dojo 发行的一部分。 在目录里面，我们将创建 javascript 文件，TestNameReadStore.js  带有以下内容：
+            </p>
+<pre class="programlisting">
+dojo.provide("custom.TestNameReadStore");
+dojo.declare("custom.TestNameReadStore", dojox.data.QueryReadStore, {
+    fetch:function (request) {
+        request.serverQuery = { test:request.query.name };
+        return this.inherited("fetch", arguments);
+    }
+});
+
+</pre>
+<p>
+                该类是 Dojo 自己的 QueryReadStore 的扩展，QueryReadStore 是一个抽象类。我们简单地通过请求定义一个方法，并把它分配给 'test' 元素。
+            </p>
+<p>
+                下一步，为我们想要的 AutoCompletion 生成表单元素：
+            </p>
+<pre class="programlisting">
+class TestController extends Zend_Controller_Action
+{
+    protected $_form;
+
+    public function getForm()
+    {
+        if (null === $this-&gt;_form) {
+            $this-&gt;_form = new Zend_Form();
+            $this-&gt;_form-&gt;setMethod('get')
+                -&gt;setAction(
+                    $this-&gt;getRequest()-&gt;getBaseUrl() . '/test/process'
+                )
+                -&gt;addElements(array(
+                    'test' =&gt; array('type' =&gt; 'text', 'options' =&gt; array(
+                        'filters'        =&gt; array('StringTrim'),
+                        'dojoType'       =&gt; array('dijit.form.ComboBox'),
+                        'store'          =&gt; 'testStore',
+                        'autoComplete'   =&gt; 'false',
+                        'hasDownArrow'   =&gt; 'true',
+                        'label' =&gt; 'Your input:',
+                    )),
+                    'go' =&gt; array('type' =&gt; 'submit',
+                                  'options' =&gt; array('label' =&gt; 'Go!'))
+                ));
+        }
+        return $this-&gt;_form;
+    }
+}
+
+            </pre>
+<p>
+                这里，我们用 'test' 和 'go' 方法生成表单。'test' 方法添加若干特别的 Dojo 专用的属性：dojoType、 store、 autoComplete 和 hasDownArrow。dojoType 用来指示我们在生成 comboBox，并且我们将把它链接到 'testStore' 的数据存储（键 'store'）－－ 稍后还有更多。指定 'autoComplete' 作为 false 告诉 Dojo 不要自动选择第一个匹配，但是要显示一个匹配列表。最后，'hasDownArrow' 生成和选择 box 类似的向下箭头，这样我们可以显示和隐藏匹配。
+            </p>
+<p>
+                让我们添加一个方法来显示表单，和处理 AutoCompletion 的结束点：
+            </p>
+<pre class="programlisting">
+class TestController extends Zend_Controller_Action
+{
+    // ...
+
+    /**
+     * Landing page
+     */
+    public function indexAction()
+    {
+        $this-&gt;view-&gt;form = $this-&gt;getForm();
+    }
+
+    public function autocompleteAction()
+    {
+        if ('ajax' != $this-&gt;_getParam('format', false)) {
+            return $this-&gt;_helper-&gt;redirector('index');
+        }
+        if ($this-&gt;getRequest()-&gt;isPost()) {
+            return $this-&gt;_helper-&gt;redirector('index');
+        }
+
+        $match = trim($this-&gt;getRequest()-&gt;getQuery('test', ''));
+
+        $matches = array();
+        foreach ($this-&gt;getData() as $datum) {
+            if (0 === strpos($datum, $match)) {
+                $matches[] = $datum;
+            }
+        }
+        $this-&gt;_helper-&gt;autoCompleteDojo($matches);
+    }
+}
+
+            </pre>
+<p>
+                在 <code class="code">autocompleteAction()</code> 中我们做许多事情。首先，我们注意确保我们有个 post 请求，并且有个 'format' 参数的值为 'ajax'；这样减少欺骗查询给动作。接着，我们检查 'test' 参数，并和我们的数据比较。（我在这里故意忽略了 <code class="code">getData()</code> 的实现 －－ 它可以是任何数据源）。最后，发送匹配给 AutoCompletion 助手。
+            </p>
+<p>
+                既然我们在后台有了所有的东西，来看一下在视图脚本中对于 landing 页面我们需要提交什么。 首先，我们需要设置数据存储，然后解析表单，最后确保合适的 Dojo 库被加载 －－包括定制的数据存储。来看看视图脚本，步骤在注释里：
+            </p>
+<pre class="programlisting">
+&lt;? // setup our data store: ?&gt;
+&lt;div dojoType="custom.TestNameReadStore" jsId="testStore"
+    url="&lt;?= $this-&gt;baseUrl() ?&gt;/unit-test/autocomplete/format/ajax"
+    requestMethod="get"&gt;&lt;/div&gt;
+
+&lt;? // render our form: ?&gt;
+&lt;?= $this-&gt;form ?&gt;
+
+&lt;? // setup Dojo-related CSS to load in HTML head: ?&gt;
+&lt;? $this-&gt;headStyle()-&gt;captureStart() ?&gt;
+@import "&lt;?= $this-&gt;baseUrl() ?&gt;/javascript/dijit/themes/tundra/tundra.css";
+@import "&lt;?= $this-&gt;baseUrl() ?&gt;/javascript/dojo/resources/dojo.css";
+&lt;? $this-&gt;headStyle()-&gt;captureEnd() ?&gt;
+
+&lt;? // setup javascript to load in HTML head, including all required
+   // Dojo libraries: ?&gt;
+&lt;? $this-&gt;headScript()
+        -&gt;setAllowArbitraryAttributes(true)
+        -&gt;appendFile($this-&gt;baseUrl() . '/javascript/dojo/dojo.js',
+            'text/javascript',
+            array('djConfig' =&gt; 'parseOnLoad: true'))
+        -&gt;captureStart() ?&gt;
+djConfig.usePlainJson=true;
+dojo.registerModulePath("custom","../custom");
+dojo.require("dojo.parser");
+dojo.require("dojox.data.QueryReadStore");
+dojo.require("dijit.form.ComboBox");
+dojo.require("custom.TestNameReadStore");
+&lt;? $this-&gt;headScript()-&gt;captureEnd() ?&gt;
+
+            </pre>
+<p>
+                注意对视图助手的调用如 headStyle 和 headScript，它们是占位符，我们可以在布局视图脚本的 HTML 头中解析。
+            </p>
+<p>
+                现在所有的 Dojo AutoCompletion 开始工作了。
+            </p>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.autocomplete.scriptaculous"></a>12.8.4.2.2. AutoCompletion with Scriptaculous</h5></div></div></div>
+<p>
+            <a href="http://wiki.script.aculo.us/scriptaculous/show/Ajax.Autocompleter" target="_top">Scriptaculous</a> 需要一个特定格式的 HTML 响应。
+        </p>
+<p>
+            和这个库一起使用的助手是 'AutoCompleteScriptaculous'，给它提供一个数据数组，这个助手将生成兼容于 Ajax.Autocompleter  的 HTML 响应。
+        </p>
+</div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.actionhelpers.contextswitch"></a>12.8.4.3. ContextSwitch and AjaxContext</h4></div></div></div>
+<p>
+        <code class="code">ContextSwitch</code> 动作助手用来使在请求后返回不同的响应格式变得容易。<code class="code">AjaxContext</code> 助手是 <code class="code">ContextSwitch</code> 的特别版本，用来返回响应到 XmlHttpRequests。
+    </p>
+<p>
+        你必须在关于动作能够响应哪个上下文（context）的控制器中打开（enable）其中一个。如果一个进来的请求对给定的动作指出一个有效的上下文，助手将做：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                如果布局被打开，则关闭它。
+        </p></li>
+<li><p>
+                设置一个备用的视图后缀，为上下文有效地请求一个分离的视图脚本。
+        </p></li>
+<li><p>
+                为期望的上下文发送适当的响应头。
+        </p></li>
+<li><p>
+                可选地调用特别的回调（callback）来设置上下文和/或执行处理后的任务。
+        </p></li>
+</ul></div>
+<p>
+        例子，考虑下列的控制器：
+    </p>
+<pre class="programlisting">
+class NewsController extends Zend_Controller_Action
+{
+    /**
+     * Landing page; forwards to listAction()
+     */
+    public function indexAction()
+    {
+        $this-&gt;_forward('list');
+    }
+
+    /**
+     * List news items
+     */
+    public function listAction()
+    {
+    }
+
+    /**
+     * View a news item
+     */
+    public function viewAction()
+    {
+    }
+}
+
+    </pre>
+<p>
+        我们想让 <code class="code">listAction()</code> 也支持 XML 格式，不用创建一个不同的动作，我们可以提示它可以返回 XML 响应：
+    </p>
+<pre class="programlisting">
+class NewsController extends Zend_Controller_Action
+{
+    public function init()
+    {
+        $contextSwitch = $this-&gt;_helper-&gt;getHelper('contextSwitch');
+        $contextSwitch-&gt;addActionContext('list', 'xml')
+                      -&gt;initContext();
+    }
+
+    // ...
+}
+
+    </pre>
+<p>
+        这将完成：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                设置 'Content-Type' 响应头为 'text/xml'.
+        </p></li>
+<li><p>
+                修改视图后缀为 'xml.phtml' （或者，如果你使用另外的视图后缀，'xml.[你的后缀]'）。
+        </p></li>
+</ul></div>
+<p>
+        现在你需要创建一个新的视图脚本 'news/list.xml.phtml'，它将创建和解析 XML。
+    </p>
+<p>
+        为决定一个请求是否应该初始化一个上下文开关（context switch），这个助手检查在请求对象理的令牌。缺省地，它寻找一个 'format' 参数，尽管这是可配置的。这意味着，在大多数情况下，为触发一个上下文开关，你可以添加一个 'format' 参数给你的请求：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                通过 URL 参数：<code class="code">/news/list/format/xml</code> （回忆一下，缺省路由模式（schema）允许在动作后跟随任意的键/值对）
+        </p></li>
+<li><p>
+                通过 GET 参数：<code class="code">/news/list?format=xml</code>
+        </p></li>
+</ul></div>
+<p>
+        <code class="code">ContextSwitch</code> 允许指定任意的上下文，包括需要修改后缀的、任何应该被发送的响应头和任意的用来初始化和善后的回调（callback）。
+    </p>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.contextswitch.contexts"></a>12.8.4.3.1.  缺省可用的上下文 </h5></div></div></div>
+<p>
+            缺省地，<code class="code">ContextSwitch</code> 助手的两个上下文可用：json 和 xml。
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <span class="emphasis"><em>JSON</em></span>. JSON 上下文设置 'Content-Type' 响应头为 'application/json'，设置视图脚本后缀为 'json.phtml'。
+                </p>
+<p>
+                    缺省地，不需要视图脚本，它将系列化所有的视图变量，立即发出 JSON 响应。
+                </p>
+<p>
+                    通过关闭 auto-JSON serialization 可禁止这个行为：
+                </p>
+<pre class="programlisting">
+$this-&gt;_helper-&gt;contextSwitch()-&gt;setAutoJsonSerialization(false);
+
+                </pre>
+</li>
+<li><p>
+                    <span class="emphasis"><em>XML</em></span>. XML 上下文设置 'Content-Type' 响应头为 'text/xml'，设置视图脚本后缀为 'xml.phtml'。你需要为这个上下文创建新的视图脚本。
+                </p></li>
+</ul></div>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.contextswitch.custom"></a>12.8.4.3.2.  创建定制的上下文 </h5></div></div></div>
+<p>
+            有时候，缺省的上下文不够用，例如你需要返回 YAML，或系列化 PHP、RSS 或 ATOM feed 等等，<code class="code">ContextSwitch</code> 正是你需要的东西。
+        </p>
+<p>
+            最容易的添加新的上下文的办法是通过 <code class="code">addContext()</code> 方法。这个方法带有两个参数：上下文的名称和一个规范（specification）数组，规范应当包含下列中的一个或多个：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><span class="emphasis"><em>suffix</em></span>: 当在视图解析器里注册时，预先准备的缺省的视图后缀。 </p></li>
+<li><p><span class="emphasis"><em>headers</em></span>: 作为响应的一部分发送的头/值（header/value）对的数组。</p></li>
+<li>
+<p><span class="emphasis"><em>callbacks</em></span>: 数组，包含一个或更多键  'init' 或 'post'，指向有效的可用于上下文和善后处理的 PHP 回调（callback）。</p>
+<p>
+                    回调的初始化发生在当 <code class="code">ContextSwitch</code> 检测到上下文时，你可以用它来执行任意的应该发生的逻辑。作为例子，当 auto-JSON serialization 是 on 的时候，JSON 上下文使用回调来关闭视图解析器（ViewRenderer）。
+                </p>
+<p>
+                   善后处理（post processing）发生在动作的 <code class="code">postDispatch()</code> 程序期间，可用来执行任意的逻辑。作为例子，JSON 上下文使用回调（callback）来决定是否 auto-JSON serialization 是 on；如果是，它系列化视图变量到 JSON 和 发送响应，如果不是，它重新打开（re-enable）视图解析器（ViewRenderer）。
+                </p>
+</li>
+</ul></div>
+<p>
+            和上下文交互作用的方法：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                <code class="code">addContext($context, array $spec)</code>: 添加新的上下文，如果上下文存在，抛出一个异常。
+            </p></li>
+<li><p>
+                <code class="code">setContext($context, array $spec)</code>: 添加新的上下文或重写一个已存在的上下文，和 <code class="code">addContext()</code> 使用相同的规范（specification）。
+            </p></li>
+<li><p>
+                <code class="code">addContexts(array $contexts)</code>: 一次添加多个上下文。<code class="code">$contexts</code> 应当是上下文/规范（context/specification）对的数组。如果任何一个上下文存在，就抛出异常。
+            </p></li>
+<li><p>
+                <code class="code">setContexts(array $contexts)</code>: 添加和重写存在的上下文（多于一个），和 <code class="code">addContexts()</code> 使用相同的规范。
+            </p></li>
+<li><p>
+                <code class="code">hasContext($context)</code>: 如果上下文存在，返回 true，否则返回 false。
+            </p></li>
+<li><p>
+                <code class="code">getContext($context)</code>: 通过名称来获取一个单个的上下文，返回一个遵循用于 <code class="code">addContext()</code> 的规范的数组。
+            </p></li>
+<li><p>
+                <code class="code">getContexts()</code>: 获取所有的上下文，返回上下文/规范对的数组。
+            </p></li>
+<li><p>
+                <code class="code">removeContext($context)</code>: 通过名称来清除一个单个的上下文，成功返回 true，如果没有发现上下文返回 false。
+            </p></li>
+<li><p>
+                <code class="code">clearContexts()</code>: 清除所有上下文。
+            </p></li>
+</ul></div>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.contextswitch.actions"></a>12.8.4.3.3.  为每个动作设置上下文 </h5></div></div></div>
+<p>
+            有两个设置可用的上下文的机制：或者在控制器里手工创建数组，或者使用在 <code class="code">ContextSwitch</code> 里的方法来装配它们。
+        </p>
+<p>
+            添加动作/上下文关系的基本方法是 <code class="code">addActionContext()</code> 。它有两个参数：上下文被添加到的动作和上下文的名称或上下文数组的其中之一。作为例子，考虑下列的控制器类：
+        </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public function listAction()
+    {
+    }
+
+    public function viewAction()
+    {
+    }
+
+    public function commentsAction()
+    {
+    }
+
+    public function updateAction()
+    {
+    }
+}
+
+        </pre>
+<p>
+            假如我们想添加 XML 上下文到 'list'动作、XML 和 JSON 上下文到 'comments' 动作，可以在 <code class="code">init()</code> 方法中完成：
+        </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public function init()
+    {
+        $this-&gt;_helper-&gt;contextSwitch()
+             -&gt;addActionContext('list', 'xml')
+             -&gt;addActionContext('comments', array('xml', 'json'))
+             -&gt;initContext();
+    }
+}
+
+        </pre>
+<p>
+            另外，还可以定义数组属性 <code class="code">$contexts</code>：
+        </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public $contexts = array(
+        'list'     =&gt; array('xml'),
+        'comments' =&gt; array('xml', 'json')
+    );
+
+    public function init()
+    {
+        $this-&gt;_helper-&gt;contextSwitch()-&gt;initContext();
+    }
+}
+
+        </pre>
+<p>
+            上述不但缺少周密考虑，而且有潜在的错误。
+        </p>
+<p>
+            下面的方法可用来构造上下文映射：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <code class="code">addActionContext($action, $context)</code>: 标记一个或多个可用的上下文给一个动作，如果映射已经存在，就追加到那些映射中。<code class="code">$context</code> 可以是一个单个的上下文，或者是一个上下文数组。
+                </p>
+<p>
+                    一个上下文的 <code class="code">true</code> 值将标记所有可用的上下文给动作。
+                </p>
+<p>
+                    一个 $context 的空值将关闭（disable）所有给定动作的上下文。
+                </p>
+</li>
+<li><p>
+                    <code class="code">setActionContext($action, $context)</code>: 标记一个或多个上下文对动作可用，如果映射已经存在，它就替换它们。<code class="code">$context</code> 可以是一个单个的上下文，或者是一个上下文数组。
+            </p></li>
+<li><p>
+                    <code class="code">addActionContexts(array $contexts)</code>: 一次性添加若干动作/上下文对，<code class="code">$contexts</code> 是动作/上下文对的关联数组。它代理 <code class="code">addActionContext()</code>，意味着如果那些动作/上下文对存在，就追加之。
+            </p></li>
+<li><p>
+                    <code class="code">setActionContexts(array $contexts)</code>: 和 <code class="code">addActionContexts()</code> 一样，但重写已存在的动作/上下文对。
+            </p></li>
+<li><p>
+                    <code class="code">hasActionContext($action, $context)</code>: 决定一个特定的动作是否有一个给定的上下文。
+            </p></li>
+<li><p>
+                    <code class="code">getActionContexts($action = null)</code>: 返回或者给定动作的所有上下文，或者所有动作/上下文对。
+            </p></li>
+<li><p>
+                    <code class="code">removeActionContext($action, $context)</code>: 从给定动作中清除一个或多个上下文。<code class="code">$context</code> 可以是一个单个的上下文，或者是一个上下文数组。
+            </p></li>
+<li><p>
+                    <code class="code">clearActionContexts($action = null)</code>: 从给定动作或者从有上下文的动作中清除所有上下文。
+            </p></li>
+</ul></div>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.contextswitch.initcontext"></a>12.8.4.3.4.  初始化上下文开关 </h5></div></div></div>
+<p>
+            为初始化上下文开关，需要在动作控制器中调用 <code class="code">initContext()</code>：
+        </p>
+<pre class="programlisting">
+class NewsController extends Zend_Controller_Action
+{
+    public function init()
+    {
+        $this-&gt;_helper-&gt;contextSwitch()-&gt;initContext();
+    }
+}
+
+        </pre>
+<p>
+            在某些情况下，你想强制使用上下文，例如，如果上下文开关是激活状态，你只想用 XML 上下文，可以通过传递上下文给 <code class="code">initContext()</code> 来完成：
+        </p>
+<pre class="programlisting">
+$contextSwitch-&gt;initContext('xml');
+
+        </pre>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.contextswitch.misc"></a>12.8.4.3.5.  另外的功能 </h5></div></div></div>
+<p>
+            用来改变 <code class="code">ContextSwitch</code> 助手行为的方法包括：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <code class="code">setAutoJsonSerialization($flag)</code>: 缺省地，JSON 上下文将系列化任何视图变量给 JSON 符号并把它作为响应返回。如果想创建自己的响应，你需要关闭它，这需要在调用  <code class="code">initContext()</code> 之前来完成。
+                </p>
+<pre class="programlisting">
+$contextSwitch-&gt;setAutoJsonSerialization(false);
+$contextSwitch-&gt;initContext();
+
+                </pre>
+<p>
+                    用 <code class="code">getAutoJsonSerialization()</code> 来获取 flag 的值。
+                </p>
+</li>
+<li>
+<p>
+                    <code class="code">setSuffix($context, $suffix, $prependViewRendererSuffix)</code>: 用这个方法，你可以为给定的上下文指定一个不同的后缀。第三个参数用来指示是否用新的后缀预先准备当前视图解析器，这个 flag 缺省为打开。
+                </p>
+<p>
+                    传递空值给后缀将导致只有视图解析器的后缀被使用。
+                </p>
+</li>
+<li>
+<p>
+                    <code class="code">addHeader($context, $header, $content)</code>: 为给定的上下文添加一个响应头，<code class="code">$header</code> 是头的名称，<code class="code">$content</code> 是为这个头传递的值。
+                </p>
+<p>
+                    每个上下文可以有多个头，<code class="code">addHeader()</code> 把另外的头添加到头的堆栈。
+                </p>
+<p>
+                    如果为上下文指定的 <code class="code">$header</code> 已经存在，就抛出一个异常。
+                </p>
+</li>
+<li><p>
+                    <code class="code">setHeader($context, $header, $content)</code>: <code class="code">setHeader()</code> 和 <code class="code">addHeader()</code> 一样，但它允许重写已经存在的上下文的头。
+                </p></li>
+<li><p>
+                    <code class="code">addHeaders($context, array $headers)</code>: 一次性添加多个头到给定的上下文，代理 <code class="code">addHeader()</code>，如果头已经存在，将抛出异常。<code class="code">$headers</code> 是一个头/上下文对的数组。
+                </p></li>
+<li><p>
+                    <code class="code">setHeaders($context, array $headers.)</code>: 象 <code class="code">addHeaders()</code> 一样，但代理 <code class="code">setHeader()</code>，允许重写已存在的头。
+                </p></li>
+<li><p>
+                    <code class="code">getHeader($context, $header)</code>: 获取给定上下文的头的值，如果没有发现返回 null。
+                </p></li>
+<li><p>
+                    <code class="code">removeHeader($context, $header)</code>: 清除一个单个的给定上下文的头。
+                </p></li>
+<li><p>
+                    <code class="code">clearHeaders($context, $header)</code>: 清除所有给定上下文的头。
+                </p></li>
+<li><p>
+                    <code class="code">setCallback($context, $trigger, $callback)</code>: 为给定的上下文在给定的触发器设置回调（callback），触发器或者是 'init'，或者是 'post'（指明回调将被在上下文初始化时或者派遣后（postDispatch）调用）。 <code class="code">$callback</code> 应当是一个有效的 PHP 回调。
+                </p></li>
+<li><p>
+                    <code class="code">setCallbacks($context, array $callbacks)</code>: 为给定的上下文设置多个回调，<code class="code">$callbacks</code> 应当是触发器/回调对。事实上，最常用的可注册的回调有两个：一个为初始化用的，一个是做善后处理。
+                </p></li>
+<li><p>
+                    <code class="code">getCallback($context, $trigger)</code>: 在给定的上下文中从给定的触发器中获取一个回调。
+                </p></li>
+<li><p>
+                    <code class="code">getCallbacks($context)</code>: 从给定的上下文获取所有的回调，返回一个触发器/回调对数组。
+                </p></li>
+<li><p>
+                    <code class="code">removeCallback($context, $trigger)</code>: 从给定的触发器和上下文清除一个回调。
+                </p></li>
+<li><p>
+                    <code class="code">clearCallbacks($context)</code>: 为给定的上下文清除所有的回调。
+                </p></li>
+<li>
+<p>
+                    <code class="code">setContextParam($name)</code>: 设置请求参数来检查什么时候决定上下文开关是否已经请求，缺省值为 'format'，但这个访问器可以用来设置一个备用的值。
+                </p>
+<p>
+                    <code class="code">getContextParam()</code> 用来获取当前的值。
+                </p>
+</li>
+<li>
+<p>
+                    <code class="code">setAutoDisableLayout($flag)</code>: 缺省地，当上下文开关出现，布局是关闭的；这是因为一般布局将只用来返回正常的相应，对备用的（alternate）上下文没有意义。然而，如果想使用布局（也许你对新的上下文有个布局），你可以通过传递一个 false 的值给 <code class="code">setAutoDisableLayout()</code> 来改变它的行为。这应当 <span class="emphasis"><em> 在 </em></span>调用 <code class="code">initContext()</code> <span class="emphasis"><em> 之前 </em></span> 来做。
+                </p>
+<p>
+                    用访问器 <code class="code">getAutoDisableLayout()</code> 来获取这个 flag 的值。
+                </p>
+</li>
+<li><p>
+                    <code class="code">getCurrentContext()</code> 可用来确定什么上下文被检测到，如果有的话。如果没有上下文开关发生，或者在调用 <code class="code">initContext()</code> 之前调用它，则返回 null。
+                </p></li>
+</ul></div>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelpers.contextswitch.ajaxcontext"></a>12.8.4.3.6. AjaxContext 函数 </h5></div></div></div>
+<p>
+            <code class="code">AjaxContext</code> 助手继承 <code class="code">ContextSwitch</code>，所有 <code class="code">ContextSwitch</code> 函数列表对它也有效，只是有些小小的不同。
+        </p>
+<p>
+            首先，它为确定上下文使用不同的动作控制器属性 － <code class="code">$ajaxable</code>。这样你就可以对 AJAX 和 普通的 HTTP 请求使用不同的上下文。<code class="code">AjaxContext</code> 的各种各样 <code class="code">*ActionContext*()</code> 方法将写到这个属性。
+        </p>
+<p>
+            其次，由请求对象的 <code class="code">isXmlHttpRequest()</code> 方法来确定，它只有在 XmlHttpRequest 出现后才触发。这样，如果上下文参数 （'format'）在请求中传递，但请求没有做成 XmlHttpRequest，不会触发上下文开关。
+        </p>
+<p>
+            第三，<code class="code">AjaxContext</code> 添加另外的上下文 － HTML。在这个上下文中，为了区别这个上下文和普通的请求，它设置后缀为 'ajax.phtml'。没有另外的头返回。
+        </p>
+<div class="example">
+<a name="zend.controller.actionhelpers.contextswitch.ajaxcontext.example"></a><p class="title"><b>例 12.5.  允许动作响应 Ajax 的请求 </b></p>
+<div class="example-contents">
+<p>
+                在下面的例子中，我们允许对动作 'view'、 'form' 和 'process' 的请求响应 AJAX 的请求。在头两个例子 'view' 和 'form'，返回不更新页面的 HTML 片段；在最后的例子，返回 JSON。
+            </p>
+<pre class="programlisting">
+class CommentController extends Zend_Controller_Action
+{
+    public function init()
+    {
+        $ajaxContext = $this-&gt;_helper-&gt;getHelper('AjaxContext');
+        $ajaxContext-&gt;addActionContext('view', 'html')
+                    -&gt;addActionContext('form', 'html')
+                    -&gt;addActionContext('process', 'json')
+                    -&gt;initContext();
+    }
+
+    public function viewAction()
+    {
+        // Pull a single comment to view.
+        // When AjaxContext detected, uses the comment/view.ajax.phtml
+        // view script.
+    }
+
+    public function formAction()
+    {
+        // Render the "add new comment" form.
+        // When AjaxContext detected, uses the comment/form.ajax.phtml
+        // view script.
+    }
+
+    public function processAction()
+    {
+        // Process a new comment
+        // Return the results as JSON; simply assign the results as
+        // view variables, and JSON will be returned.
+    }
+}
+
+            </pre>
+<p>
+                在客户端，AJAX 库将请求终点  '/comment/view'、 '/comment/form' 和 '/comment/process'，并传递 'format' 参数：'/comment/view/format/html'、'/comment/form/format/html' 和 '/comment/process/format/json'。（或者你可以通过查询字符串（ query string） 传递参数，如："?format=json"）
+            </p>
+<p>
+                假定你的库传递 'X-Requested-With:XmlHttpRequest'头，这些动作将返回适当的响应格式。
+            </p>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.actionhelpers.flashmessenger"></a>12.8.4.4. FlashMessenger</h4></div></div></div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.flashmessenger.introduction"></a>12.8.4.4.1. 简介</h5></div></div></div>
+<p>
+            <code class="code">FlashMessenger</code>助手允许你传递用户可能需要在下个请求看到的消息。为实现它，<code class="code">FlashMessenger</code>使用<code class="code">Zend_Session_Namespace</code>来存储消息以备将来或下个请求来读取。如果你计划使用<code class="code">Zend_Session</code>或者<code class="code">Zend_Session_Namespace</code>，在引导文件里用<code class="code">Zend_Session::start()</code>初始化，的确是个好主意。（参见<a href="zend.session.advanced_usage.html#zend.session.advanced_usage.starting_a_session" title="49.3.1. 开启会话">Zend_Session</a>文档有更多的关于它的用法的细节。）
+        </p>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.flashmessenger.basicusage"></a>12.8.4.4.2. Basic Usage Example</h5></div></div></div>
+<p>
+            下面的例子展示flash messenger最基本的用法。当动作<code class="code">/some/my</code> 被调用，它添加flash message "Record Saved!"，随后的对动作<code class="code">/some/my-next-request</code>的请求将读取它（并也这样删除它）。
+        </p>
+<pre class="programlisting">
+class SomeController extends Zend_Controller_Action
+{
+    /**
+     * FlashMessenger
+     *
+     * @var Zend_Controller_Action_Helper_FlashMessenger
+     */
+    protected $_flashMessenger = null;
+
+    public function init()
+    {
+        $this-&gt;_flashMessenger =
+            $this-&gt;_helper-&gt;getHelper('FlashMessenger');
+        $this-&gt;initView();
+    }
+
+    public function myAction()
+    {
+        /**
+         * default method of getting
+         * Zend_Controller_Action_Helper_FlashMessenger instance
+         * on-demand
+         */
+        $this-&gt;_flashMessenger-&gt;addMessage('Record Saved!');
+    }
+
+    public function myNextRequestAction()
+    {
+        $this-&gt;view-&gt;messages = $this-&gt;_flashMessenger-&gt;getMessages();
+        $this-&gt;render();
+    }
+}
+
+        </pre>
+</div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.actionhelpers.json"></a>12.8.4.5. JSON</h4></div></div></div>
+<p>
+        当处理期望数据表响应的 AJAX 请求，JSON 响应迅速变成选择的响应。JSON 可以立即在客户端被解析，从而快速执行。
+    </p>
+<p>
+        JSON 动作助手完成以下任务：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                如果布局是打开（enabled）的，则关闭（disable）它。
+        </p></li>
+<li><p>
+                如果视图解析器（ViewRenderer）是打开的，则关闭它。
+        </p></li>
+<li><p>
+                设置 'Content-Type' 响应头为 'application/json'。
+        </p></li>
+<li><p>
+                缺省地，不需要等待动作执行完成，立即返回响应。
+        </p></li>
+</ul></div>
+<p>
+        用法很简单：或者把它作为助手代理的方法来调用，或者调用 <code class="code">encodeJson()</code> 和 <code class="code">sendJson()</code> 方法的其中之一：
+    </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public function barAction()
+    {
+        // do some processing...
+        // Send the JSON response:
+        $this-&gt;_helper-&gt;json($data);
+
+        // or...
+        $this-&gt;_helper-&gt;json-&gt;sendJson($data);
+
+        // or retrieve the json:
+        $json = $this-&gt;_helper-&gt;json-&gt;encodeJson($data);
+    }
+}
+
+    </pre>
+<div class="note"><table border="0" summary="Note:  保持布局 （Keeping Layouts）">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 保持布局 （Keeping Layouts）</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+            如果你为 JSON 响应有分离的布局 － 也许把 JSON 封装到一些上下文 － 在 JSON 助手的每个方法接受第二个可选的参数：打开或关闭布局的 flag ，传递一个布尔 <code class="code">true</code> 值将使布局保持打开：
+        </p>
+<pre class="programlisting">
+class FooController extends Zend_Controller_Action
+{
+    public function barAction()
+    {
+        // Retrieve the json, keeping layouts:
+        $json = $this-&gt;_helper-&gt;json-&gt;encodeJson($data, true);
+    }
+}
+
+        </pre>
+</td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.actionhelpers.redirector"></a>12.8.4.6. 转向器(Redirector)</h4></div></div></div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.redirector.introduction"></a>12.8.4.6.1. 介绍</h5></div></div></div>
+<p>
+        转向器<code class="code">(Redirector)</code>助手让你使用一个转向器对象帮助程序重定向到新的URL。与<code class="code">_redirect()</code>方法相比，它具有多项优势。例如能够在转向器对象中预先配置整个站点的行为，或者使用与<code class="code">Zend_Controller_Action::_forward()</code>相似的<code class="code">gotoSimple($action, $controller, $module, $params)</code>接口。
+        </p>
+<p>
+           转向器拥有影响重定向行为的大量方法：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setCode()</code> 设置重定向过程中使用的HTTP响应码。
+                </p></li>
+<li><p>
+                    <code class="code">setExit()</code> 在重定向后强制执行<code class="code">exit()</code>方法。默认已设定。
+                </p></li>
+<li><p>
+                   <code class="code">setGotoSimple()</code>设置默认的URL，当没有提供参数给<code class="code">gotoSimple()</code>方法时转向该URL。可以使用类似<code class="code">Zend_Controller_Action::_forward()</code>的API：<code class="code">setGotoSimple($action, $controller = null, $module = null, array $params = array())</code>;
+                </p></li>
+<li><p>
+                    <code class="code">setGotoRoute()</code>设置基于一个注册路由器的URL。通过传入一个键/值数组和一个路由器名，它将根据路由器的类型和定义来组织URL。
+                </p></li>
+<li><p>
+                    <code class="code">setGotoUrl()</code>设置默认的URL，当没有参数传入<code class="code">gotoUrl()</code>，将使用该URL。接受单个URL字符串。
+                </p></li>
+<li><p>
+                    <code class="code">setPrependBase()</code>在<code class="code">setGotoUrl()</code>、<code class="code">gotoUrl()</code>或者<code class="code">gotoUrlAndExit()</code>指定的URL前面，加入请求对象的基地址(base URL)。
+                </p></li>
+<li><p>
+                    <code class="code">setUseAbsoluteUri()</code>强制转向器在重定向时使用绝对的URI。当该选项设定后，将使用<code class="code">$_SERVER['HTTP_HOST']</code>、                 <code class="code">$_SERVER['SERVER_PORT']</code>和                    <code class="code">$_SERVER['HTTPS']</code>以及重定向方法指定的URL，来形成一个完整的URI。该选项目前默认关闭，将来的版本可能会默认开启。
+                </p></li>
+</ul></div>
+<p>
+           此外，转向器中还有大量方法来执行实际的重定向。
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                   <code class="code">gotoSimple()</code>使用<code class="code">setGotoSimple()</code>(<code class="code">类似_forward()的API</code>)来构建URL并执行重定向。
+                </p></li>
+<li><p>
+                    <code class="code">gotoRoute()</code>使用<code class="code">setGotoRoute()</code>(路由组装<code class="code">route-assembly</code>)来构建URL并执行重定向。
+                </p></li>
+<li><p>
+                    <code class="code">gotoUrl()</code>使用<code class="code">setGotoUrl()</code> URL字符串）来构造URL并执行重定向。
+                </p></li>
+</ul></div>
+<p>
+           最后，你可以在任何时刻使用<code class="code">getRedirectUrl()</code>确定当前的重定向URL。
+        </p>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.redirector.basicusage"></a>12.8.4.6.2. 基础用例</h5></div></div></div>
+<div class="example">
+<a name="zend.controller.actionhelper.redirector.basicusage.example-1"></a><p class="title"><b>例 12.6. 设定选项</b></p>
+<div class="example-contents">
+<p>
+               这个例子改变了几个选项，包括设定重定向时使用的HTTP状态码为303，重定向时不默认退出，以及定义了默认的URL供重定向使用。
+            </p>
+<pre class="programlisting">
+class SomeController extends Zend_Controller_Action
+{
+    /**
+     * Redirector - defined for code completion
+     *
+     * @var Zend_Controller_Action_Helper_Redirector
+     */
+    protected $_redirector = null;
+
+    public function init()
+    {
+        $this-&gt;_redirector = $this-&gt;_helper-&gt;getHelper('Redirector');
+
+        // Set the default options for the redirector
+        // Since the object is registered in the helper broker, these
+        // become relevant for all actions from this point forward
+        $this-&gt;_redirector-&gt;setCode(303)
+                          -&gt;setExit(false)
+                          -&gt;setGotoSimple("this-action",
+                                          "some-controller");
+    }
+
+    public function myAction()
+    {
+        /* do some stuff */
+
+        // Redirect to a previously registered URL, and force an exit
+        // to occur when done:
+        $this-&gt;_redirector-&gt;redirectAndExit();
+        return; // never reached
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.controller.actionhelper.redirector.basicusage.example-2"></a><p class="title"><b>例 12.7. 使用默认设定</b></p>
+<div class="example-contents">
+<p>
+               这个例子假定使用默认设定，也就意味着任何重定向将导致立即退出。
+            </p>
+<pre class="programlisting">
+// ALTERNATIVE EXAMPLE
+class AlternativeController extends Zend_Controller_Action
+{
+    /**
+     * Redirector - defined for code completion
+     *
+     * @var Zend_Controller_Action_Helper_Redirector
+     */
+    protected $_redirector = null;
+
+    public function init()
+    {
+        $this-&gt;_redirector = $this-&gt;_helper-&gt;getHelper('Redirector');
+    }
+
+    public function myAction()
+    {
+        /* do some stuff */
+
+        $this-&gt;_redirector
+            -&gt;gotoUrl('/my-controller/my-action/param1/test/param2/test2');
+        return; // never reached since default is to goto and exit
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.controller.actionhelper.redirector.basicusage.example-3"></a><p class="title"><b>例 12.8. 使用<code class="code">goto()</code>的<code class="code">_forward()</code>API</b></p>
+<div class="example-contents">
+<p>
+                <code class="code">gotoSimple()</code>'s API 模拟了<code class="code">Zend_Controller_Action::_forward()</code>。主要的不同在于它通过传入的参数构造URL，使用默认路由器的默认格式<code class="code">:module/:controller/:action/*</code>。然后重定向而不是继续动作链循环。
+            </p>
+<pre class="programlisting">
+class ForwardController extends Zend_Controller_Action
+{
+    /**
+     * Redirector - defined for code completion
+     *
+     * @var Zend_Controller_Action_Helper_Redirector
+     */
+    protected $_redirector = null;
+
+    public function init()
+    {
+        $this-&gt;_redirector = $this-&gt;_helper-&gt;getHelper('Redirector');
+    }
+
+    public function myAction()
+    {
+        /* do some stuff */
+
+        // Redirect to 'my-action' of 'my-controller' in the current
+        // module, using the params param1 =&gt; test and param2 =&gt; test2
+        $this-&gt;_redirector-&gt;gotoSimple('my-action',
+                                       'my-controller',
+                                       null,
+                                       array('param1' =&gt; 'test',
+                                             'param2' =&gt; 'test2'
+                                             )
+                                       );
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.controller.actionhelper.redirector.basicusage.example-4"></a><p class="title"><b>例 12.9. 通过<code class="code">gotoRoute()</code>使用路由组装<code class="code">(route assembly)</code></b></p>
+<div class="example-contents">
+<p>
+                下面的例子使用了<a href="zend.controller.router.html" title="12.5. 标准路由器">路由器</a>的<code class="code">assemble()</code>方法，基于传入参数的关联数组来创建URL。假定下面的路由已经注册:
+            </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    'blog/:year/:month/:day/:id',
+    array('controller' =&gt; 'archive',
+          'module' =&gt; 'blog',
+          'action' =&gt; 'view')
+);
+$router-&gt;addRoute('blogArchive', $route);
+
+            </pre>
+<p>
+               给定一个数组，其中年份为2006，月份为4，日期为24，id为42，据此可以组装URL<code class="code">/blog/2006/4/24/42</code>。
+            </p>
+<pre class="programlisting">
+class BlogAdminController extends Zend_Controller_Action
+{
+    /**
+     * Redirector - defined for code completion
+     *
+     * @var Zend_Controller_Action_Helper_Redirector
+     */
+    protected $_redirector = null;
+
+    public function init()
+    {
+        $this-&gt;_redirector = $this-&gt;_helper-&gt;getHelper('Redirector');
+    }
+
+    public function returnAction()
+    {
+        /* do some stuff */
+
+        // Redirect to blog archive. Builds the following URL:
+        // /blog/2006/4/24/42
+        $this-&gt;_redirector-&gt;gotoRoute(
+            array('year' =&gt; 2006,
+                  'month' =&gt; 4,
+                  'day' =&gt; 24,
+                  'id' =&gt; 42),
+            'blogArchive'
+        );
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.actionhelpers.viewrenderer"></a>12.8.4.7. ViewRenderer</h4></div></div></div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.viewrenderer.introduction"></a>12.8.4.7.1. 介绍</h5></div></div></div>
+<p>
+           视图解析(<code class="code">ViewRenderer</code>)助手为实现下列目标设计：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+               不需要在控制器内创建视图对象实例；视图对象将在控制器内自动注册。
+                </p></li>
+<li><p>
+            根据当前的模块自动地设置视图脚本、助手、过滤器路径。指派当前的模块名为助手和过滤器类的类名前缀。
+                </p></li>
+<li><p>
+            为所有分发的控制器和动作创建全局有效的视图对象。
+                </p></li>
+<li><p>
+           允许开发人员为所有控制器设置默认的视图解析选项。
+                </p></li>
+<li><p>
+            加入无需干预自动解析试图脚本的功能。
+                </p></li>
+<li><p>
+           允许开发人员为视图基路径和视图脚本路径创建自己的规范。
+                </p></li>
+</ul></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+        如果手动执行<code class="code">_forward()</code>、<code class="code">redirect</code>、或者<code class="code">render</code>时，不会发生自动解析。因为执行这些动作时，等于告诉<code class="code">ViewRenderer</code>，你要自己确定输出结果。
+            </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+        <code class="code">ViewRenderer</code>助手默认启用。你可以通过前端控制器的<code class="code">noViewRenderer</code>方法、设定参数(<code class="code">$front-&gt;setParam('noViewRenderer', true)</code>)或者从助手经纪人栈(helper broker stack)中移除助手(<code class="code">Zend_Controller_Action_HelperBroker::removeHelper('viewRenderer')</code>)等方式禁用该助手。
+            </p>
+<p>
+        如希望在分发前端控制器前修改<code class="code">ViewRenderer</code>设定，可采用下面的两种方法：
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+               创建实例并注册自己的<code class="code">ViewRenderer</code>对象，然后传入到助手经纪人。
+                    </p>
+<pre class="programlisting">
+$viewRenderer = new Zend_Controller_Action_Helper_ViewRenderer();
+$viewRenderer-&gt;setView($view)
+             -&gt;setViewSuffix('php');
+Zend_Controller_Action_HelperBroker::addHelper($viewRenderer);
+
+                    </pre>
+</li>
+<li>
+<p>
+                通过助手经纪人即时的初始化并/或获取<code class="code">ViewRenderer</code>对象。
+                    </p>
+<pre class="programlisting">
+$viewRenderer = Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
+$viewRenderer-&gt;setView($view)
+             -&gt;setViewSuffix('php');
+
+                    </pre>
+</li>
+</ul></div>
+</td></tr>
+</table></div>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.viewrenderer.api"></a>12.8.4.7.2. API</h5></div></div></div>
+<p>
+            大多数使用中，只需要简单的创建 <code class="code">ViewRenderer</code>对象，然后传入到动作助手经纪人。创建实例并注册的最简单方式是使用助手经纪人的<code class="code">getStaticHelper()</code>方法：
+        </p>
+<pre class="programlisting">
+Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
+
+        </pre>
+<p>
+            动作控制器第一次实例化时，会触发<code class="code">ViewRenderer</code>创建一个视图对象。动作控制器每次实例化都会调用<code class="code">ViewRenderer</code>的<code class="code">init()</code>方法，设定动作控制器的视图属性，并以相对于当前模块的路径为参数调用<code class="code">addScriptPath()</code>方法；调用时带有以当前模块命名的类前缀参数，该参数对为该模块定义的所有助手和过滤器类都有效。(this will be called with a class prefix named after the current module, effectively namespacing all helper and filter classes you define for the module. )
+        </p>
+<p>
+            每次执行<code class="code">postDispatch()</code>方法，它将为当前动作执行<code class="code">render()</code>方法。
+        </p>
+<p>
+            例如这个类：
+        </p>
+<pre class="programlisting">
+// A controller class, foo module:
+class Foo_BarController extends Zend_Controller_Action
+{
+    // Render bar/index.phtml by default; no action required
+    public function indexAction()
+    {
+    }
+
+    // Render bar/populate.phtml with variable 'foo' set to 'bar'.
+    // Since view object defined at preDispatch(), it's already available.
+    public function populateAction()
+    {
+        $this-&gt;view-&gt;foo = 'bar';
+    }
+}
+
+...
+
+// in one of your view scripts:
+$this-&gt;foo(); // call Foo_View_Helper_Foo::foo()
+
+        </pre>
+<p>
+            <code class="code">ViewRenderer</code>也定义了大量的访问器用来设定和获取视图选项。
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setView($view)</code>可以为<code class="code">ViewRenderer</code>设定视图对象。以公共类属性<code class="code">$view</code>获取设定值。
+                </p></li>
+<li><p>
+                    <code class="code">setNeverRender($flag = true)</code>可以全局的启用或禁用自动解析，也就是对所有控制器都有效。如果设定为true，在所有控制器器内，<code class="code">postDispatch()</code>将不会自动调用<code class="code">render()</code>。<code class="code">getNeverRender()</code>返回当前的设定值。
+                </p></li>
+<li><p>
+                    <code class="code">setNoRender($flag = true)</code> 用来启用或禁用自动解析，如果设置为true，在当前控制器内，<code class="code">postDispatch()</code>不会调用<code class="code">render()</code>方法。这个设定在<code class="code">preDispatch()</code>每次执行时会被重置。<code class="code">getNoRender()</code>返回当前的设定值。
+                </p></li>
+<li><p>
+                   <code class="code">setNoController($flag = true)</code>通知<code class="code">render()</code>不要再到以控制器命名的子目录中寻找视图脚本。<code class="code">getNoController()</code>返回当前值。
+                </p></li>
+<li><p>
+                    <code class="code">setNeverController($flag = true)</code>与<code class="code">setNoController($flag = true)</code>相似，但是其在全局范围内有效——也就是说，它不会在每次分发动作时重置。<code class="code">getNeverController()</code>返回当前值。
+                </p></li>
+<li><p>
+                    <code class="code">setScriptAction($name)</code>用来指定解析的视图脚本。<code class="code">$name</code>是脚本的名字去掉后缀(不带控制器子目录，除非<code class="code">noController</code>已开启)。如果没有指定，它将寻找以请求对象中的动作命名的视图脚本。<code class="code">getScriptAction()</code>返回当前值。
+                </p></li>
+<li><p>
+                    <code class="code">setResponseSegment($name)</code>用来指定解析到响应对象中的哪个命名片段。如果没有指定，解析到默认片断。<code class="code">getResponseSegment()</code>返回当前值。
+                </p></li>
+<li><p>
+                    <code class="code">initView($path, $prefix, $options)</code>可以指定视图的基路径，为助手和过滤器脚本设置类前缀，设定<code class="code">ViewRenderer</code>选项。可以传入以下任意的标志：<code class="code">neverRender</code>，<code class="code">noRender</code>，<code class="code">noController</code>， <code class="code">scriptAction</code>，和<code class="code">responseSegment</code>。
+                </p></li>
+<li>
+<p>
+                    <code class="code">setRender($action = null, $name = null, $noController = false)</code>可以一次设定<code class="code">scriptAction</code>、<code class="code">responseSegment</code>和<code class="code">noController</code>。	<code class="code">direct()</code>是它的别名，使得控制器中可以方便的调用。
+                </p>
+<pre class="programlisting">
+// Render 'foo' instead of current action script
+$this-&gt;_helper-&gt;viewRenderer('foo');
+
+// render form.phtml to the 'html' response segment, without using a
+// controller view script subdirectory:
+$this-&gt;_helper-&gt;viewRenderer('form', 'html', true);
+
+                </pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                        <code class="code">setRender()</code> 和 <code class="code">direct()</code>并不会实际解析视图脚本，而是提示<code class="code">postDispatch()</code>和<code class="code">postDispatch()</code>解析视图。
+                </p></td></tr>
+</table></div>
+</li>
+</ul></div>
+<p>
+            构造函数允许可选的传入参数视图对象和<code class="code">ViewRenderer</code>选项，接受与<code class="code">initView()</code>一样的标志(flags)：
+        </p>
+<pre class="programlisting">
+$view    = new Zend_View(array('encoding' =&gt; 'UTF-8'));
+$options = array('noController' =&gt; true, 'neverRender' =&gt; true);
+$viewRenderer =
+    new Zend_Controller_Action_Helper_ViewRenderer($view, $options);
+
+        </pre>
+<p>
+            还有几个额外的方法用来定制路径规则，供确定视图基路径来增加视图对象，确定视图脚本路径查找并解析视图脚本时使用。这些方法每个都带有下面一个或更多的占位符(placehodlers)。
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">:moduleDir</code> 引用当前模块的基目录（常规的是模块的控制器目录的父目录）。
+                </p></li>
+<li><p>
+                    <code class="code">:module</code> 引用当前的模块名。
+                </p></li>
+<li><p>
+                    <code class="code">:controller</code> 引用当前的控制器名。
+                </p></li>
+<li><p>
+                    <code class="code">:action</code>引用当前的模块名。
+                </p></li>
+<li><p>
+                    <code class="code">:suffix</code> 引用当前的视图脚本后缀（可以通过<code class="code">setViewSuffix()</code>来设置）。
+                </p></li>
+</ul></div>
+<p>
+            控制器路径规则有关的方法:
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setViewBasePathSpec($spec)</code>可以改变确定加入到视图对象的基路径的路径规则。默认规则是<code class="code">:moduleDir/views</code>。任何时候都可以使用<code class="code">getViewBasePathSpec()</code>获取当前的规则。
+                </p></li>
+<li><p>
+                    <code class="code">setViewScriptPathSpec($spec)</code>允许改变确定到达单独的视图脚本路径(去除试图脚本基路径)的路径规则。默认的路径规则是 <code class="code">:controller/:action.:suffix</code>。任何时候都可以通过<code class="code">getViewScriptPathSpec()</code>获取当前规则。
+                </p></li>
+<li><p>
+                    <code class="code">setViewScriptPathNoControllerSpec($spec)</code>允许改变 <code class="code">noController</code>有效时确定到达单独的视图脚本路径(去除试图脚本基路径)的路径规则。默认的规则是<code class="code">:action.:suffix</code>，任何时候都可以通过<code class="code">getViewScriptPathNoControllerSpec()</code>获取当前规则。
+                </p></li>
+</ul></div>
+<p>
+            为在路径规范之上精心设计的控制，可以使用<a href="zend.filter.inflector.html" title="22.6. Zend_Filter_Inflector">Zend_Filter_Inflector</a>。深入地，<code class="code">视图解析器（ViewRenderer）</code>已经使用inflector来执行路径映射。为和inflector互动 － 或者设置你自己的或者修改缺省的inflector，下面的方法可以被使用：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <code class="code">getInflector()</code> 将获取inflector。如果在<code class="code">视图解析器</code>中不存在， 它用缺省的规则创建一个。
+                </p>
+<p>
+                    缺省地，它用静态规则引用和静态目标做为后缀和模块目录；这允许不同的<code class="code">视图解析器</code>具备动态修改inflector能力的属性。
+                </p>
+</li>
+<li><p>
+                    <code class="code">setInflector($inflector, $reference)</code> 允许设置定制的inflector和<code class="code">视图解析器</code>一起使用。如果<code class="code">$reference</code> 是true，它将设置后缀和模块目录作为静态引用和目标给<code class="code">视图解析器</code> 属性。
+            </p></li>
+</ul></div>
+<div class="note"><table border="0" summary="Note: 缺省查找约定（Conventions）">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">缺省查找约定（Conventions）</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+                <code class="code">视图解析器</code>做了一些路径标准化使视图脚本查找更容易。缺省规则如下：
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                        <code class="code">:module</code>: 混合词和驼峰词被短横线分开，并整个串变成小写。例如："FooBarBaz" 变成 "foo-bar-baz"。
+                    </p>
+<p>
+                        在内部，变形器（inflector） 使用过滤器<code class="code">Zend_Filter_Word_CamelCaseToDash</code> 和 <code class="code">Zend_Filter_StringToLower</code>。
+                    </p>
+</li>
+<li>
+<p>
+                        <code class="code">:controller</code>: 混合词和驼峰词被短横线分开；下划线转换成目录分隔符，并且整个串变小写。例如："FooBar" becomes "foo-bar"; "FooBar_Admin" 变成 "foo-bar/admin".
+                    </p>
+<p>
+                        在内部，inflector 使用过滤器<code class="code">Zend_Filter_Word_CamelCaseToDash</code>、<code class="code">Zend_Filter_Word_UnderscoreToSeparator</code> 和 <code class="code">Zend_Filter_StringToLower</code>。
+                    </p>
+</li>
+<li>
+<p>
+                        <code class="code">:action</code>: 混合词和驼峰词被短横线分开；非字母数字字符翻译成短横线，并且整个串变成小写。 例如 "fooBar" 变成 "foo-bar"； "foo-barBaz" 变成 "foo-bar-baz"。
+                    </p>
+<p>
+                        在内部，inflector 使用过滤器 <code class="code">Zend_Filter_Word_CamelCaseToDash</code>、<code class="code">Zend_Filter_PregReplace</code> 和 <code class="code">Zend_Filter_StringToLower</code>。
+                    </p>
+</li>
+</ul></div>
+</td></tr>
+</table></div>
+<p>
+            <code class="code">视图解析器</code> API中的最后一项是关于实际确定视图脚本路径和解析视图的。包括：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <code class="code">renderScript($script, $name)</code>允许解析指定路径的脚本，可选的命名的路径片段。(<code class="code">renderScript($script, $name)</code> allows you to render a script with a path you specify, optionally to a named path segment. )使用该方法时，<code class="code">ViewRenderer</code>不会自动的确定脚本名称，而是直接的向视图对象的<code class="code">render()</code>传入<code class="code">$script</code>参数。
+                </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                         当视图已经被解析到响应对象，将会设置<code class="code">noRender</code>阻止相同的脚本被多次解析。
+                </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                        默认的，<code class="code">Zend_Controller_Action::renderScript()</code>代理<code class="code">ViewRenderer</code>的<code class="code">renderScript()</code>方法。
+                    </p></td></tr>
+</table></div>
+</li>
+<li>
+<p>
+                    <code class="code">getViewScript($action, $vars)</code>基于传入的动作和/或<code class="code">$vars</code>中的变量创建到视图脚本的路径。该数组中的键可以包含所有的路径指定键('moduleDir','module', 'controller', 'action', and 'suffix')。传入的任何变量都会优先使用，否则利用基于当前请求的值。
+                </p>
+<p>
+                    <code class="code">getViewScript()</code>根据<code class="code">noController</code>标志的设定值使用<code class="code">viewScriptPathSpec</code>或者<code class="code">viewScriptPathNoControllerSpec</code>。
+                </p>
+<p>
+                    模块、控制器以及动作中的单词定界符将后替换成短线('-')。因此，控制器名称'foo.bar'和动作'baz:bat'按照默认的路径规则将会得到视图脚本路径'foo-bar/baz-bat.phtml'。
+                </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                        默认的，<code class="code">Zend_Controller_Action::getViewScript()</code>代理<code class="code">ViewRenderer</code>的<code class="code">getViewScript()</code>方法。
+                    </p></td></tr>
+</table></div>
+</li>
+<li>
+<p>
+                    <code class="code">render($action, $name, $noController)</code>首先检查<code class="code">$name</code>或                  <code class="code">$noController</code>参数是否传入，如果传入，则在ViewRenderer中设定相应的标志(分别是响应片段和noController)。然后传入<code class="code">$action</code>参数到<code class="code">getViewScript()</code>，最后传入计算的试图脚本路径到<code class="code">renderScript()</code>。
+                </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                        注意使用render()的边际效应：传入的响应片段名称和noController标志在视图对象中存留。此外解析结束后noRender会被设置。
+                    </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                        默认的，<code class="code">Zend_Controller_Action::render()</code>代理 <code class="code">ViewRenderer</code>的<code class="code">render()</code>方法。
+                    </p></td></tr>
+</table></div>
+</li>
+<li><p>
+                    <code class="code">renderBySpec($action, $vars, $name)</code>允许传入路径规则变量以确定创建的视图脚本路径。它把<code class="code">$action</code>和<code class="code">$vars</code>传入到<code class="code">getScriptPath()</code>，将脚本路径结果和<code class="code">$name</code>传入到<code class="code">renderScript()</code>。
+                </p></li>
+</ul></div>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.viewrenderer.basicusage"></a>12.8.4.7.3. 基础用法示例</h5></div></div></div>
+<div class="example">
+<a name="zend.controller.actionhelper.viewrenderer.basicusage.example-1"></a><p class="title"><b>例 12.10. 基本用法</b></p>
+<div class="example-contents">
+<p>
+                大多数基础使用中，只需在bootstrap中使用助手经纪人简单的初始化和注册<code class="code">ViewRenderer</code> 助手，然后在动作方法中设置变量。
+            </p>
+<pre class="programlisting">
+// In your bootstrap:
+Zend_Controller_Action_HelperBroker::getStaticHelper('viewRenderer');
+
+...
+
+// 'foo' module, 'bar' controller:
+class Foo_BarController extends Zend_Controller_Action
+{
+    // Render bar/index.phtml by default; no action required
+    public function indexAction()
+    {
+    }
+
+    // Render bar/populate.phtml with variable 'foo' set to 'bar'.
+    // Since view object defined at preDispatch(), it's already available.
+    public function populateAction()
+    {
+        $this-&gt;view-&gt;foo = 'bar';
+    }
+
+    // Renders nothing as it forwards to another action; the new action
+    // will perform any rendering
+    public function bazAction()
+    {
+        $this-&gt;_forward('index');
+    }
+
+    // Renders nothing as it redirects to another location
+    public function batAction()
+    {
+        $this-&gt;_redirect('/index');
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note: 命名规则：控制器和动作名中的单词定界符">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">命名规则：控制器和动作名中的单词定界符</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+                如果控制器或者动作名称由几个单词组成，分发器要求在URL中使用特定的路径和单词定界符分隔。<code class="code">ViewRenderer</code>创建路径时将控制器名称中的任何路径定界符替换成实际的路径定界符('/')，任何单词定界符替换成短线('-')。对动作<code class="code">/foo.bar/baz.bat</code>的调用将分发到<code class="code">FooBarController.php</code>中的<code class="code">FooBarController::bazBatAction()</code>，然后解析<code class="code">foo-bar/baz-bat.phtml</code>；对动作<code class="code">/bar_baz/baz-bat</code>的调用将分发到<code class="code">Bar/BazController.php</code>中的<code class="code">Bar_BazController::bazBatAction()</code>，并解析<code class="code">bar/baz/baz-bat.phtml</code>。
+            </p>
+<p>
+                注意到在第二个例子中，模块依然是默认的模块，但由于路径分隔符的存在，控制器的接收到的名字为<code class="code">Bar_BazController</code>，该类在文件<code class="code">Bar/BazController.php</code>中。ViewRenderer模拟了控制器的目录分层。
+            </p>
+</td></tr>
+</table></div>
+<div class="example">
+<a name="zend.controller.actionhelper.viewrenderer.basicusage.example-2"></a><p class="title"><b>例 12.11. 禁用自动解析</b></p>
+<div class="example-contents">
+<p>
+                对于某些动作和控制器，可能希望关闭自动解析——例如，如果想发送其他类型的输出（XML,JSON等），或者更简单的不想发送任何东西。有两个选项：关闭所有的自动解析(<code class="code">setNeverRender()</code>)，或者仅仅关闭当前动作的自动解析(<code class="code">setNoRender()</code>)。
+            </p>
+<pre class="programlisting">
+// Baz controller class, bar module:
+class Bar_BazController extends Zend_Controller_Action
+{
+    public function fooAction()
+    {
+        // Don't auto render this action
+        $this-&gt;_helper-&gt;viewRenderer-&gt;setNoRender();
+    }
+}
+
+// Bat controller class, bar module:
+class Bar_BatController extends Zend_Controller_Action
+{
+    public function preDispatch()
+    {
+        // Never auto render this controller's actions
+        $this-&gt;_helper-&gt;viewRenderer-&gt;setNoRender();
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+               大多数情况下，全局的关闭自动解析(<code class="code">setNeverRender()</code>)没有意义，因为这样<code class="code">ViewRenderer</code>做的唯一件事只是自动设置了视图对象。
+            </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.controller.actionhelper.viewrenderer.basicusage.example-3"></a><p class="title"><b>例 12.12. 选择另外的视图脚本</b></p>
+<div class="example-contents">
+<p>
+                有些情况下需要解析另一个脚本而非以动作命名的脚本。例如，如果你有一个控制器包含增加和编辑两个动作，它们可能都显示相同的'form'视图，尽管拥有不同的值集合(value set)。只需要使用<code class="code">setScriptAction()</code>或者<code class="code">setRender()</code>简单的改变脚本的名称，或者以成员方法的形式调用助手，它将调用<code class="code">setRender()</code>。
+            </p>
+<pre class="programlisting">
+// Bar controller class, foo module:
+class Foo_BarController extends Zend_Controller_Action
+{
+    public function addAction()
+    {
+        // Render 'bar/form.phtml' instead of 'bar/add.phtml'
+        $this-&gt;_helper-&gt;viewRenderer('form');
+    }
+
+    public function editAction()
+    {
+        // Render 'bar/form.phtml' instead of 'bar/edit.phtml'
+        $this-&gt;_helper-&gt;viewRenderer-&gt;setScriptAction('form');
+    }
+
+    public function processAction()
+    {
+        // do some validation...
+        if (!$valid) {
+            // Render 'bar/form.phtml' instead of 'bar/process.phtml'
+            $this-&gt;_helper-&gt;viewRenderer-&gt;setRender('form');
+            return;
+        }
+
+        // otherwise continue processing...
+    }
+
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.controller.actionhelper.viewrenderer.basicusage.example-4"></a><p class="title"><b>例 12.13. 修改注册的视图Modifying the registered view</b></p>
+<div class="example-contents">
+<p>
+                如果需要修改视图对象怎么办——例如改变助手路径或者编码？可以在控制器中修改视图对象设定，或者从<code class="code">ViewRenderer</code>中抓取视图对象；两种方式引用的是同一个对象。
+            </p>
+<pre class="programlisting">
+// Bar controller class, foo module:
+class Foo_BarController extends Zend_Controller_Action
+{
+    public function preDispatch()
+    {
+        // change view encoding
+        $this-&gt;view-&gt;setEncoding('UTF-8');
+    }
+
+    public function bazAction()
+    {
+        // Get view object and set escape callback to 'htmlspecialchars'
+        $view = $this-&gt;_helper-&gt;viewRenderer-&gt;view;
+        $view-&gt;setEscape('htmlspecialchars');
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.actionhelper.viewrenderer.advancedusage"></a>12.8.4.7.4. 高级用法示例</h5></div></div></div>
+<div class="example">
+<a name="zend.controller.actionhelper.viewrenderer.advancedusage.example-1"></a><p class="title"><b>例 12.14. 修改路径规则</b></p>
+<div class="example-contents">
+<p>
+                有些情况下，默认的路径规则可能并不适合站点的需要。比如，希望拥有一个单独的模板树供设计人员访问（例如，如果你使用<a href="http://smarty.php.net/" target="_top">Smarty</a>，这是很典型的情形）。这种情况下，你可能想硬编码视图的基路径规则，为动作视图脚本路径自身创建一套规则。
+            </p>
+<p>
+                假定视图的基路径(base path)为'/opt/vendor/templates',希望通过':moduleDir/:controller/:action.:suffix'引用视图脚本；如果设定了noController标志，想在顶级而不是在子目录中解析(':action.:suffix')。最终希望使用'tpl'作为视图脚本文件的后缀。
+            </p>
+<pre class="programlisting">
+/**
+ * In your bootstrap:
+ */
+
+// Different view implementation
+$view = new ZF_Smarty();
+
+$viewRenderer = new Zend_Controller_Action_Helper_ViewRenderer($view);
+$viewRenderer-&gt;setViewBasePathSpec('/opt/vendor/templates')
+             -&gt;setViewScriptPathSpec(':module/:controller/:action.:suffix')
+             -&gt;setViewScriptPathNoControllerSpec(':action.:suffix')
+             -&gt;setViewSuffix('tpl');
+Zend_Controller_Action_HelperBroker::addHelper($viewRenderer);
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.controller.actionhelper.viewrenderer.advancedusage.example-2"></a><p class="title"><b>例 12.15. 一个动作中解析多个视图脚本</b></p>
+<div class="example-contents">
+<p>
+                有时可能需要在一个动作中解析多个视图脚本。这个非常简单，多次调用<code class="code">render()</code>就行了：
+            </p>
+<pre class="programlisting">
+class SearchController extends Zend_Controller_Action
+{
+    public function resultsAction()
+    {
+        // Assume $this-&gt;model is the current model
+        $this-&gt;view-&gt;results =
+            $this-&gt;model-&gt;find($this-&gt;_getParam('query', '');
+
+        // render() by default proxies to the ViewRenderer
+        // Render first the search form and then the results
+        $this-&gt;render('form');
+        $this-&gt;render('results');
+    }
+
+    public function formAction()
+    {
+        // do nothing; ViewRenderer autorenders the view script
+    }
+}
+
+            </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.actionhelper.writingyourown"></a>12.8.5. 编写自己的助手</h3></div></div></div>
+<p>
+           动作助手继承抽象类<code class="code">Zend_Controller_Action_Helper_Abstract</code>，该类提供了助手经纪人要求的基本接口和功能，包含下列方法：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setActionController()</code> 用来设置当前的动作控制器。
+                </p></li>
+<li><p>
+                    <code class="code">init()</code>，该方法在实例化时由助手经纪人触发，可用来触发助手的初始化过程；动作链中多个控制器使用相同的助手时，如要恢复状态时将十分有用。
+                </p></li>
+<li><p>
+                    <code class="code">preDispatch()</code>分发动作之前触发。
+                </p></li>
+<li><p>
+                    <code class="code">postDispatch()</code>分发过程结束时触发——即使<code class="code">preDispatch()</code>插件已经跳过了该动作。清理时大量使用。
+                </p></li>
+<li><p>
+                    <code class="code">getRequest()</code> 获取当前的请求对象。
+                </p></li>
+<li><p>
+                    <code class="code">getResponse()</code> 获取当前的响应对象。
+                </p></li>
+<li><p>
+                    <code class="code">getName()</code> 获取助手名。获取了下划线后面的类名部分，没有下划线则获取类的全名。例如，如果类名为<code class="code">Zend_Controller_Action_Helper_Redirector</code>，他将返回 <code class="code">Redirector</code>，如果类名为<code class="code">FooMessage</code>，将会返回全名。
+                </p></li>
+</ul></div>
+<p>
+           助手类中还可以包含一个<code class="code">direct()</code>方法，如果定义了该方法，就可以将助手视作助手经纪人的一个方法，以便简单的、一次性的使用助手。例如<a href="zend.controller.actionhelpers.html#zend.controller.actionhelpers.redirector" title="12.8.4.6. 转向器(Redirector)">redirector</a> 定义<code class="code">direct()</code> 作为<code class="code">goto()</code>的别名,就可以这样使用：
+        </p>
+<pre class="programlisting">
+// Redirect to /blog/view/item/id/42
+$this-&gt;_helper-&gt;redirector('item', 'view', 'blog', array('id' =&gt; 42));
+
+        </pre>
+<p>
+           在内部，助手经纪人的<code class="code">__call()</code>方法先寻找名叫<code class="code">redirector</code>的助手，然后检查该助手的<code class="code">direct</code>方法是否定义，然后使用所提供的参数来调用该方法。
+        </p>
+<p>
+           如果创建了自己的助手，可以按照前面章节所述的提供相应的访问方法。
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.controller.action.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.controller.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.controller.response.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">12.7. 动作控制器 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 12.9. 响应对象</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

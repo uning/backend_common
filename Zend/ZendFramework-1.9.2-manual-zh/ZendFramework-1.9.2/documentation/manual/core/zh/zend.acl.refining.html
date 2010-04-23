@@ -1,0 +1,262 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>2.2. 精细的访问控制</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="prev" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="next" href="zend.acl.advanced.html" title="2.3. 高级用法">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.acl.refining.html#zend.acl.refining.precise" title="2.2.1. 精细的访问控制">
+<link rel="subsection" href="zend.acl.refining.html#zend.acl.refining.removing" title="2.2.2. 除去访问控制">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">2.2. 精细的访问控制</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.acl.html">上一页</a> </td>
+<th width="60%" align="center">第 2 章 Zend_Acl</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.acl.advanced.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.acl.refining"></a>2.2. 精细的访问控制</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.refining.precise"></a>2.2.1. 精细的访问控制</h3></div></div></div>
+<p>
+            在<a href="zend.acl.html#zend.acl.introduction" title="2.1. 简介">前一章节</a>中定义的基本的 ACL 显示如何在整个 ACL (所有的 resources )允许各种各样的权限。然而在实践中，访问控制趋向于拥有例外和可变程度的复杂性。Zend_Acl 允许你直截了当并灵活地完成这些精细准确的控制。
+        </p>
+<p>
+            对于CMS范例，'staff' 组覆盖了绝大多数用户的需求，同时，一个新的 'marketing' 组要求在CMS中访问时事通讯和最近的新闻。这个组相当地自给自足并有能力发布和归档时事通讯和最近的新闻。
+        </p>
+<p>
+           另外，还要求 'staff' 组被允许浏览新闻故事但不能修订最近的新闻。最后，不可能让每一个人（包括系统管理员）去归档任何'announcement' 新闻故事，因为它们只有1-2天的生命周期。
+        </p>
+<p>
+            首先我们修订 role 注册表来反映这些变化。我们已经确定 'marketing' 组和 'staff' 组有着同样的基本许可，所以我们用从 'staff' 组继承许可的方法来定义 'marketing' 组
+        </p>
+<pre class="programlisting">
+// 新 marketing 组从 staff 组继承许可
+$acl-&gt;addRole(new Zend_Acl_Role('marketing'), 'staff');
+
+        </pre>
+<p>
+           然后， 注意上面的访问控制涉及到特定的 resources ( 例如 "newsletter", "latest news", "announcement news"). 现在我们来添加这些 resources：
+        </p>
+<pre class="programlisting">
+// Create Resources for the rules
+
+// newsletter
+$acl-&gt;add(new Zend_Acl_Resource('newsletter'));
+
+// news
+$acl-&gt;add(new Zend_Acl_Resource('news'));
+
+// latest news
+$acl-&gt;add(new Zend_Acl_Resource('latest'), 'news');
+
+// announcement news
+$acl-&gt;add(new Zend_Acl_Resource('announcement'), 'news');
+
+        </pre>
+<p>
+           接着，这个是在 ACL 的目标区域定义更特定的规则的概况：
+        </p>
+<pre class="programlisting">
+// Marketing must be able to publish and archive newsletters and the
+// latest news
+$acl-&gt;allow('marketing',
+            array('newsletter', 'latest'),
+            array('publish', 'archive'));
+
+// Staff (和 marketing, 通过继承), 禁止修订 latest news
+$acl-&gt;deny('staff', 'latest', 'revise');
+
+// Everyone (包括 administrators) 禁止归档 news announcements
+$acl-&gt;deny(null, 'announcement', 'archive');
+
+        </pre>
+<p>
+           我们现在能够查询到 ACL 的最新变化：
+        </p>
+<pre class="programlisting">
+echo $acl-&gt;isAllowed('staff', 'newsletter', 'publish') ?
+     "allowed" : "denied";
+// denied
+
+echo $acl-&gt;isAllowed('marketing', 'newsletter', 'publish') ?
+     "allowed" : "denied";
+// allowed
+
+echo $acl-&gt;isAllowed('staff', 'latest', 'publish') ?
+     "allowed" : "denied";
+// denied
+
+echo $acl-&gt;isAllowed('marketing', 'latest', 'publish') ?
+     "allowed" : "denied";
+// allowed
+
+echo $acl-&gt;isAllowed('marketing', 'latest', 'archive') ?
+     "allowed" : "denied";
+// allowed
+
+echo $acl-&gt;isAllowed('marketing', 'latest', 'revise') ?
+     "allowed" : "denied";
+// denied
+
+echo $acl-&gt;isAllowed('editor', 'announcement', 'archive') ?
+     "allowed" : "denied";
+// denied
+
+echo $acl-&gt;isAllowed('administrator', 'announcement', 'archive') ?
+     "allowed" : "denied";
+// denied
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.refining.removing"></a>2.2.2. 除去访问控制</h3></div></div></div>
+<p>
+            要从 ACL 中除去一个或多个访问规则，只要简单地用 <code class="code">removeAllow()</code> 或 <code class="code">removeDeny()</code> 方法即可。如果提供一个<code class="code">null</code>参数值给 <code class="code">allow()</code> 和 <code class="code">deny()</code> 方法，则访问规则将应用到所有的角色，资源和/或权限上。
+        </p>
+<pre class="programlisting">
+// 除去 “禁止 staff 修订最近的新闻”(和marketing, 由于继承的原因)
+//（等于允许staff修订最近的新闻 Jason注）
+$acl-&gt;removeDeny('staff', 'latest', 'revise');
+
+echo $acl-&gt;isAllowed('marketing', 'latest', 'revise') ?
+     "allowed" : "denied";
+// allowed
+
+// Remove the allowance of publishing and archiving newsletters to
+// marketing
+$acl-&gt;removeAllow('marketing',
+                  'newsletter',
+                  array('publish', 'archive'));
+
+echo $acl-&gt;isAllowed('marketing', 'newsletter', 'publish') ?
+     "allowed" : "denied";
+// denied
+
+echo $acl-&gt;isAllowed('marketing', 'newsletter', 'archive') ?
+     "allowed" : "denied";
+// denied
+
+        </pre>
+<p>
+          如上所示，对于权限的修改可能是增量的，但使用 <code class="code">null</code> 值（未指定权限项的参数值）超越了对权限的增量修改。（所谓的增量修改是指可以对 Resources 一个一个地添加权限或禁止，而如果未指定权限参数值，即使用 <code class="code">null</code> 值，可以使得这些步骤简化，一次性地对某个Resource的所有权限进行允许或禁止。Jason注，Haohappy补）
+        </p>
+<pre class="programlisting">
+// 允许 marketing 对 latest news 有所有的许可
+$acl-&gt;allow('marketing', 'latest');
+
+echo $acl-&gt;isAllowed('marketing', 'latest', 'publish') ?
+     "allowed" : "denied";
+// allowed
+
+echo $acl-&gt;isAllowed('marketing', 'latest', 'archive') ?
+     "allowed" : "denied";
+// allowed
+
+echo $acl-&gt;isAllowed('marketing', 'latest', 'anything') ?
+     "allowed" : "denied";
+// allowed
+
+        </pre>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.acl.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.acl.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.acl.advanced.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 2 章 Zend_Acl </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 2.3. 高级用法</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

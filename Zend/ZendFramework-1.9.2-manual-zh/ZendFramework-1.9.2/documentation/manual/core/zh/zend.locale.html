@@ -1,0 +1,661 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 31 章 Zend_Locale</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.loader.pluginloader.html" title="30.4.  加载插件">
+<link rel="next" href="zend.locale.functions.html" title="31.2. Using Zend_Locale">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.locale.html#zend.locale.introduction" title="31.1. Introduction">
+<link rel="section" href="zend.locale.functions.html" title="31.2. Using Zend_Locale">
+<link rel="section" href="zend.locale.parsing.html" title="31.3. Normalization and Localization">
+<link rel="section" href="zend.locale.date.datesandtimes.html" title="31.4. Working with Dates and Times">
+<link rel="section" href="zend.locale.appendix.html" title="31.5. Supported locales">
+<link rel="section" href="zend.locale.migration.html" title="31.6. Migrating from previous versions">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 31 章 Zend_Locale</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.loader.pluginloader.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.locale.functions.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.locale"></a>第 31 章 Zend_Locale</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.locale.html#zend.locale.introduction">31.1. Introduction</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.whatislocalization">31.1.1. What is Localization</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.whatis">31.1.2. What is a Locale?</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.representation">31.1.3. How are Locales Represented?</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.selection">31.1.4. Selecting the Right Locale</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.selection.automatic">31.1.5. Usage of automatic Locales</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.defaultlocale">31.1.6. Using a default Locale</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.interoperate">31.1.7. ZF Locale-Aware Classes</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.frameworkwidelocale">31.1.8. Application wide locale</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.formatoptions">31.1.9. Zend_Locale_Format::setOptions(array $options)</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.html#zend.locale.cache">31.1.10. Speed up Zend_Locale and its subclasses</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.locale.functions.html">31.2. Using Zend_Locale</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.copying">31.2.1. Copying, Cloning, and Serializing Locale Objects</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.equals">31.2.2. Equality</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.getdefault">31.2.3. Default locales</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.setlocale">31.2.4. Set a new locale</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.getlocale">31.2.5. Getting the language and region</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.getdata">31.2.6. Obtaining localized strings</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.getquestion">31.2.7. Obtaining translations for "yes" and "no"</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.getlocalelist">31.2.8. Get a list of all known locales</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.functions.html#zend.locale.detection">31.2.9. Detecting locales</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.locale.parsing.html">31.3. Normalization and Localization</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.number.normalize">31.3.1. Number normalization: getNumber($input, Array $options)</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.locale.parsing.html#zend.locale.number.normalize.precision">31.3.1.1. Precision and Calculations</a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.number.localize">31.3.2. Number localization</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.number.test">31.3.3. Number testing</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.float.normalize">31.3.4. Float value normalization</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.float.localize">31.3.5. Floating point value localization</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.float.test">31.3.6. Floating point value testing</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.integer.normalize">31.3.7. Integer value normalization</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.integer.localize">31.3.8. Integer point value localization</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.integer.test">31.3.9. Integer value testing</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.parsing.html#zend.locale.numbersystems">31.3.10. Numeral System Conversion</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.locale.date.datesandtimes.html">31.4. Working with Dates and Times</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.locale.date.datesandtimes.html#zend.locale.date.normalize">31.4.1. Normalizing Dates and Times</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.date.datesandtimes.html#zend.locale.date.test">31.4.2. Testing Dates</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.date.datesandtimes.html#zend.locale.time.normalizing">31.4.3. Normalizing a Time</a></span></dt>
+<dt><span class="sect2"><a href="zend.locale.date.datesandtimes.html#zend.locale.time.test">31.4.4. Testing Times</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.locale.appendix.html">31.5. Supported locales</a></span></dt>
+<dt><span class="sect1"><a href="zend.locale.migration.html">31.6. Migrating from previous versions</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.locale.migration.html#zend.locale.migration.fromoneeighttoonenine">31.6.1. Migrating from 1.8 to 1.9 or newer</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.locale.migration.html#zend.locale.migration.fromoneeighttoonenine.depreciated">31.6.1.1. Depreciated methods</a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.locale.migration.html#zend.locale.migration.fromoneseventooneeight">31.6.2. Migrating from 1.7 to 1.8 or newer</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.locale.migration.html#zend.locale.migration.fromoneseventooneeight.defaultcaching">31.6.2.1. Default caching</a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.locale.migration.html#zend.locale.migration.fromonesixtooneseven">31.6.3. Migrating from 1.6 to 1.7 or newer</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.locale.migration.html#zend.locale.migration.fromonesixtooneseven.islocale">31.6.3.1. Changes when using isLocale()</a></span></dt>
+<dt><span class="sect3"><a href="zend.locale.migration.html#zend.locale.migration.fromonesixtooneseven.getdefault">31.6.3.2. Changes when using getDefault()</a></span></dt>
+</dl></dd>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.locale.introduction"></a>31.1. Introduction</h2></div></div></div>
+<p>
+        <code class="classname">Zend_Locale</code> is the Frameworks answer to the question, "How can the same application be used around
+        the whole world?" Most people will say, "That's easy. Let's translate all our output to several languages."
+        However, using simple translation tables to map phrases from one language to another is not sufficient.
+        Different regions will have different conventions for first names, surnames, salutory titles, formatting of
+        numbers, dates, times, currencies, etc.
+    </p>
+<p>
+        We need
+        <a href="http://en.wikipedia.org/wiki/L10n" target="_top">Localization</a>
+        and complementary
+        <a href="http://en.wikipedia.org/wiki/L10n" target="_top">Internationalization</a>
+        . Both are often abbreviated to <code class="code">L10n</code> and <code class="code">I18n</code>. Internationalization refers more to
+        support for use of systems, regardless of special needs unique to groups of users related by language, region,
+        number format conventions, financial conventions, time and date conventions, etc. Localization involves adding
+        explicit support to systems for special needs of these unique groups, such as language translation, and support
+        for local customs or conventions for communicating plurals, dates, times, currencies, names, symbols, sorting
+        and ordering, etc. <code class="code">L10n</code> and <code class="code">I18n</code> compliment each other. Zend Framework provides
+        support for these through a combination of components, including <code class="classname">Zend_Locale</code>, <code class="classname">Zend_Date</code>, <code class="classname">Zend_Measure</code>,
+        <code class="classname">Zend_Translate</code>, <code class="classname">Zend_Currency</code>, and <code class="classname">Zend_TimeSync</code>.
+    </p>
+<div class="tip"><table border="0" summary="Tip: Zend_Locale and setLocale()">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[提示]" src="images/tip.png"></td>
+<th align="left">Zend_Locale and setLocale()</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+            <a href="http://php.net/setlocale" target="_top">PHP's documentation</a> states that <code class="methodname">setlocale()</code>
+            is not threadsave because it is maintained per process and not per thread. This means that, in
+            multithreaded environments, you can have the problem that the locale changes while the script
+            never has changed the locale itself. This can lead to unexpected behaviour when you use
+            <code class="methodname">setlocale()</code> in your scripts.
+        </p>
+<p>
+            When you are using <code class="classname">Zend_Locale</code> you will not have this limitations, because
+            <code class="classname">Zend_Locale</code> is not related to or coupled with <acronym class="acronym">PHP</acronym>'s <code class="methodname">setlocale()</code>.
+        </p>
+</td></tr>
+</table></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.whatislocalization"></a>31.1.1. What is Localization</h3></div></div></div>
+<p>
+            Localization means that an application (or homepage) can be used from different users which speak different
+            languages. But as you already have expected Localization means more than only translating strings. It
+            includes
+        </p>
+<div class="itemizedlist"><ul type="opencircle">
+<li style="list-style-type: circle"><p>
+                    <code class="classname">Zend_Locale</code> - Backend support of locales available for
+                    localization support within other Zend Framework components.
+                </p></li>
+<li style="list-style-type: circle"><p>
+                    <code class="classname">Zend_Translate</code> - Translating of strings.
+                </p></li>
+<li style="list-style-type: circle"><p>
+                    <code class="classname">Zend_Date</code> - Localization of dates, times.
+                </p></li>
+<li style="list-style-type: circle"><p>
+                    <code class="classname">Zend_Calendar</code> - Localization of calendars (support for non-Gregorian calendar systems)
+                </p></li>
+<li style="list-style-type: circle"><p>
+                    <code class="classname">Zend_Currency</code> - Localization of currencies.
+                </p></li>
+<li style="list-style-type: circle"><p>
+                    <code class="classname">Zend_Locale_Format</code> - Parsing and generating localized numbers.
+                </p></li>
+<li style="list-style-type: circle"><p>
+                    <code class="classname">Zend_Locale_Data</code> - Retrieve localized standard strings as country names, language names
+                    and
+                    <a href="http://unicode.org/cldr/" target="_top">more from the <acronym class="acronym">CLDR</acronym></a>
+                    .
+                </p></li>
+<li style="list-style-type: circle"><p>
+                    <code class="code">TODO</code> - Localization of collations
+                </p></li>
+</ul></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.whatis"></a>31.1.2. What is a Locale?</h3></div></div></div>
+<p>
+            Each computer user makes use of Locales, even when they don't know it. Applications lacking localization
+            support, normally have implicit support for one particular locale (the locale of the author). When a class
+            or function makes use of localization, we say it is <code class="code">locale-aware</code>. How does the code know which
+            localization the user is expecting?
+        </p>
+<p>
+            A locale string or object identifying a supported locale gives <code class="classname">Zend_Locale</code> and its subclasses
+            access to information about the language and region expected by the user. Correct formatting, normalization,
+            and conversions are made based on this information.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.representation"></a>31.1.3. How are Locales Represented?</h3></div></div></div>
+<p>
+            Locale identifiers consist of information about the user's language and preferred/primary geographic region
+            (e.g. state or province of home or workplace). The locale identifier strings used in Zend Framework are
+            internationally defined standard abbreviations of language and region, written as
+            <code class="code">language_REGION</code>. Both the language and region parts are abbreviated to alphabetic, <acronym class="acronym">ASCII</acronym>
+            characters.
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                Be aware that there exist not only locales with 2 characters as most people think. Also there
+                are languages and regions which are not only abbreviated with 2 characters. Therefor you should
+                NOT strip the region and language yourself, but use <code class="classname">Zend_Locale</code> when you want to strip language
+                or region from a locale string. Otherwise you could have unexpected behaviour within your code
+                when you do this yourself.
+            </p></td></tr>
+</table></div>
+<p>
+            A user from USA would expect the language <code class="code">English</code> and the region <code class="constant">USA</code>, yielding the
+            locale identifier "en_US". A user in Germany would expect the language <code class="code">German</code> and the region
+            <code class="code">Germany</code>, yielding the locale identifier "de_DE". See the
+            <a href="http://unicode.org/cldr/data/diff/supplemental/languages_and_territories.html" target="_top">list of pre-defined locale and region combinations</a>, if you need to select a specific locale within Zend Framework.
+        </p>
+<div class="example">
+<a name="zend.locale.representation.example-1"></a><p class="title"><b>例 31.1. Choosing a specific locale</b></p>
+<div class="example-contents"><pre class="programlisting">
+$locale = new Zend_Locale('de_DE'); // German language _ Germany
+</pre></div>
+</div>
+<br class="example-break"><p>
+            A German user in America might expect the language <code class="code">German</code> and the region <code class="constant">USA</code>, but
+            these non-standard mixes are not supported directly as recognized "locales". Instead, if an invalid
+            combination is used, then it will automatically be truncated by dropping the region code. For example,
+            "de_IS" would be truncated to "de", and "xh_RU" would be truncated to "xh", because neither of these
+            combinations are valid. Additionally, if the base language code is not supported (e.g. "zz_US") or does not
+            exist, then a default "root" locale will be used. The "root" locale has default definitions for
+            internationally recognized representations of dates, times, numbers, currencies, etc. The truncation process
+            depends on the requested information, since some combinations of language and region might be valid for one
+            type of data (e.g. dates), but not for another (e.g. currency format).
+        </p>
+<p>
+            Beware of historical changes, as Zend Framework components do not know about or attempt
+            to track the numerous timezone changes made over many years by many regions. For
+            example, <a href="http://www.statoids.com/tus.html" target="_top">we can see a historical
+                list</a> showing dozens of changes made by governments to when and if a
+            particular region observes Daylight Savings Time, and even which timezone a particular
+            geographic area belongs. Thus, when performing date math, the math performed by Zend
+            Framework components will not adjust for these changes, but instead will give the
+            correct time for the timezone using current, modern rules for <acronym class="acronym">DST</acronym> and timezone
+            assignment for geographic regions.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.selection"></a>31.1.4. Selecting the Right Locale</h3></div></div></div>
+<p>
+            For most situations, <code class="code">new Zend_Locale()</code> will automatically select the correct locale, with
+            preference given to information provided by the user's web browser. However, if <code class="code">new
+            Zend_Locale(Zend_Locale::ENVIRONMENT)</code> is used, then preference will be given to using the host
+            server's environment configuration, as described below.
+        </p>
+<div class="example">
+<a name="zend.locale.selection.example-1"></a><p class="title"><b>例 31.2. Automatically selecting a locale</b></p>
+<div class="example-contents"><pre class="programlisting">
+$locale  = new Zend_Locale();
+
+// default behavior, same as above
+$locale1 = new Zend_Locale(Zend_Locale::BROWSER);
+
+// prefer settings on host server
+$locale2 = new Zend_Locale(Zend_Locale::ENVIRONMENT);
+
+// perfer framework app default settings
+$locale3 = new Zend_Locale(Zend_Locale::FRAMEWORK);
+</pre></div>
+</div>
+<br class="example-break"><p>
+            The search algorithm used by <code class="classname">Zend_Locale</code> for automatic selection of a locale uses three sources
+            of information:
+            </p>
+<div class="orderedlist"><ol type="1">
+<li><p>
+                        const <code class="constant">Zend_Locale::BROWSER</code> - The user's Web browser provides information with each
+                        request, which is published by <acronym class="acronym">PHP</acronym> in the global variable <code class="constant">HTTP_ACCEPT_LANGUAGE</code>. If
+                        no matching locale can be found, then preference is given to <code class="constant">ENVIRONMENT</code> and lastly
+                        <code class="constant">FRAMEWORK</code>.
+                    </p></li>
+<li><p>
+                        const <code class="constant">Zend_Locale::ENVIRONMENT</code> - <acronym class="acronym">PHP</acronym> publishes the host server's locale via the <acronym class="acronym">PHP</acronym>
+                        internal function <code class="methodname">setlocale()</code>. If no matching locale can be found, then preference
+                        is given to <code class="constant">FRAMEWORK</code> and lastly <code class="constant">BROWSER</code>.
+                    </p></li>
+<li><p>
+                        const <code class="constant">Zend_Locale::FRAMEWORK</code> - When Zend Framework has a standardized way of
+                        specifying component defaults (planned, but not yet available), then using this constant during
+                        instantiation will give preference to choosing a locale based on these defaults. If no matching
+                        locale can be found, then preference is given to <code class="constant">ENVIRONMENT</code> and lastly
+                        <code class="constant">BROWSER</code>.
+                    </p></li>
+</ol></div>
+<p>
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.selection.automatic"></a>31.1.5. Usage of automatic Locales</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Locale</code> provides three additionally locales. These locales do not belong to
+            any language or region. They are "automatic" locales which means that they have the same effect
+            as the method <code class="methodname">getDefault()</code> but without the negative effects like creating an instance.
+            These "automatic" locales can be used anywhere, where also a standard locale and also the
+            definition of a locale, its string representation, can be used. This offers simplicity for
+            situations like working with locales which are provided by a browser.
+        </p>
+<p>
+            There are three locales which have a slightly different behaviour:
+
+            </p>
+<div class="orderedlist"><ol type="1">
+<li>
+<p>
+                        <code class="code">'browser'</code> - <code class="classname">Zend_Locale</code> should work with the information
+                        which is provided by the user's Web browser. It is published by <acronym class="acronym">PHP</acronym> in the global
+                        variable <code class="constant">HTTP_ACCEPT_LANGUAGE</code>.
+                    </p>
+<p>
+                        If a user provides more than one locale within his browser, <code class="classname">Zend_Locale</code>
+                        will use the first found locale. If the user does not provide a locale or the script is
+                        being called from the command line the automatic locale <code class="code">'environment'</code>
+                        will automatically be used and returned.
+                    </p>
+</li>
+<li>
+<p>
+                        <code class="code">'environment'</code> - <code class="classname">Zend_Locale</code> should work with the information
+                        which is provided by the host server. It is published by <acronym class="acronym">PHP</acronym> via the internal function
+                        <code class="methodname">setlocale()</code>.
+                    </p>
+<p>
+                        If a environment provides more than one locale, <code class="classname">Zend_Locale</code> will use the
+                        first found locale. If the host does not provide a locale the automatic locale
+                        <code class="code">'browser'</code> will automatically be used and returned.
+                    </p>
+</li>
+<li>
+<p>
+                        <code class="code">'auto'</code> - <code class="classname">Zend_Locale</code> should automatically detect any locale
+                        which can be worked with. It will first search for a users locale and then, if not
+                        successful, search for the host locale.
+                    </p>
+<p>
+                        If no locale can be detected, it will throw an exception and tell you that the
+                        automatic detection has been failed.
+                    </p>
+</li>
+</ol></div>
+<p>
+        </p>
+<div class="example">
+<a name="zend.locale.selection.automatic.example-1"></a><p class="title"><b>例 31.3. Using automatic locales</b></p>
+<div class="example-contents"><pre class="programlisting">
+// without automatic detection
+//$locale = new Zend_Locale(Zend_Locale::BROWSER);
+//$date = new Zend_Date($locale);
+
+// with automatic detection
+$date = new Zend_Date('auto');
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.defaultlocale"></a>31.1.6. Using a default Locale</h3></div></div></div>
+<p>
+            In some environments it is not possible to detect a locale automatically. You can expect this
+            behaviour when you get an request from command line or the requesting browser has no language tag
+            set and additionally your server has the default locale 'C' set or another proprietary locale.
+        </p>
+<p>
+            In such cases <code class="classname">Zend_Locale</code> will normally throw an exception with a message that
+            the automatic detection of any locale was not successful. You have two options to handle such
+            a situation. Either through setting a new locale per hand, or defining a default locale.
+        </p>
+<div class="example">
+<a name="zend.locale.defaultlocale.example-1"></a><p class="title"><b>例 31.4. Handling locale exceptions</b></p>
+<div class="example-contents"><pre class="programlisting">
+// within the bootstrap file
+try {
+    $locale = new Zend_Locale('auto');
+} catch (Zend_Locale_Exception $e) {
+    $locale = new Zend_Locale('de');
+}
+
+// within your model/controller
+$date = new Zend_Date($locale);
+</pre></div>
+</div>
+<br class="example-break"><p>
+            But this has one big negative effect. You will have to set your locale object within
+            every class using <code class="classname">Zend_Locale</code>. This could become very unhandy if you are using
+            multiple classes.
+        </p>
+<p>
+            Since Zend Framework Release 1.5 there is a much better way to handle this. You can set a
+            default locale which the static <code class="methodname">setDefault()</code> method. Of course, every unknown
+            or not full qualified locale will also throw an exception. <code class="methodname">setDefault()</code> should
+            be the first call before you initiate any class using <code class="classname">Zend_Locale</code>. See the
+            following example for details:
+        </p>
+<div class="example">
+<a name="zend.locale.defaultlocale.example-2"></a><p class="title"><b>例 31.5. Setting a default locale</b></p>
+<div class="example-contents"><pre class="programlisting">
+// within the bootstrap file
+Zend_Locale::setDefault('de');
+
+// within your model/controller
+$date = new Zend_Date();
+</pre></div>
+</div>
+<br class="example-break"><p>
+            In the case that no locale can be detected, automatically the locale
+            <span class="emphasis"><em>de</em></span> will be used. Otherwise, the detected locale will be used.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.interoperate"></a>31.1.7. ZF Locale-Aware Classes</h3></div></div></div>
+<p>
+            In the Zend Framework, locale-aware classes rely on <code class="classname">Zend_Locale</code> to
+            automatically select a locale, as explained above. For example, in a Zend Framework web
+            application, constructing a date using <code class="classname">Zend_Date</code> without
+            specifying a locale results in an object with a locale based on information provided by
+            the current user's web browser.
+        </p>
+<div class="example">
+<a name="zend.locale.interoperate.example-1"></a><p class="title"><b>例 31.6. Dates default to correct locale of web users</b></p>
+<div class="example-contents"><pre class="programlisting">
+$date = new Zend_Date('2006',Zend_Date::YEAR);
+</pre></div>
+</div>
+<br class="example-break"><p>
+            To override this default behavior, and force locale-aware Zend Framework components to
+            use specific locales, regardless of the origin of your website visitors, explicitly
+            specify a locale as the third argument to the constructor.
+        </p>
+<div class="example">
+<a name="zend.locale.interoperate.example-2"></a><p class="title"><b>例 31.7. Overriding default locale selection</b></p>
+<div class="example-contents"><pre class="programlisting">
+$usLocale = new Zend_Locale('en_US');
+$date = new Zend_Date('2006', Zend_Date::YEAR, $usLocale);
+$temp = new Zend_Measure_Temperature('100,10',
+                                     Zend_Measure::TEMPERATURE,
+                                     $usLocale);
+</pre></div>
+</div>
+<br class="example-break"><p>
+            If you know many objects should all use the same default locale, explicitly specify the default locale to
+            avoid the overhead of each object determining the default locale.
+        </p>
+<div class="example">
+<a name="zend.locale.interoperate.example-3"></a><p class="title"><b>例 31.8. Performance optimization when using a default locale</b></p>
+<div class="example-contents"><pre class="programlisting">
+$locale = new Zend_Locale();
+$date = new Zend_Date('2006', Zend_Date::YEAR, $locale);
+$temp = new Zend_Measure_Temperature('100,10',
+                                     Zend_Measure::TEMPERATURE,
+                                     $locale);
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.frameworkwidelocale"></a>31.1.8. Application wide locale</h3></div></div></div>
+<p>
+            Zend Framework allows the usage of an application wide locale. You simply set an instance of
+            <code class="classname">Zend_Locale</code> to the registry with the key 'Zend_Locale'. Then this instance will
+            be used within all locale aware classes of Zend Framework. This way you set one locale within
+            your registry and then you can forget about setting it again. It will automatically be used
+            in all other classes. See the below example for the right usage:
+        </p>
+<div class="example">
+<a name="zend.locale.frameworkwidelocale.example"></a><p class="title"><b>例 31.9. Usage of an application wide locale</b></p>
+<div class="example-contents"><pre class="programlisting">
+// within your bootstrap
+$locale = new Zend_Locale('de_AT');
+Zend_Registry::set('Zend_Locale', $locale);
+
+// within your model or controller
+$date = new Zend_Date();
+// print $date-&gt;getLocale();
+echo $date-&gt;getDate();
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.formatoptions"></a>31.1.9. Zend_Locale_Format::setOptions(array $options)</h3></div></div></div>
+<p>
+            The 'precision' option of a value is used to truncate or stretch extra digits. A value of '-1' disables
+            modification of the number of digits in the fractional part of the value. The 'locale' option helps when
+            parsing numbers and dates using separators and month names. The date format 'format_type' option selects between
+            <acronym class="acronym">CLDR</acronym>/ISO date format specifier tokens and <acronym class="acronym">PHP</acronym>'s date() tokens. The 'fix_date' option enables or disables
+            heuristics that attempt to correct invalid dates. The 'number_format' option specifies a default number
+            format for use with <code class="methodname">toNumber()</code> (see
+            <a href="zend.locale.parsing.html#zend.locale.number.localize" title="31.3.2. Number localization">第 31.3.2 节 “Number localization”</a>
+            ).
+        </p>
+<p>
+            The 'date_format' option can be used to specify a default date format string, but beware of using getDate(),
+            checkdateFormat() and getTime() after using setOptions() with a 'date_format'. To use these four methods
+            with the default date format for a locale, use array('date_format' =&gt; null, 'locale' =&gt; $locale) for their
+            options.
+        </p>
+<div class="example">
+<a name="zend.locale.formatoptions.example-1"></a><p class="title"><b>例 31.10. Dates default to correct locale of web users</b></p>
+<div class="example-contents"><pre class="programlisting">
+Zend_Locale_Format::setOptions(array('locale' =&gt; 'en_US',
+                                     'fix_date' =&gt; true,
+                                     'format_type' =&gt; 'php'));
+</pre></div>
+</div>
+<br class="example-break"><p>
+            For working with the standard definitions of a locale the option <code class="constant">Zend_Locale_Format::STANDARD</code> can be used.
+            Setting the option <code class="constant">Zend_Locale_Format::STANDARD</code> for <code class="code">date_format</code> uses the standard definitions from the actual
+            set locale. Setting it for number_format uses the standard number format for this locale.
+            And setting it for locale uses the standard locale for this environment or browser.
+        </p>
+<div class="example">
+<a name="zend.locale.formatoptions.example-2"></a><p class="title"><b>例 31.11. Using STANDARD definitions for setOptions()</b></p>
+<div class="example-contents"><pre class="programlisting">
+Zend_Locale_Format::setOptions(array('locale' =&gt; 'en_US',
+                                     'date_format' =&gt; 'dd.MMMM.YYYY'));
+// overriding the global set date format
+$date = Zend_Locale_Format::getDate('2007-04-20',
+                                    array('date_format' =&gt;
+                                              Zend_Locale_Format::STANDARD);
+
+// global setting of the standard locale
+Zend_Locale_Format::setOptions(array('locale' =&gt; Zend_Locale_Format::STANDARD,
+                                     'date_format' =&gt; 'dd.MMMM.YYYY'));
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.locale.cache"></a>31.1.10. Speed up Zend_Locale and its subclasses</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Locale</code> and its subclasses can be speed up by the usage of
+            <code class="classname">Zend_Cache</code>. Use the static method
+            <code class="methodname">Zend_Locale::setCache($cache)</code> if you are using
+            <code class="classname">Zend_Locale</code>. <code class="classname">Zend_Locale_Format</code> can be
+            speed up the using the option <code class="code">cache</code> within
+            <code class="classname">Zend_Locale_Format::setOptions(array('cache' =&gt; $adapter));</code>.
+            If you are using both classes you should only set the cache for
+            <code class="classname">Zend_Locale</code>, otherwise the last set cache will overwrite the
+            previous set cache. For convenience there are also the static methods
+            <code class="methodname">getCache()</code>, <code class="methodname">hasCache()</code>,
+            <code class="methodname">clearCache()</code> and <code class="methodname">removeCache()</code>.
+        </p>
+<p>
+            When no cache is set, then <code class="classname">Zend_Locale</code> will automatically set a
+            cache itself. Sometimes it is wished to prevent that a cache is set, even if this
+            degrades performance. In this case the static
+            <code class="methodname">disableCache(true)</code> method should be used. It does not only
+            disable the actual set cache, without erasing it, but also prevents that a cache is
+            automatically generated when no cache is set.
+        </p>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.loader.pluginloader.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.locale.functions.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">30.4.  加载插件  </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 31.2. Using Zend_Locale</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

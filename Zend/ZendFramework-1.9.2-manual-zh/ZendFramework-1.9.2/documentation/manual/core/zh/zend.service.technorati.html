@@ -1,0 +1,916 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>48.27. Zend_Service_Technorati</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="prev" href="zend.service.strikeiron.advanced-uses.html" title="48.26. Zend_Service_StrikeIron: Advanced Uses">
+<link rel="next" href="zend.service.twitter.html" title="48.28. Zend_Service_Twitter">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.introduction" title="48.27.1. Introduction">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.getting-started" title="48.27.2. Getting Started">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.making-first-query" title="48.27.3. Making Your First Query">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.consuming-results" title="48.27.4. Consuming Results">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.handling-errors" title="48.27.5. Handling Errors">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.checking-api-daily-usage" title="48.27.6. Checking Your API Key Daily Usage">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.queries" title="48.27.7. Available Technorati Queries">
+<link rel="subsection" href="zend.service.technorati.html#zend.service.technorati.classes" title="48.27.8. Zend_Service_Technorati Classes">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">48.27. Zend_Service_Technorati</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.service.strikeiron.advanced-uses.html">上一页</a> </td>
+<th width="60%" align="center">第 48 章 Zend_Service</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.service.twitter.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.service.technorati"></a>48.27. Zend_Service_Technorati</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.introduction"></a>48.27.1. Introduction</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Technorati</code> provides an easy, intuitive and object-oriented interface for using
+            the Technorati <acronym class="acronym">API</acronym>. It provides access to all available
+            <a href="http://technorati.com/developers/api/" target="_top">Technorati <acronym class="acronym">API</acronym> queries</a>
+            and returns the original <acronym class="acronym">XML</acronym> response as a friendly <acronym class="acronym">PHP</acronym> object.
+        </p>
+<p>
+            <a href="http://technorati.com/" target="_top">Technorati</a> is one of the most popular blog search engines.
+            The <acronym class="acronym">API</acronym> interface enables developers to retrieve information about a specific blog, search blogs matching a
+            single tag or phrase and get information about a specific author (blogger). For a full list of available
+            queries please see the
+            <a href="http://technorati.com/developers/api/" target="_top">Technorati <acronym class="acronym">API</acronym> documentation</a>
+            or the <a href="zend.service.technorati.html#zend.service.technorati.queries" title="48.27.7. Available Technorati Queries">Available Technorati queries</a> section of this
+            document.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.getting-started"></a>48.27.2. Getting Started</h3></div></div></div>
+<p>
+            Technorati requires a valid <acronym class="acronym">API</acronym> key for usage. To get your own <acronym class="acronym">API</acronym> Key you first need to
+            <a href="http://technorati.com/signup/" target="_top">create a new Technorati account</a>, then visit the
+            <a href="http://technorati.com/developers/apikey.html" target="_top">API Key section</a>.
+        </p>
+<div class="note"><table border="0" summary="Note: API Key limits">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">API Key limits</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                You can make up to 500 Technorati <acronym class="acronym">API</acronym> calls per day, at no charge.
+                Other usage limitations may apply, depending on the current Technorati <acronym class="acronym">API</acronym> license.
+            </p></td></tr>
+</table></div>
+<p>
+            Once you have a valid <acronym class="acronym">API</acronym> key, you're ready to start using <code class="classname">Zend_Service_Technorati</code>.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.making-first-query"></a>48.27.3. Making Your First Query</h3></div></div></div>
+<p>
+            In order to run a query, first you need a <code class="classname">Zend_Service_Technorati</code> instance with a valid <acronym class="acronym">API</acronym>
+            key. Then choose one of the available query methods, and call it providing required arguments.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.making-first-query.example-1"></a><p class="title"><b>例 48.106. Sending your first query</b></p>
+<div class="example-contents"><pre class="programlisting">
+// create a new Zend_Service_Technorati
+// with a valid API_KEY
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+
+// search Technorati for PHP keyword
+$resultSet = $technorati-&gt;search('PHP');
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Each query method accepts an array of optional parameters that can be used to refine your query.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.making-first-query.example-2"></a><p class="title"><b>例 48.107. Refining your query</b></p>
+<div class="example-contents"><pre class="programlisting">
+// create a new Zend_Service_Technorati
+// with a valid API_KEY
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+
+// filter your query including only results
+// with some authority (Results from blogs with a handful of links)
+$options = array('authority' =&gt; 'a4');
+
+// search Technorati for PHP keyword
+$resultSet = $technorati-&gt;search('PHP', $options);
+</pre></div>
+</div>
+<br class="example-break"><p>
+            A <code class="classname">Zend_Service_Technorati</code> instance is not a single-use object. That is, you don't need to
+            create a new instance for each query call; simply use your current <code class="classname">Zend_Service_Technorati</code>
+            object as long as you need it.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.making-first-query.example-3"></a><p class="title"><b>例 48.108. Sending multiple queries with the same Zend_Service_Technorati instance</b></p>
+<div class="example-contents"><pre class="programlisting">
+// create a new Zend_Service_Technorati
+// with a valid API_KEY
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+
+// search Technorati for PHP keyword
+$search = $technorati-&gt;search('PHP');
+
+// get top tags indexed by Technorati
+$topTags = $technorati-&gt;topTags();
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.consuming-results"></a>48.27.4. Consuming Results</h3></div></div></div>
+<p>
+            You can get one of two types of result object in response to a query.
+        </p>
+<p>
+            The first group is represented by <code class="classname">Zend_Service_Technorati_*ResultSet</code> objects. A result set
+            object is basically a collection of result objects. It extends the basic
+            <code class="classname">Zend_Service_Technorati_ResultSet</code> class and implements the <code class="code">SeekableIterator</code> <acronym class="acronym">PHP</acronym>
+            interface. The best way to consume a result set object is to loop over it with the <acronym class="acronym">PHP</acronym> <code class="code">foreach</code>
+            statement.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.consuming-results.example-1"></a><p class="title"><b>例 48.109. Consuming a result set object</b></p>
+<div class="example-contents"><pre class="programlisting">
+// create a new Zend_Service_Technorati
+// with a valid API_KEY
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+
+// search Technorati for PHP keyword
+// $resultSet is an instance of Zend_Service_Technorati_SearchResultSet
+$resultSet = $technorati-&gt;search('PHP');
+
+// loop over all result objects
+foreach ($resultSet as $result) {
+    // $result is an instance of Zend_Service_Technorati_SearchResult
+}
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Because <code class="classname">Zend_Service_Technorati_ResultSet</code> implements the <code class="code">SeekableIterator</code>
+            interface, you can seek a specific result object using its position in the result collection.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.consuming-results.example-2"></a><p class="title"><b>例 48.110. Seeking a specific result set object</b></p>
+<div class="example-contents"><pre class="programlisting">
+// create a new Zend_Service_Technorati
+// with a valid API_KEY
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+
+// search Technorati for PHP keyword
+// $resultSet is an instance of Zend_Service_Technorati_SearchResultSet
+$resultSet = $technorati-&gt;search('PHP');
+
+// $result is an instance of Zend_Service_Technorati_SearchResult
+$resultSet-&gt;seek(1);
+$result = $resultSet-&gt;current();
+</pre></div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                <code class="code">SeekableIterator</code> works as an array and counts positions starting from index 0. Fetching
+                position number 1 means getting the second result in the collection.
+            </p></td></tr>
+</table></div>
+<p>
+            The second group is represented by special standalone result objects.
+            <code class="classname">Zend_Service_Technorati_GetInfoResult</code>, <code class="classname">Zend_Service_Technorati_BlogInfoResult</code> and
+            <code class="classname">Zend_Service_Technorati_KeyInfoResult</code> act as wrappers for additional objects, such as
+            <code class="classname">Zend_Service_Technorati_Author</code> and <code class="classname">Zend_Service_Technorati_Weblog</code>.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.consuming-results.example-3"></a><p class="title"><b>例 48.111. Consuming a standalone result object</b></p>
+<div class="example-contents"><pre class="programlisting">
+// create a new Zend_Service_Technorati
+// with a valid API_KEY
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+
+// get info about weppos author
+$result = $technorati-&gt;getInfo('weppos');
+
+$author = $result-&gt;getAuthor();
+echo '&lt;h2&gt;Blogs authored by ' . $author-&gt;getFirstName() . " " .
+          $author-&gt;getLastName() . '&lt;/h2&gt;';
+echo '&lt;ol&gt;';
+foreach ($result-&gt;getWeblogs() as $weblog) {
+    echo '&lt;li&gt;' . $weblog-&gt;getName() . '&lt;/li&gt;';
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Please read the <a href="zend.service.technorati.html#zend.service.technorati.classes" title="48.27.8. Zend_Service_Technorati Classes">Zend_Service_Technorati Classes</a>
+            section for further details about response classes.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.handling-errors"></a>48.27.5. Handling Errors</h3></div></div></div>
+<p>
+            Each <code class="classname">Zend_Service_Technorati</code> query method throws a
+            <code class="classname">Zend_Service_Technorati_Exception</code> exception on failure with a meaningful error message.
+        </p>
+<p>
+            There are several reasons that may cause a <code class="classname">Zend_Service_Technorati</code> query to fail.
+            <code class="classname">Zend_Service_Technorati</code> validates all parameters for any query request. If a parameter is
+            invalid or it contains an invalid value, a new <code class="classname">Zend_Service_Technorati_Exception</code> exception is
+            thrown. Additionally, the Technorati <acronym class="acronym">API</acronym> interface could be temporally unavailable, or it could return a
+            response that is not well formed.
+        </p>
+<p>
+            You should always wrap a Technorati query with a <code class="code">try</code>...<code class="code">catch</code> block.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.handling-errors.example-1"></a><p class="title"><b>例 48.112. Handling a Query Exception</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+try {
+    $resultSet = $technorati-&gt;search('PHP');
+} catch(Zend_Service_Technorati_Exception $e) {
+    echo "An error occurred: " $e-&gt;getMessage();
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.checking-api-daily-usage"></a>48.27.6. Checking Your API Key Daily Usage</h3></div></div></div>
+<p>
+            From time to time you probably will want to check your <acronym class="acronym">API</acronym> key daily usage. By default Technorati limits
+            your <acronym class="acronym">API</acronym> usage to 500 calls per day, and an exception is returned by <code class="classname">Zend_Service_Technorati</code>
+            if you try to use it beyond this limit. You can get information about your <acronym class="acronym">API</acronym> key usage using the
+            <code class="methodname">Zend_Service_Technorati::keyInfo()</code> method.
+        </p>
+<p>
+            <code class="methodname">Zend_Service_Technorati::keyInfo()</code> returns a
+            <code class="classname">Zend_Service_Technorati_KeyInfoResult</code> object. For full details please see the
+            <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+        </p>
+<div class="example">
+<a name="zend.service.technorati.checking-api-daily-usage.example-1"></a><p class="title"><b>例 48.113. Getting API key daily usage information</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$key = $technorati-&gt;keyInfo();
+
+echo "API Key: " . $key-&gt;getApiKey() . "&lt;br /&gt;";
+echo "Daily Usage: " . $key-&gt;getApiQueries() . "/" .
+     $key-&gt;getMaxQueries() . "&lt;br /&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.queries"></a>48.27.7. Available Technorati Queries</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Technorati</code> provides support for the following queries:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.cosmos" title="48.27.7.1. Technorati Cosmos"><code class="code">Cosmos</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.search" title="48.27.7.2. Technorati Search"><code class="code">Search</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.tag" title="48.27.7.3. Technorati Tag"><code class="code">Tag</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.dailycounts" title="48.27.7.4. Technorati DailyCounts"><code class="code">DailyCounts</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.toptags" title="48.27.7.5. Technorati TopTags"><code class="code">TopTags</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.bloginfo" title="48.27.7.6. Technorati BlogInfo"><code class="code">BlogInfo</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.blogposttags" title="48.27.7.7. Technorati BlogPostTags"><code class="code">BlogPostTags</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.queries.getinfo" title="48.27.7.8. Technorati GetInfo"><code class="code">GetInfo</code></a></p></li>
+</ul></div>
+<p>
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.cosmos"></a>48.27.7.1. Technorati Cosmos</h4></div></div></div>
+<p>
+                <a href="http://technorati.com/developers/api/cosmos.html" target="_top">Cosmos</a> query lets you see what
+                blogs are linking to a given <acronym class="acronym">URL</acronym>. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.cosmosresultset" title="48.27.8.2. Zend_Service_Technorati_CosmosResultSet"><code class="classname">Zend_Service_Technorati_CosmosResultSet</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::cosmos()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.cosmos.example-1"></a><p class="title"><b>例 48.114. Cosmos Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$resultSet = $technorati-&gt;cosmos('http://devzone.zend.com/');
+
+echo "&lt;p&gt;Reading " . $resultSet-&gt;totalResults() .
+     " of " . $resultSet-&gt;totalResultsAvailable() .
+     " available results&lt;/p&gt;";
+echo "&lt;ol&gt;";
+foreach ($resultSet as $result) {
+    echo "&lt;li&gt;" . $result-&gt;getWeblog()-&gt;getName() . "&lt;/li&gt;";
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.search"></a>48.27.7.2. Technorati Search</h4></div></div></div>
+<p>
+                The <a href="http://technorati.com/developers/api/search.html" target="_top">Search</a> query lets you see
+                what blogs contain a given search string. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.searchresultset" title="48.27.8.3. Zend_Service_Technorati_SearchResultSet"><code class="classname">Zend_Service_Technorati_SearchResultSet</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::search()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.search.example-1"></a><p class="title"><b>例 48.115. Search Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$resultSet = $technorati-&gt;search('zend framework');
+
+echo "&lt;p&gt;Reading " . $resultSet-&gt;totalResults() .
+     " of " . $resultSet-&gt;totalResultsAvailable() .
+     " available results&lt;/p&gt;";
+echo "&lt;ol&gt;";
+foreach ($resultSet as $result) {
+    echo "&lt;li&gt;" . $result-&gt;getWeblog()-&gt;getName() . "&lt;/li&gt;";
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.tag"></a>48.27.7.3. Technorati Tag</h4></div></div></div>
+<p>
+                The <a href="http://technorati.com/developers/api/tag.html" target="_top">Tag</a> query lets you see what
+                posts are associated with a given tag. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.tagresultset" title="48.27.8.4. Zend_Service_Technorati_TagResultSet"><code class="classname">Zend_Service_Technorati_TagResultSet</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::tag()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.tag.example-1"></a><p class="title"><b>例 48.116. Tag Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$resultSet = $technorati-&gt;tag('php');
+
+echo "&lt;p&gt;Reading " . $resultSet-&gt;totalResults() .
+     " of " . $resultSet-&gt;totalResultsAvailable() .
+     " available results&lt;/p&gt;";
+echo "&lt;ol&gt;";
+foreach ($resultSet as $result) {
+    echo "&lt;li&gt;" . $result-&gt;getWeblog()-&gt;getName() . "&lt;/li&gt;";
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.dailycounts"></a>48.27.7.4. Technorati DailyCounts</h4></div></div></div>
+<p>
+                The <a href="http://technorati.com/developers/api/dailycounts.html" target="_top">DailyCounts</a> query
+                provides daily counts of posts containing the queried keyword. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.dailycountsresultset" title="48.27.8.5. Zend_Service_Technorati_DailyCountsResultSet"><code class="classname">Zend_Service_Technorati_DailyCountsResultSet</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::dailyCounts()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.dailycounts.example-1"></a><p class="title"><b>例 48.117. DailyCounts Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$resultSet = $technorati-&gt;dailyCounts('php');
+
+foreach ($resultSet as $result) {
+    echo "&lt;li&gt;" . $result-&gt;getDate() .
+         "(" . $result-&gt;getCount() . ")&lt;/li&gt;";
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.toptags"></a>48.27.7.5. Technorati TopTags</h4></div></div></div>
+<p>
+                The <a href="http://technorati.com/developers/api/toptags.html" target="_top">TopTags</a> query provides
+                information on top tags indexed by Technorati. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.tagsresultset" title="48.27.8.6. Zend_Service_Technorati_TagsResultSet"><code class="classname">Zend_Service_Technorati_TagsResultSet</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::topTags()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.toptags.example-1"></a><p class="title"><b>例 48.118. TopTags Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$resultSet = $technorati-&gt;topTags();
+
+echo "&lt;p&gt;Reading " . $resultSet-&gt;totalResults() .
+     " of " . $resultSet-&gt;totalResultsAvailable() .
+     " available results&lt;/p&gt;";
+echo "&lt;ol&gt;";
+foreach ($resultSet as $result) {
+    echo "&lt;li&gt;" . $result-&gt;getTag() . "&lt;/li&gt;";
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.bloginfo"></a>48.27.7.6. Technorati BlogInfo</h4></div></div></div>
+<p>
+                The <a href="http://technorati.com/developers/api/bloginfo.html" target="_top">BlogInfo</a> query provides
+                information on what blog, if any, is associated with a given <acronym class="acronym">URL</acronym>. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.bloginforesult" title="48.27.8.14. Zend_Service_Technorati_BlogInfoResult"><code class="classname">Zend_Service_Technorati_BlogInfoResult</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::blogInfo()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.bloginfo.example-1"></a><p class="title"><b>例 48.119. BlogInfo Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$result = $technorati-&gt;blogInfo('http://devzone.zend.com/');
+
+echo '&lt;h2&gt;&lt;a href="' . (string) $result-&gt;getWeblog()-&gt;getUrl() . '"&gt;' .
+     $result-&gt;getWeblog()-&gt;getName() . '&lt;/a&gt;&lt;/h2&gt;';
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.blogposttags"></a>48.27.7.7. Technorati BlogPostTags</h4></div></div></div>
+<p>
+                The <a href="http://technorati.com/developers/api/blogposttags.html" target="_top">BlogPostTags</a> query
+                provides information on the top tags used by a specific blog. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.tagsresultset" title="48.27.8.6. Zend_Service_Technorati_TagsResultSet"><code class="classname">Zend_Service_Technorati_TagsResultSet</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::blogPostTags()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.blogposttags.example-1"></a><p class="title"><b>例 48.120. BlogPostTags Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$resultSet = $technorati-&gt;blogPostTags('http://devzone.zend.com/');
+
+echo "&lt;p&gt;Reading " . $resultSet-&gt;totalResults() .
+     " of " . $resultSet-&gt;totalResultsAvailable() .
+     " available results&lt;/p&gt;";
+echo "&lt;ol&gt;";
+foreach ($resultSet as $result) {
+    echo "&lt;li&gt;" . $result-&gt;getTag() . "&lt;/li&gt;";
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.getinfo"></a>48.27.7.8. Technorati GetInfo</h4></div></div></div>
+<p>
+                The <a href="http://technorati.com/developers/api/getinfo.html" target="_top">GetInfo</a> query tells you
+                things that Technorati knows about a member. It returns a
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.getinforesult" title="48.27.8.13. Zend_Service_Technorati_GetInfoResult"><code class="classname">Zend_Service_Technorati_GetInfoResult</code></a>
+                object. For full details please see <code class="methodname">Zend_Service_Technorati::getInfo()</code> in the
+                <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.queries.getinfo.example-1"></a><p class="title"><b>例 48.121. GetInfo Query</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$result = $technorati-&gt;getInfo('weppos');
+
+$author = $result-&gt;getAuthor();
+echo "&lt;h2&gt;Blogs authored by " . $author-&gt;getFirstName() . " " .
+     $author-&gt;getLastName() . "&lt;/h2&gt;";
+echo "&lt;ol&gt;";
+foreach ($result-&gt;getWeblogs() as $weblog) {
+    echo "&lt;li&gt;" . $weblog-&gt;getName() . "&lt;/li&gt;";
+}
+echo "&lt;/ol&gt;";
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.queries.keyinfo"></a>48.27.7.9. Technorati KeyInfo</h4></div></div></div>
+<p>
+                The KeyInfo query provides information on daily usage of an <acronym class="acronym">API</acronym> key. It returns a
+               <a href="zend.service.technorati.html#zend.service.technorati.classes.keyinforesult" title="48.27.8.15. Zend_Service_Technorati_KeyInfoResult"><code class="classname">Zend_Service_Technorati_KeyInfoResult</code></a>
+               object. For full details please see <code class="methodname">Zend_Service_Technorati::keyInfo()</code> in the
+               <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+            </p>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.technorati.classes"></a>48.27.8. Zend_Service_Technorati Classes</h3></div></div></div>
+<p>
+            The following classes are returned by the various Technorati queries. Each
+            <code class="classname">Zend_Service_Technorati_*ResultSet</code> class holds a type-specific result set which can be easily
+            iterated, with each result being contained in a type result object. All result set classes extend
+            <code class="classname">Zend_Service_Technorati_ResultSet</code> class and implement the <code class="code">SeekableIterator</code>
+            interface, allowing for easy iteration and seeking to a specific result.
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.resultset" title="48.27.8.1. Zend_Service_Technorati_ResultSet"><code class="classname">Zend_Service_Technorati_ResultSet</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.cosmosresultset" title="48.27.8.2. Zend_Service_Technorati_CosmosResultSet"><code class="classname">Zend_Service_Technorati_CosmosResultSet</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.searchresultset" title="48.27.8.3. Zend_Service_Technorati_SearchResultSet"><code class="classname">Zend_Service_Technorati_SearchResultSet</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.tagresultset" title="48.27.8.4. Zend_Service_Technorati_TagResultSet"><code class="classname">Zend_Service_Technorati_TagResultSet</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.dailycountsresultset" title="48.27.8.5. Zend_Service_Technorati_DailyCountsResultSet"><code class="classname">Zend_Service_Technorati_DailyCountsResultSet</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.tagsresultset" title="48.27.8.6. Zend_Service_Technorati_TagsResultSet"><code class="classname">Zend_Service_Technorati_TagsResultSet</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.result" title="48.27.8.7. Zend_Service_Technorati_Result"><code class="classname">Zend_Service_Technorati_Result</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.cosmosresult" title="48.27.8.8. Zend_Service_Technorati_CosmosResult"><code class="classname">Zend_Service_Technorati_CosmosResult</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.searchresult" title="48.27.8.9. Zend_Service_Technorati_SearchResult"><code class="classname">Zend_Service_Technorati_SearchResult</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.tagresult" title="48.27.8.10. Zend_Service_Technorati_TagResult"><code class="classname">Zend_Service_Technorati_TagResult</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.dailycountsresult" title="48.27.8.11. Zend_Service_Technorati_DailyCountsResult"><code class="classname">Zend_Service_Technorati_DailyCountsResult</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.tagsresult" title="48.27.8.12. Zend_Service_Technorati_TagsResult"><code class="classname">Zend_Service_Technorati_TagsResult</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.getinforesult" title="48.27.8.13. Zend_Service_Technorati_GetInfoResult"><code class="classname">Zend_Service_Technorati_GetInfoResult</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.bloginforesult" title="48.27.8.14. Zend_Service_Technorati_BlogInfoResult"><code class="classname">Zend_Service_Technorati_BlogInfoResult</code></a></p></li>
+<li><p><a href="zend.service.technorati.html#zend.service.technorati.classes.keyinforesult" title="48.27.8.15. Zend_Service_Technorati_KeyInfoResult"><code class="classname">Zend_Service_Technorati_KeyInfoResult</code></a></p></li>
+</ul></div>
+<p>
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                <code class="classname">Zend_Service_Technorati_GetInfoResult</code>, <code class="classname">Zend_Service_Technorati_BlogInfoResult</code>
+                and <code class="classname">Zend_Service_Technorati_KeyInfoResult</code> represent exceptions to the above because they
+                don't belong to a result set and they don't implement any interface. They represent a single response
+                object and they act as a wrapper for additional <code class="classname">Zend_Service_Technorati</code> objects, such as
+                <code class="classname">Zend_Service_Technorati_Author</code> and <code class="classname">Zend_Service_Technorati_Weblog</code>.
+            </p></td></tr>
+</table></div>
+<p>
+            The <code class="classname">Zend_Service_Technorati</code> library includes additional convenient classes representing
+            specific response objects. <code class="classname">Zend_Service_Technorati_Author</code> represents a single Technorati
+            account, also known as a blog author or blogger. <code class="classname">Zend_Service_Technorati_Weblog</code> represents a
+            single weblog object, along with all specific weblog properties such as feed <acronym class="acronym">URL</acronym>s or blog name. For full
+            details please see <code class="classname">Zend_Service_Technorati</code> in the
+            <a href="http://framework.zend.com/apidoc/core/" target="_top">API reference guide</a>.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.resultset"></a>48.27.8.1. Zend_Service_Technorati_ResultSet</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_ResultSet</code> is the most essential result set. The scope of this
+                class is to be extended by a query-specific child result set class, and it should never be used to
+                initialize a standalone object. Each of the specific result sets represents a collection of
+                query-specific
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.result" title="48.27.8.7. Zend_Service_Technorati_Result"><code class="classname">Zend_Service_Technorati_Result</code></a>
+                objects.
+            </p>
+<p>
+                <code class="classname">Zend_Service_Technorati_ResultSet</code> implements the <acronym class="acronym">PHP</acronym> <code class="code">SeekableIterator</code>
+                interface, and you can iterate all result objects via the <acronym class="acronym">PHP</acronym> <code class="code">foreach</code> statement.
+            </p>
+<div class="example">
+<a name="zend.service.technorati.classes.resultset.example-1"></a><p class="title"><b>例 48.122. Iterating result objects from a resultset collection</b></p>
+<div class="example-contents"><pre class="programlisting">
+// run a simple query
+$technorati = new Zend_Service_Technorati('VALID_API_KEY');
+$resultSet = $technorati-&gt;search('php');
+
+// $resultSet is now an instance of
+// Zend_Service_Technorati_SearchResultSet
+// it extends Zend_Service_Technorati_ResultSet
+foreach ($resultSet as $result) {
+    // do something with your
+    // Zend_Service_Technorati_SearchResult object
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.cosmosresultset"></a>48.27.8.2. Zend_Service_Technorati_CosmosResultSet</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_CosmosResultSet</code> represents a Technorati Cosmos query result set.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_CosmosResultSet</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.resultset" title="48.27.8.1. Zend_Service_Technorati_ResultSet">Zend_Service_Technorati_ResultSet</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.searchresultset"></a>48.27.8.3. Zend_Service_Technorati_SearchResultSet</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_SearchResultSet</code> represents a Technorati Search query result set.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_SearchResultSet</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.resultset" title="48.27.8.1. Zend_Service_Technorati_ResultSet">Zend_Service_Technorati_ResultSet</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.tagresultset"></a>48.27.8.4. Zend_Service_Technorati_TagResultSet</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_TagResultSet</code> represents a Technorati Tag query result set.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_TagResultSet</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.resultset" title="48.27.8.1. Zend_Service_Technorati_ResultSet">Zend_Service_Technorati_ResultSet</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.dailycountsresultset"></a>48.27.8.5. Zend_Service_Technorati_DailyCountsResultSet</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_DailyCountsResultSet</code> represents a Technorati DailyCounts query result set.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_DailyCountsResultSet</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.resultset" title="48.27.8.1. Zend_Service_Technorati_ResultSet">Zend_Service_Technorati_ResultSet</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.tagsresultset"></a>48.27.8.6. Zend_Service_Technorati_TagsResultSet</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_TagsResultSet</code> represents a Technorati TopTags or BlogPostTags queries result set.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_TagsResultSet</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.resultset" title="48.27.8.1. Zend_Service_Technorati_ResultSet">Zend_Service_Technorati_ResultSet</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.result"></a>48.27.8.7. Zend_Service_Technorati_Result</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_Result</code> is the most essential result object. The scope of this
+                class is to be extended by a query specific child result class, and it should never be used to
+                initialize a standalone object.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.cosmosresult"></a>48.27.8.8. Zend_Service_Technorati_CosmosResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_CosmosResult</code> represents a single Technorati Cosmos query result
+                object. It is never returned as a standalone object, but it always belongs to a valid
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.cosmosresultset" title="48.27.8.2. Zend_Service_Technorati_CosmosResultSet">Zend_Service_Technorati_CosmosResultSet</a>
+                object.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_CosmosResult</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.result" title="48.27.8.7. Zend_Service_Technorati_Result">Zend_Service_Technorati_Result</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.searchresult"></a>48.27.8.9. Zend_Service_Technorati_SearchResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_SearchResult</code> represents a single Technorati Search query result
+                object. It is never returned as a standalone object, but it always belongs to a valid
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.searchresultset" title="48.27.8.3. Zend_Service_Technorati_SearchResultSet">Zend_Service_Technorati_SearchResultSet</a>
+                object.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_SearchResult</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.result" title="48.27.8.7. Zend_Service_Technorati_Result">Zend_Service_Technorati_Result</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.tagresult"></a>48.27.8.10. Zend_Service_Technorati_TagResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_TagResult</code> represents a single Technorati Tag query result object.
+                It is never returned as a standalone object, but it always belongs to a valid
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.tagresultset" title="48.27.8.4. Zend_Service_Technorati_TagResultSet">Zend_Service_Technorati_TagResultSet</a>
+                object.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_TagResult</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.result" title="48.27.8.7. Zend_Service_Technorati_Result">Zend_Service_Technorati_Result</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.dailycountsresult"></a>48.27.8.11. Zend_Service_Technorati_DailyCountsResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_DailyCountsResult</code> represents a single Technorati DailyCounts query
+                result object. It is never returned as a standalone object, but it always belongs to a valid
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.dailycountsresultset" title="48.27.8.5. Zend_Service_Technorati_DailyCountsResultSet">Zend_Service_Technorati_DailyCountsResultSet</a>
+                object.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_DailyCountsResult</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.result" title="48.27.8.7. Zend_Service_Technorati_Result">Zend_Service_Technorati_Result</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.tagsresult"></a>48.27.8.12. Zend_Service_Technorati_TagsResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_TagsResult</code> represents a single Technorati TopTags or BlogPostTags
+                query result object. It is never returned as a standalone object, but it always belongs to a valid
+                <a href="zend.service.technorati.html#zend.service.technorati.classes.tagsresultset" title="48.27.8.6. Zend_Service_Technorati_TagsResultSet">Zend_Service_Technorati_TagsResultSet </a>
+                object.
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="classname">Zend_Service_Technorati_TagsResult</code> extends
+                    <a href="zend.service.technorati.html#zend.service.technorati.classes.result" title="48.27.8.7. Zend_Service_Technorati_Result">Zend_Service_Technorati_Result</a>.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.getinforesult"></a>48.27.8.13. Zend_Service_Technorati_GetInfoResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_GetInfoResult</code> represents a single Technorati GetInfo query result
+                object.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.bloginforesult"></a>48.27.8.14. Zend_Service_Technorati_BlogInfoResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_BlogInfoResult</code> represents a single Technorati BlogInfo query
+                result object.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.technorati.classes.keyinforesult"></a>48.27.8.15. Zend_Service_Technorati_KeyInfoResult</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Service_Technorati_KeyInfoResult</code> represents a single Technorati KeyInfo query result
+                object. It provides information about your
+                <a href="zend.service.technorati.html#zend.service.technorati.checking-api-daily-usage" title="48.27.6. Checking Your API Key Daily Usage">Technorati <acronym class="acronym">API</acronym> Key daily usage</a>.
+            </p>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.service.strikeiron.advanced-uses.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.service.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.service.twitter.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">48.26. Zend_Service_StrikeIron: Advanced Uses </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 48.28. Zend_Service_Twitter</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

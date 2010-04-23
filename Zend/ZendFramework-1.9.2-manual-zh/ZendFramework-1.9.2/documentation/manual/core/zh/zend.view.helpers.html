@@ -1,0 +1,1600 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>61.4. 视图助手（View Helper）</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="prev" href="zend.view.scripts.html" title="61.3. 视图脚本">
+<link rel="next" href="zend.view.abstract.html" title="61.5. Zend_View_Abstract">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.view.helpers.html#zend.view.helpers.initial" title="61.4.1. 基本的助手">
+<link rel="subsection" href="zend.view.helpers.html#zend.view.helpers.paths" title="61.4.2. 助手的路径">
+<link rel="subsection" href="zend.view.helpers.html#zend.view.helpers.custom" title="61.4.3. 编写自定义的助手类">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">61.4. 视图助手（View Helper）</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.view.scripts.html">上一页</a> </td>
+<th width="60%" align="center">第 61 章 Zend_View</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.view.abstract.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.view.helpers"></a>61.4. 视图助手（View Helper）</h2></div></div></div>
+<p>
+        在你的视图脚本中，经常需要执行某些特定的复杂的功能：例如，格式化日期，生成表单对象，或者显示action的链接等等。你可以使用助手类来完成这些工作。
+    </p>
+<p>
+        助手就是简单的类。假设你想要一个名为'fooBar'的助手，缺省地，类的前缀是<code class="code">'Zend_View_Helper_'</code> （当设定助手路径时，你可以指定定制的前缀），类名的最后一部分就是助手名称；这一部分应该是TitleCapped（即像英文文章的标题一样，例如fooBar就要写成FooBar，by Jason Qi）;所以，类的全名就是<code class="code">Zend_View_Helper_FooBar</code> 。这个类应当至少有一个在助手之后命名的方法，并且是驼峰格式（即首字母小写，之后的每个单词首字母大写，例如thisIsAnExample。详见http://c2.com/cgi/wiki?CamelCase　-- Haohappy注）：<code class="code">fooBar()</code> 。
+    </p>
+<div class="note"><table border="0" summary="Note:  注意大小写 ">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 注意大小写 </th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            助手名称总是遵循驼峰格式，例如，它们从不以大写字母开头。类名是混合大小写字格式，但方法在执行时是驼峰格式。
+        </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note:  缺省助手路径 ">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 缺省助手路径 </th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            即使调用 <code class="code">setHelperPath()</code> 来重写当前的路径，缺省助手路径总是指向 Zend Framework 视图助手， 例如：'Zend/View/Helper/'，设置这个路径来确保缺省的助手工作。
+        </p></td></tr>
+</table></div>
+<p>
+       在视图脚本中，你可以用<code class="code">$this-&gt;helperName()</code>来调用helper。这时<code class="code">Zend_View</code>会加载 <code class="code">Zend_View_Helper_HelperName</code>类，建立一个对象实例，并调用它的<code class="code">helperName()</code>方法。对象的实例会在 <code class="code">Zend_View</code>的实例内一直存在，并可以被<code class="code">$this-&gt;helperName()</code>重复调用。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.view.helpers.initial"></a>61.4.1. 基本的助手</h3></div></div></div>
+<p>
+            <code class="code">Zend_View</code>自带了几个helper类，大部分是用来生成组件的和有自动转义变量的功能。另外，有些助手用来创建基于路由的URL和HTML列表以及声明变量。当前的助手包括：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                <code class="code">declareVars():</code> 当使用 <code class="code">strictVars()</code> 时很有用，这个助手可用来声明已经或还没有在View对象里设置的模板变量，并设置缺省值。当作参数传递改方法的数组将用来设置缺省值；否则，如果变量不存在，就设置一个空的字符串。
+            </p></li>
+<li><p>
+                <code class="code">fieldset($name, $content, $attribs):</code> 生成一个 XHTML fieldset. 如果 <code class="code">$attribs</code> 包含一个 'legend' 键，它的值将用于 fieldset legend。 Fieldset 将环绕在 <code class="code">$content</code> 周围提供给助手。
+            </p></li>
+<li><p>
+                <code class="code">form($name, $attribs, $content):</code> 生成一个 XHTML 表单。所有 <code class="code">$attribs</code> 转义和解析成表单标签的 XHTML 属性。如果 <code class="code">$content</code>  不以布尔 false 出现，那么内容就是在表单标签内被解析，如果 <code class="code">$content</code>  是布尔 false （缺省），只有开头的表单标签被生成。
+            </p></li>
+<li><p>
+                <code class="code">formButton($name, $value, $attribs):</code> 生成 &lt;button /&gt; 元素;
+            </p></li>
+<li>
+<p>
+                <code class="code">formCheckbox($name, $value, $attribs,$options):</code> 生成 &lt;input type="checkbox" /&gt; 元素。
+            </p>
+<p>
+                缺省地，当没有提供 $value 并且没有 $options，'0' 被假定为未选的值，'1'为选中的值。
+                如果传递 $value，但没有 $options，选中的值就被假定为传递的值。
+             </p>
+<p>
+                 $options 应当是数组。如果数组被索引，第一个值就是选中的值，第二个是未选的值，
+                  所有其它值被忽略。 你也可传递一个带有键为 'checked' 和 'unChecked' 的联合数组。
+             </p>
+<p>
+                 如果传递了 $options，如果 $value 匹配选中的值，元素将标记为选中。你也通过传递
+                 一个布尔值给属性 'checked' 来标记元素为选中或未选。
+             </p>
+<p>
+                  上述内容可能最好汇总成一些例子：
+             </p>
+<pre class="programlisting">&lt;?php
+// '1' and '0' as checked/unchecked options; not checked
+echo $this-&gt;formCheckbox('foo');
+
+// '1' and '0' as checked/unchecked options; checked
+echo $this-&gt;formCheckbox('foo', null, array('checked' =&gt; true));
+
+// 'bar' and '0' as checked/unchecked options; not checked
+echo $this-&gt;formCheckbox('foo', 'bar');
+
+// 'bar' and '0' as checked/unchecked options; checked
+echo $this-&gt;formCheckbox('foo', 'bar', array('checked' =&gt; true));
+
+// 'bar' and 'baz' as checked/unchecked options; unchecked
+echo $this-&gt;formCheckbox('foo', null, null, array('bar', 'baz');
+
+// 'bar' and 'baz' as checked/unchecked options; unchecked
+echo $this-&gt;formCheckbox('foo', null, null, array(
+    'checked' =&gt; 'bar',
+    'unChecked' =&gt; 'baz'
+));
+
+// 'bar' and 'baz' as checked/unchecked options; checked
+echo $this-&gt;formCheckbox('foo', 'bar', null, array('bar', 'baz');
+echo $this-&gt;formCheckbox('foo', null, array('checked' =&gt; true), array('bar', 'baz');
+
+// 'bar' and 'baz' as checked/unchecked options; unchecked
+echo $this-&gt;formCheckbox('foo', 'baz', null, array('bar', 'baz');
+echo $this-&gt;formCheckbox('foo', null, array('checked' =&gt; false), array('bar', 'baz');
+</pre>
+<p>
+                    对所有情况，标记预先准备一个带有未选的值的隐藏元素。
+                    这样，如果值是未选的，你将仍获得有效的返回到表单的值。
+                </p>
+</li>
+<li>
+<p>
+                    <code class="code">formErrors($errors, $options):</code> 生成一个无顺序的 XHTML 列表来显示错误。 <code class="code">$errors</code> 是个字符串或字符串数组；<code class="code">$options</code> 是你想放入开头列表标签的任何属性。
+                </p>
+<p>
+                    当通过调用助手中的方法时，你可以指定替代的开头，结尾和分隔符：
+                </p>
+<div class="itemizedlist"><ul type="circle">
+<li><p>
+                            <code class="code">setElementStart($string)</code>; 缺省为 '&lt;ul class="errors"%s"&gt;&lt;li&gt;', 其中 %s 是在  <code class="code">$options</code> 中被替换的属性。
+                    </p></li>
+<li><p>
+                            <code class="code">setElementSeparator($string)</code>; 缺省为 '&lt;/li&gt;&lt;li&gt;'。
+                    </p></li>
+<li><p>
+                            <code class="code">setElementEnd($string)</code>; 缺省为 '&lt;/li&gt;&lt;/ul&gt;'。
+                    </p></li>
+</ul></div>
+</li>
+<li><p>
+                <code class="code">formFile($name, $value, $attribs):</code> 生成&lt;input
+                type="file" /&gt;
+            </p></li>
+<li><p>
+                <code class="code">formHidden($name, $value, $attribs):</code> 生成&lt;input
+                type="hidden" /&gt;
+            </p></li>
+<li><p>
+                <code class="code">formLabel($name, $value, $attribs):</code> 生成
+                &lt;label&gt;设置 <code class="code">for</code> 属性给
+                <code class="code">$name</code>，实际的标签字符给 <code class="code">$value</code>。
+
+                如果 <code class="code">disable</code> 传递给
+                <code class="code">attribs</code>，什么都不返回。
+            </p></li>
+<li><p>
+                <code class="code">formMultiCheckbox($name, $value, $attribs, $options, $listsep):</code> 生成一个 checkboxes 列表。<code class="code">$options</code> 是个联合数组，可以有任意的深度。<code class="code">$value</code> 可以是单个的值或者是可选的匹配在 <code class="code">$options</code> 数组中的键的一个数组。<code class="code">$listsep</code> 缺省为一个 HTML break ("&lt;br /&gt;")。缺省地，这个元素被当作数组，所有 checkboxes 共享同一个名称，并以数组的形式提交。
+            </p></li>
+<li><p>
+                <code class="code">formPassword($name, $value, $attribs):</code> Creates an
+                &lt;input type="password" /&gt; element.
+            </p></li>
+<li><p>
+                <code class="code">formRadio($name, $value, $attribs, $options):</code> 生成一系列&lt;input type="button" /&gt;，每个$options数组元素一个，key为radio的值，并且元素的值是radio的标签。
+            </p></li>
+<li><p>
+                <code class="code">formReset($name, $value, $attribs):</code> 生成&lt;input
+                type="reset" /&gt;
+            </p></li>
+<li><p>
+                <code class="code">formSelect($name, $value, $attribs, $options):</code> 生成&lt;select&gt;...&lt;/select&gt;其中的每个&lt;option&gt;对应于一个$option数组元素。元素的key是option的值，元素的值是option的标签。$value这个值的option默认为选中。
+            </p></li>
+<li><p>
+                <code class="code">formSubmit($name, $value, $attribs):</code> 生成&lt;input
+                type="submit" /&gt;
+            </p></li>
+<li><p>
+                <code class="code">formText($name, $value, $attribs):</code> 生成&lt;input
+                type="text" /&gt;
+            </p></li>
+<li><p>
+                <code class="code">formTextarea($name, $value, $attribs):</code> 生成&lt;textarea&gt;...&lt;/textarea&gt;
+            </p></li>
+<li><p>
+                <code class="code">url($urlOptions, $name, $reset):</code> 基于已命名的路由生成URL字符串。<code class="code">$urlOptions</code> 必须是一个键/值对应的关联数组，用于特定的路由。
+            </p></li>
+<li><p>
+                <code class="code">htmlList($items, $ordered, $attribs):</code> 基于传递给它的 <code class="code">$items</code> 生成无序的和有序的列表。如果 <code class="code">$items</code> 是多维数组，将创建嵌套的列表。
+            </p></li>
+</ul></div>
+<p>
+            以上helper的使用非常简单，下面是个例子。注意你只需要调用即可，它们会根据需要自己加载并实例化。
+        </p>
+<pre class="programlisting">&lt;?php
+// 在你的view脚本内部, $this 指向 Zend_View 实例.
+//
+// 假设你已经为select对应的变量$countries指定一系列option值，
+// array('us' =&gt; 'United States', 'il' =&gt;
+// 'Israel', 'de' =&gt; 'Germany').
+?&gt;
+&lt;form action="action.php" method="post"&gt;
+    &lt;p&gt;&lt;label&gt;Your Email:
+        &lt;?php echo $this-&gt;formText('email', 'you@example.com', array('size' =&gt; 32)) ?&gt;
+    &lt;/label&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;label&gt;Your Country:
+        &lt;?php echo $this-&gt;formSelect('country', 'us', null, $this-&gt;countries) ?&gt;
+    &lt;/label&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;label&gt;Would you like to opt in?
+        &lt;?php echo $this-&gt;formCheckbox('opt_in', 'yes', null, array('yes', 'no')) ?&gt;
+    &lt;/label&gt;&lt;/p&gt;
+&lt;/form&gt;
+        </pre>
+<p>
+            以上视图脚本会输出这样的结果：
+        </p>
+<pre class="programlisting">&lt;form action="action.php" method="post"&gt;
+    &lt;p&gt;&lt;label&gt;Your Email:
+        &lt;input type="text" name="email" value="you@example.com" size="32" /&gt;
+    &lt;/label&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;label&gt;Your Country:
+        &lt;select name="country"&gt;
+            &lt;option value="us" selected="selected"&gt;United States&lt;/option&gt;
+            &lt;option value="il"&gt;Israel&lt;/option&gt;
+            &lt;option value="de"&gt;Germany&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/label&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;label&gt;Would you like to opt in?
+        &lt;input type="hidden" name="opt_in" value="no" /&gt;
+        &lt;input type="checkbox" name="opt_in" value="yes" checked="checked" /&gt;
+    &lt;/label&gt;&lt;/p&gt;
+&lt;/form&gt;
+        </pre>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.action"></a>61.4.1.1. 动作视图助手</h4></div></div></div>
+<p>
+        <code class="code">Action</code> 视图助手允许视图脚本执行一个特定的控制器Action；在执行之后的响应对象的结果将被返回。有时候特定的Action生成可重用内容或“widget-ized”内容（在页面内生成一个带有特定功能的小面板，类似于Windows Vista的widget，Haohappy注），这时我们就可以使用本功能。
+    </p>
+<p>
+        内部调用<code class="code">_forward()</code> 或者转向的Action在此将无效，将返回空字符串。
+    </p>
+<p>
+        <code class="code">Action</code>视图助手的API和大部分MVC组件调用控制器动作的方式一样：<code class="code">action($action,$controller, $module = null, array $params = array())</code>。<code class="code">$action</code> 和 <code class="code">$controller</code> 是必须的；如果没有指定模块，缺省模块将被使用。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.action.usage"></a><p class="title"><b>例 61.1. 动作视图助手的基本用法</b></p>
+<div class="example-contents">
+<p>
+            例如，假设你有一个<code class="code">CommentController</code> ，为了给当前请求输出评论列表，带一个可被调用的 <code class="code">listAction()</code> 方法：
+        </p>
+<pre class="programlisting">
+&lt;div id="sidebar right"&gt;
+    &lt;div class="item"&gt;
+        &lt;?= $this-&gt;action('list', 'comment', null, array('count' =&gt; 10)); ?&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+        </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.partial"></a>61.4.1.2. 区域助手（Partial Helper） </h4></div></div></div>
+<p>
+        <code class="code">Partial</code> 视图助手被用来在它自己的变量范围内解析特定的模板。主要用法是（解析）可重用的模板片段，你不需要操心变量名的冲突。另外，它们让你从特定的模块指定 partial 视图脚本。
+    </p>
+<p>
+        <code class="code">Partial</code> 的兄弟 <code class="code">PartialLoop</code> 视图助手允许传递可迭代数据并为每个条目解析一部分。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.partial.usage"></a><p class="title"><b>例 61.2.  Partials 的基本用法 </b></p>
+<div class="example-contents">
+<p>
+            partials 的基本用法是在它自己的视图范围内解析一个模板的片段。
+        </p>
+<pre class="programlisting">
+&lt;?php // partial.phtml ?&gt;
+&lt;ul&gt;
+    &lt;li&gt;From: &lt;?= $this-&gt;escape($this-&gt;from) ?&gt;&lt;/li&gt;
+    &lt;li&gt;Subject: &lt;?= $this-&gt;escape($this-&gt;subject) ?&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+<p>
+            你可以这样从视图脚本里调用它：
+        </p>
+<pre class="programlisting">
+&lt;?= $this-&gt;partial('partial.phtml', array(
+    'from' =&gt; 'Team Framework',
+    'subject' =&gt; 'view partials')); ?&gt;
+</pre>
+<p>
+            解析结果如下：
+        </p>
+<pre class="programlisting">
+&lt;ul&gt;
+    &lt;li&gt;From: Team Framework&lt;/li&gt;
+    &lt;li&gt;Subject: view partials&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note:  什么是模型（model）? ">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 什么是模型（model）? </th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+                和 <code class="code">Partial</code> 视图助手一起使用的模型（即partial()的第二个参数，Haohappy注）可以是下列其中之一：
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <span class="emphasis"><em> 数组 </em></span>。如果传递了数组，它应当是联合数组，因为它的 ‘键/值’ 对用作为视图变量的键赋值给视图。
+                </p></li>
+<li><p>
+                        <span class="emphasis"><em> 实现了toArray() 方法的对象 </em></span>。如果被传递的对象有 <code class="code">toArray()</code> 方法，<code class="code">toArray()</code>的结果将被当作视图变量赋值给视图对象。
+                </p></li>
+<li><p>
+                        <span class="emphasis"><em> 标准对象 </em></span>。 任何其它对象将把<code class="code">object_get_vars()</code>的结果（对象的所有公共属性）赋值给视图对象。
+                </p></li>
+</ul></div>
+<p>
+                如果你的模型是一个对象，你可能想让它<span class="emphasis"><em>作为对象</em></span>传递给 partial 脚本，而不是把它系列化成一个数组变量。
+                你可以通过设置适当的助手的 'objectKey' 属性来完成这个：
+            </p>
+<pre class="programlisting">
+// Tell partial to pass objects as 'model' variable
+$view-&gt;partial()-&gt;setObjectKey('model');
+
+// Tell partial to pass objects from partialLoop as 'model' variable in final
+// partial view script:
+$view-&gt;partialLoop()-&gt;setObjectKey('model');
+</pre>
+<p>
+                当传递 <code class="code">Zend_Db_Table_Rowset</code>s 给 <code class="code">partialLoop()</code>时这个技术相当有用，
+                因为你在视图脚本里有全部访问 row 对象的权限，允许你调用它们的方法（如从父或依赖的 rows 获取数据）。
+            </p>
+</td></tr>
+</table></div>
+<div class="example">
+<a name="zend.view.helpers.initial.partial.partialloop"></a><p class="title"><b>例 61.3.  使用 PartialLoop 来解析可迭代的（Iterable）的模型 </b></p>
+<div class="example-contents">
+<p>
+            可能你常常会需要在一个循环里使用 partials 来输出相同的内容片段多次，这时你就可以把大块的重复的内容或复杂的显示逻辑放到一个地方。然而这对性能有影响，因为partial助手需要在每个迭代里调用一次。
+        </p>
+<p>
+            <code class="code">PartialLoop</code> 视图助手解决了这个问题。 它允许你把迭代条目（实现<code class="code">Iterator</code>的数组或对象）当做模型来传递。它这些把这些条目当作模型迭代、传递给 partial 脚本。在迭代器里的条目可以是 <code class="code">Partial</code> 视图助手允许的任何模型。
+        </p>
+<p>
+            让我们看一下下面的 partial 视图脚本：
+        </p>
+<pre class="programlisting">
+&lt;? // partialLoop.phtml ?&gt;
+    &lt;dt&gt;&lt;?= $this-&gt;key ?&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;?= $this-&gt;value ?&gt;&lt;/dd&gt;
+
+</pre>
+<p>
+            添加下列 "model"：
+        </p>
+<pre class="programlisting">&lt;?php
+$model = array(
+    array('key' =&gt; 'Mammal', 'value' =&gt; 'Camel'),
+    array('key' =&gt; 'Bird', 'value' =&gt; 'Penguin'),
+    array('key' =&gt; 'Reptile', 'value' =&gt; 'Asp'),
+    array('key' =&gt; 'Fish', 'value' =&gt; 'Flounder'),
+);
+?&gt;</pre>
+<p>
+            在视图脚本中，你可以这样调用 <code class="code">PartialLoop</code> 助手：
+        </p>
+<pre class="programlisting">
+&lt;dl&gt;
+&lt;?= $this-&gt;partialLoop('partialLoop.phtml', $model) ?&gt;
+&lt;/dl&gt;
+</pre>
+<pre class="programlisting">
+&lt;dl&gt;&lt;/dl&gt;
+    &lt;dt&gt;Mammal&lt;/dt&gt;
+    &lt;dd&gt;Camel&lt;/dd&gt;
+
+    &lt;dt&gt;Bird&lt;/dt&gt;
+    &lt;dd&gt;Penguin&lt;/dd&gt;
+
+    &lt;dt&gt;Reptile&lt;/dt&gt;
+    &lt;dd&gt;Asp&lt;/dd&gt;
+
+    &lt;dt&gt;Fish&lt;/dt&gt;
+    &lt;dd&gt;Flounder&lt;/dd&gt;
+
+&lt;/dl&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.view.helpers.initial.partial.modules"></a><p class="title"><b>例 61.4.  在其它模块中解析 Partials </b></p>
+<div class="example-contents">
+<p>
+            有时候 partial 存在于不同的模块(Module)。如果你知道模块的名称，你可以把它当作第二个参数传递给 <code class="code">partial()</code> 或者 <code class="code">partialLoop()</code>，把 <code class="code">$model</code> 作为第三个参数。
+        </p>
+<p>
+            例如，如果一个你想用一个在 'list' 模块的 pager partial，就象下面这样来运用：
+        </p>
+<pre class="programlisting">
+&lt;?= $this-&gt;partial('pager.phtml', 'list', $pagerData) ?&gt;
+</pre>
+<p>
+            这样，你可以重用原来是特别供给其它模块使用的 partials 。所以，在共享的视图脚本路径里放置可重用的 partials 很可能是个好习惯。
+        </p>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.placeholder"></a>61.4.1.3.  占位符助手（Placeholder Helper） </h4></div></div></div>
+<p>
+        <code class="code">Placeholder</code> 视图助手用来在视图脚本和视图实例之间持久化内容。它也提供一些有用的功能如：聚合内容、抓取视图脚本内容以后来用和添加前置（pre-）和后置（post-）文本到内容 （还可以为聚合内容定制分隔符等）。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.placeholder.usage"></a><p class="title"><b>例 61.5.  占位符的基本用法 </b></p>
+<div class="example-contents">
+<p>
+            占位符的基本用法是将视图中的数据持久化。每个<code class="code">Placeholder</code>助手的启用都需要一个占位符名称，助手接着返回一个占位符容器对象，你可以用来处理或者简单地输出。
+        </p>
+<pre class="programlisting">
+&lt;?php $this-&gt;placeholder('foo')-&gt;set("Some text for later") ?&gt;
+
+&lt;?php
+    echo $this-&gt;placeholder('foo');
+    // outputs "Some text for later"
+?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.view.helpers.initial.placeholder.aggregation"></a><p class="title"><b>例 61.6.  用占位符来聚合内容 </b></p>
+<div class="example-contents">
+<p>
+            通过占位符来聚合内容有时候很有用。例如视图脚本可拥有一个变量数组来存放数据，而视图脚本可以决定这些数据如何显示出来。
+        </p>
+<p>
+            <code class="code">Placeholder</code> 视图助手使用继承自 <code class="code">ArrayObject</code> 的容器，为处理数组提供了丰富的功能。另外，它为格式化存储在容器里的内容提供了众多的方法：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setPrefix($prefix)</code> 用内容的前缀设置文本。任何时候使用 <code class="code">getPrefix()</code> 来确定当前的设置是什么。
+            </p></li>
+<li><p>
+                    <code class="code">setPostfix($prefix)</code> 用要追加的内容设置文本。任何时候使用 <code class="code">getPostfix()</code> 来确定当前的设置是什么。
+            </p></li>
+<li><p>
+                    <code class="code">setSeparator($prefix)</code> 设置用来分隔聚合内容的分隔符。任何时候使用 <code class="code">getSeparator()</code> 来确定当前的设置是什么。
+            </p></li>
+<li><p>
+                    <code class="code">setIndent($prefix)</code> 可以用来给内容设置一个缩进的值。如果传递一个整数，就按这个数量来缩进；如果传递一个字符串，就按字符串的长度来缩进。任何时候使用 <code class="code">getIndent()</code> 来确定当前的设置是什么。
+            </p></li>
+</ul></div>
+<pre class="programlisting">
+&lt;!-- first view script --&gt;
+&lt;?php $this-&gt;placeholder('foo')-&gt;exchangeArray($this-&gt;data) ?&gt;
+</pre>
+<pre class="programlisting">
+&lt;!-- later view script --&gt;
+&lt;?php
+$this-&gt;placeholder('foo')-&gt;setPrefix("&lt;ul&gt;\n    &lt;li&gt;")
+                         -&gt;setSeparator("&lt;/li&gt;&lt;li&gt;\n")
+                         -&gt;setIndent(4)
+                         -&gt;setPostfix("&lt;/li&gt;&lt;/ul&gt;\n");
+?&gt;
+
+&lt;?php
+    echo $this-&gt;placeholder('foo');
+    //输出一个带有漂亮缩进的HTML无序列表
+?&gt;
+</pre>
+<p>
+            因为 <code class="code">Placeholder</code> 容器对象从 <code class="code">ArrayObject</code> 继承而来，所以你可以很容易地给特定的键赋值，而不是简单地把它压进容器。键可以作为对象属性或数组键来访问。
+        </p>
+<pre class="programlisting">
+&lt;?php $this-&gt;placeholder('foo')-&gt;bar = $this-&gt;data ?&gt;
+&lt;?php echo $this-&gt;placeholder('foo')-&gt;bar ?&gt;
+
+&lt;?php
+$foo = $this-&gt;placeholder('foo');
+echo $foo['bar'];
+?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.view.helpers.initial.placeholder.capture"></a><p class="title"><b>例 61.7.  使用占位符（Placeholders）来抓取内容 </b></p>
+<div class="example-contents">
+<p>
+            有时你可能会在视图脚本（最容易的模板）为占位符放些内容，<code class="code">Placeholder</code> 视图助手允许你抓取任意的内容，在以后用下列的 API 来解析并输出（本功能类似于缓冲输出－－Haohappy注）：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <code class="code">captureStart($type, $key)</code> 开始抓取内容。
+                </p>
+<p>
+                    <code class="code">$type</code> 应该是 <code class="code">Placeholder</code> 的常量 <code class="code">APPEND</code> 或 <code class="code">SET</code> 其中之一。如果用 <code class="code">APPEND</code>，被抓取得内容就追加到在占位符当前内容的列表；                  如果用 <code class="code">SET</code>，被抓取得内容就被用作占位符的唯一内容（替换以前的内容）。缺省地 <code class="code">$type</code> 是 <code class="code">APPEND</code>。
+                </p>
+<p>
+                    <code class="code">$key</code>可用来在占位符容器指定一个特殊的键给你想抓取的内容。
+                </p>
+<p>
+                    <code class="code">captureStart()</code> 锁住抓取直到 <code class="code">captureEnd()</code> 被调用，不能在同一个占位符容器里嵌套抓取，这样做会引起一个异常。
+                </p>
+</li>
+<li><p>
+                    <code class="code">captureEnd()</code> 使抓取内容停止，并根据 <code class="code">captureStart()</code> 如何被调用来把它放到容器对象。
+            </p></li>
+</ul></div>
+<pre class="programlisting">
+&lt;!-- Default capture: append --&gt;
+&lt;?php $this-&gt;placeholder('foo')-&gt;captureStart();
+foreach ($this-&gt;data as $datum): ?&gt;
+&lt;div class="foo"&gt;
+    &lt;h2&gt;&lt;?= $datum-&gt;title ?&gt;&lt;/h2&gt;
+    &lt;p&gt;&lt;?= $datum-&gt;content ?&gt;&lt;/p&gt;
+&lt;/div&gt;
+ &lt;?php endforeach; ?&gt;
+&lt;?php $this-&gt;placeholder('foo')-&gt;captureEnd() ?&gt;
+
+&lt;?php echo $this-&gt;placeholder('foo') ?&gt;
+</pre>
+<pre class="programlisting">
+&lt;!-- Capture to key --&gt;
+&lt;?php $this-&gt;placeholder('foo')-&gt;captureStart('SET', 'data');
+foreach ($this-&gt;data as $datum): ?&gt;
+&lt;div class="foo"&gt;
+    &lt;h2&gt;&lt;?= $datum-&gt;title ?&gt;&lt;/h2&gt;
+    &lt;p&gt;&lt;?= $datum-&gt;content ?&gt;&lt;/p&gt;
+&lt;/div&gt;
+ &lt;?php endforeach; ?&gt;
+&lt;?php $this-&gt;placeholder('foo')-&gt;captureEnd() ?&gt;
+
+&lt;?php echo $this-&gt;placeholder('foo')-&gt;data ?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.view.helpers.initial.placeholder.implementations"></a>61.4.1.3.1.  具体占位符实现 </h5></div></div></div>
+<p>
+            Zend Framework 自带有若干个具体实现的占位符，包括常用的占位符：doctype、page title、以及各种 &lt;head&gt; 元素。对所有情况，不带参数调用占位符将返回元素自己。
+        </p>
+<p>
+            每个元素的文档，请查看如下链接：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <a href="zend.view.helpers.html#zend.view.helpers.initial.doctype" title="61.4.1.4. 文档类型助手（Doctype Helper）">Doctype</a>
+            </p></li>
+<li><p>
+                    <a href="zend.view.helpers.html#zend.view.helpers.initial.headlink" title="61.4.1.5. HeadLink 助手">HeadLink</a>
+            </p></li>
+<li><p>
+                    <a href="zend.view.helpers.html#zend.view.helpers.initial.headmeta" title="61.4.1.6. HeadMeta 助手">HeadMeta</a>
+            </p></li>
+<li><p>
+                    <a href="zend.view.helpers.html#zend.view.helpers.initial.headscript" title="61.4.1.7. HeadScript 助手">HeadScript</a>
+            </p></li>
+<li><p>
+                    <a href="zend.view.helpers.html#zend.view.helpers.initial.headstyle" title="61.4.1.8. HeadStyle 助手">HeadStyle</a>
+            </p></li>
+<li><p>
+                    <a href="zend.view.helpers.html#zend.view.helpers.initial.headtitle" title="61.4.1.9. HeadTitle 助手">HeadTitle</a>
+            </p></li>
+<li><p>
+                    <a href="zend.view.helpers.html#zend.view.helpers.initial.inlinescript" title="61.4.1.11. InlineScript 助手">InlineScript</a>
+            </p></li>
+</ul></div>
+</div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.doctype"></a>61.4.1.4. 文档类型助手（Doctype Helper）</h4></div></div></div>
+<p>
+        有效的HTML和XHTML文档应当包括一个 <code class="code">DOCTYPE</code> 声明。但是文档类型声明很难记忆，而且会影响到文档中的特定元素的解析（例如，在 <code class="code">&lt;script&gt;</code> 和 <code class="code">&lt;style&gt;</code> 元素中转义的CDATA）。
+    </p>
+<p>
+        <code class="code">Doctype</code> 助手允许指定下列类型之一：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">XHTML11</code></p></li>
+<li><p><code class="code">XHTML1_STRICT</code></p></li>
+<li><p><code class="code">XHTML1_TRANSITIONAL</code></p></li>
+<li><p><code class="code">XHTML1_FRAMESET</code></p></li>
+<li><p><code class="code">XHTML_BASIC1</code></p></li>
+<li><p><code class="code">HTML4_STRICT</code></p></li>
+<li><p><code class="code">HTML4_LOOSE</code></p></li>
+<li><p><code class="code">HTML4_FRAMESET</code></p></li>
+</ul></div>
+<p>
+        你也可以指定一个自己定制的带有良好结构的文档类型。
+    </p>
+<p>
+        <code class="code">Doctype</code>助手是 <a href="zend.view.helpers.html#zend.view.helpers.initial.placeholder" title="61.4.1.3.  占位符助手（Placeholder Helper）"> 占位符助手 </a> 的一个具体的实现。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.doctype.basicusage"></a><p class="title"><b>例 61.8. Doctype 助手的基本用法 </b></p>
+<div class="example-contents">
+<p>
+            在任何时候都可以指定 doctype。然而，依赖 doctype 输出的助手只在你设置后才认识它，所以最简单的用法是在 bootstrap 脚本中指定：
+        </p>
+<pre class="programlisting">
+$doctypeHelper = new Zend_View_Helper_Doctype();
+$doctypeHelper-&gt;doctype('XHTML1_STRICT');
+</pre>
+<p>
+            然后在布局脚本中输出：
+        </p>
+<pre class="programlisting">
+&lt;?php echo $this-&gt;doctype() ?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.view.helpers.initial.doctype.retrieving"></a><p class="title"><b>例 61.9. 获取 Doctype</b></p>
+<div class="example-contents">
+<p>
+            如果需要知道文档类型，可以在由调用助手返回的对象中调用<code class="code">getDoctype()</code>。
+        </p>
+<pre class="programlisting">&lt;?php
+$doctype = $view-&gt;doctype()-&gt;getDoctype();
+?&gt;</pre>
+<p>
+            很常见地，你需要知道doctype是否XHTML；那么，<code class="code">isXhtml()</code>方法已经足够：
+        </p>
+<pre class="programlisting">&lt;?php
+if ($view-&gt;doctype()-&gt;isXhtml()) {
+    // do something differently
+}
+?&gt;</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.headlink"></a>61.4.1.5. HeadLink 助手</h4></div></div></div>
+<p>
+        HTML的 <code class="code">&lt;link&gt;</code> 标签越来越多地用于为你的站点链接不同资源：stylesheet, feed, favicon, trackback等。<code class="code">HeadLink</code> 助手提供了一个简单的接口用来创建和聚合这些元素以供稍后在你的布局脚本里获取和输出。
+    </p>
+<p>
+        <code class="code">HeadLink</code> 助手有以下特殊的方法用来添加 stylesheet 链接：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">appendStylesheet($href, $media,
+                    $conditionalStylesheet)</code></p></li>
+<li><p><code class="code">offsetSetStylesheet($index, $href, $media,
+                    $conditionalStylesheet)</code></p></li>
+<li><p><code class="code">prependStylesheet($href, $media,
+                    $conditionalStylesheet)</code></p></li>
+<li><p><code class="code">setStylesheet($href, $media,
+                    $conditionalStylesheet)</code></p></li>
+</ul></div>
+<p>
+        <code class="code">$media</code> 值缺省为 'screen'，但可以为任何有效的媒体(media)值。<code class="code">$conditionalStylesheet</code> 是布尔值，将用于解析时来决定是否有特殊的注释应该被包括以防止在特定的平台上加载stylesheet。
+    </p>
+<p>
+        另外，<code class="code">HeadLink</code> 助手有特殊的方法用来添加 'alternate' 链接到它的堆栈：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">appendAlternate($href, $type,
+                    $title)</code></p></li>
+<li><p><code class="code">offsetSetAlternate($index, $href, $type,
+                    $title)</code></p></li>
+<li><p><code class="code">prependAlternate($href, $type,
+                    $title)</code></p></li>
+<li><p><code class="code">setAlternate($href, $type,
+                    $title)</code></p></li>
+</ul></div>
+<p>
+        <code class="code">headLink()</code> 助手方法允许指定所有的必要的属性给 <code class="code">&lt;link&gt;</code> 元素， 也允许指定替代 － 是否新元素替换所有其他的，前置（栈顶），或追加（栈底）。
+    </p>
+<p>
+        <code class="code">HeadLink</code> 助手是 <a href="zend.view.helpers.html#zend.view.helpers.initial.placeholder" title="61.4.1.3.  占位符助手（Placeholder Helper）"> 占位符助手 </a>的一个具体实现。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.headlink.basicusage"></a><p class="title"><b>例 61.10. HeadLink 助手的基本用法</b></p>
+<div class="example-contents">
+<p>
+            任何时候可以指定<code class="code">headLink</code>，典型地，将在布局脚本里指定全局链接，并在应用程序视图脚本里指定特定的链接。在布局脚本里的 &lt;head&gt; 部份，用echo来输出。
+        </p>
+<pre class="programlisting">
+&lt;?php // 在视图脚本中设置链接：
+$this-&gt;headLink()-&gt;appendStylesheet('/styles/basic.css')
+                 -&gt;headLink(array('rel' =&gt; 'favicon', 'href' =&gt; '/img/favicon.ico'), 'PREPEND')
+                 -&gt;prependStylesheet('/styles/moz.css', 'screen', true);
+?&gt;
+&lt;?php // 解析链接：?&gt;
+&lt;?= $this-&gt;headLink() ?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.headmeta"></a>61.4.1.6. HeadMeta 助手</h4></div></div></div>
+<p>
+        HTML <code class="code">&lt;meta&gt;</code>元素用来提供关于HTML文档的 meta 信息－如关键字，文档字符集，缓冲的 pragama 等。Meta标签可以是'http-equiv' 或 'name' 类型，必须包含'content'属性，并且也可以有 'lang' 或 'scheme' 修饰属性。
+    </p>
+<p>
+        <code class="code">HeadMeta</code> 助手提供下列方法来设置和添加 meta 标签：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">appendName($keyValue, $content,
+                    $conditionalName)</code></p></li>
+<li><p><code class="code">offsetSetName($index, $keyValue, $content,
+                    $conditionalName)</code></p></li>
+<li><p><code class="code">prependName($keyValue, $content,
+                    $conditionalName)</code></p></li>
+<li><p><code class="code">setName($keyValue, $content,
+                    $modifiers)</code></p></li>
+<li><p><code class="code">appendHttpEquiv($keyValue, $content,
+                    $conditionalHttpEquiv)</code></p></li>
+<li><p><code class="code">offsetSetHttpEquiv($index, $keyValue, $content,
+                    $conditionalHttpEquiv)</code></p></li>
+<li><p><code class="code">prependHttpEquiv($keyValue, $content,
+                    $conditionalHttpEquiv)</code></p></li>
+<li><p><code class="code">setHttpEquiv($keyValue, $content,
+                    $modifiers)</code></p></li>
+</ul></div>
+<p>
+        <code class="code">$keyValue</code> 参数用来定义'name'的值或'http-equive'键；<code class="code">$content</code> 是'content' 键的值，<code class="code">$modifiers</code> 是可选的包含'lang' 和/或 'scheme'键的联合数组。
+    </p>
+<p>
+        也可以用 <code class="code">headMeta()</code>  助手方法来设置 meta 标签：<code class="code">headMeta($content, $keyValue, $keyType = 'name', $modifiers = array(), $placement = 'APPEND')</code>。<code class="code">$keyValue</code> 是指定在 <code class="code">$keyType</code> 里的键的内容，<code class="code">$keyType</code> 应该是'name' 或 'http-equiv'。<code class="code">$placement</code>  可以是 'SET' （覆盖所有先前存储的值）， 'APPEND' （添加到栈尾）或 'PREPEND'（添加到栈顶）。
+    </p>
+<p>
+        <code class="code">HeadMeta</code> 覆盖每个 <code class="code">append()</code>、<code class="code">offsetSet()</code>、 <code class="code">prepend()</code> 和 <code class="code">set()</code> 来加强上面列出的特殊方法的用法。在内部，它存储每个条目为 <code class="code">stdClass</code> 令牌，它稍后用 <code class="code">itemToString()</code> 方法来序列化。这允许在堆栈的条目中执行检查，并可选地通过修改对象返回来修改这些条目。
+    </p>
+<p>
+        <code class="code">HeadMeta</code>助手是 <a href="zend.view.helpers.html#zend.view.helpers.initial.placeholder" title="61.4.1.3.  占位符助手（Placeholder Helper）"> 占位符助手 </a> 的一个具体实现。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.headmeta.basicusage"></a><p class="title"><b>例 61.11. HeadMeta 助手基本用法</b></p>
+<div class="example-contents">
+<p>
+            你可以在任何时候指定一个新的meta标签。例如指定客户端缓冲规则或SEO关键字。
+        </p>
+<p>
+            例如，如果想指定SEO关键字，要创建带有名为'keywords'和内容（在页面上和关键字有关联的）的meta名称标签：
+        </p>
+<pre class="programlisting">
+&lt;?php // setting meta keywords
+$this-&gt;headMeta()-&gt;appendName('keywords', 'framework php productivity');
+?&gt;
+</pre>
+<p>
+            如果想设置一些客户端缓冲规则，最好设置带有想执行的规则的 http-equiv 标签：
+        </p>
+<pre class="programlisting">
+&lt;?php // 禁止客户端缓存
+$this-&gt;headMeta()-&gt;appendHttpEquiv('expires', 'Wed, 26 Feb 1997 08:21:57 GMT')
+                 -&gt;appendHttpEquiv('pragma', 'no-cache')
+                 -&gt;appendHttpEquiv('Cache-Control', 'no-cache');
+?&gt;
+</pre>
+<p>
+            meta标签的另一个流行用法是设置内容类型，字符集和语言：
+        </p>
+<pre class="programlisting">
+&lt;?php // setting content type and character set
+$this-&gt;headMeta()-&gt;appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8')
+                 -&gt;appendHttpEquiv('Content-Language', 'en-US');
+?&gt;
+</pre>
+<p>
+            最后一个例子，可以使用"meta refresh" 来让页面转向，一个简单的办法来显示过渡消息：
+        </p>
+<pre class="programlisting">
+&lt;?php // 设置以下meta可使页面3秒钟后转向一个新的url
+$this-&gt;headMeta()-&gt;appendHttpEquiv('Refresh', '3;URL=http://www.some.org/some.html');
+?&gt;
+</pre>
+<p>
+            在布局脚本(layout)中放置所有meta标签后，简单地echo助手，把所有内容输出：
+        </p>
+<pre class="programlisting">
+&lt;?= $this-&gt;headMeta() ?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.headscript"></a>61.4.1.7. HeadScript 助手</h4></div></div></div>
+<p>
+        HTML <code class="code">&lt;script&gt;</code> 元素用来提供内嵌的客户端脚本元素或链接到远程包含客户端脚本代码的资源。你可以用<code class="code">HeadScript</code> 助手来管理它们。
+    </p>
+<p>
+        <code class="code">HeadScript</code> 助手支持下列方法来设置和添加脚本：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">appendFile($src, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+<li><p><code class="code">offsetSetFile($index, $src, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+<li><p><code class="code">prependFile($src, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+<li><p><code class="code">setFile($src, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+<li><p><code class="code">appendScript($script, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+<li><p><code class="code">offsetSetScript($index, $script, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+<li><p><code class="code">prependScript($script, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+<li><p><code class="code">setScript($script, $type = 'text/javascript',
+                    $attrs = array())</code></p></li>
+</ul></div>
+<p>
+        对于所有<code class="code">*File()</code>方法，<code class="code">$src</code> 是要加载的脚本的远程位置，常常以 URL 或路径的形式表示。 对于所有<code class="code">*Script()</code>方法，<code class="code">$script</code>是客户端你想用于元素中的脚本。
+    </p>
+<p>
+        <code class="code">HeadScript</code>也允许抓取脚本，然后放到其它地方，如果你想通过程序生成客户端脚本，这将很有用。下面的例子里有它的用法。
+    </p>
+<p>
+        最后，你也可以用 <code class="code">headScript()</code>方法 来快速地添加脚本元素，它的用法是： <code class="code">headScript($mode = 'FILE', $spec, $placement = 'APPEND')</code>。<code class="code">$mode</code> 是指链接一个文件还是一个脚本，可以是'FILE' 或 'SCRIPT' ，<code class="code">$spec</code> 是链接的脚本文件或脚本代码。$placement必须为'APPEND', 'PREPEND', 或'SET'其中之一.
+    </p>
+<p>
+        <code class="code">HeadScript</code> 覆盖 <code class="code">append()</code>， <code class="code">offsetSet()</code>，<code class="code">prepend()</code> 和 <code class="code">set()</code> 中的每一个来加强上述特殊方法的用法。在内部，它存储每个条目为 <code class="code">stdClass</code> 令牌，它在稍后用 <code class="code">itemToString()</code> 方法 serializes 。这允许在堆栈里检查条目，并可选地通过修改返回的对象来修改这些条目。
+    </p>
+<p>
+        The <code class="code">HeadScript</code> 助手是 <a href="zend.view.helpers.html#zend.view.helpers.initial.placeholder" title="61.4.1.3.  占位符助手（Placeholder Helper）"> 占位符助手 </a> 的一个具体实现。
+    </p>
+<div class="note"><table border="0" summary="Note: 在HTML Body中使用 InlineScript ">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">在HTML Body中使用 InlineScript </th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            当包含脚本内嵌在 HTML <code class="code">body</code>里时，应当使用<code class="code">HeadScript</code> 的兄弟助手，<a href="zend.view.helpers.html#zend.view.helpers.initial.inlinescript" title="61.4.1.11. InlineScript 助手">InlineScript</a>。为了加速页面的加载，提高用户访问速度，特别是当使用第三方分析脚本（比如Google Analytics等流量统计系统的javascript文件 --Haohappy注），把脚本放在文档的最后是一个好的习惯。
+        </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note:  任意的属性缺省关闭 （Disabled）">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 任意的属性缺省关闭 （Disabled）</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+            缺省地，<code class="code">HeadScript</code> 将只解析（render）由 W3C 赋予的 <code class="code">&lt;script&gt;</code> 属性，包括 'type'、 'charset'、 'defer'、 'language' 和 'src' 。 然而，一些 javascript 框架，如 <a href="http://www.dojotoolkit.org/" target="_top">Dojo</a>，利用定制的属性来修改行为。为了允许这样的属性，可以通过 <code class="code">setAllowArbitraryAttributes()</code> 方法来打开（enable）它们：
+        </p>
+<pre class="programlisting">&lt;?php
+$this-&gt;headScript()-&gt;setAllowArbitraryAttributes(true);
+?&gt;</pre>
+</td></tr>
+</table></div>
+<div class="example">
+<a name="zend.view.helpers.initial.headscript.basicusage"></a><p class="title"><b>例 61.12. HeadScript 助手基本用法 </b></p>
+<div class="example-contents">
+<p>
+            在任何时候可以指定一个新的脚本。如上所述，可以链接到外部资源文件或脚本自己。
+        </p>
+<pre class="programlisting">
+&lt;?php // adding scripts
+$this-&gt;headScript()-&gt;appendFile('/js/prototype.js')
+                   -&gt;appendScript($onloadScript);
+?&gt;
+</pre>
+<p>
+            在客户端脚本编程中，顺序常常很重要，因为依赖的缘故，需要确保按特定的顺序来加载库，使用 append、 prepend 和 offsetSet 指令来帮助完成任务：
+        </p>
+<pre class="programlisting">
+&lt;?php // 按顺序放置脚本文件
+
+//设置偏移量来确保这个文件最后加载
+$this-&gt;headScript()-&gt;offsetSetScript(100, '/js/myfuncs.js');
+
+//使用scriptaculous效果文件，这时append动作使用索引101，接上行代码的索引
+$this-&gt;headScript()-&gt;appendScript('/js/scriptaculous.js');
+
+//但总是保证prototype文件首先加载
+$this-&gt;headScript()-&gt;prependScript('/js/prototype.js');
+?&gt;
+</pre>
+<p>
+            当准备好输出所有脚本到布局脚本，简单地 echo 这个助手：
+        </p>
+<pre class="programlisting">
+&lt;?= $this-&gt;headScript() ?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.view.helpers.initial.headscript.capture"></a><p class="title"><b>例 61.13. Capturing Scripts Using the HeadScript Helper</b></p>
+<div class="example-contents">
+<p>
+            有时候，需要“编程式”地生成客户端脚本。你可以使用字符串串联、heredoc或类似的技术（字符串串联即$string1.$string2这种形式，heredoc即使用&lt;&lt;&lt;操作符－－Haohappy注），通常通过创建脚本和在PHP标签里做手脚会更容易些。<code class="code">HeadScript</code> 可以实现这个功能，把一段JavaScript代码抓取到堆栈中暂存（道理同缓冲输出－－Haohappy注）：
+        </p>
+<pre class="programlisting">
+&lt;?php $this-&gt;headScript()-&gt;captureStart() ?&gt;
+var action = '&lt;?= $this-&gt;baseUrl ?&gt;';
+$('foo_form').action = action;
+&lt;?php $this-&gt;headScript()-&gt;captureEnd() ?&gt;
+</pre>
+<p>
+            下面是上例中的一些假设：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    脚本将追加到堆栈。如果需要替换或者追加到堆栈顶部，那么需要分别把 'SET' 或 'PREPEND' 作为第一个参数传递给 <code class="code">captureStart()</code> 。
+            </p></li>
+<li><p>
+                    脚本 MIME 类型假定为 'text/javascript'，如果想指定一个不同的类型，需要把它作为第二个参数传递给 <code class="code">captureStart()</code> 。
+             </p></li>
+<li><p>
+                    如果需要为 <code class="code">&lt;script&gt;</code> 标签指定附加属性， 把它们放入数组作为第三个参数传递给 <code class="code">captureStart()</code> 。
+            </p></li>
+</ul></div>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.headstyle"></a>61.4.1.8. HeadStyle 助手 </h4></div></div></div>
+<p>
+        在 HTML <code class="code">&lt;head&gt;</code> 元素中 HTML <code class="code">&lt;style&gt;</code> 元素用来包含 CSS stylesheets inline 。
+    </p>
+<div class="note"><table border="0" summary="Note:  使用 HeadLink 来链接 CSS 文件 ">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 使用 HeadLink 来链接 CSS 文件 </th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            <a href="zend.view.helpers.html#zend.view.helpers.initial.headlink" title="61.4.1.5. HeadLink 助手">HeadLink</a> 为包含外部 stylesheets 应该用来生成 <code class="code">&lt;link&gt;</code> 元素。如果想定义自己的 stylesheets inline， 使用 <code class="code">HeadScript</code> 。
+        </p></td></tr>
+</table></div>
+<p>
+        <code class="code">HeadStyle</code> 助手支持下列方法来设置和添加 stylesheet 声明：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">appendStyle($content, $attributes =
+                    array())</code></p></li>
+<li><p><code class="code">offsetSetStyle($index, $content, $attributes =
+                    array())</code></p></li>
+<li><p><code class="code">prependStyle($content, $attributes =
+                    array())</code></p></li>
+<li><p><code class="code">setStyle($content, $attributes =
+                    array())</code></p></li>
+</ul></div>
+<p>
+        对于所有情况，<code class="code">$content</code>  是实际上的 CSS 声明。<code class="code">$attributes</code>  是提供给 <code class="code">style</code>  标签的任何额外的属性：lang、 title、 media 或 dir 都是允许的。
+    </p>
+<p>
+        <code class="code">HeadStyle</code>  也允许抓取样式声明，如果想用程序生成声明，然后在任何地方自由使用，这很有用。这个用法将在下面的例子给出。
+    </p>
+<p>
+        最后，你也可以用 <code class="code">headStyle()</code>方法 来快速地添加声明元素，它的用法： <code class="code">headStyle($content$placement = 'APPEND', $attributes = array())</code> 。<code class="code">$placement</code> 是 'APPEND'、 'PREPEND' 或 'SET'。
+    </p>
+<p>
+        <code class="code">HeadStyle</code> 覆盖 <code class="code">append()</code>， <code class="code">offsetSet()</code>，<code class="code">prepend()</code> 和 <code class="code">set()</code> 中的每一个来加强上述特殊方法的用法。 在内部，它存储每个条目为 <code class="code">stdClass</code> 令牌，它在稍后用 <code class="code">itemToString()</code> 方法 serializes 。这允许在堆栈里检查条目，并可选地通过修改返回的对象来修改这些条目。
+    </p>
+<p>
+        <code class="code">HeadStyle</code> 助手是 <a href="zend.view.helpers.html#zend.view.helpers.initial.placeholder" title="61.4.1.3.  占位符助手（Placeholder Helper）"> 占位符助手 </a> 的一个具体实现。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.headstyle.basicusage"></a><p class="title"><b>例 61.14. HeadStyle 助手的基本用法 </b></p>
+<div class="example-contents">
+<p>
+            在任何时候都可以指定一个新的样式标签：
+        </p>
+<pre class="programlisting">
+&lt;?php // adding styles
+$this-&gt;headStyle()-&gt;appendStyle($styles);
+?&gt;
+</pre>
+<p>
+            对 CSS 来说，顺序非常重要，因为层叠的顺序(the order of the cascade)，你需要确保样式表中的声明按特定的顺序加载。使用append、 prepend 和 offsetSet 指令可帮助你达到目的：
+         </p>
+<pre class="programlisting">
+&lt;?php // Putting styles in order
+
+// place at a particular offset:
+$this-&gt;headStyle()-&gt;offsetSetStyle(100, $customStyles);
+
+// place at end:
+$this-&gt;headStyle()-&gt;appendStyle($finalStyles);
+
+// place at beginning
+$this-&gt;headStyle()-&gt;prependStyle($firstStyles);
+?&gt;
+</pre>
+<p>
+            当准备好在布局脚本里输出所有样式声明，简单地 echo 助手：
+        </p>
+<pre class="programlisting">
+&lt;?= $this-&gt;headStyle() ?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.view.helpers.initial.headstyle.capture"></a><p class="title"><b>例 61.15.  用 HeadStyle 助手抓取样式声明 </b></p>
+<div class="example-contents">
+<p>
+            有时候需要用程序生成 CSS 样式声明。当你可以使用字符串串联，heredoc等等， 通常通过创建脚本和在PHP标签里做手脚会更容易些。<code class="code">HeadStyle</code> 可以做这个，把它抓取到堆栈：
+        </p>
+<pre class="programlisting">
+&lt;?php $this-&gt;headStyle()-&gt;captureStart() ?&gt;
+body {
+    background-color: &lt;?= $this-&gt;bgColor ?&gt;;
+}
+&lt;?php $this-&gt;headStyle()-&gt;captureEnd() ?&gt;
+</pre>
+<p>
+            下面是一些假设：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    样式声明将追加到堆栈。如果需要替换或者加到堆栈顶部，那么需要分别把 'SET' 或 'PREPEND' 作为第一个参数传递给 <code class="code">captureStart()</code> 。
+            </p></li>
+<li><p>
+                    如果想指定任何另外的属性给 <code class="code">&lt;style&gt;</code> 标签，通过数组把它们作为第二个参数传递给 <code class="code">captureStart()</code> 。
+            </p></li>
+</ul></div>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.headtitle"></a>61.4.1.9. HeadTitle 助手 </h4></div></div></div>
+<p>
+        HTML <code class="code">&lt;title&gt;</code> 元素用来提供标题给HTML文档。<code class="code">HeadTitle</code> 助手允许用程序生成和存储标题供以后解析和输出。
+    </p>
+<p>
+        <code class="code">HeadTitle</code> 助手是 <a href="zend.view.helpers.html#zend.view.helpers.initial.placeholder" title="61.4.1.3.  占位符助手（Placeholder Helper）"> 占位符助手 </a> 的一个具体实现。 它覆盖 <code class="code">toString()</code> 方法来确保生成 <code class="code">&lt;title&gt;</code> 元素，并添加一个 <code class="code">headTitle()</code> 方法来快速并容易地设置和标题元素的聚合。那个方法的 signature 是 <code class="code">headTitle($title, $setType = 'APPEND')</code>，缺省地是追加到堆栈（聚合标题元素）的值，但你也可以指定 'PREPEND' ( 放栈顶 ) 或 'SET' ( 重写堆栈 )。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.headtitle.basicusage"></a><p class="title"><b>例 61.16. HeadTitle 助手基本用法 </b></p>
+<div class="example-contents">
+<p>
+            你可以在任何时候指定一个标题标签。一般的用法可以让你在应用程序的每一个层次来设置标题段：站点、控制器、动作和潜在的资源。
+        </p>
+<pre class="programlisting">&lt;?php
+// setting the controller and action name as title segments:
+//把控制器和动作的名称设置为标题的一部分
+$request = Zend_Controller_Front::getInstance()-&gt;getRequest();
+$this-&gt;headTitle($request-&gt;getActionName())
+     -&gt;headTitle($request-&gt;getControllerName());
+
+// setting the site in the title; possibly in the layout script:
+//添加标题内容，这种写法常用于布局脚本中
+$this-&gt;headTitle('Zend Framework');
+
+// setting a separator string for segments:
+//为标题的各部分设置分隔符
+$this-&gt;headTitle()-&gt;setSeparator(' / ');
+?&gt;
+</pre>
+<p>
+            在布局脚本中准备好标题后，使用echo即可输出：
+        </p>
+<pre class="programlisting">
+&lt;!-- renders &lt;action&gt; / &lt;controller&gt; / Zend Framework --&gt;
+&lt;?= $this-&gt;headTitle() ?&gt;
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.object"></a>61.4.1.10. HTML 对象助手</h4></div></div></div>
+<p>
+        HTML <code class="code">&lt;object&gt;</code> 元素在网页里用于嵌入媒体如 Flash 或 QuickTime。
+        对象视图助手用最小的代价来帮助嵌入媒体。
+    </p>
+<p>
+        有四个初始的对象助手：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                <code class="code">formFlash</code>
+                为嵌入 Flash 文件生成 markup。
+            </p></li>
+<li><p>
+                <code class="code">formObject</code>
+                为嵌入定制对象生成 markup。
+            </p></li>
+<li><p>
+                <code class="code">formPage</code>
+                为嵌入其它 (X)HTML 页面生成 markup。
+            </p></li>
+<li><p>
+                <code class="code">formQuicktime</code>
+                为嵌入 QuickTime 文件生成 markup。
+            </p></li>
+</ul></div>
+<p>
+        所有这些助手使用相似的接口。这样，本文档只包含两个助手的例子。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.object.flash"></a><p class="title"><b>例 61.17. Flash 助手</b></p>
+<div class="example-contents">
+<p>
+            使用助手嵌入 Flash 到你的页面相当简单。唯一需要的参数是资源 URI。
+        </p>
+<pre class="programlisting">&lt;?php echo $this-&gt;htmlFlash('/path/to/flash.swf'); ?&gt;</pre>
+<p>
+            它输出下列 HTML:
+        </p>
+<pre class="programlisting">
+&lt;object data="/path/to/flash.swf" type="application/x-shockwave-flash"
+    classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+    codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab"&gt;
+&lt;/object&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><p>
+        另外你可以指定可以和 <code class="code">&lt;object&gt;</code> 一起解析的属性、参数和内容。
+        这个用 <code class="code">htmlObject</code> 助手来示范。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.object.object"></a><p class="title"><b>例 61.18.  通过传递另外的参数来定制对象 </b></p>
+<div class="example-contents">
+<p>
+            对象助手里的第一个参数总是必需的，它是你想嵌入的资源的 URI。
+            第二个参数只对 <code class="code">htmlObject</code>  助手是必需的，其它助手对这个参数已经有了正确的值。
+            第三个参数用来传递属性到对象元素，它只接受带有key-value对的数组，<code class="code">classid</code> 和 <code class="code">codebase</code> 是这个属性的例子。
+            第四个参数也用带有key-value对的数组并用它们生成 <code class="code">&lt;param&gt;</code>  元素，你将很快看到一个这样的例子。
+            最后一个是提供另外的内容给对象的选项。来看一下使用所有参数的例子。
+        </p>
+<pre class="programlisting">
+echo $this-&gt;htmlObject(
+    '/path/to/file.ext',
+    'mime/type',
+    array(
+        'attr1' =&gt; 'aval1',
+        'attr2' =&gt; 'aval2'
+    ),
+    array(
+        'param1' =&gt; 'pval1',
+        'param2' =&gt; 'pval2'
+    ),
+    'some content'
+);
+
+/*
+这将输出:
+
+&lt;object data="/path/to/file.ext" type="mime/type"
+    attr1="aval1" attr2="aval2"&gt;
+    &lt;param name="param1" value="pval1" /&gt;
+    &lt;param name="param2" value="pval2" /&gt;
+    some content
+&lt;/object&gt;
+*/
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.inlinescript"></a>61.4.1.11. InlineScript 助手 </h4></div></div></div>
+<p>
+        HTML <code class="code">&lt;script&gt;</code> 标签用来提供内嵌的客户端脚本，或者链接到远程包含客户端脚本代码的资源。<code class="code">InlineScript</code> 助手允许你管理这两者。它由<a href="zend.view.helpers.html#zend.view.helpers.initial.headscript" title="61.4.1.7. HeadScript 助手">HeadScript</a>派生，并且HeadScript助手的任何方法都可用，唯一不同的是需要用 <code class="code">inlineScript()</code> 方法代替 <code class="code">headScript()</code>。
+    </p>
+<div class="note"><table border="0" summary="Note:  在 HTML Body 里脚本使用 InlineScript ">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 在 HTML Body 里脚本使用 InlineScript </th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+            如果想在HTML <code class="code">body</code>里内嵌脚本，应当使用 <code class="code">InlineScript</code> 。为了加快页面加载速度（特别是使用第三方分析脚本时），把脚本放到文档的尾部是个很好的习惯。
+        </p>
+<p>
+            一些 JS 库必须包含在 HTML <code class="code">head</code>部分，对于这些类库请使用 <a href="zend.view.helpers.html#zend.view.helpers.initial.headscript" title="61.4.1.7. HeadScript 助手">HeadScript</a> 。
+        </p>
+</td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.json"></a>61.4.1.12.  JSON 助手 </h4></div></div></div>
+<p>
+        当创建返回 JSON 的视图，设置适当的响应头也非常重要，JSON 视图助手就是来做这个的。另外，缺省地，它关闭（disable）了布局（如果布局是打开（enable）的），因为布局一般不和 JSON 响应一起使用。
+    </p>
+<p>
+        JSON 助手设置下列的头：
+    </p>
+<pre class="programlisting">
+Content-Type: application/json
+</pre>
+<p>
+        当解析响应来决定如何处理内容，大部分 AJAX 库寻找这个头。
+    </p>
+<p>
+        JSON 助手的用法相当简单：
+    </p>
+<pre class="programlisting">&lt;?php
+&lt;?= $this-&gt;json($this-&gt;data) ?&gt;
+?&gt;</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.view.helpers.initial.translate"></a>61.4.1.13.  翻译助手 </h4></div></div></div>
+<p>
+        通常，网站支持多种语言。使用 <a href="zend.translate.html#zend.translate.introduction" title="57.1. 简介">Zend 翻译 </a> 来翻译网站的内容并且 使用 <code class="code"> 翻译 </code> 视图助手来在视图里集成 <code class="code">Zend 翻译 </code>。
+    </p>
+<p>
+        在下面所有的例子里我们使用简单的数组翻译适配器（Array Translation Adapter）。当然你也可以使用任何 <code class="code">Zend_Translate</code> 的实例和 <code class="code">Zend_Translate_Adapter</code> 的任何子类。有若干方法来实例化<code class="code"> 翻译 </code>视图助手：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                已注册的，通过先前注册的实例
+            </p></li>
+<li><p>
+                后来地，通过 fluent interface （流利的接口？我还没有找到合适的词汇，by Jason Qi）
+            </p></li>
+<li><p>
+                直接地，通过实例化类
+            </p></li>
+</ul></div>
+<p>
+        <code class="code">Zend_Translate</code> 的已注册的实例是这个助手的首选用法。你也可以简单地在添加适配器到注册表之前选择被使用的地点（locale）
+    </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            我们用地点（locales）而不用语言是因为一种语音也可以包含一个地区。例如英语有不同的方言，有英国英语和美国英语，因此我们用“地点”而不说“语言”。
+        </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.registered"></a><p class="title"><b>例 61.19.  已注册的实例 </b></p>
+<div class="example-contents">
+<p>
+            为使用已注册的实例就是创建一个 <code class="code">Zend_Translate</code> 或者 <code class="code">Zend_Translate_Adapter</code> 的实例并在 <code class="code">Zend_Registry</code> 里用 <code class="code">Zend_Translate</code> 作为它的键。
+        </p>
+<pre class="programlisting">&lt;?php
+// 我们的例子适配器
+$adapter = new Zend_Translate('array', array('simple' =&gt; 'einfach'), 'de');
+Zend_Registry::set('Zend_Translate', $adapter);
+
+// 在视图中
+echo $this-&gt;translate('simple');
+// 返回 'einfach'
+?&gt;</pre>
+</div>
+</div>
+<br class="example-break"><p>
+        如果你熟悉 fluent interface ，那么也可以在视图里创建一个实例然后实例化这个助手。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.afterwards"></a><p class="title"><b>例 61.20.  在视图里 </b></p>
+<div class="example-contents">
+<p>
+            为了使用 fluent interface ，创建一个 <code class="code">Zend_Translate</code> 或者 <code class="code">Zend_Translate_Adapter</code> 的实例，调用不带参数的助手并调用 <code class="code">setTranslator</code> 方法。
+        </p>
+<pre class="programlisting">&lt;?php
+// 在视图里
+$adapter = new Zend_Translate('array', array('simple' =&gt; 'einfach'), 'de');
+$this-&gt;translate()-&gt;setTranslator($adapter)-&gt;translate('simple');
+// 返回 'einfach'
+?&gt;</pre>
+</div>
+</div>
+<br class="example-break"><p>
+        如果你使用没有<code class="code">Zend_View</code>的助手，那么你也可以直接使用它。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.directly"></a><p class="title"><b>例 61.21.  直接用法 </b></p>
+<div class="example-contents">
+<pre class="programlisting">&lt;?php
+// 我们的例子适配器
+$adapter = new Zend_Translate('array', array('simple' =&gt; 'einfach'), 'de');
+
+// 实例化适配器
+$translate = new Zend_View_Helper_Translate($adapter);
+print $translate-&gt;translate('simple'); // this returns 'einfach'
+?&gt;</pre>
+<p>
+            如果你不用 <code class="code">Zend_View</code> 你将需要这样做并需要创建一个已翻译的输出。
+        </p>
+</div>
+</div>
+<br class="example-break"><p>
+        就象已经知道，<code class="code">translate()</code> 方法用来返回翻译。用需要的翻译适配器的信息 id 来调用它。但它也可以在翻译字符串里替换参数。因此，它有两个方法接受变量参数。或者是参数类表，或者是参数数组。如下例：
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.parameter"></a><p class="title"><b>例 61.22.  单个参数 </b></p>
+<div class="example-contents">
+<p>
+            使用单个参数就把它添加到这个方法。
+        </p>
+<pre class="programlisting">&lt;?php
+// 在视图里
+$date = "Monday";
+$this-&gt;translate("Today is %1\$s", $date);
+// 应当返回 'Heute ist Monday'
+?&gt;</pre>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            记住如果使用的参数也是文本，你可能也要翻译这些参数。
+        </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.parameterlist"></a><p class="title"><b>例 61.23.  参数列表 </b></p>
+<div class="example-contents">
+<p>
+            使用参数列表并添加给方法。
+        </p>
+<pre class="programlisting">&lt;?php
+// 在视图里
+$date = "Monday";
+$month = "April";
+$time = "11:20:55";
+$this-&gt;translate("Today is %1\$s in %2\$s. Actual time: %3\$s", $date, $month, $time);
+// 应当返回 'Heute ist Monday in April. Aktuelle Zeit: 11:20:55'
+?&gt;</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.view.helpers.initial.translate.parameterarray"></a><p class="title"><b>例 61.24.  参数数组 </b></p>
+<div class="example-contents">
+<p>
+            使用参数数组并添加到方法。
+        </p>
+<pre class="programlisting">&lt;?php
+// 在视图里
+$date = array("Monday", "April", "11:20:55");
+$this-&gt;translate("Today is %1\$s in %2\$s. Actual time: %3\$s", $date);
+// 应当返回 'Heute ist Monday in April. Aktuelle Zeit: 11:20:55'
+?&gt;</pre>
+</div>
+</div>
+<br class="example-break"><p>
+        有时候必需要修改翻译的地点。可以通过动态翻译或者把所有的静态翻译来完成。并且你可以使用参数类表和参数数组。在这两种情况下，地点被当作最后一个单个参数给出。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.dynamic"></a><p class="title"><b>例 61.25.  动态修改地点 （locale）</b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+// 在视图里
+$date = array("Monday", "April", "11:20:55");
+$this-&gt;translate("Today is %1\$s in %2\$s. Actual time: %3\$s", $date, 'it');
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+        这个例子为 messageid 返回意大利语的翻译。但它将只能用一次。下个翻译将从适配器里设置地点。通常地在添加它到注册表之前你将在翻译适配器里设置期望的地点。但你也可以从助手里设置地点：
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.static"></a><p class="title"><b>例 61.26.  静态修改地点 （locale）</b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+// 在视图里
+$date = array("Monday", "April", "11:20:55");
+$this-&gt;translate()-&gt;setLocale('it');
+$this-&gt;translate("Today is %1\$s in %2\$s. Actual time: %3\$s", $date);
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+        在上面的例子里设置 <code class="code">'it'</code> 为新的缺省地点，它将被用来给所有将来的翻译。
+    </p>
+<p>
+        当然，还有 <code class="code">getLocale()</code> 方法来获得当前设置的地点。
+    </p>
+<div class="example">
+<a name="zend.view.helpers.initial.translate.getlocale"></a><p class="title"><b>例 61.27.  获得当前设置的地点 </b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+// 在视图里
+$date = array("Monday", "April", "11:20:55");
+
+// 从上面的例子里返回 'de' 作为缺省地点
+$this-&gt;translate()-&gt;getLocale();
+
+$this-&gt;translate()-&gt;setLocale('it');
+$this-&gt;translate("Today is %1\$s in %2\$s. Actual time: %3\$s", $date);
+
+// 返回 'it' 为新的缺省地点
+$this-&gt;translate()-&gt;getLocale();
+?&gt;</pre></div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.view.helpers.paths"></a>61.4.2. 助手的路径</h3></div></div></div>
+<p>
+            就像可以指定视图脚本的路径，控制器也可以为<code class="code">Zend_View</code>设定助手类的路径。默认地，<code class="code">Zend_View</code>会到 “Zend/View/Helper/”下查找助手类。可以用 <code class="code">setHelperPath()</code> 和 <code class="code">addHelperPath()</code> 方法来告诉 <code class="code">Zend_View</code> 从其它地方来找路径。另外，你也可以指定类名的前缀，用于指定助手类所在的路径，允许给助手类命名空间。默认情况下，如果没有给出前缀，会假设使用“Zend_View_Helper_”。
+        </p>
+<pre class="programlisting">&lt;?php
+$view = new Zend_View();
+
+// 设置路径为：/path/to/more/helpers, 通过使用前缀 'My_View_Helper'
+$view-&gt;setHelperPath('/path/to/more/helpers', 'My_View_Helper');
+        </pre>
+<p>
+            你可以用<code class="code">addHelperPath()</code>来增加helper的路径， <code class="code">Zend_View</code>将使用最近增加的路径。这样你可以使用自己的helper。
+        </p>
+<pre class="programlisting">&lt;?php
+$view = new Zend_View();
+// Add /path/to/some/helpers with class prefix 'My_View_Helper'
+$view-&gt;addHelperPath('/path/to/some/helpers', 'My_View_Helper');
+// Add /other/path/to/helpers with class prefix 'Your_View_Helper'
+$view-&gt;addHelperPath('/other/path/to/helpers', 'Your_View_Helper');
+
+// now when you call $this-&gt;helperName(), Zend_View will look first for
+// "/path/to/some/helpers/HelperName" using class name "Your_View_Helper_HelperName",
+// then for "/other/path/to/helpers/HelperName.php" using class name "My_View_Helper_HelperName",
+// and finally for "Zend/View/Helper/HelperName.php" using class name "Zend_View_Helper_HelperName".
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.view.helpers.custom"></a>61.4.3. 编写自定义的助手类</h3></div></div></div>
+<p>
+            编写自定义的助手类很容易，只要遵循以下几个原则即可：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                helper的类名最后部分必须是helper的名称，并使用混合大小写字格式。例如，你在写一个名为“specialPurpose”的类，类名将至少是"SpecialPurpose"，另外你还应该给类名加上前缀，建议将“View_Helper”作为前缀的一部份：“My_View_Helper_SpecialPurpose”。（注意大小写）你将需要将前缀（包含或不包含下划线）传递给<code class="code">addHelperPath()</code> 或 <code class="code">setHelperPath()</code>。
+            </p></li>
+<li><p>
+                类中必须有一个public的方法，该方法名与helper类名相同。该方法将在你的模板调用"$this-&gt;specialPurpose()"时执行。在我们的“specialPurpose”例子中，相应的方法声明可以是“public function specialPurpose()”。
+            </p></li>
+<li><p>
+                一般来说，助手类不应该echo或print或有其它形式的输出。它只需要返回值就可以了。返回的数据应当被转义。
+            </p></li>
+<li><p>
+                类文件的命名应该是助手类的名称，比如在"specialPurpose"例子中，文件要存为“SpecialPurpose.php”。
+            </p></li>
+</ul></div>
+<p>
+            把助手类的文件放在你的助手路径下， <code class="code">Zend_View</code>就会自动加载，实例化，持久化，并执行。
+        </p>
+<p>
+            下面是一个<code class="code">SpecialPurpose</code> 助手代码的例子：
+        </p>
+<pre class="programlisting">&lt;?php
+class My_View_Helper_SpecialPurpose
+{
+    protected $_count = 0;
+    public function specialPurpose()
+    {
+        $this-&gt;_count++;
+        $output = "I have seen 'The Jerk' {$this-&gt;_count} time(s).";
+        return htmlspecialchars($output);
+    }
+}
+        </pre>
+<p>
+            在视图代码中，可以调用 <code class="code">SpecialPurpose</code> 助手任意次。它将被实例化一次，并且会在<code class="code">Zend_View</code>实例的生命周期内持久存在。
+        </p>
+<pre class="programlisting">&lt;?php
+// remember, in a view script, $this refers to the Zend_View instance.
+echo $this-&gt;specialPurpose();
+echo $this-&gt;specialPurpose();
+echo $this-&gt;specialPurpose();
+        </pre>
+<p>
+            输出结果如下所示：
+        </p>
+<pre class="programlisting">I have seen 'The Jerk' 1 time(s).
+I have seen 'The Jerk' 2 time(s).
+I have seen 'The Jerk' 3 time(s).
+        </pre>
+<p>
+            有时候需要访问调用<code class="code">Zend_View</code> 对象－例如，如果需要使用已指定的编码字符集，或想解析其它视图脚本作为助手的一部分。为了访问视图对象，助手类应该有一个 <code class="code">setView($view)</code> 方法，如下：
+        </p>
+<pre class="programlisting">&lt;?php
+class My_View_Helper_ScriptPath
+{
+    public $view;
+
+    public function setView(Zend_View_Interface $view)
+    {
+        $this-&gt;view = $view;
+    }
+
+    public function scriptPath($script)
+    {
+        return $this-&gt;view-&gt;getScriptPath($script);
+    }
+}
+        </pre>
+<p>
+            如果助手类有一个 <code class="code">setView()</code> 方法，它将在助手类第一次实例化时被调用，并接受当前视图对象作为参数。是否让它在类里持久和如何访问，都完全取决于你。
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.view.scripts.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.view.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.view.abstract.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">61.3. 视图脚本 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 61.5. Zend_View_Abstract</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

@@ -1,0 +1,608 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A.2. PHP 扩展</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="requirements.html" title="附录 A. 系统需求">
+<link rel="prev" href="requirements.html" title="附录 A. 系统需求">
+<link rel="next" href="requirements.zendcomponents.html" title="A.3. Zend Framework 组件">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">A.2. PHP 扩展</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="requirements.html">上一页</a> </td>
+<th width="60%" align="center">附录 A. 系统需求</th>
+<td width="20%" align="right"> <a accesskey="n" href="requirements.zendcomponents.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="requirements.extensions"></a>A.2. PHP 扩展</h2></div></div></div>
+<p>
+            下面列出了所有 PHP 内建支持的扩展，以及它们在 Zend Framework 中如何应用。
+            这个可以帮助了解哪个扩展需要在应用中使用。
+            不是每一个被 Zend Framework 使用的扩展都要应用在程序中。
+        </p>
+<p>
+            使用方式“依赖”表示当扩展不可用时，组件或者类也不可使用。
+            使用方式“可选”表示当扩展不可用时，组件或者类自动使用代替方案。
+        </p>
+<div class="table">
+<a name="id3069592"></a><p class="title"><b>表 A.1. Zend Framework 使用的 PHP 扩展</b></p>
+<div class="table-contents"><table summary="Zend Framework 使用的 PHP 扩展" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>扩展</th>
+<th>使用方式</th>
+<th>使用扩展的 Zend Framework 组件</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.apc.php" target="_top"><code class="code">apc</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.cache.backends.html" target="_top"><code class="code">Zend_Cache_Backend_Apc</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.bc.php" target="_top"><code class="code">bcmath</code></a></td>
+<td>可选</td>
+<td><a href="http://framework.zend.com/manual/en/zend.locale.html" target="_top"><code class="code">Zend_Locale_Math</code></a></td>
+</tr>
+<tr>
+<td><a href="http://pecl.php.net/package/Bitset" target="_top"><code class="code">bitset</code></a></td>
+<td>可选</td>
+<td><a href="http://framework.zend.com/manual/en/zend.search.lucene.html" target="_top"><code class="code">Zend_Search_Lucene</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.bzip2.php" target="_top"><code class="code">bz2</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.calendar.php" target="_top"><code class="code">calendar</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.com.php" target="_top"><code class="code">com_dotnet</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ctype.php" target="_top"><code class="code">ctype</code></a></td>
+<td>依赖</td>
+<td>
+                           <a href="http://framework.zend.com/manual/en/zend.auth.adapter.http.html" target="_top"><code class="code">Zend_Auth_Adapter_Http</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.gdata.html" target="_top"><code class="code">Zend_Gdata_App</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.http.html" target="_top"><code class="code">Zend_Http_Client</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.pdf.html" target="_top"><code class="code">Zend_Pdf</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.rest.client.html" target="_top"><code class="code">Zend_Rest_Client</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.rest.server.html" target="_top"><code class="code">Zend_Rest_Server</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.search.lucene.html" target="_top"><code class="code">Zend_Search_Lucene</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.uri.html" target="_top"><code class="code">Zend_Uri</code></a>,
+                           <a href="http://framework.zend.com/manual/en/zend.validate.html" target="_top"><code class="code">Zend_Validate</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.curl.php" target="_top"><code class="code">curl</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.http.client.adapters.html" target="_top"><code class="code">Zend_Http_Client_Adapter_Curl</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.datetime.php" target="_top"><code class="code">date</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.dba.php" target="_top"><code class="code">dba</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.dbase.php" target="_top"><code class="code">dbase</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.dom.php" target="_top"><code class="code">dom</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://framework.zend.com/manual/en/zend.feed.html" target="_top"><code class="code">Zend_Feed</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.gdata.html" target="_top"><code class="code">Zend_Gdata</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.log.formatters.html" target="_top"><code class="code">Zend_Log_Formatter_Xml</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.rest.server.html" target="_top"><code class="code">Zend_Rest_Server</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.search.lucene.html" target="_top"><code class="code">Zend_Search_Lucene</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.amazon.html" target="_top"><code class="code">Zend_Service_Amazon</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.delicious.html" target="_top"><code class="code">Zend_Service_Delicious</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.flickr.html" target="_top"><code class="code">Zend_Service_Flickr</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.simpy.html" target="_top"><code class="code">Zend_Service_Simpy</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.yahoo.html" target="_top"><code class="code">Zend_Service_Yahoo</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.xmlrpc.html" target="_top"><code class="code">Zend_XmlRpc</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.exif.php" target="_top"><code class="code">exif</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.fbsql.php" target="_top"><code class="code">fbsql</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.fdf.php" target="_top"><code class="code">fdf</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.filter.php" target="_top"><code class="code">filter</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ftp.php" target="_top"><code class="code">ftp</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.image.php" target="_top"><code class="code">gd</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.pdf.html" target="_top"><code class="code">Zend_Pdf</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.gettext.php" target="_top"><code class="code">gettext</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.gmp.php" target="_top"><code class="code">gmp</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.hash.php" target="_top"><code class="code">hash</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.auth.adapter.http.html" target="_top"><code class="code">Zend_Auth_Adapter_Http</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ibm-db2.php" target="_top"><code class="code">ibm_db2</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Db2</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.iconv.php" target="_top"><code class="code">iconv</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://framework.zend.com/manual/en/zend.locale.parsing.html" target="_top"><code class="code">Zend_Locale_Format</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.mime.html" target="_top"><code class="code">Zend_Mime_Decode</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.pdf.html" target="_top"><code class="code">Zend_Pdf</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.search.lucene.html" target="_top"><code class="code">Zend_Search_Lucene</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.audioscrobbler.html" target="_top"><code class="code">Zend_Service_Audioscrobbler</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.flickr.html" target="_top"><code class="code">Zend_Service_Flickr</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.xmlrpc.client.html" target="_top"><code class="code">Zend_XmlRpc_Client</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.imap.php" target="_top"><code class="code">imap</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ifx.php" target="_top"><code class="code">informix</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ibase.php" target="_top"><code class="code">interbase</code></a></td>
+<td>依赖</td>
+<td>Zend_Db_Adapter_Firebird</td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.json.php" target="_top"><code class="code">json</code></a></td>
+<td>可选</td>
+<td><a href="http://framework.zend.com/manual/en/zend.json.html" target="_top"><code class="code">Zend_Json</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ldap.php" target="_top"><code class="code">ldap</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.libxml.php" target="_top"><code class="code">libxml</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://www.php.net/manual/zh/ref.dom.php" target="_top"><code class="code">DOM</code></a>,
+                            <a href="http://www.php.net/manual/zh/ref.simplexml.php" target="_top"><code class="code">SimpleXML</code></a>,
+                            <a href="http://www.php.net/manual/zh/ref.xslt.php" target="_top"><code class="code">XSLT</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.mbstring.php" target="_top"><code class="code">mbstring</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.feed.html" target="_top"><code class="code">Zend_Feed</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.mcrypt.php" target="_top"><code class="code">mcrypt</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.memcache.php" target="_top"><code class="code">memcache</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.cache.backends.html" target="_top"><code class="code">Zend_Cache_Backend_Memcached</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.mhash.php" target="_top"><code class="code">mhash</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.mime-magic.php" target="_top"><code class="code">mime_magic</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.http.html" target="_top"><code class="code">Zend_Http_Client</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ming.php" target="_top"><code class="code">ming</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.msql.php" target="_top"><code class="code">msql</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.mssql.php" target="_top"><code class="code">mssql</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.mysql.php" target="_top"><code class="code">mysql</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.mysqli.php" target="_top"><code class="code">mysqli</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Mysqli</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.ncurses.php" target="_top"><code class="code">ncurses</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.oci8.php" target="_top"><code class="code">oci8</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Oracle</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.uodbc.php" target="_top"><code class="code">odbc</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.openssl.php" target="_top"><code class="code">openssl</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pcntl.php" target="_top"><code class="code">pcntl</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pcre.php" target="_top"><code class="code">pcre</code></a></td>
+<td>依赖</td>
+<td>Virtually all components</td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pdo.php" target="_top"><code class="code">pdo</code></a></td>
+<td>依赖</td>
+<td>All PDO database adapters</td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pdo-dblib.php" target="_top"><code class="code">pdo_dblib</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pdo-firebird.php" target="_top"><code class="code">pdo_firebird</code></a></td>
+<td>--</td>
+<td> </td>
+</tr>
+<tr>
+<td><code class="code">pdo_mssql</code></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Pdo_Mssql</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pdo-mysql.php" target="_top"><code class="code">pdo_mysql</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Pdo_Mysql</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pdo-oci.php" target="_top"><code class="code">pdo_oci</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Pdo_Oci</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pdo-pgsql.php" target="_top"><code class="code">pdo_pgsql</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Pdo_Pgsql</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pdo-sqlite.php" target="_top"><code class="code">pdo_sqlite</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.db.html" target="_top"><code class="code">Zend_Db_Adapter_Pdo_Sqlite</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pgsql.php" target="_top"><code class="code">pgsql</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.posix.php" target="_top"><code class="code">posix</code></a></td>
+<td>可选</td>
+<td><a href="http://framework.zend.com/manual/en/zend.mail.html" target="_top"><code class="code">Zend_Mail</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.pspell.php" target="_top"><code class="code">pspell</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.readline.php" target="_top"><code class="code">readline</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.recode.php" target="_top"><code class="code">recode</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/language.oop5.reflection.php" target="_top"><code class="code">Reflection</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://framework.zend.com/manual/en/zend.controller.html" target="_top"><code class="code">Zend_Controller</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.filter.html" target="_top"><code class="code">Zend_Filter</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.filter.input.html" target="_top"><code class="code">Zend_Filter_Input</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.json.html" target="_top"><code class="code">Zend_Json</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.log.html" target="_top"><code class="code">Zend_Log</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.rest.server.html" target="_top"><code class="code">Zend_Rest_Server</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.server.reflection.html" target="_top"><code class="code">Zend_Server_Reflection</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.validate.html" target="_top"><code class="code">Zend_Validate</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.view.html" target="_top"><code class="code">Zend_View</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.xmlrpc.server.html" target="_top"><code class="code">Zend_XmlRpc_Server</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.session.php" target="_top"><code class="code">session</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://framework.zend.com/manual/en/zend.controller.actionhelpers.html" target="_top"><code class="code">Zend_Controller_Action_Helper_Redirector</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.session.html" target="_top"><code class="code">Zend_Session</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.shmop.php" target="_top"><code class="code">shmop</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.simplexml.php" target="_top"><code class="code">SimpleXML</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://framework.zend.com/manual/en/zend.config.adapters.xml.html" target="_top"><code class="code">Zend_Config_Xml</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.feed.html" target="_top"><code class="code">Zend_Feed</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.rest.client.html" target="_top"><code class="code">Zend_Rest_Client</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.service.audioscrobbler.html" target="_top"><code class="code">Zend_Service_Audioscrobbler</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.xmlrpc.html" target="_top"><code class="code">Zend_XmlRpc</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.soap.php" target="_top"><code class="code">soap</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.service.strikeiron.html" target="_top"><code class="code">Zend_Service_StrikeIron</code></a></td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.sockets.php" target="_top"><code class="code">sockets</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.spl.php" target="_top"><code class="code">SPL</code></a></td>
+<td>依赖</td>
+<td>Virtually all components</td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/en/ref.sqlite.php" target="_top"><code class="code">SQLite</code></a></td>
+<td>依赖</td>
+<td><a href="http://framework.zend.com/manual/en/zend.cache.backends.html" target="_top">Zend_Cache_Backend_Sqlite</a></td>
+</tr>
+<tr>
+<td><code class="code">standard</code></td>
+<td>依赖</td>
+<td>Virtually all components</td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.sybase.php" target="_top"><code class="code">sybase</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td>sysvmsg</td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td>sysvsem</td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td>sysvshm</td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.tidy.php" target="_top"><code class="code">tidy</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.tokenizer.php" target="_top"><code class="code">tokenizer</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.wddx.php" target="_top"><code class="code">wddx</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.xml.php" target="_top"><code class="code">xml</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://framework.zend.com/manual/en/zend.translate.adapter.html" target="_top"><code class="code">Zend_Translate_Adapter_Qt</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.translate.adapter.html" target="_top"><code class="code">Zend_Translate_Adapter_Tmx</code></a>,
+                            <a href="http://framework.zend.com/manual/en/zend.translate.adapter.html" target="_top"><code class="code">Zend_Translate_Adapter_Xliff</code></a>
+                        </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.xmlreader.php" target="_top"><code class="code">XMLReader</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.xmlrpc.php" target="_top"><code class="code">xmlrpc</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.xmlwriter.php" target="_top"><code class="code">XMLWriter</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.xsl.php" target="_top"><code class="code">xsl</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.zip.php" target="_top"><code class="code">zip</code></a></td>
+<td>---</td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="http://www.php.net/manual/zh/ref.zlib.php" target="_top"><code class="code">zlib</code></a></td>
+<td>依赖</td>
+<td>
+                            <a href="http://framework.zend.com/manual/en/zend.pdf.html" target="_top"><code class="code">Zend_Pdf</code></a>,
+                            <a href="http://www.php.net/manual/zh/ref.memcache.php" target="_top"><code class="code">Memcache</code></a>
+                        </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break">
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="requirements.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="requirements.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="requirements.zendcomponents.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">附录 A. 系统需求 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> A.3. Zend Framework 组件</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

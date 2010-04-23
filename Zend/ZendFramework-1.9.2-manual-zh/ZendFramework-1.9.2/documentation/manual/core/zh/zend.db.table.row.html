@@ -1,0 +1,228 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>15.6. Zend_Db_Table_Row</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="prev" href="zend.db.table.html" title="15.5. Zend_Db_Table">
+<link rel="next" href="zend.db.tablerowset.html" title="15.7. Zend_Db_Table_Rowset">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.db.table.row.html#zend.db.table.row.introduction" title="15.6.1. 简介">
+<link rel="subsection" href="zend.db.table.row.html#zend.db.table.row.fetch" title="15.6.2. 取回一条记录">
+<link rel="subsection" href="zend.db.table.row.html#zend.db.table.row.modify" title="15.6.3. 修改数据">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">15.6. Zend_Db_Table_Row</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.db.table.html">上一页</a> </td>
+<th width="60%" align="center">第 15 章 Zend_Db</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.db.tablerowset.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.db.table.row"></a>15.6. Zend_Db_Table_Row</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.row.introduction"></a>15.6.1. 简介</h3></div></div></div>
+<p>
+            Zend_Db_Table_Row是Zend Framework的行数据网关.通常来说,你不可以自己实例化Zend_Db_Table_Row,
+            而是通过调用Zend_Db_Table::find()方法或者Zend_Db_Table::fetchRow()方法将Zend_Db_Table_Row作为
+            结果数据返回过来.一旦你得到来一个Zend_Db_Table_Row对象,你可以修改记录值(体现为类的属性)然后
+            调用save()方法可以将更改保存到原表上.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.row.fetch"></a>15.6.2. 取回一条记录</h3></div></div></div>
+<p>
+            首先,需要实例化一个Zend_Db_Table类.
+        </p>
+<pre class="programlisting">&lt;?php
+// 设置一个 adapter
+require_once 'Zend/Db.php';
+$params = array (
+    'host'     =&gt; '127.0.0.1',
+    'username' =&gt; 'malory',
+    'password' =&gt; '******',
+    'dbname'   =&gt; 'camelot'
+);
+
+$db = Zend_Db::factory('PDO_MYSQL', $params);
+
+// 为所有的Zend_Db_Table对象设置默认adapter
+require_once 'Zend/Db/Table.php';
+Zend_Db_Table::setDefaultAdapter($db);
+
+// 连接到数据库中的某一个表
+class RoundTable extends Zend_Db_Table {}
+$table = new RoundTable();
+?&gt;
+        </pre>
+<p>
+            接下来,使用Zend_Db_Table::find()方法和主键进行查询,或者使
+            用Zend_Db_Table::fetchRow()方法查询.得到的返回结果是一个Zend_Db_Table_Row
+            对象,该对象的属性名采用camelCaps的形式对应数据库中带下划线的表名.例如,表名
+            若为first_name,那么类中的改属性则为firstName.
+        </p>
+<pre class="programlisting">&lt;?php
+// 从表中取回的结果数据是一个Zend_Db_Table_Row对象
+$row = $table-&gt;fetchRow('first_name = "Robin"');
+
+//
+// $row现在是一个带有多种公有属性的Zend_Db_Table_Row对象
+// that map to table columns:
+//
+// $row-&gt;id = '3'
+// $row-&gt;nobleTitle = 'Sir'
+// $row-&gt;firstName = 'Robin'
+// $row-&gt;favoriteColor = 'yellow'
+//
+
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.row.modify"></a>15.6.3. 修改数据</h3></div></div></div>
+<p>
+            修改行数据是一件很轻松的事情:只需要按照常规的方法修改类属性.然后调用save()方法
+            就将改变的结果保存到了数据表中.
+        </p>
+<pre class="programlisting">&lt;?php
+// 连接到数据库中的表
+class RoundTable extends Zend_Db_Table {}
+$table = new RoundTable();
+
+// 从表中取回的结果数据是一个Zend_Db_Table_Row对象
+$row = $table-&gt;fetchRow('first_name = "Robin"');
+
+//
+// $row现在是一个带有多种公有属性的Zend_Db_Table_Row对象
+// that map to table columns:
+//
+// $row-&gt;id = '3'
+// $row-&gt;nobleTitle = 'Sir'
+// $row-&gt;firstName = 'Robin'
+// $row-&gt;favoriteColor = 'yellow'
+//
+// 改变favorite color字段,并且将变动存储到数据表中.
+$row-&gt;favoriteColor = 'blue';'
+$row-&gt;save();
+?&gt;
+        </pre>
+<p>
+            但是,你不能够修改主键的值.假如你试图进行改操作, Zend_Db_Table_Row将抛出一个异常.
+        </p>
+<pre class="programlisting">&lt;?php
+// 连接到数据库中的表
+class RoundTable extends Zend_Db_Table {}
+$table = new RoundTable();
+
+// fetch a record from the table as a Zend_Db_Table_Row object
+$row = $table-&gt;fetchRow('first_name = "Robin"');
+
+// 我们尝试修改主键值
+try {
+    $row-&gt;id = 5;
+    echo "We should not see this message, as an exception was thrown.";
+} catch (Zend_Db_Table_RowException $e) {
+    echo $e-&gt;getMessage();
+}
+?&gt;
+        </pre>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.db.table.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.db.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.db.tablerowset.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">15.5. Zend_Db_Table </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 15.7. Zend_Db_Table_Rowset</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

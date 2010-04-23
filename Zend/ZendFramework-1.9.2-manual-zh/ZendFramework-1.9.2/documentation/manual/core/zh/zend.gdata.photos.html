@@ -1,0 +1,848 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>24.11. Using Picasa Web Albums</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="prev" href="zend.gdata.gbase.html" title="24.10. Using Google Base">
+<link rel="next" href="zend.gdata.youtube.html" title="24.12. Using the YouTube Data API">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.gdata.photos.html#zend.gdata.photos.connecting" title="24.11.1. Connecting To The Service">
+<link rel="subsection" href="zend.gdata.photos.html#zend.gdata.photos.queries" title="24.11.2. Understanding and Constructing Queries">
+<link rel="subsection" href="zend.gdata.photos.html#zend.gdata.photos.retrieval" title="24.11.3. Retrieving Feeds And Entries">
+<link rel="subsection" href="zend.gdata.photos.html#zend.gdata.photos.creation" title="24.11.4. Creating Entries">
+<link rel="subsection" href="zend.gdata.photos.html#zend.gdata.photos.deletion" title="24.11.5. Deleting Entries">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">24.11. Using Picasa Web Albums</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.gdata.gbase.html">上一页</a> </td>
+<th width="60%" align="center">第 24 章 Zend_Gdata</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.gdata.youtube.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.gdata.photos"></a>24.11. Using Picasa Web Albums</h2></div></div></div>
+<p>
+        Picasa Web Albums is a service which allows users to maintain albums of
+        their own pictures, and browse the albums and pictures of others.
+        The <acronym class="acronym">API</acronym> offers a programmatic interface to this service, allowing
+        users to add to, update, and remove from their albums, as well as
+        providing the ability to tag and comment on photos.
+    </p>
+<p>
+        Access to public albums and photos is not restricted by account,
+        however, a user must be logged in for non-read-only access.
+    </p>
+<p>
+        For more information on the <acronym class="acronym">API</acronym>, including
+        instructions for enabling <acronym class="acronym">API</acronym> access, refer to the <a href="http://code.google.com/apis/picasaweb/overview.html" target="_top">Picasa
+        Web Albums Data <acronym class="acronym">API</acronym> Overview</a>.
+    </p>
+<div class="note"><table border="0" summary="Note: Authentication">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Authentication</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            The <acronym class="acronym">API</acronym> provides authentication via AuthSub (recommended)
+            and ClientAuth. <acronym class="acronym">HTTP</acronym> connections must be authenticated for write
+            support, but non-authenticated connections have read-only access.
+        </p></td></tr>
+</table></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.photos.connecting"></a>24.11.1. Connecting To The Service</h3></div></div></div>
+<p>
+            The Picasa Web Albums <acronym class="acronym">API</acronym>, like all GData <acronym class="acronym">API</acronym>s, is based off of the Atom Publishing Protocol (APP),
+            an <acronym class="acronym">XML</acronym> based format for managing web-based resources. Traffic between a client and the
+            servers occurs over <acronym class="acronym">HTTP</acronym> and allows for both authenticated and unauthenticated connections.
+        </p>
+<p>
+            Before any transactions can occur, this connection needs to be made. Creating a connection to the
+            Picasa servers involves two steps: creating an <acronym class="acronym">HTTP</acronym> client and binding a
+            <code class="classname">Zend_Gdata_Photos</code>
+            service instance to that client.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.connecting.authentication"></a>24.11.1.1. Authentication</h4></div></div></div>
+<p>
+                The Google Picasa <acronym class="acronym">API</acronym> allows access to both public and private photo feeds. Public feeds
+                do not require authentication, but are read-only and offer reduced functionality. Private feeds
+                offers the most complete functionality but requires an authenticated connection to the Picasa
+                servers. There are three authentication schemes that are supported by Google Picasa :
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <em class="firstterm">ClientAuth</em>
+                        provides direct username/password authentication to the
+                        Picasa servers. Since this scheme requires that users
+                        provide your application with their password, this
+                        authentication is only recommended when other
+                        authentication schemes are insufficient.
+                    </p></li>
+<li><p>
+                        <em class="firstterm">AuthSub</em>
+                        allows authentication to the Picasa servers via a
+                        Google proxy server. This provides the same level of
+                        convenience as ClientAuth but without the security
+                        risk, making this an ideal choice for web-based
+                        applications.
+                    </p></li>
+</ul></div>
+<p>
+                The
+                <code class="classname">Zend_Gdata</code>
+                library provides support for both authentication schemes.
+                The rest of this chapter will assume that you are familiar the
+                authentication schemes available and how to create an
+                appropriate authenticated connection. For more information,
+                please see section the
+                <a href="zend.gdata.html#zend.gdata.introduction.authentication" title="24.1.4. Google Data Client Authentication">Authentication section</a>
+                of this manual or the
+                <a href="http://code.google.com/apis/gdata/auth.html" target="_top">Authentication Overview in the Google Data <acronym class="acronym">API</acronym> Developer's Guide</a>.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.connecting.service"></a>24.11.1.2. Creating A Service Instance</h4></div></div></div>
+<p>
+                In order to interact with the servers, this library provides the
+                <code class="classname">Zend_Gdata_Photos</code> service class. This class provides a common interface to the
+                Google Data and Atom Publishing Protocol models and assists in marshaling requests to and from
+                the servers.
+            </p>
+<p>
+                Once deciding on an authentication scheme, the next step is to create an instance of
+                <code class="classname">Zend_Gdata_Photos</code>. The class constructor takes an instance of
+                <code class="classname">Zend_Http_Client</code> as a single argument. This provides an interface for AuthSub
+                and ClientAuth authentication, as both of these require creation of a special authenticated
+                <acronym class="acronym">HTTP</acronym> client. If no arguments are provided, an unauthenticated instance of
+                <code class="classname">Zend_Http_Client</code> will be automatically created.
+            </p>
+<p>The example below shows how to create a service class using ClientAuth authentication:</p>
+<pre class="programlisting">
+// Parameters for ClientAuth authentication
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$user = "sample.user@gmail.com";
+$pass = "pa$$w0rd";
+
+// Create an authenticated HTTP client
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+
+// Create an instance of the service
+$service = new Zend_Gdata_Photos($client);
+</pre>
+<p>A service instance using AuthSub can be created in a similar, though slightly more lengthy fashion:</p>
+<pre class="programlisting">
+session_start();
+
+/**
+ * Returns the full URL of the current page, based upon env variables
+ *
+ * Env variables used:
+ * $_SERVER['HTTPS'] = (on|off|)
+ * $_SERVER['HTTP_HOST'] = value of the Host: header
+ * $_SERVER['SERVER_PORT'] = port number (only used if not http/80,https/443)
+ * $_SERVER['REQUEST_URI'] = the URI after the method of the HTTP request
+ *
+ * @return string Current URL
+ */
+function getCurrentUrl()
+{
+    global $_SERVER;
+
+    /**
+     * Filter php_self to avoid a security vulnerability.
+     */
+    $php_request_uri = htmlentities(substr($_SERVER['REQUEST_URI'], 0,
+    strcspn($_SERVER['REQUEST_URI'], "\n\r")), ENT_QUOTES);
+
+    if (isset($_SERVER['HTTPS']) &amp;&amp; strtolower($_SERVER['HTTPS']) == 'on') {
+        $protocol = 'https://';
+    } else {
+        $protocol = 'http://';
+    }
+    $host = $_SERVER['HTTP_HOST'];
+    if ($_SERVER['SERVER_PORT'] != '' &amp;&amp;
+        (($protocol == 'http://' &amp;&amp; $_SERVER['SERVER_PORT'] != '80') ||
+        ($protocol == 'https://' &amp;&amp; $_SERVER['SERVER_PORT'] != '443'))) {
+            $port = ':' . $_SERVER['SERVER_PORT'];
+    } else {
+        $port = '';
+    }
+    return $protocol . $host . $port . $php_request_uri;
+}
+
+/**
+ * Returns the AuthSub URL which the user must visit to authenticate requests
+ * from this application.
+ *
+ * Uses getCurrentUrl() to get the next URL which the user will be redirected
+ * to after successfully authenticating with the Google service.
+ *
+ * @return string AuthSub URL
+ */
+function getAuthSubUrl()
+{
+    $next = getCurrentUrl();
+    $scope = 'http://picasaweb.google.com/data';
+    $secure = false;
+    $session = true;
+    return Zend_Gdata_AuthSub::getAuthSubTokenUri($next, $scope, $secure,
+        $session);
+}
+
+/**
+ * Returns a HTTP client object with the appropriate headers for communicating
+ * with Google using AuthSub authentication.
+ *
+ * Uses the $_SESSION['sessionToken'] to store the AuthSub session token after
+ * it is obtained. The single use token supplied in the URL when redirected
+ * after the user succesfully authenticated to Google is retrieved from the
+ * $_GET['token'] variable.
+ *
+ * @return Zend_Http_Client
+ */
+function getAuthSubHttpClient()
+{
+    global $_SESSION, $_GET;
+    if (!isset($_SESSION['sessionToken']) &amp;&amp; isset($_GET['token'])) {
+        $_SESSION['sessionToken'] =
+            Zend_Gdata_AuthSub::getAuthSubSessionToken($_GET['token']);
+    }
+    $client = Zend_Gdata_AuthSub::getHttpClient($_SESSION['sessionToken']);
+    return $client;
+}
+
+/**
+ * Create a new instance of the service, redirecting the user
+ * to the AuthSub server if necessary.
+ */
+$service = new Zend_Gdata_Photos(getAuthSubHttpClient());
+</pre>
+<p>Finally, an unauthenticated server can be created for use with public feeds:</p>
+<pre class="programlisting">
+// Create an instance of the service using an unauthenticated HTTP client
+$service = new Zend_Gdata_Photos();
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.photos.queries"></a>24.11.2. Understanding and Constructing Queries</h3></div></div></div>
+<p>
+            The primary method to request data from the service is by constructing a query. There are query
+            classes for each of the following types:
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <em class="firstterm">User</em>
+                    is used to specify the user whose data is being searched for, and is specified as a username.
+                    If no user is provided, "default" will be used instead to indicate the currently authenticated
+                    user (if authenticated).
+                </p></li>
+<li><p>
+                    <em class="firstterm">Album</em>
+                    is used to specify the album which is being searched for, and is specified as either an id,
+                    or an album name.
+                </p></li>
+<li><p>
+                    <em class="firstterm">Photo</em>
+                    is used to specify the photo which is being searched for, and is specified as an id.
+                </p></li>
+</ul></div>
+<p>A new <code class="code">UserQuery</code> can be constructed as followed:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_UserQuery();
+$query-&gt;setUser("sample.user");
+</pre>
+<p>
+            For each query, a number of parameters limiting the search can be requested, or specified,
+            with get(Parameter) and set(Parameter), respectively. They are as follows:
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <em class="firstterm">Projection</em>
+                    sets the format of the data returned in the feed, as either "api" or "base". Normally,
+                    "api" is desired. The default is "api".
+                </p></li>
+<li><p>
+                    <em class="firstterm">Type</em>
+                    sets the type of element to be returned, as either "feed" or "entry". The default is "feed".
+                </p></li>
+<li><p>
+                    <em class="firstterm">Access</em>
+                    sets the visibility of items to be returned, as "all", "public", or "private". The default is
+                    "all". Non-public elements will only be returned if the query is searching for the
+                    authenticated user.
+                </p></li>
+<li><p>
+                    <em class="firstterm">Tag</em>
+                    sets a tag filter for returned items. When a tag is set, only items tagged with this value
+                    will return.
+                </p></li>
+<li><p>
+                    <em class="firstterm">Kind</em>
+                    sets the kind of elements to return. When kind is specified, only entries that match this
+                    value will be returned.
+                </p></li>
+<li><p>
+                    <em class="firstterm">ImgMax</em>
+                    sets the maximum image size for entries returned. Only image entries smaller than this value
+                    will be returned.
+                </p></li>
+<li><p>
+                    <em class="firstterm">Thumbsize</em>
+                    sets the thumbsize of entries that are returned. Any retrieved entry will have a thumbsize
+                    equal to this value.
+                </p></li>
+<li><p>
+                    <em class="firstterm">User</em>
+                    sets the user whose data is being searched for. The default is "default".
+                </p></li>
+<li><p>
+                    <em class="firstterm">AlbumId</em>
+                    sets the id of the album being searched for. This element only applies to album and photo queries.
+                    In the case of photo queries, this specifies the album that contains the requested photo. The
+                    album id is mutually exclusive with the album's name. Setting one unsets the other.
+                </p></li>
+<li><p>
+                    <em class="firstterm">AlbumName</em>
+                    sets the name of the album being searched for. This element only applies to the album and photo
+                    queries. In the case of photo queries, this specifies the album that contains the requested photo.
+                    The album name is mutually exclusive with the album's id. Setting one unsets the other.
+                </p></li>
+<li><p>
+                    <em class="firstterm">PhotoId</em>
+                    sets the id of the photo being searched for. This element only applies to photo queries.
+                </p></li>
+</ul></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.photos.retrieval"></a>24.11.3. Retrieving Feeds And Entries</h3></div></div></div>
+<p>
+            The service has functions to retrieve a feed, or individual entries, for users, albums,
+            and individual photos.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.user_retrieval"></a>24.11.3.1. Retrieving A User</h4></div></div></div>
+<p>
+                The service supports retrieving a user feed and list of the user's content. If the requested
+                user is also the authenticated user, entries marked as "<code class="code">hidden</code>" will also be returned.
+            </p>
+<p>The user feed can be accessed by passing the username to the <code class="code">getUserFeed</code> method:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+try {
+    $userFeed = $service-&gt;getUserFeed("sample.user");
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+<p>Or, the feed can be accessed by constructing a query, first:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_UserQuery();
+$query-&gt;setUser("sample.user");
+
+try {
+    $userFeed = $service-&gt;getUserFeed(null, $query);
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+<p>Constructing a query also provides the ability to request a user entry object:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_UserQuery();
+$query-&gt;setUser("sample.user");
+$query-&gt;setType("entry");
+
+try {
+    $userEntry = $service-&gt;getUserEntry($query);
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.album_retrieval"></a>24.11.3.2. Retrieving An Album</h4></div></div></div>
+<p>The service supports retrieving an album feed and a list of the album's content.</p>
+<p>
+                The album feed is accessed by constructing a query object and passing it to <code class="code">getAlbumFeed</code>:
+            </p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_AlbumQuery();
+$query-&gt;setUser("sample.user");
+$query-&gt;setAlbumId("1");
+
+try {
+    $albumFeed = $service-&gt;getAlbumFeed($query);
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+<p>
+                Alternatively, the query object can be given an album name with <code class="code">setAlbumName</code>. Setting
+                the album name is mutually exclusive with setting the album id, and setting one will unset the other.
+            </p>
+<p>Constructing a query also provides the ability to request an album entry object:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_AlbumQuery();
+$query-&gt;setUser("sample.user");
+$query-&gt;setAlbumId("1");
+$query-&gt;setType("entry");
+
+try {
+    $albumEntry = $service-&gt;getAlbumEntry($query);
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.photo_retrieval"></a>24.11.3.3. Retrieving A Photo</h4></div></div></div>
+<p>The service supports retrieving a photo feed and a list of associated comments and tags.</p>
+<p>
+                The photo feed is accessed by constructing a query object and passing it to <code class="code">getPhotoFeed</code>:
+            </p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_PhotoQuery();
+$query-&gt;setUser("sample.user");
+$query-&gt;setAlbumId("1");
+$query-&gt;setPhotoId("100");
+
+try {
+    $photoFeed = $service-&gt;getPhotoFeed($query);
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+<p>Constructing a query also provides the ability to request a photo entry object:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_PhotoQuery();
+$query-&gt;setUser("sample.user");
+$query-&gt;setAlbumId("1");
+$query-&gt;setPhotoId("100");
+$query-&gt;setType("entry");
+
+try {
+    $photoEntry = $service-&gt;getPhotoEntry($query);
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.comment_retrieval"></a>24.11.3.4. Retrieving A Comment</h4></div></div></div>
+<p>
+                The service supports retrieving comments from a feed of a different type. By setting a query
+                to return a kind of "comment", a feed request can return comments associated with a specific user,
+                album, or photo.
+            </p>
+<p>Performing an action on each of the comments on a given photo can be accomplished as follows:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_PhotoQuery();
+$query-&gt;setUser("sample.user");
+$query-&gt;setAlbumId("1");
+$query-&gt;setPhotoId("100");
+$query-&gt;setKind("comment");
+
+try {
+    $photoFeed = $service-&gt;getPhotoFeed($query);
+
+    foreach ($photoFeed as $entry) {
+        if ($entry instanceof Zend_Gdata_Photos_CommentEntry) {
+            // Do something with the comment
+        }
+    }
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.tag_retrieval"></a>24.11.3.5. Retrieving A Tag</h4></div></div></div>
+<p>
+                The service supports retrieving tags from a feed of a different type. By setting a query
+                to return a kind of "tag", a feed request can return tags associated with a specific photo.
+            </p>
+<p>Performing an action on each of the tags on a given photo can be accomplished as follows:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$query = new Zend_Gdata_Photos_PhotoQuery();
+$query-&gt;setUser("sample.user");
+$query-&gt;setAlbumId("1");
+$query-&gt;setPhotoId("100");
+$query-&gt;setKind("tag");
+
+try {
+    $photoFeed = $service-&gt;getPhotoFeed($query);
+
+    foreach ($photoFeed as $entry) {
+        if ($entry instanceof Zend_Gdata_Photos_TagEntry) {
+            // Do something with the tag
+        }
+    }
+} catch (Zend_Gdata_App_Exception $e) {
+    echo "Error: " . $e-&gt;getMessage();
+}
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.photos.creation"></a>24.11.4. Creating Entries</h3></div></div></div>
+<p>The service has functions to create albums, photos, comments, and tags.</p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.album_creation"></a>24.11.4.1. Creating An Album</h4></div></div></div>
+<p>The service supports creating a new album for an authenticated user:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$entry = new Zend_Gdata_Photos_AlbumEntry();
+$entry-&gt;setTitle($service-&gt;newTitle("test album"));
+
+$service-&gt;insertAlbumEntry($entry);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.photo_creation"></a>24.11.4.2. Creating A Photo</h4></div></div></div>
+<p>The service supports creating a new photo for an authenticated user:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+// $photo is the name of a file uploaded via an HTML form
+
+$fd = $service-&gt;newMediaFileSource($photo["tmp_name"]);
+$fd-&gt;setContentType($photo["type"]);
+
+$entry = new Zend_Gdata_Photos_PhotoEntry();
+$entry-&gt;setMediaSource($fd);
+$entry-&gt;setTitle($service-&gt;newTitle($photo["name"]));
+
+$albumQuery = new Zend_Gdata_Photos_AlbumQuery;
+$albumQuery-&gt;setUser("sample.user");
+$albumQuery-&gt;setAlbumId("1");
+
+$albumEntry = $service-&gt;getAlbumEntry($albumQuery);
+
+$service-&gt;insertPhotoEntry($entry, $albumEntry);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.comment_creation"></a>24.11.4.3. Creating A Comment</h4></div></div></div>
+<p>The service supports creating a new comment for a photo:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$entry = new Zend_Gdata_Photos_CommentEntry();
+$entry-&gt;setTitle($service-&gt;newTitle("comment"));
+$entry-&gt;setContent($service-&gt;newContent("comment"));
+
+$photoQuery = new Zend_Gdata_Photos_PhotoQuery;
+$photoQuery-&gt;setUser("sample.user");
+$photoQuery-&gt;setAlbumId("1");
+$photoQuery-&gt;setPhotoId("100");
+$photoQuery-&gt;setType('entry');
+
+$photoEntry = $service-&gt;getPhotoEntry($photoQuery);
+
+$service-&gt;insertCommentEntry($entry, $photoEntry);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.tag_creation"></a>24.11.4.4. Creating A Tag</h4></div></div></div>
+<p>The service supports creating a new tag for a photo:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$entry = new Zend_Gdata_Photos_TagEntry();
+$entry-&gt;setTitle($service-&gt;newTitle("tag"));
+
+$photoQuery = new Zend_Gdata_Photos_PhotoQuery;
+$photoQuery-&gt;setUser("sample.user");
+$photoQuery-&gt;setAlbumId("1");
+$photoQuery-&gt;setPhotoId("100");
+$photoQuery-&gt;setType('entry');
+
+$photoEntry = $service-&gt;getPhotoEntry($photoQuery);
+
+$service-&gt;insertTagEntry($entry, $photoEntry);
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.photos.deletion"></a>24.11.5. Deleting Entries</h3></div></div></div>
+<p>The service has functions to delete albums, photos, comments, and tags.</p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.album_deletion"></a>24.11.5.1. Deleting An Album</h4></div></div></div>
+<p>The service supports deleting an album for an authenticated user:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$albumQuery = new Zend_Gdata_Photos_AlbumQuery;
+$albumQuery-&gt;setUser("sample.user");
+$albumQuery-&gt;setAlbumId("1");
+$albumQuery-&gt;setType('entry');
+
+$entry = $service-&gt;getAlbumEntry($albumQuery);
+
+$service-&gt;deleteAlbumEntry($entry, true);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.photo_deletion"></a>24.11.5.2. Deleting A Photo</h4></div></div></div>
+<p>The service supports deleting a photo for an authenticated user:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$photoQuery = new Zend_Gdata_Photos_PhotoQuery;
+$photoQuery-&gt;setUser("sample.user");
+$photoQuery-&gt;setAlbumId("1");
+$photoQuery-&gt;setPhotoId("100");
+$photoQuery-&gt;setType('entry');
+
+$entry = $service-&gt;getPhotoEntry($photoQuery);
+
+$service-&gt;deletePhotoEntry($entry, true);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.comment_deletion"></a>24.11.5.3. Deleting A Comment</h4></div></div></div>
+<p>The service supports deleting a comment for an authenticated user:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$photoQuery = new Zend_Gdata_Photos_PhotoQuery;
+$photoQuery-&gt;setUser("sample.user");
+$photoQuery-&gt;setAlbumId("1");
+$photoQuery-&gt;setPhotoId("100");
+$photoQuery-&gt;setType('entry');
+
+$path = $photoQuery-&gt;getQueryUrl() . '/commentid/' . "1000";
+
+$entry = $service-&gt;getCommentEntry($path);
+
+$service-&gt;deleteCommentEntry($entry, true);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.tag_deletion"></a>24.11.5.4. Deleting A Tag</h4></div></div></div>
+<p>The service supports deleting a tag for an authenticated user:</p>
+<pre class="programlisting">
+$service = Zend_Gdata_Photos::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$service = new Zend_Gdata_Photos($client);
+
+$photoQuery = new Zend_Gdata_Photos_PhotoQuery;
+$photoQuery-&gt;setUser("sample.user");
+$photoQuery-&gt;setAlbumId("1");
+$photoQuery-&gt;setPhotoId("100");
+$photoQuery-&gt;setKind("tag");
+$query = $photoQuery-&gt;getQueryUrl();
+
+$photoFeed = $service-&gt;getPhotoFeed($query);
+
+foreach ($photoFeed as $entry) {
+    if ($entry instanceof Zend_Gdata_Photos_TagEntry) {
+        if ($entry-&gt;getContent() == $tagContent) {
+            $tagEntry = $entry;
+        }
+    }
+}
+
+$service-&gt;deleteTagEntry($tagEntry, true);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.photos.optimistic_concurrenty"></a>24.11.5.5. Optimistic Concurrency (Notes On Deletion)</h4></div></div></div>
+<p>
+                GData feeds, including those of the Picasa Web Albums service, implement optimistic concurrency,
+                a versioning system that prevents users from overwriting changes, inadvertently. When
+                deleting a entry through the service class, if the entry has been modified since it was
+                last fetched, an exception will be thrown, unless explicitly set otherwise (in which case
+                the deletion is retried on the updated entry).
+            </p>
+<p>
+                An example of how to handle versioning during a deletion is shown by <code class="code">deleteAlbumEntry</code>:
+            </p>
+<pre class="programlisting">
+// $album is the albumEntry to be deleted
+try {
+    $this-&gt;delete($album);
+} catch (Zend_Gdata_App_HttpException $e) {
+    if ($e-&gt;getMessage()-&gt;getStatus() === 409) {
+        $entry =
+            new Zend_Gdata_Photos_AlbumEntry($e-&gt;getMessage()-&gt;getBody());
+        $this-&gt;delete($entry-&gt;getLink('edit')-&gt;href);
+    } else {
+        throw $e;
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.gdata.gbase.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.gdata.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.gdata.youtube.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">24.10. Using Google Base </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 24.12. Using the YouTube Data API</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>45.2. Zend_Rest_Client</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="prev" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="next" href="zend.rest.server.html" title="45.3. Zend_Rest_Server">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.rest.client.html#zend.rest.client.introduction" title="45.2.1. Introduction">
+<link rel="subsection" href="zend.rest.client.html#zend.rest.client.return" title="45.2.2. Responses">
+<link rel="subsection" href="zend.rest.client.html#zend.rest.client.args" title="45.2.3. Request Arguments">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">45.2. Zend_Rest_Client</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.rest.html">上一页</a> </td>
+<th width="60%" align="center">第 45 章 Zend_Rest</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.rest.server.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.rest.client"></a>45.2. Zend_Rest_Client</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.rest.client.introduction"></a>45.2.1. Introduction</h3></div></div></div>
+<p>
+            Using the <code class="classname">Zend_Rest_Client</code> is very similar to using
+            <code class="code">SoapClient</code> objects (<a href="http://www.php.net/soap" target="_top">SOAP web service extension</a>).
+            You can simply call the REST service procedures as
+            <code class="classname">Zend_Rest_Client</code> methods. Specify the service's full
+            address in the <code class="classname">Zend_Rest_Client</code> constructor.
+        </p>
+<div class="example">
+<a name="zend.rest.client.introduction.example-1"></a><p class="title"><b>例 45.1. A basic REST request</b></p>
+<div class="example-contents"><pre class="programlisting">
+/**
+ * Connect to framework.zend.com server and retrieve a greeting
+ */
+$client = new Zend_Rest_Client('http://framework.zend.com/rest');
+
+echo $client-&gt;sayHello('Davey', 'Day')-&gt;get(); // "Hello Davey, Good Day"
+</pre></div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note: Differences in calling">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Differences in calling</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+                <code class="classname">Zend_Rest_Client</code> attempts to make remote methods
+                look as much like native methods as possible, the only
+                difference being that you must follow the method call with one
+                of either <code class="methodname">get()</code>, <code class="methodname">post()</code>,
+                <code class="methodname">put()</code> or <code class="methodname">delete()</code>. This call may be
+                made via method chaining or in separate method calls:
+            </p>
+<pre class="programlisting">
+$client-&gt;sayHello('Davey', 'Day');
+echo $client-&gt;get();
+</pre>
+</td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.rest.client.return"></a>45.2.2. Responses</h3></div></div></div>
+<p>
+            All requests made using <code class="classname">Zend_Rest_Client</code> return a
+            <code class="classname">Zend_Rest_Client_Response</code> object. This object has many
+            properties that make it easier to access the results.
+        </p>
+<p>
+            When the service is based on <code class="classname">Zend_Rest_Server</code>,
+            <code class="classname">Zend_Rest_Client</code> can make several assumptions about the
+            response, including response status (success or failure) and return
+            type.
+        </p>
+<div class="example">
+<a name="zend.rest.client.return.example-1"></a><p class="title"><b>例 45.2. Response Status</b></p>
+<div class="example-contents"><pre class="programlisting">
+$result = $client-&gt;sayHello('Davey', 'Day')-&gt;get();
+
+if ($result-&gt;isSuccess()) {
+    echo $result; // "Hello Davey, Good Day"
+}
+</pre></div>
+</div>
+<br class="example-break"><p>
+            In the example above, you can see that we use the request result as
+            an object, to call <code class="methodname">isSuccess()</code>, and then because of
+            <code class="methodname">__toString()</code>, we can simply <code class="code">echo</code> the
+            object to get the result. <code class="classname">Zend_Rest_Client_Response</code>
+            will allow you to echo any scalar value. For complex types, you can
+            use either array or object notation.
+        </p>
+<p>
+            If however, you wish to query a service not using
+            <code class="classname">Zend_Rest_Server</code> the
+            <code class="classname">Zend_Rest_Client_Response</code> object will behave more like
+            a <code class="code">SimpleXMLElement</code>. However, to make things easier, it
+            will automatically query the <acronym class="acronym">XML</acronym> using XPath if the property is not
+            a direct descendant of the document root element. Additionally, if
+            you access a property as a method, you will receive the <acronym class="acronym">PHP</acronym> value
+            for the object, or an array of <acronym class="acronym">PHP</acronym> value results.
+        </p>
+<div class="example">
+<a name="zend.rest.client.return.example-2"></a><p class="title"><b>例 45.3. Using Technorati's Rest Service</b></p>
+<div class="example-contents"><pre class="programlisting">
+$technorati = new Zend_Rest_Client('http://api.technorati.com/bloginfo');
+$technorati-&gt;key($key);
+$technorati-&gt;url('http://pixelated-dreams.com');
+$result = $technorati-&gt;get();
+echo $result-&gt;firstname() .' '. $result-&gt;lastname();
+</pre></div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.rest.client.return.example-3"></a><p class="title"><b>例 45.4. Example Technorati Response</b></p>
+<div class="example-contents"><pre class="programlisting">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!-- generator="Technorati API version 1.0 /bloginfo" --&gt;
+&lt;!DOCTYPE tapi PUBLIC "-//Technorati, Inc.//DTD TAPI 0.02//EN"
+                      "http://api.technorati.com/dtd/tapi-002.xml"&gt;
+&lt;tapi version="1.0"&gt;
+    &lt;document&gt;
+        &lt;result&gt;
+            &lt;url&gt;http://pixelated-dreams.com&lt;/url&gt;
+            &lt;weblog&gt;
+                &lt;name&gt;Pixelated Dreams&lt;/name&gt;
+                &lt;url&gt;http://pixelated-dreams.com&lt;/url&gt;
+                &lt;author&gt;
+                    &lt;username&gt;DShafik&lt;/username&gt;
+                    &lt;firstname&gt;Davey&lt;/firstname&gt;
+                    &lt;lastname&gt;Shafik&lt;/lastname&gt;
+                &lt;/author&gt;
+                &lt;rssurl&gt;
+                    http://pixelated-dreams.com/feeds/index.rss2
+                &lt;/rssurl&gt;
+                &lt;atomurl&gt;
+                    http://pixelated-dreams.com/feeds/atom.xml
+                &lt;/atomurl&gt;
+                &lt;inboundblogs&gt;44&lt;/inboundblogs&gt;
+                &lt;inboundlinks&gt;218&lt;/inboundlinks&gt;
+                &lt;lastupdate&gt;2006-04-26 04:36:36 GMT&lt;/lastupdate&gt;
+                &lt;rank&gt;60635&lt;/rank&gt;
+            &lt;/weblog&gt;
+            &lt;inboundblogs&gt;44&lt;/inboundblogs&gt;
+            &lt;inboundlinks&gt;218&lt;/inboundlinks&gt;
+        &lt;/result&gt;
+    &lt;/document&gt;
+&lt;/tapi&gt;
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Here we are accessing the <code class="code">firstname</code> and
+            <code class="code">lastname</code> properties. Even though these are not
+            top-level elements, they are automatically returned when accessed by
+            name.
+        </p>
+<div class="note"><table border="0" summary="Note: Multiple items">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Multiple items</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                If multiple items are found when accessing a value by name, an
+                array of SimpleXMLElements will be returned; accessing via
+                method notation will return an array of <acronym class="acronym">PHP</acronym> values.
+            </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.rest.client.args"></a>45.2.3. Request Arguments</h3></div></div></div>
+<p>
+            Unless you are making a request to a <code class="classname">Zend_Rest_Server</code>
+            based service, chances are you will need to send multiple arguments
+            with your request. This is done by calling a method with the name of
+            the argument, passing in the value as the first (and only) argument.
+            Each of these method calls returns the object itself, allowing for
+            chaining, or "fluent" usage. The first call, or the first argument
+            if you pass in more than one argument, is always assumed to be the
+            method when calling a <code class="classname">Zend_Rest_Server</code> service.
+        </p>
+<div class="example">
+<a name="zend.rest.client.args.example-1"></a><p class="title"><b>例 45.5. Setting Request Arguments</b></p>
+<div class="example-contents"><pre class="programlisting">
+$client = new Zend_Rest_Client('http://example.org/rest');
+
+$client-&gt;arg('value1');
+$client-&gt;arg2('value2');
+$client-&gt;get();
+
+// or
+
+$client-&gt;arg('value1')-&gt;arg2('value2')-&gt;get();
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Both of the methods in the example above, will result in the
+            following get args:
+            <code class="code">?method=arg&amp;arg1=value1&amp;arg=value1&amp;arg2=value2</code>
+        </p>
+<p>
+            You will notice that the first call of
+            <code class="code">$client-&gt;arg('value1');</code> resulted in both
+            <code class="code">method=arg&amp;arg1=value1</code> and <code class="code">arg=value1</code>;
+            this is so that <code class="classname">Zend_Rest_Server</code> can understand the
+            request properly, rather than requiring pre-existing knowledge of
+            the service.
+        </p>
+<div class="warning"><table border="0" summary="Warning: Strictness of Zend_Rest_Client">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[警告]" src="images/warning.png"></td>
+<th align="left">Strictness of Zend_Rest_Client</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                Any REST service that is strict about the arguments it receives will likely fail
+                using <code class="classname">Zend_Rest_Client</code>, because of the behavior described
+                above. This is not a common practice and should not cause problems.
+            </p></td></tr>
+</table></div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.rest.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.rest.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.rest.server.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 45 章 Zend_Rest </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 45.3. Zend_Rest_Server</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

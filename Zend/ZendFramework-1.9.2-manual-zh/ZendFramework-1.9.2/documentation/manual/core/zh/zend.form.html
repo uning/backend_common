@@ -1,0 +1,249 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 23 章 Zend_Form</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.filter.migration.html" title="22.7. Migrating from Previous Versions">
+<link rel="next" href="zend.form.quickstart.html" title="23.2. Zend_Form 快速起步">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.form.html#zend.form.introduction" title="23.1. Zend_Form">
+<link rel="section" href="zend.form.quickstart.html" title="23.2. Zend_Form 快速起步">
+<link rel="section" href="zend.form.elements.html" title="23.3.  使用 Zend_Form_Element 生成表单元素">
+<link rel="section" href="zend.form.forms.html" title="23.4.  使用 Zend_Form 生成表单">
+<link rel="section" href="zend.form.decorators.html" title="23.5.  使用 Zend_Form_Decorator 生成定制的表单标识（Markup）">
+<link rel="section" href="zend.form.standardElements.html" title="23.6. Zend Framework 带有的标准表单元素">
+<link rel="section" href="zend.form.standardDecorators.html" title="23.7.  Zend Framework 带有的标准表单装饰器（Decorators）">
+<link rel="section" href="zend.form.i18n.html" title="23.8.  Zend_Form 的国际化">
+<link rel="section" href="zend.form.advanced.html" title="23.9. Zend_Form 的高级用法">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 23 章 Zend_Form</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.filter.migration.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.form.quickstart.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.form"></a>第 23 章 Zend_Form</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.form.html#zend.form.introduction">23.1. Zend_Form</a></span></dt>
+<dt><span class="sect1"><a href="zend.form.quickstart.html">23.2. Zend_Form 快速起步 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.create">23.2.1.  创建表单对象 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.elements">23.2.2.  添加表单元素 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.render">23.2.3.  解析（Render）表单 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.validate">23.2.4.  检查表单是否有效 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.errorstatus">23.2.5.  获得错误状态 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.puttingtogether">23.2.6.  放到一起 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.config">23.2.7.  使用 Zend_Config 对象 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.quickstart.html#zend.form.quickstart.conclusion">23.2.8.  结论 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.form.elements.html">23.3.  使用 Zend_Form_Element 生成表单元素 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.loaders">23.3.1.  插件加载器 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.filters">23.3.2.  过滤器 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.validators">23.3.3.  校验器 </a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.form.elements.html#zend.form.elements.validators.errors">23.3.3.1.  定制错误消息 </a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.decorators">23.3.4.  装饰器 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.metadata">23.3.5.  元数据和属性 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.standard">23.3.6.  标准元素 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.methods">23.3.7. Zend_Form_Element 方法 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.config">23.3.8.  配置 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.elements.html#zend.form.elements.custom">23.3.9.  定制元素 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.form.forms.html">23.4.  使用 Zend_Form 生成表单 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.plugins">23.4.1.  插件加载器 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.elements">23.4.2.  元素（Elements）</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.elements.values">23.4.2.1.  组装和读取数值 </a></span></dt>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.elements.global">23.4.2.2.  全局操作 </a></span></dt>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.elements.methods">23.4.2.3.  和元素交互使用的方法 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.displaygroups">23.4.3.  显示组（Display Groups）</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.displaygroups.global">23.4.3.1.  全局操作 </a></span></dt>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.displaygroups.customClasses">23.4.3.2.  使用定制的显示组类 </a></span></dt>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.displaygroups.interactionmethods">23.4.3.3.  和显示组交互使用的方法 </a></span></dt>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.displaygroups.methods">23.4.3.4. Zend_Form_DisplayGroup 方法 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.subforms">23.4.4.  子表单 </a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.subforms.global">23.4.4.1.  全局操作 </a></span></dt>
+<dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.subforms.methods">23.4.4.2.  和子表单交互使用的方法 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.metadata">23.4.5.  元数据（Metadata）和属性（Attributes）</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.decorators">23.4.6.  装饰器 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.validation">23.4.7.  校验 </a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.form.forms.html#zend.form.forms.validation.errors">23.4.7.1.  定制错误消息 </a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.methods">23.4.8.  方法 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.config">23.4.9.  配置 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.forms.html#zend.form.forms.custom">23.4.10.  定制表单 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.form.decorators.html">23.5.  使用 Zend_Form_Decorator 生成定制的表单标识（Markup）</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.decorators.html#zend.form.decorators.operation">23.5.1.  操作 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.decorators.html#zend.form.decorators.standard">23.5.2.  标准装饰器 </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.decorators.html#zend.form.decorators.custom">23.5.3.  定制装饰器 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.form.standardElements.html">23.6. Zend Framework 带有的标准表单元素 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.button">23.6.1. Zend_Form_Element_Button</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.checkbox">23.6.2. Zend_Form_Element_Checkbox</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.hidden">23.6.3. Zend_Form_Element_Hidden</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.hash">23.6.4. Zend_Form_Element_Hash</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.Image">23.6.5. Zend_Form_Element_Image</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.multiCheckbox">23.6.6. Zend_Form_Element_MultiCheckbox</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.multiselect">23.6.7. Zend_Form_Element_Multiselect</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.password">23.6.8. Zend_Form_Element_Password</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.radio">23.6.9. Zend_Form_Element_Radio</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.reset">23.6.10. Zend_Form_Element_Reset</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.select">23.6.11. Zend_Form_Element_Select</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.submit">23.6.12. Zend_Form_Element_Submit</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.text">23.6.13. Zend_Form_Element_Text</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardElements.html#zend.form.standardElements.textarea">23.6.14. Zend_Form_Element_Textarea</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.form.standardDecorators.html">23.7.  Zend Framework 带有的标准表单装饰器（Decorators） </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.callback">23.7.1. Zend_Form_Decorator_Callback</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.captcha">23.7.2. Zend_Form_Decorator_Captcha</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.description">23.7.3. Zend_Form_Decorator_Description</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.dtDdWrapper">23.7.4. Zend_Form_Decorator_DtDdWrapper</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.errors">23.7.5. Zend_Form_Decorator_Errors</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.fieldset">23.7.6. Zend_Form_Decorator_Fieldset</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.form">23.7.7. Zend_Form_Decorator_Form</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.formElements">23.7.8. Zend_Form_Decorator_FormElements</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.htmlTag">23.7.9. Zend_Form_Decorator_HtmlTag</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.image">23.7.10. Zend_Form_Decorator_Image</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.label">23.7.11. Zend_Form_Decorator_Label</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.viewHelper">23.7.12. Zend_Form_Decorator_ViewHelper</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.standardDecorators.html#zend.form.standardDecorators.viewScript">23.7.13. Zend_Form_Decorator_ViewScript</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.form.i18n.html">23.8.  Zend_Form 的国际化 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.i18n.html#zend.form.i18n.initialization">23.8.1.  在表单中初始化 I18n </a></span></dt>
+<dt><span class="sect2"><a href="zend.form.i18n.html#zend.form.i18n.standard">23.8.2.  标准 I18n 目标 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.form.advanced.html">23.9. Zend_Form 的高级用法 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.form.advanced.html#zend.form.advanced.arrayNotation">23.9.1.  数组符号（Notation）</a></span></dt>
+<dt><span class="sect2"><a href="zend.form.advanced.html#zend.form.advanced.multiPage">23.9.2.  多页表单 </a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.form.introduction"></a>23.1. Zend_Form</h2></div></div></div>
+<p>
+        Zend_Form 在 web 程序中简化表单的创建和处理，它完成下列目标：
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p> 元素输入过滤和校验 </p></li>
+<li><p> 元素排序 </p></li>
+<li><p> 元素和表单解析（rendering），包括转义（escaping） </p></li>
+<li><p> 元素和表单分组 </p></li>
+<li><p> 元素和表单级配置 </p></li>
+</ul></div>
+<p>
+        它充分利用了其它 Zend Framework 组件来完成其目标，包括：<code class="code">Zend_Config</code>、 <code class="code">Zend_Validate</code>、<code class="code">Zend_Filter</code>、 <code class="code">Zend_Loader_PluginLoader</code> 和 可选的 <code class="code">Zend_View</code>。
+    </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.filter.migration.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.form.quickstart.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">22.7. Migrating from Previous Versions </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 23.2. Zend_Form 快速起步 </td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 2 章 Zend_Acl</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="introduction.installation.html" title="1.2. 安装">
+<link rel="next" href="zend.acl.refining.html" title="2.2. 精细的访问控制">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.acl.html#zend.acl.introduction" title="2.1. 简介">
+<link rel="section" href="zend.acl.refining.html" title="2.2. 精细的访问控制">
+<link rel="section" href="zend.acl.advanced.html" title="2.3. 高级用法">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 2 章 Zend_Acl</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="introduction.installation.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.acl.refining.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.acl"></a>第 2 章 Zend_Acl</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.acl.html#zend.acl.introduction">2.1. 简介</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.acl.html#zend.acl.introduction.resources">2.1.1. 关于资源(Resource)</a></span></dt>
+<dt><span class="sect2"><a href="zend.acl.html#zend.acl.introduction.roles">2.1.2. 关于角色(Role)</a></span></dt>
+<dt><span class="sect2"><a href="zend.acl.html#zend.acl.introduction.creating">2.1.3. 创建访问控制列表(ACL)</a></span></dt>
+<dt><span class="sect2"><a href="zend.acl.html#zend.acl.introduction.role_registry">2.1.4. 注册角色(Role)</a></span></dt>
+<dt><span class="sect2"><a href="zend.acl.html#zend.acl.introduction.defining">2.1.5. 定义访问控制</a></span></dt>
+<dt><span class="sect2"><a href="zend.acl.html#zend.acl.introduction.querying">2.1.6. 查询 ACL</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.acl.refining.html">2.2. 精细的访问控制</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.acl.refining.html#zend.acl.refining.precise">2.2.1. 精细的访问控制</a></span></dt>
+<dt><span class="sect2"><a href="zend.acl.refining.html#zend.acl.refining.removing">2.2.2. 除去访问控制</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.acl.advanced.html">2.3. 高级用法</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.acl.advanced.html#zend.acl.advanced.storing">2.3.1. 保存 ACL 数据确保持久性</a></span></dt>
+<dt><span class="sect2"><a href="zend.acl.advanced.html#zend.acl.advanced.assertions">2.3.2. 使用声明(Assert)来编写条件性的 ACL 规则</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.acl.introduction"></a>2.1. 简介</h2></div></div></div>
+<p>
+        Zend_Acl 为权限管理提供轻量并灵活的访问控制列表 (ACL,access control list) 的实现。一般地，应用软件可以利用这样的功能限制某些特定对象来访问特定保护的对象。
+    </p>
+<p>
+        在本文档中，
+
+         </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <span class="strong"><strong>resource</strong></span> （资源）是一个限制访问的对象。
+                </p></li>
+<li><p>
+                    <span class="strong"><strong>role</strong></span> （角色）是一个可以发出请求去访问Resource的对象。
+                </p></li>
+</ul></div>
+<p>
+
+        简单地说就是：<span class="strong"><strong>roles 请求访问 resources</strong></span>。例如，如果停车服务员要进入汽车，那么，这个停车服务员就是发出请求的 role，而这辆汽车就是 resource，因为不是所有人都有权进入汽车。
+    </p>
+<p>
+         通过规范和访问控制列表（ACL）的使用，应用软件可以控制角色（roles）如何来访问资源（resources）。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.introduction.resources"></a>2.1.1. 关于资源(Resource)</h3></div></div></div>
+<p>
+            在 Zend_Acl 中，创建一个 resource 非常简单。Zend_Acl 提供了 resource
+            接口<code class="code">Zend_Acl_Resource_Interface</code> 使开发者在程序中创建 resources 非常容易。
+            为了使Zend_Acl把某个对象当作一个resource，一个类只需要实现这个只包含了一个方法 <code class="code">getResourceId()</code> 的接口。
+            另外，<code class="code">Zend_Acl_Resource</code>是一个包含在 Zend_Acl 里作为一个基本的 resource 实现的类，开发者可以任意扩展它。
+        </p>
+<p>
+            Zend_Acl 提供了一个树结构，它可以添加多个 resources (或者叫“访问控制下的区域”）。因为 resources 被存储在这样一个树结构，
+            所以它们可以被组织成从一般（树根）到特殊（树叶）。基于特殊resource的查询将自动从resource的等级结构中搜索分配给祖先rResources的规则，
+            它允许简单的规则继承。例如，要把一个缺省的规则应用到一个城市的每个建筑物，就简单地把这个规则分配给这个城市，
+            而不是把规则分配给每个建筑物。然而，有些建筑物也许要求例外的规则，在Zend_Acl里，很容易地通过分配例外规则给每个有这样要求的建筑物来实现。
+            一个 resource 可以从唯一的一个父 resource 继承，而这个父 resource 也有它自己的父 resource，等等。
+         </p>
+<p>
+            Zend_Acl 也支持基于 resources 的权限（例如："create", "read", "update", "delete"）， 所以开发者可以根据 resource 分配影响全部或者特殊权限的规则到一个或多个资源。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.introduction.roles"></a>2.1.2. 关于角色(Role)</h3></div></div></div>
+<p>
+            象 Resources 一样，创建一个 role 也非常简单。 Zend_Acl 提供了 <code class="code">Zend_Acl_Role_Interface</code> 使开发者创建 roles 非常容易。
+            为了使Zend_Acl把某个对象当作一个 role，一个类只需要实现这个只包含了一个方法 <code class="code">getRoleId()</code> 的接口。
+            另外，<code class="code">Zend_Acl_Role</code>是一个包含在Zend_Acl里作为一个基本的 role 实现的类，开发者可以任意扩展它。
+        </p>
+<p>
+            在 Zend_Acl, 一个 role 可以从一个或多个 role 继承，这就是在 role 中支持规则的继承。例如，一个用户 role，如 “sally”，
+            可以属于一个或多个 role，如：“editor”和“administrator”。开发者可以分别给“editor”和“administrator”分配规则，
+            而“sally”将从它们俩继承规则，不需要直接给“sally”分配规则。
+        </p>
+<p>
+           虽然从多重角色继承的能力非常有用，但是多重继承也带来了一定程度的复杂性。下面的例子来示例含糊情形和Zend_Acl如何解决它。
+        </p>
+<div class="example">
+<a name="zend.acl.introduction.roles.example.multiple_inheritance"></a><p class="title"><b>例 2.1. 角色之间的多重继承</b></p>
+<div class="example-contents">
+<p>
+               下面的代码定义了三个基本角色 - "<code class="code">guest</code>", "<code class="code">member</code>", 和 "<code class="code">admin</code>" -
+               其它角色可以从它们继承。接着，创建一个"<code class="code">someUser</code>" 角色并从其它三个基本角色继承。
+               在<code class="code">$parents</code> 数组里这些角色出现的顺序很重要。 必要时，Zend_Acl 不但搜索为被查询的角色
+               （这里指 "<code class="code">someUser</code>"）定义的访问规则，而且搜索为被查询的角色所继承的角色
+               （这里指 "<code class="code">guest</code>", "<code class="code">member</code>", and "<code class="code">admin</code>"）定义的访问规则：
+            </p>
+<pre class="programlisting">
+$acl = new Zend_Acl();
+
+$acl-&gt;addRole(new Zend_Acl_Role('guest'))
+    -&gt;addRole(new Zend_Acl_Role('member'))
+    -&gt;addRole(new Zend_Acl_Role('admin'));
+
+$parents = array('guest', 'member', 'admin');
+$acl-&gt;addRole(new Zend_Acl_Role('someUser'), $parents);
+
+$acl-&gt;add(new Zend_Acl_Resource('someResource'));
+
+$acl-&gt;deny('guest', 'someResource');
+$acl-&gt;allow('member', 'someResource');
+
+echo $acl-&gt;isAllowed('someUser', 'someResource') ? 'allowed' : 'denied';
+
+            </pre>
+<p>
+                因为没有明确地为 "<code class="code">someUser</code>"和"<code class="code">someResource</code>" 定义规则，
+                所以Zend_Acl 必须搜索可能为"<code class="code">someUser</code>"所继承的角色定义的规则。
+                首先，"<code class="code">admin</code>"角色被访问，没有给它定义访问规则。
+                接着，"<code class="code">member</code>"角色被访问，Zend_Acl发现有个规则允许"<code class="code">member</code>" 访问"<code class="code">someResource</code>"。
+            </p>
+<p>
+                如果Zend_Acl打算继续检查为父角色所定义的规则，然而，
+                它将发现"<code class="code">guest</code>" 被拒绝访问"<code class="code">someResource</code>" 。
+                这带来了模棱两可的情形， "<code class="code">someUser</code>"即被允许又被禁止访问"<code class="code">someResource</code>"，因为它从不同的父角色继承了冲突的规则。
+            </p>
+<p>
+                Zend_Acl 解决了这个模棱两可的问题，当它发现第一个可用的规则时，就完成了查询。
+                对于这个案例，因为"<code class="code">member</code>"角色先于"<code class="code">guest</code>" 角色被检查，这个例子将打印"<code class="code">allowed</code>"。
+            </p>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                当为一个角色指定多重父（角色）时，请记住，对于一个授权查询的可用规则，最后列出的父（角色）是首先被搜索的。
+             </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.introduction.creating"></a>2.1.3. 创建访问控制列表(ACL)</h3></div></div></div>
+<p>
+           ACL 可以表示任何一组物理或虚拟对象，然而，作为示范，我们将创建一个基本的内容管理系统的（CMS）ACL，
+           在一个范围很宽的多样化区域里，它将维护若干个等级的组。为创建一个新的 ACL 对象，我们不带参数地实例化这个 ACL：
+        </p>
+<pre class="programlisting">
+$acl = new Zend_Acl();
+
+        </pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+               除非开发者指明一个"allow" 规则，Zend_Acl 禁止任何 role 对任何 resource 的任何访问权限。
+            </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.introduction.role_registry"></a>2.1.4. 注册角色(Role)</h3></div></div></div>
+<p>
+            CMS 通常需要一个分级的权限系统来决定它的用户的授权能力。
+            作为示范，“Guest”组允许有限的访问，“Staff”适合大多数的执行日常操作的CMS用户，“Editor”组适合于发布、复核、存档和删除内容，
+            最后“Administrator”组的任务包括所有其它组的内容并包括敏感的信息、用户管理、后台配置数据和备份/导出。
+            这组许可可以被表示为一个 role 注册表，允许每个组从“”组继承权限，也可以为单一的组提供独特的权限。这些许可可以表示如下：
+         </p>
+<div class="table">
+<a name="zend.acl.introduction.role_registry.table.example_cms_access_controls"></a><p class="title"><b>表 2.1. 一个CMS范例的访问控制</b></p>
+<div class="table-contents"><table summary="一个CMS范例的访问控制" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>名称</th>
+<th>独特的许可</th>
+<th>从...继承的许可</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Guest</td>
+<td>View</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Staff</td>
+<td>Edit, Submit, Revise</td>
+<td>Guest</td>
+</tr>
+<tr>
+<td>Editor</td>
+<td>Publish, Archive, Delete</td>
+<td>Staff</td>
+</tr>
+<tr>
+<td>Administrator</td>
+<td>(Granted all access)</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break"><p>
+            对于这个范例，<code class="code">Zend_Acl_Role</code>  被使用，但任何实现 <code class="code">Zend_Acl_Role_Interface</code>  的对象是可接受的。这些组可以被添加到 role 注册表如下：
+        </p>
+<pre class="programlisting">
+$acl = new Zend_Acl();
+
+// 用 Zend_Acl_Role 把组添加到 Role 注册表
+// Guest 不继承访问控制
+$roleGuest = new Zend_Acl_Role('guest');
+$acl-&gt;addRole($roleGuest);
+
+// Staff 从 guest 继承
+$acl-&gt;addRole(new Zend_Acl_Role('staff'), $roleGuest);
+
+/*
+另外, 上面的也可这样来写：
+$acl-&gt;addRole(new Zend_Acl_Role('staff'), 'guest');
+*/
+
+// Editor 从 staff 继承
+$acl-&gt;addRole(new Zend_Acl_Role('editor'), 'staff');
+
+// Administrator 不继承访问控制
+$acl-&gt;addRole(new Zend_Acl_Role('administrator'));
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.introduction.defining"></a>2.1.5. 定义访问控制</h3></div></div></div>
+<p>
+           现在 ACL 包含了相关的 roles，可以建立规则来定义 roles 如何访问 resources。
+           你也许注意到我们在这个范例里没有定义任何特定的 resources， 这简单地表示这些规则适用于所有 resources。
+           Zend_Acl 提供一个实现，籍此，规则只需要被分配从一般到特殊，最小化规则的需求，因为 resources 和 roles 继承由它们祖先定义的规则。
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                一般来说，当且仅当更具体的规则没有使用， Zend_Acl 就服从已给定的规则。
+            </p></td></tr>
+</table></div>
+<p>
+           因此，我们可以用最少量的代码来定义适度复杂的规则。应用上面定义的基本许可：
+        </p>
+<pre class="programlisting">
+$acl = new Zend_Acl();
+
+$roleGuest = new Zend_Acl_Role('guest');
+$acl-&gt;addRole($roleGuest);
+$acl-&gt;addRole(new Zend_Acl_Role('staff'), $roleGuest);
+$acl-&gt;addRole(new Zend_Acl_Role('editor'), 'staff');
+$acl-&gt;addRole(new Zend_Acl_Role('administrator'));
+
+// Guest 只可以浏览内容
+$acl-&gt;allow($roleGuest, null, 'view');
+
+/*
+另外, 上面也可写为：
+$acl-&gt;allow('guest', null, 'view');
+*/
+
+// Staff 从 guest 继承浏览权限，但也要另外的权限
+$acl-&gt;allow('staff', null, array('edit', 'submit', 'revise'));
+
+// Editor 从 Staff 继承 view, edit, submit 和 revise 权限
+// 但也要另外的权限
+$acl-&gt;allow('editor', null, array('publish', 'archive', 'delete'));
+
+// Administrator 不需要继承任何权限，它拥有所有的权限
+$acl-&gt;allow('administrator');
+
+        </pre>
+<p>
+          在上面 <code class="code">allow()</code> 中调用中 <code class="code">null</code> 的值用来表明 allow 规则适用于所有的 resources。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.acl.introduction.querying"></a>2.1.6. 查询 ACL</h3></div></div></div>
+<p>
+           我们现在有一个灵活的 ACL 可以用来决定请求者在整个 web 应用里是否拥有执行功能的许可。用<code class="code">isAllowed()</code>方法来执行查询相当简单：
+        </p>
+<pre class="programlisting">
+echo $acl-&gt;isAllowed('guest', null, 'view') ?
+     "allowed" : "denied";
+// allowed
+
+echo $acl-&gt;isAllowed('staff', null, 'publish') ?
+     "allowed" : "denied";
+// denied
+
+echo $acl-&gt;isAllowed('staff', null, 'revise') ?
+     "allowed" : "denied";
+// allowed
+
+echo $acl-&gt;isAllowed('editor', null, 'view') ?
+     "allowed" : "denied";
+// allowed because of inheritance from guest
+
+echo $acl-&gt;isAllowed('editor', null, 'update') ?
+     "allowed" : "denied";
+// denied because no allow rule for 'update'
+
+echo $acl-&gt;isAllowed('administrator', null, 'view') ?
+     "allowed" : "denied";
+// allowed because administrator is allowed all privileges
+
+echo $acl-&gt;isAllowed('administrator') ?
+     "allowed" : "denied";
+// allowed because administrator is allowed all privileges
+
+echo $acl-&gt;isAllowed('administrator', null, 'update') ?
+     "allowed" : "denied";
+// allowed because administrator is allowed all privileges
+
+        </pre>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="introduction.installation.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.acl.refining.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">1.2. 安装 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 2.2. 精细的访问控制</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

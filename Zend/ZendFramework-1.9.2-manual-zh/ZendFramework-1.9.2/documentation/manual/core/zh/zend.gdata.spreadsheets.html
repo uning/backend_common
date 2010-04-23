@@ -1,0 +1,458 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>24.8. Using Google Spreadsheets</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="prev" href="zend.gdata.health.html" title="24.7. Using Google Health">
+<link rel="next" href="zend.gdata.gapps.html" title="24.9. Using Google Apps Provisioning">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.gdata.spreadsheets.html#zend.gdata.spreadsheets.creating" title="24.8.1. Create a Spreadsheet">
+<link rel="subsection" href="zend.gdata.spreadsheets.html#zend.gdata.spreadsheets.listspreadsheets" title="24.8.2. Get a List of Spreadsheets">
+<link rel="subsection" href="zend.gdata.spreadsheets.html#zend.gdata.spreadsheets.listworksheets" title="24.8.3. Get a List of Worksheets">
+<link rel="subsection" href="zend.gdata.spreadsheets.html#zend.gdata.spreadsheets.listfeeds" title="24.8.4. Interacting With List-based Feeds">
+<link rel="subsection" href="zend.gdata.spreadsheets.html#zend.gdata.spreadsheets.cellfeeds" title="24.8.5. Interacting With Cell-based Feeds">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">24.8. Using Google Spreadsheets</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.gdata.health.html">上一页</a> </td>
+<th width="60%" align="center">第 24 章 Zend_Gdata</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.gdata.gapps.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.gdata.spreadsheets"></a>24.8. Using Google Spreadsheets</h2></div></div></div>
+<p>
+        The Google Spreadsheets data <acronym class="acronym">API</acronym> allows client applications to view
+        and update Spreadsheets content in the form of Google data <acronym class="acronym">API</acronym> feeds.
+        Your client application can request a list of a user's spreadsheets,
+        edit or delete content in an existing Spreadsheets worksheet, and
+        query the content in an existing Spreadsheets worksheet.
+    </p>
+<p>
+        See
+        <a href="http://code.google.com/apis/spreadsheets/overview.html" target="_top">http://code.google.com/apis/spreadsheets/overview.html</a>
+        for more information about the Google Spreadsheets <acronym class="acronym">API</acronym>.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.spreadsheets.creating"></a>24.8.1. Create a Spreadsheet</h3></div></div></div>
+<p>
+            The Spreadsheets data <acronym class="acronym">API</acronym> does not currently provide a way to
+            programmatically create or delete a spreadsheet.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.spreadsheets.listspreadsheets"></a>24.8.2. Get a List of Spreadsheets</h3></div></div></div>
+<p>
+            You can get a list of spreadsheets for a particular user by using
+            the <code class="code">getSpreadsheetFeed</code> method of the Spreadsheets
+            service. The service will return a
+            <code class="classname">Zend_Gdata_Spreadsheets_SpreadsheetFeed</code> object
+            containing a list of spreadsheets associated with the authenticated
+            user.
+        </p>
+<pre class="programlisting">
+$service = Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME;
+$client = Zend_Gdata_ClientLogin::getHttpClient($user, $pass, $service);
+$spreadsheetService = new Zend_Gdata_Spreadsheets($client);
+$feed = $spreadsheetService-&gt;getSpreadsheetFeed();
+</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.spreadsheets.listworksheets"></a>24.8.3. Get a List of Worksheets</h3></div></div></div>
+<p>
+            A given spreadsheet may contain multiple worksheets. For each
+            spreadsheet, there's a worksheets metafeed listing all the
+            worksheets in that spreadsheet.
+        </p>
+<p>
+            Given the spreadsheet key from the &lt;id&gt; of a
+            <code class="classname">Zend_Gdata_Spreadsheets_SpreadsheetEntry</code>
+            object you've already retrieved, you can fetch a feed
+            containing a list of worksheets associated with that spreadsheet.
+        </p>
+<pre class="programlisting">
+$query = new Zend_Gdata_Spreadsheets_DocumentQuery();
+$query-&gt;setSpreadsheetKey($spreadsheetKey);
+$feed = $spreadsheetService-&gt;getWorksheetFeed($query);
+</pre>
+<p>
+            The resulting <code class="classname">Zend_Gdata_Spreadsheets_WorksheetFeed</code>
+            object feed represents the response from the server. Among other
+            things, this feed contains a list of
+            <code class="classname">Zend_Gdata_Spreadsheets_WorksheetEntry </code>
+            objects (<code class="code">$feed-&gt;entries</code>), each of which represents a
+            single worksheet.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.spreadsheets.listfeeds"></a>24.8.4. Interacting With List-based Feeds</h3></div></div></div>
+<p>
+            A given worksheet generally contains multiple rows, each
+            containing multiple cells. You can request data from the
+            worksheet either as a list-based feed, in which each entry
+            represents a row, or as a cell-based feed, in which each
+            entry represents a single cell. For information on cell-based
+            feeds, see <a href="zend.gdata.spreadsheets.html#zend.gdata.spreadsheets.cellfeeds" title="24.8.5. Interacting With Cell-based Feeds">Interacting with cell-based feeds</a>.
+        </p>
+<p>
+            The following sections describe how to get a list-based feed,
+            add a row to a worksheet, and send queries with various query
+            parameters.
+        </p>
+<p>
+            The list feed makes some assumptions about how the data is laid
+            out in the spreadsheet.
+        </p>
+<p>
+            In particular, the list feed treats the first row of the
+            worksheet as a header row; Spreadsheets dynamically creates
+            <acronym class="acronym">XML</acronym> elements named after the contents of header-row cells.
+            Users who want to provide Gdata feeds should not put any data
+            other than column headers in the first row of a worksheet.
+        </p>
+<p>
+            The list feed contains all rows after the first row up to the
+            first blank row. The first blank row terminates the data set.
+            If expected data isn't appearing in a feed, check the worksheet
+            manually to see whether there's an unexpected blank row in the
+            middle of the data. In particular, if the second row of the
+            spreadsheet is blank, then the list feed will contain no data.
+        </p>
+<p>
+            A row in a list feed is as many columns wide as the worksheet itself.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.listfeeds.get"></a>24.8.4.1. Get a List-based Feed</h4></div></div></div>
+<p>
+                To retrieve a worksheet's list feed, use the
+                <code class="code">getListFeed</code> method of the Spreadsheets service.
+            </p>
+<pre class="programlisting">
+$query = new Zend_Gdata_Spreadsheets_ListQuery();
+$query-&gt;setSpreadsheetKey($spreadsheetKey);
+$query-&gt;setWorksheetId($worksheetId);
+$listFeed = $spreadsheetService-&gt;getListFeed($query);
+</pre>
+<p>
+                The resulting <code class="classname">Zend_Gdata_Spreadsheets_ListFeed</code>
+                object <code class="varname">$listfeed</code> represents a response from the
+                server. Among other things, this feed contains an array of
+                <code class="classname">Zend_Gdata_Spreadsheets_ListEntry</code> objects
+                (<code class="code">$listFeed-&gt;entries</code>), each of which represents
+                a single row in a worksheet.
+            </p>
+<p>
+              Each <code class="classname">Zend_Gdata_Spreadsheets_ListEntry</code> contains an
+              array, <code class="code">custom</code>, which contains the data for that
+              row. You can extract and display this array:
+            </p>
+<pre class="programlisting">
+$rowData = $listFeed-&gt;entries[1]-&gt;getCustom();
+foreach($rowData as $customEntry) {
+  echo $customEntry-&gt;getColumnName() . " = " . $customEntry-&gt;getText();
+}
+</pre>
+<p>
+              An alternate version of this array, <code class="code">customByName</code>,
+              allows direct access to an entry's cells by name. This is
+              convenient when trying to access a specific header:
+            </p>
+<pre class="programlisting">
+$customEntry = $listFeed-&gt;entries[1]-&gt;getCustomByName('my_heading');
+echo $customEntry-&gt;getColumnName() . " = " . $customEntry-&gt;getText();
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.listfeeds.reverse"></a>24.8.4.2. Reverse-sort Rows</h4></div></div></div>
+<p>
+                By default, rows in the feed appear in the same order as the
+                corresponding rows in the GUI; that is, they're in order by
+                row number. To get rows in reverse order, set the reverse
+                properties of the <code class="classname">Zend_Gdata_Spreadsheets_ListQuery</code>
+                object to true:
+            </p>
+<pre class="programlisting">
+$query = new Zend_Gdata_Spreadsheets_ListQuery();
+$query-&gt;setSpreadsheetKey($spreadsheetKey);
+$query-&gt;setWorksheetId($worksheetId);
+$query-&gt;setReverse('true');
+$listFeed = $spreadsheetService-&gt;getListFeed($query);
+</pre>
+<p>
+                Note that if you want to order (or reverse sort) by a
+                particular column, rather than by position in the worksheet,
+                you can set the <code class="code">orderby</code> value of the
+                <code class="classname">Zend_Gdata_Spreadsheets_ListQuery</code> object to
+                <code class="code">column:&lt;the header of that column&gt;</code>.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.listfeeds.sq"></a>24.8.4.3. Send a Structured Query</h4></div></div></div>
+<p>
+                You can set a <code class="classname">Zend_Gdata_Spreadsheets_ListQuery</code>'s
+                <code class="code">sq</code> value to produce a feed with entries that meet
+                the specified criteria. For example, suppose you have a worksheet
+                containing personnel data, in which each row represents
+                information about a single person. You wish to retrieve all rows
+                in which the person's name is "John" and the person's age is over
+                25. To do so, you would set <code class="code">sq</code> as follows:
+            </p>
+<pre class="programlisting">
+$query = new Zend_Gdata_Spreadsheets_ListQuery();
+$query-&gt;setSpreadsheetKey($spreadsheetKey);
+$query-&gt;setWorksheetId($worksheetId);
+$query-&gt;setSpreadsheetQuery('name=John and age&gt;25');
+$listFeed = $spreadsheetService-&gt;getListFeed($query);
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.listfeeds.addrow"></a>24.8.4.4. Add a Row</h4></div></div></div>
+<p>
+                Rows can be added to a spreadsheet by using the
+                <code class="code">insertRow</code> method of the Spreadsheet service.
+            </p>
+<pre class="programlisting">
+$insertedListEntry = $spreadsheetService-&gt;insertRow($rowData,
+                                                    $spreadsheetKey,
+                                                    $worksheetId);
+</pre>
+<p>
+                The <code class="varname">$rowData</code> parameter contains an array of column
+                keys to data values. The method returns a
+                <code class="classname">Zend_Gdata_Spreadsheets_SpreadsheetsEntry</code> object
+                which represents the inserted row.
+            </p>
+<p>
+                Spreadsheets inserts the new row immediately after the last row
+                that appears in the list-based feed, which is to say
+                immediately before the first entirely blank row.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.listfeeds.editrow"></a>24.8.4.5. Edit a Row</h4></div></div></div>
+<p>
+                Once a <code class="classname">Zend_Gdata_Spreadsheets_ListEntry</code> object
+                is fetched, its rows can be updated by using the
+                <code class="code">updateRow</code> method of the Spreadsheet service.
+            </p>
+<pre class="programlisting">
+$updatedListEntry = $spreadsheetService-&gt;updateRow($oldListEntry,
+                                                   $newRowData);
+</pre>
+<p>
+                The <code class="varname">$oldListEntry</code> parameter contains the list entry
+                to be updated. <code class="varname">$newRowData</code> contains an array of
+                column keys to data values, to be used as the new row data.
+                The method returns a
+                <code class="classname">Zend_Gdata_Spreadsheets_SpreadsheetsEntry</code> object
+                which represents the updated row.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.listfeeds.deleterow"></a>24.8.4.6. Delete a Row</h4></div></div></div>
+<p>
+                To delete a row, simply invoke <code class="code">deleteRow</code> on the
+                <code class="classname">Zend_Gdata_Spreadsheets</code> object with the existing
+                entry to be deleted:
+            </p>
+<pre class="programlisting">
+$spreadsheetService-&gt;deleteRow($listEntry);
+</pre>
+<p>
+                Alternatively, you can call the <code class="code">delete</code> method of
+                the entry itself:
+            </p>
+<pre class="programlisting">
+$listEntry-&gt;delete();
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.spreadsheets.cellfeeds"></a>24.8.5. Interacting With Cell-based Feeds</h3></div></div></div>
+<p>
+            In a cell-based feed, each entry represents a single cell.
+        </p>
+<p>
+            Note that we don't recommend interacting with both a cell-based
+            feed and a list-based feed for the same worksheet at the same time.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.cellfeeds.get"></a>24.8.5.1. Get a Cell-based Feed</h4></div></div></div>
+<p>
+                To retrieve a worksheet's cell feed, use the
+                <code class="code">getCellFeed</code> method of the Spreadsheets service.
+            </p>
+<pre class="programlisting">
+$query = new Zend_Gdata_Spreadsheets_CellQuery();
+$query-&gt;setSpreadsheetKey($spreadsheetKey);
+$query-&gt;setWorksheetId($worksheetId);
+$cellFeed = $spreadsheetService-&gt;getCellFeed($query);
+</pre>
+<p>
+                The resulting <code class="classname">Zend_Gdata_Spreadsheets_CellFeed</code>
+                object <code class="varname">$cellFeed</code> represents a response from the
+                server. Among other things, this feed contains an array of
+                <code class="classname">Zend_Gdata_Spreadsheets_CellEntry</code> objects
+                (<code class="code">$cellFeed&gt;entries</code>), each of which represents
+                a single cell in a worksheet. You can display this information:
+            </p>
+<pre class="programlisting">
+foreach($cellFeed as $cellEntry) {
+  $row = $cellEntry-&gt;cell-&gt;getRow();
+  $col = $cellEntry-&gt;cell-&gt;getColumn();
+  $val = $cellEntry-&gt;cell-&gt;getText();
+  echo "$row, $col = $val\n";
+}
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.cellfeeds.cellrangequery"></a>24.8.5.2. Send a Cell Range Query</h4></div></div></div>
+<p>
+                Suppose you wanted to retrieve the cells in the first column
+                of a worksheet. You can request a cell feed containing only
+                this column as follows:
+            </p>
+<pre class="programlisting">
+$query = new Zend_Gdata_Spreadsheets_CellQuery();
+$query-&gt;setMinCol(1);
+$query-&gt;setMaxCol(1);
+$query-&gt;setMinRow(2);
+$feed = $spreadsheetService-&gt;getCellsFeed($query);
+</pre>
+<p>
+                This requests all the data in column 1, starting with row 2.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.spreadsheets.cellfeeds.updatecell"></a>24.8.5.3. Change Contents of a Cell</h4></div></div></div>
+<p>
+                To modify the contents of a cell, call
+                <code class="code">updateCell</code> with the row, column,
+                and new value of the cell.
+            </p>
+<pre class="programlisting">
+$updatedCell = $spreadsheetService-&gt;updateCell($row,
+                                               $col,
+                                               $inputValue,
+                                               $spreadsheetKey,
+                                               $worksheetId);
+</pre>
+<p>
+                The new data is placed in the specified cell in the worksheet.
+                If the specified cell contains data already, it will be
+                overwritten. Note: Use <code class="code">updateCell</code> to change
+                the data in a cell, even if the cell is empty.
+            </p>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.gdata.health.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.gdata.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.gdata.gapps.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">24.7. Using Google Health </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 24.9. Using Google Apps Provisioning</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

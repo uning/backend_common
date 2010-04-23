@@ -1,0 +1,554 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>48.18. Zend_Service_Delicious</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="prev" href="zend.service.audioscrobbler.html" title="48.17. Zend_Service_Audioscrobbler">
+<link rel="next" href="zend.service.flickr.html" title="48.19. Zend_Service_Flickr">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.introduction" title="48.18.1. Introduction">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.retrieving_posts" title="48.18.2. Retrieving posts">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.postlist" title="48.18.3. Zend_Service_Delicious_PostList">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.editing_posts" title="48.18.4. Editing posts">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.deleting_posts" title="48.18.5. Deleting posts">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.adding_posts" title="48.18.6. Adding new posts">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.tags" title="48.18.7. Tags">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.bundles" title="48.18.8. Bundles">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.public_data" title="48.18.9. Public data">
+<link rel="subsection" href="zend.service.delicious.html#zend.service.delicious.httpclient" title="48.18.10. HTTP client">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">48.18. Zend_Service_Delicious</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.service.audioscrobbler.html">上一页</a> </td>
+<th width="60%" align="center">第 48 章 Zend_Service</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.service.flickr.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.service.delicious"></a>48.18. Zend_Service_Delicious</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.introduction"></a>48.18.1. Introduction</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Delicious</code> is simple <acronym class="acronym">API</acronym> for using
+            <a href="http://del.icio.us" target="_top">del.icio.us</a>
+            <acronym class="acronym">XML</acronym> and <acronym class="acronym">JSON</acronym> web services. This component gives you read-write access to posts at del.icio.us
+            if you provide credentials. It also allows read-only access to public data of all users.
+        </p>
+<div class="example">
+<a name="zend.service.delicious.introduction.getAllPosts"></a><p class="title"><b>例 48.79. Get all posts</b></p>
+<div class="example-contents"><pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+$posts = $delicious-&gt;getAllPosts();
+
+foreach ($posts as $post) {
+    echo "--\n";
+    echo "Title: {$post-&gt;getTitle()}\n";
+    echo "Url: {$post-&gt;getUrl()}\n";
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.retrieving_posts"></a>48.18.2. Retrieving posts</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Delicious</code> provides three methods for retrieving posts: <code class="methodname">getPosts()</code>,
+            <code class="methodname">getRecentPosts()</code> and <code class="methodname">getAllPosts()</code>. All of these
+            methods return an instance of <code class="classname">Zend_Service_Delicious_PostList</code>, which
+            holds all retrieved posts.
+        </p>
+<pre class="programlisting">
+/**
+ * Get posts matching the arguments. If no date or url is given,
+ * most recent date will be used.
+ *
+ * @param string $tag Optional filtering by tag
+ * @param Zend_Date $dt Optional filtering by date
+ * @param string $url Optional filtering by url
+ * @return Zend_Service_Delicious_PostList
+ */
+public function getPosts($tag = null, $dt = null, $url = null);
+
+/**
+ * Get recent posts
+ *
+ * @param string $tag   Optional filtering by tag
+ * @param string $count Maximal number of posts to be returned
+ *                      (default 15)
+ * @return Zend_Service_Delicious_PostList
+ */
+public function getRecentPosts($tag = null, $count = 15);
+
+/**
+ * Get all posts
+ *
+ * @param string $tag Optional filtering by tag
+ * @return Zend_Service_Delicious_PostList
+ */
+public function getAllPosts($tag = null);
+</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.postlist"></a>48.18.3. Zend_Service_Delicious_PostList</h3></div></div></div>
+<p>
+            Instances of this class are returned by the <code class="methodname">getPosts()</code>, <code class="methodname">getAllPosts()</code>,
+            <code class="methodname">getRecentPosts()</code>, and <code class="methodname">getUserPosts()</code> methods of <code class="classname">Zend_Service_Delicious</code>.
+        </p>
+<p>
+            For easier data access this class implements the <code class="code">Countable</code>, <code class="code">Iterator</code>, and
+            <code class="code">ArrayAccess</code> interfaces.
+        </p>
+<div class="example">
+<a name="zend.service.delicious.postlist.accessing_post_lists"></a><p class="title"><b>例 48.80. Accessing post lists</b></p>
+<div class="example-contents"><pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+$posts = $delicious-&gt;getAllPosts();
+
+// count posts
+echo count($posts);
+
+// iterate over posts
+foreach ($posts as $post) {
+    echo "--\n";
+    echo "Title: {$post-&gt;getTitle()}\n";
+    echo "Url: {$post-&gt;getUrl()}\n";
+}
+
+// get post using array access
+echo $posts[0]-&gt;getTitle();
+</pre></div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                The <code class="methodname">ArrayAccess::offsetSet()</code> and <code class="methodname">ArrayAccess::offsetUnset()</code> methods
+                throw exceptions in this implementation. Thus, code like <code class="code">unset($posts[0]);</code> and
+                <code class="code">$posts[0] = 'A';</code> will throw exceptions because these properties are read-only.
+            </p></td></tr>
+</table></div>
+<p>
+            Post list objects have two built-in filtering capabilities. Post lists may be filtered by tags and by <acronym class="acronym">URL</acronym>.
+        </p>
+<div class="example">
+<a name="zend.service.delicious.postlist.example.withTags"></a><p class="title"><b>例 48.81. Filtering a Post List with Specific Tags</b></p>
+<div class="example-contents">
+<p>
+                Posts may be filtered by specific tags using <code class="methodname">withTags()</code>. As a convenience,
+                <code class="methodname">withTag()</code> is also provided for when only a single tag needs to be specified.
+            </p>
+<pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+$posts = $delicious-&gt;getAllPosts();
+
+// Print posts having "php" and "zend" tags
+foreach ($posts-&gt;withTags(array('php', 'zend')) as $post) {
+    echo "Title: {$post-&gt;getTitle()}\n";
+    echo "Url: {$post-&gt;getUrl()}\n";
+}
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.service.delicious.postlist.example.byUrl"></a><p class="title"><b>例 48.82. Filtering a Post List by URL</b></p>
+<div class="example-contents">
+<p>
+                Posts may be filtered by <acronym class="acronym">URL</acronym> matching a specified regular expression using the <code class="methodname">withUrl()</code>
+                method:
+            </p>
+<pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+$posts = $delicious-&gt;getAllPosts();
+
+// Print posts having "help" in the URL
+foreach ($posts-&gt;withUrl('/help/') as $post) {
+    echo "Title: {$post-&gt;getTitle()}\n";
+    echo "Url: {$post-&gt;getUrl()}\n";
+}
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.editing_posts"></a>48.18.4. Editing posts</h3></div></div></div>
+<div class="example">
+<a name="zend.service.delicious.editing_posts.post_editing"></a><p class="title"><b>例 48.83. Post editing</b></p>
+<div class="example-contents"><pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+$posts = $delicious-&gt;getPosts();
+
+// set title
+$posts[0]-&gt;setTitle('New title');
+// save changes
+$posts[0]-&gt;save();
+</pre></div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.service.delicious.editing_posts.method_call_chaining"></a><p class="title"><b>例 48.84. Method call chaining</b></p>
+<div class="example-contents">
+<p>
+               Every setter method returns the post object so that you can chain method calls using a fluent interface.
+            </p>
+<pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+$posts = $delicious-&gt;getPosts();
+
+$posts[0]-&gt;setTitle('New title')
+         -&gt;setNotes('New notes')
+         -&gt;save();
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.deleting_posts"></a>48.18.5. Deleting posts</h3></div></div></div>
+<p>
+            There are two ways to delete a post, by specifying the post <acronym class="acronym">URL</acronym> or by calling the <code class="methodname">delete()</code>
+            method upon a post object.
+        </p>
+<div class="example">
+<a name="zend.service.delicious.deleting_posts.deleting_posts"></a><p class="title"><b>例 48.85. Deleting posts</b></p>
+<div class="example-contents"><pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+
+// by specifying URL
+$delicious-&gt;deletePost('http://framework.zend.com');
+
+// or by calling the method upon a post object
+$posts = $delicious-&gt;getPosts();
+$posts[0]-&gt;delete();
+
+// another way of using deletePost()
+$delicious-&gt;deletePost($posts[0]-&gt;getUrl());
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.adding_posts"></a>48.18.6. Adding new posts</h3></div></div></div>
+<p>
+            To add a post you first need to call the <code class="methodname">createNewPost()</code> method, which returns a
+            <code class="classname">Zend_Service_Delicious_Post</code> object. When you edit the post, you need to save it
+            to the del.icio.us database by calling the <code class="methodname">save()</code> method.
+        </p>
+<div class="example">
+<a name="zend.service.delicious.adding_posts.adding_a_post"></a><p class="title"><b>例 48.86. Adding a post</b></p>
+<div class="example-contents"><pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+
+// create a new post and save it (with method call chaining)
+$delicious-&gt;createNewPost('Zend Framework', 'http://framework.zend.com')
+          -&gt;setNotes('Zend Framework Homepage')
+          -&gt;save();
+
+// create a new post and save it  (without method call chaining)
+$newPost = $delicious-&gt;createNewPost('Zend Framework',
+                                     'http://framework.zend.com');
+$newPost-&gt;setNotes('Zend Framework Homepage');
+$newPost-&gt;save();
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.tags"></a>48.18.7. Tags</h3></div></div></div>
+<div class="example">
+<a name="zend.service.delicious.tags.tags"></a><p class="title"><b>例 48.87. Tags</b></p>
+<div class="example-contents"><pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+
+// get all tags
+print_r($delicious-&gt;getTags());
+
+// rename tag ZF to zendFramework
+$delicious-&gt;renameTag('ZF', 'zendFramework');
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.bundles"></a>48.18.8. Bundles</h3></div></div></div>
+<div class="example">
+<a name="zend.service.delicious.bundles.example"></a><p class="title"><b>例 48.88. Bundles</b></p>
+<div class="example-contents"><pre class="programlisting">
+$delicious = new Zend_Service_Delicious('username', 'password');
+
+// get all bundles
+print_r($delicious-&gt;getBundles());
+
+// delete bundle someBundle
+$delicious-&gt;deleteBundle('someBundle');
+
+// add bundle
+$delicious-&gt;addBundle('newBundle', array('tag1', 'tag2'));
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.public_data"></a>48.18.9. Public data</h3></div></div></div>
+<p>
+            The del.icio.us web <acronym class="acronym">API</acronym> allows access to the public data of all users.
+        </p>
+<div class="table">
+<a name="zend.service.delicious.public_data.functions_for_retrieving_public_data"></a><p class="title"><b>表 48.14. Methods for retrieving public data</b></p>
+<div class="table-contents"><table summary="Methods for retrieving public data" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Name</th>
+<th>Description</th>
+<th>Return type</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code class="methodname">getUserFans()</code></td>
+<td>Retrieves fans of a user</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code class="methodname">getUserNetwork()</code></td>
+<td>Retrieves network of a user</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code class="methodname">getUserPosts()</code></td>
+<td>Retrieves posts of a user</td>
+<td>Zend_Service_Delicious_PostList</td>
+</tr>
+<tr>
+<td><code class="methodname">getUserTags()</code></td>
+<td>Retrieves tags of a user</td>
+<td>Array</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                When using only these methods, a username and password combination is not required when constructing
+                a new <code class="classname">Zend_Service_Delicious</code> object.
+            </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.service.delicious.public_data.retrieving_public_data"></a><p class="title"><b>例 48.89. Retrieving public data</b></p>
+<div class="example-contents"><pre class="programlisting">
+// username and password are not required
+$delicious = new Zend_Service_Delicious();
+
+// get fans of user someUser
+print_r($delicious-&gt;getUserFans('someUser'));
+
+// get network of user someUser
+print_r($delicious-&gt;getUserNetwork('someUser'));
+
+// get tags of user someUser
+print_r($delicious-&gt;getUserTags('someUser'));
+</pre></div>
+</div>
+<br class="example-break"><div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.service.delicious.public_data.posts"></a>48.18.9.1. Public posts</h4></div></div></div>
+<p>
+                When retrieving public posts with the <code class="methodname">getUserPosts()</code> method, a
+                <code class="classname">Zend_Service_Delicious_PostList</code> object is returned, and it contains
+                <code class="classname">Zend_Service_Delicious_SimplePost</code> objects, which contain basic information
+                about the posts, including <acronym class="acronym">URL</acronym>, title, notes, and tags.
+            </p>
+<div class="table">
+<a name="zend.service.delicious.public_data.posts.SimplePost_methods"></a><p class="title"><b>表 48.15. Methods of the Zend_Service_Delicious_SimplePost class</b></p>
+<div class="table-contents"><table summary="Methods of the Zend_Service_Delicious_SimplePost class" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Name</th>
+<th>Description</th>
+<th>Return type</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code class="methodname">getNotes()</code></td>
+<td>Returns notes of a post</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code class="methodname">getTags()</code></td>
+<td>Returns tags of a post</td>
+<td>Array</td>
+</tr>
+<tr>
+<td><code class="methodname">getTitle()</code></td>
+<td>Returns title of a post</td>
+<td>String</td>
+</tr>
+<tr>
+<td><code class="methodname">getUrl()</code></td>
+<td>Returns <acronym class="acronym">URL</acronym> of a post</td>
+<td>String</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break">
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.delicious.httpclient"></a>48.18.10. HTTP client</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Delicious</code> uses <code class="classname">Zend_Rest_Client</code> for making <acronym class="acronym">HTTP</acronym> requests
+            to the del.icio.us web service. To change which <acronym class="acronym">HTTP</acronym> client <code class="classname">Zend_Service_Delicious</code>
+            uses, you need to change the <acronym class="acronym">HTTP</acronym> client of <code class="classname">Zend_Rest_Client</code>.
+        </p>
+<div class="example">
+<a name="zend.service.delicious.httpclient.changing"></a><p class="title"><b>例 48.90. Changing the HTTP client of Zend_Rest_Client</b></p>
+<div class="example-contents"><pre class="programlisting">
+$myHttpClient = new My_Http_Client();
+Zend_Rest_Client::setHttpClient($myHttpClient);
+</pre></div>
+</div>
+<br class="example-break"><p>
+            When you are making more than one request with <code class="classname">Zend_Service_Delicious</code> to speed your
+            requests, it's better to configure your <acronym class="acronym">HTTP</acronym> client to keep connections alive.
+        </p>
+<div class="example">
+<a name="zend.service.delicious.httpclient.keepalive"></a><p class="title"><b>例 48.91. Configuring your HTTP client to keep connections alive</b></p>
+<div class="example-contents"><pre class="programlisting">
+Zend_Rest_Client::getHttpClient()-&gt;setConfig(array(
+        'keepalive' =&gt; true
+));
+</pre></div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                When a <code class="classname">Zend_Service_Delicious</code> object is constructed, the <acronym class="acronym">SSL</acronym> transport
+                of <code class="classname">Zend_Rest_Client</code> is set to <code class="code">'ssl'</code> rather than the default of
+                <code class="code">'ssl2'</code>. This is because del.icio.us has some problems with <code class="code">'ssl2'</code>, such
+                as requests taking a long time to complete (around 2 seconds).
+            </p></td></tr>
+</table></div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.service.audioscrobbler.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.service.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.service.flickr.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">48.17. Zend_Service_Audioscrobbler </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 48.19. Zend_Service_Flickr</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

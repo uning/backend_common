@@ -1,0 +1,10 @@
+
+#not crlf replace
+*.* -crlf
+
+#binary
+*.swc  -merge binary
+*.swf  -merge binary
+*.fla  -merge binary
+*.jpg  -merge  binary
+*.bin  -merge  binary

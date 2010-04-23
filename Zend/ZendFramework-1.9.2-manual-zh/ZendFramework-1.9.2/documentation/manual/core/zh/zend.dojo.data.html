@@ -1,0 +1,359 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>17.2. Zend_Dojo_Data: dojo.data Envelopes</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="prev" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="next" href="zend.dojo.view.html" title="17.3. Dojo 视图助手">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.dojo.data.html#zend.dojo.data.usage" title="17.2.1. Zend_Dojo_Data 用法">
+<link rel="subsection" href="zend.dojo.data.html#zend.dojo.data.advanced" title="17.2.2. 高级用例">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">17.2. Zend_Dojo_Data: dojo.data Envelopes</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.dojo.html">上一页</a> </td>
+<th width="60%" align="center">第 17 章 Zend_Dojo</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.dojo.view.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.dojo.data"></a>17.2. Zend_Dojo_Data: dojo.data Envelopes</h2></div></div></div>
+<p>
+        Dojo 通过它的 dojo.data 组件为 data-enabled 小部件提供数据抽象。
+        该组件提供附加数据存储的能力，提供一些关于身份字段和可选的标签字段的元数据以及
+        从数据存储查询、排序和获取记录和一组记录的 API。
+    </p>
+<p>
+        dojo.data 常和XmlHttpRequest一起使用来从服务器取出动态数据。
+        它的基本机制是扩展 QueryReadStore 来指向一个 URL 并指定查询信息，服务器端就用
+        下列 JSON 格式来返回数据：
+    </p>
+<pre class="programlisting">
+{
+    identifier: '&lt;name&gt;',
+    &lt;label: '&lt;label&gt;',&gt;
+    items: [
+        { name: '...', label: '...', someKey: '...' },
+        ...
+    ]
+}
+
+</pre>
+<p>
+        <code class="code">Zend_Dojo_Data</code> 提供一个简单的接口通过程序来构造这样的结构，
+        交互并系列化成一个数组或 JSON。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.dojo.data.usage"></a>17.2.1. Zend_Dojo_Data 用法</h3></div></div></div>
+<p>
+            很简单，dojo.data 要求你在每个条目和一组条目（数据）中提供标识符字段的名字。
+            你可以通过构造函数或 mutators 来传递它们：
+        </p>
+<div class="example">
+<a name="zend.dojo.data.usage.constructor"></a><p class="title"><b>例 17.1. 通过构造函数初始化 Zend_Dojo_Data</b></p>
+<div class="example-contents"><pre class="programlisting">
+$data = new Zend_Dojo_Data('id', $items);
+
+            </pre></div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.dojo.data.usage.mutators"></a><p class="title"><b>例 17.2. 通过 mutators 初始化 Zend_Dojo_Data</b></p>
+<div class="example-contents"><pre class="programlisting">
+$data = new Zend_Dojo_Data();
+$data-&gt;setIdentifier('id')
+     -&gt;addItems($items);
+
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            用 <code class="code">addItem()</code> 和 <code class="code">addItems()</code> 添加一个单个条目或追加多个条目。
+        </p>
+<div class="example">
+<a name="zend.dojo.data.usage.append"></a><p class="title"><b>例 17.3. 追加数据到 Zend_Dojo_Data</b></p>
+<div class="example-contents"><pre class="programlisting">
+$data = new Zend_Dojo_Data($identifier, $items);
+$data-&gt;addItem($someItem);
+
+$data-&gt;addItems($someMoreItems);
+
+            </pre></div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note:  永远使用标识符！">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left"> 永远使用标识符！</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                每个 dojo.data 数据存储要求以元数据来提供标识符列，<code class="code">Zend_Dojo_Data</code> 也一样。
+                实际上，如果不用标识符添加条目，将会抛出异常。
+            </p></td></tr>
+</table></div>
+<p>
+            条目可以是下列其中之一：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                联合数组
+            </p></li>
+<li><p>
+                实现 <code class="code">toArray()</code> 方法的对象
+            </p></li>
+<li><p>
+                任何其它对象（将通过 get_object_vars() 系列化 ）
+            </p></li>
+</ul></div>
+<p>
+            你可以通过 <code class="code">addItems()</code> 或 <code class="code">setItems()</code>（覆盖先前的条目） 附加上述条目的集合；
+            用的时候，你可以传递一个参数：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                数组
+            </p></li>
+<li><p>
+                实现<code class="code">Traversable</code>接口的对象（包括 <code class="code">Iterator</code> 和 <code class="code">ArrayAccess</code> 接口）。
+            </p></li>
+</ul></div>
+<p>
+            如果想为条目指定一个用作标签的字段，调用<code class="code">setLabel()</code>:
+        </p>
+<div class="example">
+<a name="zend.dojo.data.usage.label"></a><p class="title"><b>例 17.4. 在 Zend_Dojo_Data 里指定一个标签字段 </b></p>
+<div class="example-contents"><pre class="programlisting">
+$data-&gt;setLabel('name');
+
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            最后，你也可以用 <code class="code">fromJson()</code> 方法从 dojo.data JSON 数组加载一个 <code class="code">Zend_Dojo_Data</code> 条目，
+        </p>
+<div class="example">
+<a name="zend.dojo.data.usage.populate"></a><p class="title"><b>例 17.5.  从 JSON 组装 Zend_Dojo_Data </b></p>
+<div class="example-contents"><pre class="programlisting">
+$data-&gt;fromJson($json);
+
+            </pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.dojo.data.advanced"></a>17.2.2. 高级用例</h3></div></div></div>
+<p>
+            除了可以作为可系列化的数据容器，<code class="code">Zend_Dojo_Data</code> 也可以用各种各样的方法处理和疏导（traverse）数据。
+        </p>
+<p>
+            <code class="code">Zend_Dojo_Data</code> 实现 <code class="code">ArrayAccess</code>、 <code class="code">Iterator</code> 和 <code class="code">Countable</code> 的接口。
+            这意味着你可以使用数据集合几乎就像使用数组一样。
+        </p>
+<p>
+            所有的条目通过标识符字段来引用。因为表示符必须是独一无二的，你可用它的值来取出每个记录。
+            有两个方法可以做这个：通过 <code class="code">getItem()</code> 方法，或通过数组符号。
+        </p>
+<pre class="programlisting">
+// Using getItem():
+$item = $data-&gt;getItem('foo');
+
+// Or use array notation:
+$item = $data['foo'];
+
+        </pre>
+<p>
+            如果你知道标识符，你可以用它来读取、更新、删除、创建或测试条目：
+        </p>
+<pre class="programlisting">
+// Update or create an item:
+$data['foo'] = array('title' =&gt; 'Foo', 'email' =&gt; 'foo@foo.com');
+
+// Delete an item:
+unset($data['foo']);
+
+// Test for an item:
+if (isset($data[foo])) {
+}
+
+       </pre>
+<p>
+            你也可以遍历所有条目，在内部，所有的条目以数组形式存储。
+        </p>
+<pre class="programlisting">
+foreach ($data as $item) {
+    echo $item['title'] . ': ' . $item['description'] . "\n";
+}
+
+        </pre>
+<p>
+            甚至还可以数出你有多少条目：
+        </p>
+<pre class="programlisting">
+echo count($data), " items found!";
+
+        </pre>
+<p>
+            最后，因为这个类实现 <code class="code">__toString()</code>， 你也可以通过 echo 它把它传给 JSON 或 字符串：
+        </p>
+<pre class="programlisting">
+echo $data; // echo as JSON string
+
+$json = (string) $data; // cast to string == cast to JSON
+
+        </pre>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.dojo.data.advanced.methods"></a>17.2.2.1.  可用的方法 </h4></div></div></div>
+<p>
+                除了上述实现接口必须的方法外，下列方法也可用。
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setItems($items)</code>: 一次设置多个条目，覆盖在对象里先前的任何条目。
+                    <code class="code">$items</code> 是一个数组或一个 <code class="code">Traversable</code> 对象。
+                </p></li>
+<li><p>
+                    <code class="code">setItem($item, $id = null)</code>: 设置一个条目，可选地传递一个显式标识符。
+                    如果有的话，覆盖先前在集合里的条目。有效的条目包括联合数组，实现 <code class="code">toArray()</code> 的对象或任何有 public 属性的对象。
+                </p></li>
+<li><p>
+                    <code class="code">addItem($item, $id = null)</code>: 添加一个条目，可选地传递一个显式标识符。
+                    如果在集合理已经存在该条目，将产生异常。有效的条目包括联合数组，实现 <code class="code">toArray()</code> 的对象或任何有 public 属性的对象。
+                </p></li>
+<li><p>
+                    <code class="code">addItems($items)</code>: 一次添加多个条目，追加到任何当前条目。如果新条目的标识符在集合理已经存在，将产生异常。
+                    <code class="code">$items</code> 是一个数组或一个 <code class="code">Traversable</code> 对象。
+                </p></li>
+<li><p>
+                    <code class="code">getItems()</code>: 以数组的数组（array of arrays）的形式获取所有条目。
+                </p></li>
+<li><p>
+                    <code class="code">hasItem($id)</code>: 确定一个条目的标识符是否在集合理存在。
+                </p></li>
+<li><p>
+                    <code class="code">getItem($id)</code>: 从集合里按给定的标识符获取一个条目；返回一个联合数组。
+                    如果没有条目匹配，返回 null。
+                </p></li>
+<li><p>
+                    <code class="code">removeItem($id)</code>: 从集合里按给定的标识符删除一个条目。
+                </p></li>
+<li><p>
+                    <code class="code">clearItems()</code>: 从集合里删除所有条目。
+                </p></li>
+<li><p>
+                    <code class="code">setIdentifier($identifier)</code>: 为集合里的每个条目设置表示独一无二的标识符的字段名。
+                </p></li>
+<li><p>
+                    <code class="code">getIdentifier()</code>: 获取标识符字段的名字。
+                </p></li>
+<li><p>
+                    <code class="code">setLabel($label)</code>: 设置用于为条目显示标签的字段的名字。
+                </p></li>
+<li><p>
+                    <code class="code">getLabel()</code>: 读取标签字段名。
+                </p></li>
+<li><p>
+                    <code class="code">toArray()</code>: 传递对象到一个数组。数组里最少包含键 'identifier' 和 'items'，
+                    如果在对象里设置了标签，也要包含 'label'。
+                </p></li>
+<li><p>
+                    <code class="code">toJson()</code>: 传递对象给一个JSON 表达。
+                </p></li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.dojo.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.dojo.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.dojo.view.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 17 章 Zend_Dojo </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 17.3. Dojo 视图助手</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

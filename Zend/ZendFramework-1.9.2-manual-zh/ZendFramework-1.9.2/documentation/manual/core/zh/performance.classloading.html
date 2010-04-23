@@ -1,0 +1,410 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>E.2. Class Loading</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="prev" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="next" href="performance.database.html" title="E.3. Zend_Db Performance">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="performance.classloading.html#performance.classloading.includepath" title="E.2.1. How can I optimize my include_path?">
+<link rel="subsection" href="performance.classloading.html#performance.classloading.striprequires" title="E.2.2. How can I eliminate unnecessary require_once statements?">
+<link rel="subsection" href="performance.classloading.html#performance.classloading.pluginloader" title="E.2.3. How can I speed up plugin loading?">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">E.2. Class Loading</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="performance.html">上一页</a> </td>
+<th width="60%" align="center">附录 E. Zend Framework Performance Guide</th>
+<td width="20%" align="right"> <a accesskey="n" href="performance.database.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="performance.classloading"></a>E.2. Class Loading</h2></div></div></div>
+<p>
+        Anyone who ever performs profiling of a Zend Framework application will
+        immediately recognize that class loading is relatively expensive in Zend
+        Framework. Between the sheer number of class files that need to be
+        loaded for many components, to the use of plugins that do not have a 1:1
+        relationship between their class name and the file system, the various
+        calls to <code class="methodname">include_once()</code> and
+        <code class="methodname">require_once()</code> can be problematic. This chapter intends to provide
+        some concrete solutions to these issues.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="performance.classloading.includepath"></a>E.2.1. How can I optimize my include_path?</h3></div></div></div>
+<p>
+            One trivial optimization you can do to increase the speed of class
+            loading is to pay careful attention to your include_path. In
+            particular, you should do four things: use absolute paths (or paths
+            relative to absolute paths), reduce the number of include paths you
+            define, have your Zend Framework include_path as early as possible,
+            and only include the current directory path at the end of your
+            include_path.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="performance.classloading.includepath.abspath"></a>E.2.1.1. Use absolute paths</h4></div></div></div>
+<p>
+                While this may seem a micro-optimization, the fact is that if
+                you don't, you'll get very little benefit from <acronym class="acronym">PHP</acronym>'s realpath
+                cache, and as a result, opcode caching will not perform nearly
+                as you may expect.
+            </p>
+<p>
+                There are two easy ways to ensure this. First, you can hardcode
+                the paths in your <code class="filename">php.ini</code>, <code class="filename">httpd.conf</code>,
+                or <code class="filename">.htaccess</code>. Second, you
+                can use <acronym class="acronym">PHP</acronym>'s <code class="methodname">realpath()</code> function when
+                setting your include_path:
+            </p>
+<pre class="programlisting">
+$paths = array(
+    realpath(dirname(__FILE__) . '/../library'),
+    '.',
+);
+set_include_path(implode(PATH_SEPARATOR, $paths);
+</pre>
+<p>
+                You <span class="emphasis"><em>can</em></span> use relative paths -- so long as
+                they are relative to an absolute path:
+            </p>
+<pre class="programlisting">
+define('APPLICATION_PATH', realpath(dirname(__FILE__)));
+$paths = array(
+    APPLICATION_PATH . '/../library'),
+    '.',
+);
+set_include_path(implode(PATH_SEPARATOR, $paths);
+</pre>
+<p>
+                However, even so, it's typically a trivial task to simply pass
+                the path to <code class="methodname">realpath()</code>.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="performance.classloading.includepath.reduce"></a>E.2.1.2. Reduce the number of include paths you define</h4></div></div></div>
+<p>
+                Include paths are scanned in the order in which they appear in
+                the include_path. Obviously, this means that you'll get a result
+                faster if the file is found on the first scan rather than the
+                last. Thus, a rather obvious enhancement is to simply reduce the
+                number of paths in your include_path to only what you need. Look
+                through each include_path you've defined, and determine if you
+                actually have any functionality in that path that is used in
+                your application; if not, remove it.
+            </p>
+<p>
+                Another optimization is to combine paths. For instance, Zend
+                Framework follows <acronym class="acronym">PEAR</acronym> naming conventions; thus, if you are
+                using <acronym class="acronym">PEAR</acronym> libraries (or libraries from another framework or
+                component library that follows <acronym class="acronym">PEAR</acronym> CS), try to put all of these
+                libraries on the same include_path. This can often be achieved
+                by something as simple as symlinking one or more libraries into
+                a common directory.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="performance.classloading.includepath.early"></a>E.2.1.3. Define your Zend Framework include_path as early as possible</h4></div></div></div>
+<p>
+                Continuing from the previous suggestion, another obvious
+                optimization is to define your Zend Framework include_path as
+                early as possible in your include_path. In most cases, it should
+                be the first path in the list. This ensures that files included
+                from Zend Framework are found on the first scan.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="performance.classloading.includepath.currentdir"></a>E.2.1.4. Define the current directory last, or not at all</h4></div></div></div>
+<p>
+                Most include_path examples show using the current directory, or
+                '.'. This is convenient for ensuring that scripts in the same
+                directory as the file requiring them can be loaded. However,
+                these same examples typically show this path item as the first
+                item in the include_path -- which means that the current
+                directory tree is always scanned first. In most cases, with Zend
+                Framework applications, this is not desired, and the path may be
+                safely pushed to the last item in the list.
+            </p>
+<div class="example">
+<a name="performance.classloading.includepath.example"></a><p class="title"><b>例 E.1. Example: Optimized include_path</b></p>
+<div class="example-contents">
+<p>
+                Let's put all of these suggestions together. Our assumption will
+                be that you are using one or more <acronym class="acronym">PEAR</acronym> libraries in conjunction
+                with Zend Framework -- perhaps the PHPUnit and <code class="classname">Archive_Tar</code>
+                libraries -- and that you occasionally need to include
+                files relative to the current file.
+            </p>
+<p>
+                First, we'll create a library directory in our project. Inside
+                that directory, we'll symlink our Zend Framework's <code class="filename">library/Zend</code>
+                directory, as well as the necessary directories from our <acronym class="acronym">PEAR</acronym>
+                installation:
+            </p>
+<pre class="programlisting">
+library
+    Archive/
+    PEAR/
+    PHPUnit/
+    Zend/
+</pre>
+<p>
+                This allows us to add our own library code if necessary, while
+                keeping shared libraries intact.
+            </p>
+<p>
+                Next, we'll opt to create our include_path programmatically
+                within our <code class="filename">public/index.php</code> file. This allows us to move our
+                code around on the file system, without needing to edit the
+                include_path every time.
+            </p>
+<p>
+                We'll borrow ideas from each of the suggestions above: we'll use
+                absolute paths, as determined using <code class="methodname">realpath()</code>;
+                we'll include Zend Framework's include path early; we've
+                already consolidated include_paths; and we'll put the current
+                directory as the last path. In fact, we're doing really well
+                here -- we're going to end up with only two paths.
+            </p>
+<pre class="programlisting">
+$paths = array(
+    realpath(dirname(__FILE__) . '/../library'),
+    '.'
+);
+set_include_path(implode(PATH_SEPARATOR, $paths));
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="performance.classloading.striprequires"></a>E.2.2. How can I eliminate unnecessary require_once statements?</h3></div></div></div>
+<p>
+            Lazy loading is an optimization technique designed to push the
+            expensive operation of loading a class file until the last possible
+            moment -- i.e., when instantiating an object of that class, calling
+            a static class method, or referencing a class constant or static
+            property. <acronym class="acronym">PHP</acronym> supports this via autoloading, which allows you to
+            define one or more callbacks to execute in order to map a class name
+            to a file.
+        </p>
+<p>
+            However, most benefits you may reap from autoloading are negated if
+            your library code is still performing <code class="methodname">require_once()</code> calls --
+            which is precisely the case with Zend Framework. So, the question is: how can
+            you eliminate those <code class="methodname">require_once()</code> calls in order to maximize
+            autoloader performance?
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="performance.classloading.striprequires.sed"></a>E.2.2.1. Strip require_once calls with find and sed</h4></div></div></div>
+<p>
+                An easy way to strip <code class="methodname">require_once()</code> calls is to use the
+                <acronym class="acronym">UNIX</acronym> utilities 'find' and 'sed' in conjunction to comment out
+                each call. Try executing the following statements (where '%'
+                indicates the shell prompt):
+            </p>
+<pre class="programlisting">
+% cd path/to/ZendFramework/library
+% find . -name '*.php' -not -wholename '*/Loader/Autoloader.php' \
+  -not -wholename '*/Application.php' -print0 | \
+  xargs -0 sed --regexp-extended --in-place 's/(require_once)/\/\/ \1/g'
+</pre>
+<p>
+                This one-liner (broken into two lines for readability) iterates
+                through each <acronym class="acronym">PHP</acronym> file and tells it to replace each instance of
+                'require_once' with '// require_once', effectively commenting
+                out each such statement. (It selectively keeps 
+                <font color="red">&lt;functionname&gt;require_once&lt;/functionname&gt;</font> calls within
+                <code class="classname">Zend_Application</code> and
+                <code class="classname">Zend_Loader_Autoloader</code>, as these classes will fail without 
+                them.)
+            </p>
+<p>
+                This command could be added to an automated build or release
+                process trivially, helping boost performance in your production
+                application. It should be noted, however, that if you use this
+                technique, you <span class="emphasis"><em>must</em></span> utilize autoloading;
+                you can do that from your "<code class="filename">public/index.php</code>" file with the
+                following code:
+            </p>
+<pre class="programlisting">
+require_once 'Zend/Loader/Autoloader.php';
+Zend_Loader_Autoloader::getInstance();
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="performance.classloading.pluginloader"></a>E.2.3. How can I speed up plugin loading?</h3></div></div></div>
+<p>
+            Many components have plugins, which allow you to create your own
+            classes to utilize with the component, as well as to override
+            existing, standard plugins shipped with Zend Framework. This
+            provides important flexibility to the framework, but at a price:
+            plugin loading is a fairly expensive task.
+        </p>
+<p>
+            The plugin loader allows you to register class prefix / path pairs,
+            allowing you to specify class files in non-standard paths. Each
+            prefix can have multiple paths associated with it.
+            Internally, the plugin loader loops through each prefix, and then
+            through each path attached to it, testing to see if the file exists
+            and is readable on that path. It then loads it, and tests to see
+            that the class it is looking for is available. As you might imagine,
+            this can lead to many stat calls on the file system.
+        </p>
+<p>
+            Multiply this by the number of components that use the PluginLoader,
+            and you get an idea of the scope of this issue. At the time of this
+            writing, the following components made use of the PluginLoader:
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                <code class="classname">Zend_Controller_Action_HelperBroker</code>: helpers
+            </p></li>
+<li><p>
+                <code class="classname">Zend_Dojo</code>: view helpers, form elements and decorators
+            </p></li>
+<li><p>
+                <code class="classname">Zend_File_Transfer</code>: adapters
+            </p></li>
+<li><p>
+                <code class="classname">Zend_Filter_Inflector</code>: filters (used by the
+                ViewRenderer action helper and <code class="classname">Zend_Layout</code>)
+            </p></li>
+<li><p>
+                <code class="classname">Zend_Filter_Input</code>: filters and validators
+            </p></li>
+<li><p>
+                <code class="classname">Zend_Form</code>: elements, validators, filters,
+                decorators, captcha and file transfer adapters
+            </p></li>
+<li><p>
+                <code class="classname">Zend_Paginator</code>: adapters
+            </p></li>
+<li><p>
+                <code class="classname">Zend_View</code>: helpers, filters
+            </p></li>
+</ul></div>
+<p>
+            How can you reduce the number of such calls made?
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="performance.classloading.pluginloader.includefilecache"></a>E.2.3.1. Use the PluginLoader include file cache</h4></div></div></div>
+<p>
+                Zend Framework 1.7.0 adds an include file cache to the
+                PluginLoader. This functionality writes "<code class="methodname">include_once()</code>"
+                calls to a file, which you can then include in your bootstrap. While this
+                introduces extra <code class="methodname">include_once()</code> calls to your code, it
+                also ensures that the PluginLoader returns as early as possible.
+            </p>
+<p>
+                The PluginLoader documentation <a href="">includes
+                a complete example of its use</a>.
+            </p>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="performance.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="performance.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="performance.database.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">附录 E. Zend Framework Performance Guide </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> E.3. Zend_Db Performance</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

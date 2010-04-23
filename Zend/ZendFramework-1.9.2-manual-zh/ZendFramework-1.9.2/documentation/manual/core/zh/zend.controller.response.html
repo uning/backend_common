@@ -1,0 +1,404 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>12.9. 响应对象</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="prev" href="zend.controller.actionhelpers.html" title="12.8. 动作助手">
+<link rel="next" href="zend.controller.plugins.html" title="12.10. 插件">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.controller.response.html#zend.controller.response.usage" title="12.9.1. 用法">
+<link rel="subsection" href="zend.controller.response.html#zend.controller.response.headers" title="12.9.2. 处理消息头">
+<link rel="subsection" href="zend.controller.response.html#zend.controller.response.namedsegments" title="12.9.3. 命名片段">
+<link rel="subsection" href="zend.controller.response.html#zend.controller.response.exceptions" title="12.9.4. 在响应对象中测试异常">
+<link rel="subsection" href="zend.controller.response.html#zend.controller.response.subclassing" title="12.9.5. 子类化响应对象">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">12.9. 响应对象</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.controller.actionhelpers.html">上一页</a> </td>
+<th width="60%" align="center">第 12 章 Zend_Controller</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.controller.plugins.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.controller.response"></a>12.9. 响应对象</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.response.usage"></a>12.9.1. 用法</h3></div></div></div>
+<p>
+            响应对象逻辑上是<a href="zend.controller.request.html" title="12.4. 请求对象">请求对象</a>的搭档.目的在于收集消息体和/或消息头，因而可能返回大批的结果。另外前端控制器可能传递任何异常到响应对象，允许开发人员优美的处理异常。可以通过设置            <code class="code">Zend_Controller_Front::throwExceptions(true)</code>覆盖这项功能：
+        </p>
+<pre class="programlisting">
+$front-&gt;throwExceptions(true);
+
+        </pre>
+<p>
+            如果要发送响应输出包括消息头，使用<code class="code">sendResponse()</code>。
+        </p>
+<pre class="programlisting">
+$response-&gt;sendResponse();
+
+        </pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+                        默认地，前端控制器完成分发请求后调用<code class="code">sendResponse()</code>；一般地，你不需要调用它。但是，如果你想处理响应或者用它来测试你可以使用<code class="code">Zend_Controller_Front::returnResponse(true)</code>设置<code class="code">returnResponse</code> 标志覆盖默认行为：
+            </p>
+<pre class="programlisting">
+$front-&gt;returnResponse(true);
+$response = $front-&gt;dispatch();
+
+// do some more processing, such as logging...
+// and then send the output:
+$response-&gt;sendResponse();
+
+            </pre>
+</td></tr>
+</table></div>
+<p>
+                  开发人员可以在动作控制器中使用响应对象。把结果写进响应对象，而不是直接渲染输出和发送消息头：
+        </p>
+<pre class="programlisting">
+// Within an action controller action:
+// Set a header
+$this-&gt;getResponse()
+    -&gt;setHeader('Content-Type', 'text/html')
+    -&gt;appendBody($content);
+
+        </pre>
+<p>
+            这样做，可以在显示内容之前，将所有消息头一次发送。
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                如果使用动作控制器的 <a href="zend.controller.action.html#zend.controller.action.viewintegration" title="12.7.5. 视图集成">视图集成(view integration)</a>，你不需要在相应对象中设置渲染的视图脚本，因为<code class="code">Zend_Controller_Action::render()</code> 默认完成了这些。
+            </p></td></tr>
+</table></div>
+<p>
+                  如果程序中发生了异常，检查响应对象的<code class="code">isException()</code> 标志，使用<code class="code">getException()</code>获取异常。此外，可以创建定制的响应对象重定向到错误页面，记录异常消息，漂亮的格式化异常消息等。
+        </p>
+<p>
+                  在前端控制器执行dispatch()后可以获得响应对象，或者请求前端控制器返回响应对象代替渲染输出。
+        </p>
+<pre class="programlisting">
+// retrieve post-dispatch:
+$front-&gt;dispatch();
+$response = $front-&gt;getResponse();
+if ($response-&gt;isException()) {
+    // log, mail, etc...
+}
+
+// Or, have the front controller dispatch() process return it
+$front-&gt;returnResponse(true);
+$response = $front-&gt;dispatch();
+
+// do some processing...
+
+// finally, echo the response
+$response-&gt;sendResponse();
+
+        </pre>
+<p>
+                  默认地，异常消息是不显示的。可以通过调用<code class="code">renderExceptions()</code>覆盖默认设置。或者启用前端控制器的throwExceptions():
+        </p>
+<pre class="programlisting">
+$response-&gt;renderExceptions(true);
+$front-&gt;dispatch($request, $response);
+
+// or:
+$front-&gt;returnResponse(true);
+$response = $front-&gt;dispatch();
+$response-&gt;renderExceptions();
+$response-&gt;sendResponse();
+
+// or:
+$front-&gt;throwExceptions(true);
+$front-&gt;dispatch();
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.response.headers"></a>12.9.2. 处理消息头</h3></div></div></div>
+<p>
+                  如上文所述，响应对象的一项重要职责是收集和发出HTTP响应消息头，相应地存在大量的方法:
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">canSendHeaders()</code> 用来判别消息头是否已发送，该方法带有一个可选的标志指示消息头已发出时是否抛出异常。可以通过设置<code class="code">headersSentThrowsException</code> 属性为<code class="code">false</code>来覆盖默认设置。
+                </p></li>
+<li>
+<p>
+                    <code class="code">setHeader($name, $value, $replace = false)</code>用来设置单独的消息头。默认的不会替换已经存在的同名消息头，但可以设置<code class="code">$replace</code> 为true强制替换.
+                </p>
+<p>
+                              设置消息头前，该方法先检查<code class="code">canSendHeaders()</code>看操作是否允许，并请求抛出异常。
+                </p>
+</li>
+<li>
+<p>
+                    <code class="code">setRedirect($url, $code = 302)</code> 设置HTTP定位消息头准备重定向，如果提供HTTP状态码，重定向将会使用该状态码。
+                </p>
+<p>
+                              其内部调用<code class="code">setHeader()</code>并使<code class="code">$replace</code> 标志呈打开状态确保只发送一次定位消息头。
+                </p>
+</li>
+<li><p>
+                    <code class="code">getHeaders()</code> 返回一个消息头数组，每个元素都是一个带有'name'和'value'键的数组。
+                </p></li>
+<li><p>
+                    <code class="code">clearHeaders()</code> 清除所有注册的键值消息头。
+                </p></li>
+<li><p>
+                    <code class="code">setRawHeader()</code> 设置没有键值对的原始消息头，比如HTTP状态消息头。
+                </p></li>
+<li><p>
+                    <code class="code">getRawHeaders()</code> 返回所有注册的原始消息头。
+                     </p></li>
+<li><p>
+                    <code class="code">clearRawHeaders()</code>清除所有的原始消息头。
+                </p></li>
+<li><p>
+                    <code class="code">clearAllHeaders()</code> 清除所有的消息头，包括原始消息头和键值消息头。
+                </p></li>
+</ul></div>
+<p>
+                  除了上述方法，还有获取和设置当前请求HTTP响应码的访问器，            <code class="code">setHttpResponseCode()</code> 和            <code class="code">getHttpResponseCode()</code>.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.response.namedsegments"></a>12.9.3. 命名片段</h3></div></div></div>
+<p>
+                  相应对象支持“命名片段”。允许你将消息体分割成不同的片段，并呈一定顺序排列。因此输出的是以特定次序返回的。在其内部，主体内容被存储为一个数组，大量的访问器方法可以用来指示数组内位置和名称。
+        </p>
+<p>
+                  举例来说，你可以使用<code class="code">preDispatch()</code> 钩子来向响应对象中加入页头，然后在动作控制器中加入主体内容，最后在<code class="code">postDispatch()</code>钩子中加入页脚。
+        </p>
+<pre class="programlisting">
+// Assume that this plugin class is registered with the front controller
+class MyPlugin extends Zend_Controller_Plugin_Abstract
+{
+    public function preDispatch(Zend_Controller_Request_Abstract $request)
+    {
+        $response = $this-&gt;getResponse();
+        $view = new Zend_View();
+        $view-&gt;setBasePath('../views/scripts');
+
+        $response-&gt;prepend('header', $view-&gt;render('header.phtml'));
+    }
+
+    public function postDispatch(Zend_Controller_Request_Abstract $request)
+    {
+        $response = $this-&gt;getResponse();
+        $view = new Zend_View();
+        $view-&gt;setBasePath('../views/scripts');
+
+        $response-&gt;append('footer', $view-&gt;render('footer.phtml'));
+    }
+}
+
+// a sample action controller
+class MyController extends Zend_Controller_Action
+{
+    public function fooAction()
+    {
+        $this-&gt;render();
+    }
+}
+
+        </pre>
+<p>
+                  上面的例子中，调用<code class="code">/my/foo</code>会使得最终响应对象中的内容呈现下面的结构：
+        </p>
+<pre class="programlisting">
+array(
+    'header'  =&gt; ..., // header content
+    'default' =&gt; ..., // body content from MyController::fooAction()
+    'footer'  =&gt; ...  // footer content
+);
+
+        </pre>
+<p>
+            渲染响应时，会按照数组中元素顺序来渲染。
+        </p>
+<p>
+            大量的方法可以用来处理命名片段：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setBody()</code> 和 <code class="code">appendBody()</code> 都允许传入一个<code class="code">$name</code>参数，指示一个命名片段。如果提供了这个参数，将会覆盖指定的命名片段，如果该片段不存在就创建一个。如果没有传入<code class="code">$name</code>参数到<code class="code">setBody()</code>，将会重置整个主体内容。如果没有传入<code class="code">$name</code>参数到<code class="code">appendBody()</code>，内容被附加到'default'命名片段。
+                </p></li>
+<li><p>
+                    <code class="code">prepend($name, $content)</code> 将创建一个<code class="code">$name</code>命名片段并放置在数组的开始位置。如果该片段存在，将首先移除。
+                </p></li>
+<li><p>
+                    <code class="code">append($name, $content)</code> 将创建一个<code class="code">$name</code>命名片段，并放置在数组的结尾位置。 如果该片段存在，将首先移除。
+                </p></li>
+<li><p>
+                    <code class="code">insert($name, $content, $parent = null, $before = false)</code> 将创建一个<code class="code">$name</code>命名片段。如果提供<code class="code">$parent</code>参数，新的片段视<code class="code">$before</code>的值决定放置在	<code class="code">$parent</code>的前面或者后面。如果该片段存在，将首先移除。
+                </p></li>
+<li><p>
+                    <code class="code">clearBody($name = null)</code> 如果<code class="code">$name</code>参数提供，将删除该片段，否则删除全部。
+                </p></li>
+<li><p>
+                    <code class="code">getBody($spec = false)</code> 如果<code class="code">$spec</code>参数为一个片段名称，将可以获取到该字段。若<code class="code">$spec</code>参数为false，将返回字符串格式的命名片段顺序链。如果<code class="code">$spec</code>参数为true,返回主体内容数组。
+                </p></li>
+</ul></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.response.exceptions"></a>12.9.4. 在响应对象中测试异常</h3></div></div></div>
+<p>
+                  如上文所述，默认的，分发过程中的异常发生会在响应对象中注册。异常会注册在一个堆中，允许你抛出所有异常--程序异常，分发异常，插件异常等。如果你要检查或者记录特定的异常，你可能想要使用响应对象的异常API：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    <code class="code">setException(Exception $e)</code> 注册一个异常。
+                </p></li>
+<li><p>
+                    <code class="code">isException()</code> 判断该异常是否注册。
+                </p></li>
+<li><p>
+                    <code class="code">getException()</code> 返回整个异常堆。
+                </p></li>
+<li><p>
+                    <code class="code">hasExceptionOfType($type)</code> 判断特定类的异常是否在堆中。
+                </p></li>
+<li><p>
+                    <code class="code">hasExceptionOfMessage($message)</code> 判断带有指定消息的异常是否在堆中。
+                </p></li>
+<li><p>
+                    <code class="code">hasExceptionOfCode($code)</code> 判断带有指定代码的异常是否在堆中。
+                </p></li>
+<li><p>
+                    <code class="code">getExceptionByType($type)</code> 获取堆中特定类的所有异常。如果没有则返回false，否则返回数组。
+                </p></li>
+<li><p>
+                    <code class="code">getExceptionByMessage($message)</code> 获取堆中带有特定消息的所有异常。如果没有则返回false，否则返回数组。
+                </p></li>
+<li><p>
+                    <code class="code">getExceptionByCode($code)</code> 获取堆中带有特定编码的所有异常。如果没有则返回false，否则返回数组。
+                </p></li>
+<li><p>
+                    <code class="code">renderExceptions($flag)</code> 设置标志指示当发送响应时是否发送其中的异常。
+                </p></li>
+</ul></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.response.subclassing"></a>12.9.5. 子类化响应对象</h3></div></div></div>
+<p>
+                  响应对象的目的首先在于从大量的动作和插件中收集消息头和内容，然后返回到客户端；其次，响应对象也收集发生的任何异常，以处理或者返回这些异常，再或者对终端用户隐藏它们。
+        </p>
+<p>
+                  响应的基类是<code class="code">Zend_Controller_Response_Abstract</code>，创建的任何子类必须继承这个类或它的衍生类。前面的章节中已经列出了大量可用的方法。
+        </p>
+<p>
+                  子类化响应对象的原因包括基于请求环境修改返回的内容的输出方式（例如：在CLI和PHP-GTK请求中不发送消息头）增加返回存储在命名片段中内容的最终视图的功能等等。
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.controller.actionhelpers.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.controller.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.controller.plugins.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">12.8. 动作助手 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 12.10. 插件</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

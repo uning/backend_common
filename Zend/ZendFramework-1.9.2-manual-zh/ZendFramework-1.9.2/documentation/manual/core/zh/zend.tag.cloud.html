@@ -1,0 +1,289 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>51.2. Zend_Tag_Cloud</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="prev" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="next" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.tag.cloud.html#zend.tag.cloud.decorators" title="51.2.1. Decorators">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">51.2. Zend_Tag_Cloud</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.tag.html">上一页</a> </td>
+<th width="60%" align="center">第 51 章 Zend_Tag</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.test.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.tag.cloud"></a>51.2. Zend_Tag_Cloud</h2></div></div></div>
+<p>
+        <code class="classname">Zend_Tag_Cloud</code> is the rendering part of
+        <code class="classname">Zend_Tag</code>. By default it comes with a set of HTML
+        decorators, which allow you to create tag clouds for a website, but
+        also supplies you with two abstract classes to create your own
+        decorators, to create tag clouds in <acronym class="acronym">PDF</acronym> documents for example.
+    </p>
+<p>
+        You can instantiate and configure <code class="classname">Zend_Tag_Cloud</code> either
+        programatically or completely via an array or an instance of
+        <code class="classname">Zend_Config</code>. The available options are:
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                <code class="code">cloudDecorator</code>: defines the decorator for the
+                cloud. Can either be the name of the class which should be
+                loaded by the pluginloader, an instance of
+                <code class="classname">Zend_Tag_Cloud_Decorator_Cloud</code> or an array
+                containing the string <code class="code">decorator</code> and optionally
+                an array <code class="code">options</code>, which will be passed to the
+                decorators constructor.
+            </p></li>
+<li><p>
+                <code class="code">tagDecorator</code>: defines the decorator for individual
+                tags. This can either be the name of the class which should be
+                loaded by the pluginloader, an instance of
+                <code class="classname">Zend_Tag_Cloud_Decorator_Tag</code> or an array
+                containing the string <code class="code">decorator</code> and optionally
+                an array <code class="code">options</code>, which will be passed to the
+                decorators constructor.
+            </p></li>
+<li><p>
+                <code class="code">pluginLoader</code>: a different plugin loader to use.
+                Must be an instance of
+                <code class="classname">Zend_Loader_PluginLoader_Interface</code>.
+            </p></li>
+<li><p>
+                <code class="code">prefixPath</code>: prefix paths to add to the plugin
+                loader. Must be an array containing the keys prefix and path or
+                multiple arrays containing the keys prefix and path. Invalid
+                elements will be skipped.
+            </p></li>
+<li><p>
+                <code class="code">itemList</code>: a different item list to use. Must be an
+                instance of <code class="classname">Zend_Tag_ItemList</code>.
+            </p></li>
+<li><p>
+                <code class="code">tags</code>: a list of tags to assign to the cloud. Each
+                tag must either implement <code class="classname">Zend_Tag_Taggable</code> or be
+                an array which can be used to instantiate
+                <code class="classname">Zend_Tag_Item</code>.
+            </p></li>
+</ul></div>
+<div class="example">
+<a name="zend.tag.cloud.example.using"></a><p class="title"><b>例 51.2. Using Zend_Tag_Cloud</b></p>
+<div class="example-contents">
+<p>
+            This example illustrates a basic example of how to create a tag
+            cloud, add multiple tags to it and finally render it.
+        </p>
+<pre class="programlisting">
+// Create the cloud and assign static tags to it
+$cloud = new Zend_Tag_Cloud(array(
+    'tags' =&gt; array(
+        array('title' =&gt; 'Code', 'weight' =&gt; 50,
+              'params' =&gt; array('url' =&gt; '/tag/code')),
+        array('title' =&gt; 'Zend Framework', 'weight' =&gt; 1,
+              'params' =&gt; array('url' =&gt; '/tag/zend-framework')),
+        array('title' =&gt; 'PHP', 'weight' =&gt; 5,
+              'params' =&gt; array('url' =&gt; '/tag/php')),
+    )
+));
+
+// Render the cloud
+echo $cloud;
+</pre>
+<p>
+            This will output the tag cloud with the three tags, spread with
+            the default font-sizes.
+        </p>
+</div>
+</div>
+<br class="example-break"><div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.tag.cloud.decorators"></a>51.2.1. Decorators</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Tag_Cloud</code> requires two types of decorators to be
+            able to render a tag cloud. This includes a decorator which renders
+            the single tags as well as a decorator which renders the surounding
+            cloud. <code class="classname">Zend_Tag_Cloud</code> ships a default decorator set for
+            formatting a tag cloud in HTML. This set will by default create a
+            tag cloud as ul/li-list, spread with different font-sizes according
+            to the weight values of the tags assigned to them.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.tag.cloud.decorators.htmltag"></a>51.2.1.1. HTML Tag decorator</h4></div></div></div>
+<p>
+                The HTML tag decorator will by default render every tag in an
+                anchor element, surounded by a li element. The anchor itself is
+                fixed and cannot be changed, but the surounding element(s) can.
+            </p>
+<div class="note"><table border="0" summary="Note: URL parameter">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">URL parameter</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    As the HTML tag decorator always surounds the tag title with
+                    an anchor, you should define an <acronym class="acronym">URL</acronym> parameter for every
+                    tag used in it.
+                </p></td></tr>
+</table></div>
+<p>
+                The tag decorator can either spread different font-sizes over
+                the anchors or a defined list of classnames. When setting
+                options for one of those possibilities, the corespondening one
+                will automatically be enabled. The following configuration
+                options are available:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <code class="code">fontSizeUnit</code>: defines the font-size unit
+                        used for all font-sizes. The possible values are:
+                        em, ex, px, in, cm, mm, pt, pc and %.
+                    </p></li>
+<li><p>
+                        <code class="code">minFontSize</code>: the minimum font-size
+                        distributed through the tags (must be an integer).
+                    </p></li>
+<li><p>
+                        <code class="code">maxFontSize</code>: the maximum font-size
+                        distributed through the tags (must be an integer).
+                    </p></li>
+<li><p>
+                        <code class="code">classList</code>: an arry of classes distributed
+                        through the tags.
+                    </p></li>
+<li><p>
+                        <code class="code">htmlTags</code>: an array of HTML tags surounding
+                        the anchor. Each element can either be a string, which
+                        is used as element type then, or an array containing
+                        an attribute list for the element, defined as key/value
+                        pair. In this case, the array key is used as element
+                        type.
+                    </p></li>
+</ul></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.tag.cloud.decorators.htmlcloud"></a>51.2.1.2. HTML Cloud decorator</h4></div></div></div>
+<p>
+                The HTML cloud decorator will suround the HTML tags with an
+                ul-element by default and add no separation. Like in the tag
+                decorator, you can define multiple surounding HTML tags and
+                additionally define a separator. The available options are:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <code class="code">separator</code>: defines the separator which
+                        is placed between all tags.
+                    </p></li>
+<li><p>
+                        <code class="code">htmlTags</code>: an array of HTML tags surounding
+                        all tags. Each element can either be a string, which
+                        is used as element type then, or an array containing
+                        an attribute list for the element, defined as key/value
+                        pair. In this case, the array key is used as element
+                        type.
+                    </p></li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.tag.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.tag.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.test.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 51 章 Zend_Tag </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 52 章 Zend_Test</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

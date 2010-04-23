@@ -1,0 +1,282 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>12.11. 使用传统的模块目录结构</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="prev" href="zend.controller.plugins.html" title="12.10. 插件">
+<link rel="next" href="zend.controller.exceptions.html" title="12.12. MVC 异常">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.controller.modular.html#zend.controller.modular.introduction" title="12.11.1. 简介">
+<link rel="subsection" href="zend.controller.modular.html#zend.controller.modular.directories" title="12.11.2. 指定模块控制器目录">
+<link rel="subsection" href="zend.controller.modular.html#zend.controller.modular.router" title="12.11.3. Routing to modules">
+<link rel="subsection" href="zend.controller.modular.html#zend.controller.modular.defaultcontroller" title="12.11.4. 模块或全局缺省控制器">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">12.11. 使用传统的模块目录结构</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.controller.plugins.html">上一页</a> </td>
+<th width="60%" align="center">第 12 章 Zend_Controller</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.controller.exceptions.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.controller.modular"></a>12.11. 使用传统的模块目录结构</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.modular.introduction"></a>12.11.1. 简介</h3></div></div></div>
+<p>
+            传统的模块目录结构允许你把不同的MVC应用程序分离成为独立的单元，并和不同的前端控制器配合再使用。示例一下这样的目录结构：
+        </p>
+<pre class="programlisting">
+
+docroot/
+    index.php
+application/
+    default/
+        controllers/
+            IndexController.php
+            FooController.php
+        models/
+        views/
+            scripts/
+                index/
+                foo/
+            helpers/
+            filters/
+    blog/
+        controllers/
+            IndexController.php
+        models/
+        views/
+            scripts/
+                index/
+            helpers/
+            filters/
+    news/
+        controllers/
+            IndexController.php
+            ListController.php
+        models/
+        views/
+        views/
+            scripts/
+                index/
+                list/
+            helpers/
+            filters/
+
+        </pre>
+<p>
+            在这个范例中，模块名作为它所包含的控制器的前缀。上面的例子包含三个模块控制器：'Blog_IndexController' 'News_IndexController' 和'News_ListController'。也定义了两个全局控制器：'IndexController' 和 'FooController'。它们都将不需要命名空间前缀。这个目录结构在本章中用作为例子。
+        </p>
+<div class="note"><table border="0" summary="Note: 在缺省模块中不用命名空间前缀">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">在缺省模块中不用命名空间前缀</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                注意在缺省模块中，控制器不需要一个命名空间前缀。这样，在上例中，在缺省模块中的控制器不需要'Default_'这样的前缀－－根据它们的基本控制器名'IndexController' 和 'FooController'被简单地派遣。然而，命名空间前缀被用于所有其它模块。
+            </p></td></tr>
+</table></div>
+<p>
+            那么，你怎样用Zend Framework MVC组件来实现这样的目录结构？
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.modular.directories"></a>12.11.2. 指定模块控制器目录</h3></div></div></div>
+<p>
+            利用模块的第一步是来修改你如何在前端控制器指定控制器目录列表。在基本的MVC系列，传递数组或字符串给<code class="code">setControllerDirectory()</code>，或者传递路径给<code class="code">addControllerDirectory()</code>。当使用模块，你需要稍微修改对这些方法的调用。
+        </p>
+<p>
+            用<code class="code">setControllerDirectory()</code>，你将需要传递一个关联数组和指定‘模块名/目录路径’的‘键/值’对。特殊的键<code class="code">default</code> 将被用作全局控制器（不需要模块命名空间）。所有条目应该包含指向一个单个路径的字符串键，并且<code class="code">default</code>键必须出现。例如：
+        </p>
+<pre class="programlisting">
+$front-&gt;setControllerDirectory(array(
+    'default' =&gt; '/path/to/application/controllers',
+    'blog'    =&gt; '/path/to/application/blog/controllers'
+));
+
+        </pre>
+<p>
+            <code class="code">addControllerDirectory()</code>将带有可选的第二个参数。当使用模块，传递模块名作为第二个参数；如果没有指定，路径将被加到<code class="code">default</code>命名空间。例如：
+        </p>
+<pre class="programlisting">
+$front-&gt;addControllerDirectory('/path/to/application/news/controllers',
+                               'news');
+
+        </pre>
+<p>
+            把最好的保留到最后，指定模块的最容易的方法是整体来做，把所有模块放到一个通用的目录并使用相同的结构。这可以用<code class="code">addModuleDirectory()</code>来完成：
+        </p>
+<pre class="programlisting">
+/**
+ * Assuming the following directory structure:
+ * application/
+ *     modules/
+ *         default/
+ *             controllers/
+ *         foo/
+ *             controllers/
+ *         bar/
+ *             controllers/
+ */
+$front-&gt;addModuleDirectory('/path/to/application/modules');
+
+        </pre>
+<p>
+            上面的例子将定义<code class="code">default</code>、<code class="code">foo</code> 和 <code class="code">bar</code>模块，每个都分别指向它们的模块的<code class="code">controllers</code>子目录。
+        </p>
+<p>
+            你可以在模块中通过<code class="code">setModuleControllerDirectoryName()</code>来定制模块子目录：
+        </p>
+<pre class="programlisting">
+/**
+ * Change the controllers subdirectory to be 'con'
+ * application/
+ *     modules/
+ *         default/
+ *             con/
+ *         foo/
+ *             con/
+ *         bar/
+ *             con/
+ */
+$front-&gt;setModuleControllerDirectoryName('con');
+$front-&gt;addModuleDirectory('/path/to/application/modules');
+
+        </pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            你可以通过传递一个空值给<code class="code">setModuleControllerDirectoryName()</code>来指定在你的模块中没有控制器子目录。
+        </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.modular.router"></a>12.11.3. Routing to modules</h3></div></div></div>
+<p>
+            在<code class="code">Zend_Controller_Router_Rewrite</code>中缺省的路由是一个<code class="code">Zend_Controller_Router_Route_Module</code>类型的对象。这个路由使用下面路由计划之一：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">:module/:controller/:action/*</code></p></li>
+<li><p><code class="code">:controller/:action/*</code></p></li>
+</ul></div>
+<p>
+            换句话说，它将自己或通过先前的模块来匹配控制器和动作。匹配规则指定一个模块将只匹配在传递给前端控制器和派遣器的控制器目录数组中存在同名的键。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.modular.defaultcontroller"></a>12.11.4. 模块或全局缺省控制器</h3></div></div></div>
+<p>
+            在缺省的路由器中，如果在URL中没有指定控制器，缺省控制器就被使用（<code class="code">IndexController</code>，除非另外要求）。对于模块控制器，如果一个模块被指定但没有控制器，派遣器首先寻找在这个模块路径中的缺省控制器，然后回到在'default'、全局、命名空间中发现的缺省控制器。
+        </p>
+<p>
+            如果你总愿意缺省到全局命名空间，在前端控制器中设置<code class="code">useDefaultControllerAlways</code> 参数：
+        </p>
+<pre class="programlisting">
+$front-&gt;setParam('useDefaultControllerAlways', true);
+
+        </pre>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.controller.plugins.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.controller.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.controller.exceptions.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">12.10. 插件 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 12.12. MVC 异常</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

@@ -1,0 +1,822 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>12.5. 标准路由器</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="prev" href="zend.controller.request.html" title="12.4. 请求对象">
+<link rel="next" href="zend.controller.dispatcher.html" title="12.6. 分发器">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.introduction" title="12.5.1. 简介">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.usage" title="12.5.2. 使用路由器">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.basic" title="12.5.3. 基本的Rewrite路由器操作">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.default-routes" title="12.5.4. 缺省路由">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.rewritebase" title="12.5.5. 基本 URL 和子目录">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.routes" title="12.5.6. Route Types">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.add-config" title="12.5.7. 使用 Zend_Config with the RewriteRouter">
+<link rel="subsection" href="zend.controller.router.html#zend.controller.router.subclassing" title="12.5.8. Subclassing the Router">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">12.5. 标准路由器</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.controller.request.html">上一页</a> </td>
+<th width="60%" align="center">第 12 章 Zend_Controller</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.controller.dispatcher.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.controller.router"></a>12.5. 标准路由器</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.introduction"></a>12.5.1. 简介</h3></div></div></div>
+<p>
+            <code class="code">Zend_Controller_Router_Rewrite</code>是标准的框架路由器。路由是个过程，在这个过程中它取出URI的端点（跟着基本URL的URI的那部分）并把它分解成参数来决定哪个模块、哪个控制器和控制器中的哪个动作应该接受请求。模块、控制器、动作和其它参数被打包到<code class="code">Zend_Controller_Request_Http</code>对象，接着这个对象由<code class="code">Zend_Controller_Dispatcher_Standard</code>来处理。路由只发生一次：当请求最初被接收和第一个控制器被派遣之前。
+        </p>
+<p>
+            <code class="code">Zend_Controller_Router_Rewrite</code>被设计来考虑使用纯php结构时mod_rewrite-like的功能性。它非常宽松地基于Ruby on Rails并且不要求任何先前的web服务器URL rewriting的知识。它被设计来和单个Apache的 mod_rewrite规则（其中之一）一起工作：
+        </p>
+<pre class="programlisting">
+RewriteEngine on
+RewriteRule !\.(js|ico|gif|jpg|png|css)$ index.php
+
+        </pre>
+<p>
+            或者：
+        </p>
+<pre class="programlisting">
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1
+
+        </pre>
+<p>
+            如果<a href="http://www.isapirewrite.com" target="_top">Isapi_Rewrite</a>已经用下列的rewrite规则被安装为一个Isapi扩展， rewrite路由器也可以和IIS web服务器一起使用：
+        </p>
+<pre class="programlisting">
+RewriteRule ^[\w/\%]*(?:\.(?!(?:js|ico|gif|jpg|png|css)$)[\w\%]*$)? /index.php [I]
+
+        </pre>
+<div class="note"><table border="0" summary="Note: IIS Isapi_Rewrite">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">IIS Isapi_Rewrite</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                当使用IIS，<code class="code">$_SERVER['REQUEST_URI']</code>将要么不存在，要么被设置成一个空串。在这个例子中，<code class="code">Zend_Controller_Request_Http</code>将企图使用被Isapi_Rewrite扩展设置的<code class="code">$_SERVER['HTTP_X_REWRITE_URL']</code>的值。
+            </p></td></tr>
+</table></div>
+<p>
+            如果使用 Lighttpd，下面的 rewrite 规则有效：
+        </p>
+<pre class="programlisting">
+url.rewrite-once = (
+    ".*\?(.*)$" =&gt; "/index.php?$1",
+    ".*\.(js|ico|gif|jpg|png|css)$" =&gt; "$0",
+    "" =&gt; "/index.php"
+)
+
+</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.usage"></a>12.5.2. 使用路由器</h3></div></div></div>
+<p>
+            为正确使用rewrite路由器你必须初始化它，添加一些用户定义的路由并注入到控制器。下面的代码示例这个过程：
+        </p>
+<pre class="programlisting">
+// Create a router
+
+$router = $ctrl-&gt;getRouter(); // returns a rewrite router by default
+$router-&gt;addRoute(
+    'user',
+    new Zend_Controller_Router_Route('user/:username',
+                                     array('controller' =&gt; 'user',
+                                           'action' =&gt; 'info'))
+);
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.basic"></a>12.5.3. 基本的Rewrite路由器操作</h3></div></div></div>
+<p>
+            RewriteRouter的核心是用户定义路由的定义。路由通过调用RewriteRouter的addRoute方法和传递一个由类实现的<code class="code">Zend_Controller_Router_Route_Interface</code>的新的实例被添加。例如：
+        </p>
+<pre class="programlisting">
+$router-&gt;addRoute('user',
+                  new Zend_Controller_Router_Route('user/:username'));
+
+        </pre>
+<p>
+            Rewrite 路由器带有四个基本类型的路由（其中一个是特殊的）：
+        </p>
+<div class="itemizedlist"><ul type="opencircle">
+<li style="list-style-type: circle"><p><a href="zend.controller.router.html#zend.controller.router.routes.standard" title="12.5.6.1. Zend_Controller_Router_Route">第 12.5.6.1 节 “Zend_Controller_Router_Route”</a></p></li>
+<li style="list-style-type: circle"><p><a href="zend.controller.router.html#zend.controller.router.routes.static" title="12.5.6.2. Zend_Controller_Router_Route_Static">第 12.5.6.2 节 “Zend_Controller_Router_Route_Static”</a></p></li>
+<li style="list-style-type: circle"><p><a href="zend.controller.router.html#zend.controller.router.routes.regex" title="12.5.6.3. Zend_Controller_Router_Route_Regex">第 12.5.6.3 节 “Zend_Controller_Router_Route_Regex”</a></p></li>
+<li style="list-style-type: circle"><p><a href="zend.controller.router.html#zend.controller.router.default-routes" title="12.5.4. 缺省路由">第 12.5.4 节 “缺省路由”</a> *</p></li>
+</ul></div>
+<p>
+            路由可以被使用无数次来创建链或用户定义的应用程序路由计划。你可以在任何配置中使用任何数量的路由，除了模块路由以外，它最好被用一次并作为通用路由（例如，作为缺省的）。每个路由将在稍后详细描述。
+        </p>
+<p>
+            addRoute的第一个参数是路由名。它用来作为权柄从路由器中取得路由（例如，for URL generation purposes）。第二个参数是路由自己。
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+                路由名最普通的用法是通过Zend_View_url助手的方法：
+            </p>
+<pre class="programlisting">
+"&lt;?= $this-&gt;url(array('username' =&gt; 'martel'), 'user') ?&gt;"&gt;Martel&lt;/a&gt;
+
+            </pre>
+<p>
+                它将导致在 href： <code class="code">user/martel</code>.
+            </p>
+</td></tr>
+</table></div>
+<p>
+            路由是一个简单的过程，这个过程通过所有提供的路由和匹配它的当前请求的URI定义来迭代。当一个正匹配被发现，变量值从路由实例返回并注入到<code class="code">Zend_Controller_Request</code>对象以备将来在派遣器和用户创建的控制器中使用。如果是负匹配，在链中的下个路由被检查。
+        </p>
+<div class="note"><table border="0" summary="Note: 倒序匹配">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">倒序匹配</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                用倒序来匹配路由确保最通用的路由被首先定义。
+            </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note: 返回的值">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">返回的值</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                从路由返回的值来自于URL参数或用于定义的缺省值。这些变量以后可通过<code class="code">Zend_Controller_Request::getParam()</code> 或 <code class="code">Zend_Controller_Action::_getParam()</code> 方法来访问。
+            </p></td></tr>
+</table></div>
+<p>
+            有三个特殊的变量可用于你的路由－'module'、 'controller' 和 'action'。这些特殊的变量被Zend_Controller_Dispatcher用来找出控制器和动作然后派遣过去。
+        </p>
+<div class="note"><table border="0" summary="Note: 特殊变量">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">特殊变量</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                如果你选择通过 <code class="code">setControllerKey</code> 和 <code class="code">setActionKey</code>方法的方式来改变缺省值，这些特殊变量的名字可能会不同。
+            </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.default-routes"></a>12.5.4. 缺省路由</h3></div></div></div>
+<p>
+            Zend_Controller_Router_Rewrite 和缺省路由一起预先配置，它将以<code class="code">controller/action</code>的形式匹配URIs。另外，模块名可以被指定作为第一个路径参数，允许这种<code class="code">module/controller/action</code>形式的URIs。最后，它也将缺省地匹配任何另外的追加到URI的参数－<code class="code">controller/action/var1/value1/var2/value2</code>。
+        </p>
+<p>
+            一些路由如何匹配的例子：
+        </p>
+<pre class="programlisting">
+// Assuming the following:
+$ctrl-&gt;setControllerDirectory(
+    array(
+        'default' =&gt; '/path/to/default/controllers',
+        'news'    =&gt; '/path/to/news/controllers',
+        'blog'    =&gt; '/path/to/blog/controllers'
+    )
+);
+
+Module only:
+http://example/news
+    module == news
+
+Invalid module maps to controller name:
+http://example/foo
+    controller == foo
+
+Module + controller:
+http://example/blog/archive
+    module     == blog
+    controller == archive
+
+Module + controller + action:
+http://example/blog/archive/list
+    module     == blog
+    controller == archive
+    action     == list
+
+Module + controller + action + params:
+http://example/blog/archive/list/sort/alpha/date/desc
+    module     == blog
+    controller == archive
+    action     == list
+    sort       == alpha
+    date       == desc
+
+        </pre>
+<p>
+            缺省路由是存储在RewriteRouter名（index）为'default'的简单的<code class="code">Zend_Controller_Router_Route_Module</code>对象。它被创建多多少少象下面这样：
+        </p>
+<pre class="programlisting">
+$compat = new Zend_Controller_Router_Route_Module(array(),
+                                                  $dispatcher,
+                                                  $request);
+$this-&gt;addRoute('default', $compat);
+
+        </pre>
+<p>
+            如果你不想这个特别的缺省路由在你的路由计划中，你可以重写你自己的‘缺省’路由（例如，把它存储在'default'名下）或用<code class="code">removeDefaultRoutes()</code>完全清除它：
+        </p>
+<pre class="programlisting">
+// Remove any default routes
+$router-&gt;removeDefaultRoutes();
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.rewritebase"></a>12.5.5. 基本 URL 和子目录</h3></div></div></div>
+<p>
+            rewrite路由器可以被用在子目录（例如，<code class="code">http://domain.com/~user/application-root/</code>），在此例中，应用程序 (<code class="code">/~user/application-root</code>)的基本URL应该能自动被<code class="code">Zend_Controller_Request_Http</code>检测到并使用。
+        </p>
+<p>
+            如果基本URL被误删除，你可以通过<code class="code">Zend_Controller_Request_Http</code> 和调用 <code class="code">setBaseUrl()</code> 方法（参见<a href="zend.controller.request.html#zend.controller.request.http.baseurl" title="12.4.2.2. 基地址和子目录">第 12.4.2.2 节 “基地址和子目录”</a>）用你自己的基本路径重写它。
+        </p>
+<pre class="programlisting">
+$request-&gt;setBaseUrl('/~user/application-root/');
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.routes"></a>12.5.6. Route Types</h3></div></div></div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.router.routes.standard"></a>12.5.6.1. Zend_Controller_Router_Route</h4></div></div></div>
+<p>
+        <code class="code">Zend_Controller_Router_Route</code> 是标准的框架路由。它结合了灵活路由定义的易用性。每个路由包含了基本的URL映射（静态的和动态的部分（变量））并且可以被缺省地初始化，也可以根据不同的要求初始化。
+    </p>
+<p>
+        让我们想象一下我们假设的应用程序将需要一些广域内容作者的信息页面。我们想能够把浏览器指向<code class="code">http://domain.com/author/martel</code>去看一个叫"martel"的信息。有这样功能的路由看起来是这样的：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    'author/:username',
+    array(
+        'controller' =&gt; 'profile',
+        'action'     =&gt; 'userinfo'
+    )
+);
+
+$router-&gt;addRoute('user', $route);
+
+    </pre>
+<p>
+        在<code class="code">Zend_Controller_Router_Route</code>里构造函数的第一个参数是路由的定义，它将匹配一个URL。路由定义包含静态的和动态部分，它们由正斜杠('/')符分开。静态部分只是简单的字符：<code class="code">author</code>。动态部分，被叫做变量，用预设的冒号来标记变量名：<code class="code">:username</code>。
+    </p>
+<div class="note"><table border="0" summary="Note: 字符的的用法">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">字符的的用法</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            当前的实现允许你使用任何字符（正斜杠除外）作为变量标识符，但强烈建议只使用PHP使用的变量标识符。将来的实现也许会改变这个行为，它可能会导致在你的代码里有隐藏的bugs。
+        </p></td></tr>
+</table></div>
+<p>
+        当你把浏览器指向<code class="code">http://domain.com/author/martel</code>这个例子的路由应该被匹配，它所有的变量将被注入到<code class="code">Zend_Controller_Request</code>对象并在<code class="code">ProfileController</code>可访问。由这个例子返回的变量可能会被表示为如下键和值配对的数组：
+    </p>
+<pre class="programlisting">
+$values = array(
+    'username'   =&gt; 'martel',
+    'controller' =&gt; 'profile',
+    'action'     =&gt; 'userinfo'
+);
+
+    </pre>
+<p>
+        稍后，基于这些值，<code class="code">Zend_Controller_Dispatcher_Standard</code>应该调用<code class="code">ProfileController</code>类（在缺省模块中）中的<code class="code">userinfoAction()</code>方法。你将依靠<code class="code">Zend_Controller_Action::_getParam()</code>或者<code class="code">Zend_Controller_Request::getParam()</code>方法能够访问所有的变量：
+    </p>
+<pre class="programlisting">
+public function userinfoAction()
+{
+    $request = $this-&gt;getRequest();
+    $username = $request-&gt;getParam('username');
+
+    $username = $this-&gt;_getParam('username');
+}
+
+    </pre>
+<p>
+        路由定义可以包一个额外的特别字符－通配符－表示为'*'号。它被用来取得参数，和缺省模块路由类似（在URI中定义的var=&gt;value）。下面的路由多多少少地模仿了模块路由的行为：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    ':module/:controller/:action/*',
+    array('module' =&gt; 'default')
+);
+$router-&gt;addRoute('default', $route);
+
+    </pre>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.router.routes.standard.variable-defaults"></a>12.5.6.1.1. 变量缺省</h5></div></div></div>
+<p>
+            在路由中每个变量可以有一个缺省值，这就是<code class="code">Zend_Controller_Router_Route</code>中构造函数使用的第二个变量。这个参数是一个数组，在数组中键表示变量名，值就是期望的缺省值：
+        </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    'archive/:year',
+    array('year' =&gt; 2006)
+);
+$router-&gt;addRoute('archive', $route);
+
+        </pre>
+<p>
+            上述路由将匹配象<code class="code">http://domain.com/archive/2005</code>和<code class="code">http://example.com/archive</code>的URLs。对于后者变量year将有一个初始的缺省值为2006。
+        </p>
+<p>
+            这个例子将导致注入一个year变量给请求对象。应为没有路由信息出现（没有控制器和动作参数被定义），应用程序将被派遣给缺省的控制器和动作方法（它们都在<code class="code">Zend_Controller_Dispatcher_Abstract</code>被定义）。为使它更可用，你必须提供一个有效的控制器和动作作为路由的缺省值：
+        </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    'archive/:year',
+    array(
+        'year'       =&gt; 2006,
+        'controller' =&gt; 'archive',
+        'action'     =&gt; 'show'
+    )
+);
+$router-&gt;addRoute('archive', $route);
+
+        </pre>
+<p>
+            这个路由将导致派遣给<code class="code">ArchiveController</code>类的<code class="code">showAction()</code>方法。
+        </p>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.router.routes.standard.variable-requirements"></a>12.5.6.1.2. 变量请求</h5></div></div></div>
+<p>
+            当变量请求被设定，第三个参数可以加给<code class="code">Zend_Controller_Router_Route</code>的构造函数。这些被定义为正则表达式的一部分：
+        </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    'archive/:year',
+    array(
+        'year'       =&gt; 2006,
+        'controller' =&gt; 'archive',
+        'action'     =&gt; 'show'
+    ),
+    array('year' =&gt; '\d+')
+);
+$router-&gt;addRoute('archive', $route);
+
+        </pre>
+<p>
+            用上述定义的路由，路由器仅当year变量包含数字数据将匹配它，例如<code class="code">http://domain.com/archive/2345</code>。象<code class="code">http://example.com/archive/test</code>这样的URL将不被匹配并且控制将被传递给在链中的下一个路由。
+        </p>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.controller.router.routes.standard.hostname-routing"></a>12.5.6.1.3.  主机名路由 </h5></div></div></div>
+<p>
+            你也可以使用主机名做路由匹配。对简单的匹配使用静态主机名选项：
+        </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    array(
+        'host' =&gt; 'blog.mysite.com',
+        'path' =&gt; 'archive'
+    ),
+    array(
+        'module'     =&gt; 'blog',
+        'controller' =&gt; 'archive',
+        'action'     =&gt; 'index'
+    )
+);
+$router-&gt;addRoute('archive', $route);
+
+        </pre>
+<p>
+            如果你想匹配参数在主机名里，使用 regex 选项。在下面例子中，子域为动作控制器被用作用户名参数。
+            当组装路由时，你可以给出用户名为参数，就像你用其它路径参数一样：
+        </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route(
+    array(
+        'host' =&gt; array(
+            'regex'   =&gt; '([a-z]+).mysite.com',
+            'reverse' =&gt; '%s.mysite.com'
+            'params'  =&gt; array(
+                1 =&gt; 'username'
+            )
+        ),
+        'path' =&gt; ''
+    ),
+    array(
+        'module'     =&gt; 'users',
+        'controller' =&gt; 'profile',
+        'action'     =&gt; 'index'
+    )
+);
+$router-&gt;addRoute('profile', $route);
+
+        </pre>
+</div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.router.routes.static"></a>12.5.6.2. Zend_Controller_Router_Route_Static</h4></div></div></div>
+<p>
+        上面的例子都使用动态路由－－包含模型来匹配的路由。然而有时候，特定的路由被设定成型，启动正则表达式引擎将有过渡的杀伤力。对这种情形的答案是使用静态路由：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Static(
+    'login',
+    array('controller' =&gt; 'auth', 'action' =&gt; 'login')
+);
+$router-&gt;addRoute('login', $route);
+
+    </pre>
+<p>
+        上面的路由将匹配<code class="code">http://domain.com/login</code>的URL，并分派到 <code class="code">AuthController::loginAction()</code>.
+    </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.controller.router.routes.regex"></a>12.5.6.3. Zend_Controller_Router_Route_Regex</h4></div></div></div>
+<p>
+        除了缺省的和静态的路由类型外，正则表达式路由类型也可用。这个路由比其它路由更强更灵活，只是稍微有点复杂。同时，它应该比标准路由快。
+    </p>
+<p>
+        象标准路由一样，这个路由必须用路由定义和一些缺省条件来初始化。让我们创建一个archive路由作为例子，和先前定义的类似，这次只是用了Regex：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Regex(
+    'archive/(\d+)',
+    array(
+        'controller' =&gt; 'archive',
+        'action'     =&gt; 'show'
+    )
+);
+$router-&gt;addRoute('archive', $route);
+
+    </pre>
+<p>
+        每个定义的regex子模式将被注入到请求对象里。同上述的例子，再成功匹配<code class="code">http://domain.com/archive/2006</code>之后，结果值的数组看起来象这样：
+    </p>
+<pre class="programlisting">
+$values = array(
+    1            =&gt; '2006',
+    'controller' =&gt; 'archive',
+    'action'     =&gt; 'show'
+);
+
+    </pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            在匹配之前，开头和结尾的斜杠从路由器里的URL中去除掉了。结果，匹配<code class="code">http://domain.com/foo/bar/</code>，需要<code class="code">foo/bar</code>这样的regex，而不是<code class="code">/foo/bar</code>。
+        </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            行开头和行结尾符号（分别为'^' 和 '$'）被自动预先追加到所有表达式。这样，你不需要在你的正则表达式里用它们，你应该匹配整个字符串。
+        </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            这个路由类使用<code class="code">#</code>符作为分隔符。这意味着你将需要避免哈希符（'#'）但不是正斜杠（'/'）在你的路由定义里。因为'#'符（名称为锚）很少被传给webserver，你将几乎不需要在你的regex里使用它。
+        </p></td></tr>
+</table></div>
+<p>
+        你可以用通常的办法获得已定义的子模式的内容：
+    </p>
+<pre class="programlisting">
+public function showAction()
+{
+    $request = $this-&gt;getRequest();
+    $year    = $request-&gt;getParam(1); // $year = '2006';
+}
+
+    </pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>注意这个键是整数(1) 而不是字符串('1')。</p></td></tr>
+</table></div>
+<p>
+        因为'year'的缺省没有设置，这个路由将和它的标准路由副本不是非常精确地相同。即使我们为'year'声明一个缺省并使子模式可选，也不清楚是否会在拖尾斜杠(trailing slash)上还将有问题。方案是使整个'year'部分和斜杠一起可选但只抓取数字部分：（这段比较绕口，请校对者仔细看看，谢谢 Jason Qi）
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Regex(
+    'archive(?:/(\d+))?',
+    array(
+        1            =&gt; '2006',
+        'controller' =&gt; 'archive',
+        'action'     =&gt; 'show'
+    )
+);
+$router-&gt;addRoute('archive', $route);
+
+    </pre>
+<p>
+        让我们看看你可能注意到的问题。 给参数使用基于整数的键不是容易管理的办法，今后可能会有问题。这就是为什么有第三个参数。这是个联合数组表示一个regex子模式到参数名键的映射。我们来看看一个简单的例子：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Regex(
+    'archive/(\d+)',
+    array(
+        'controller' =&gt; 'archive',
+        'action' =&gt; 'show'
+    ),
+    array(
+        1 =&gt; 'year'
+    )
+);
+$router-&gt;addRoute('archive', $route);
+
+    </pre>
+<p>
+        这将导致下面的值被注入到请求：
+    </p>
+<pre class="programlisting">
+$values = array(
+    'year'       =&gt; '2006',
+    'controller' =&gt; 'archive',
+    'action'     =&gt; 'show'
+);
+
+    </pre>
+<p>
+        这个映射被任何目录来定义使它能工作于任何环境。键可以包含变量名或子模式索引：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Regex(
+    'archive/(\d+)',
+    array( ... ),
+    array(1 =&gt; 'year')
+);
+
+// OR
+
+$route = new Zend_Controller_Router_Route_Regex(
+    'archive/(\d+)',
+    array( ... ),
+    array('year' =&gt; 1)
+);
+
+    </pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            子模式键必须用整数表示。
+        </p></td></tr>
+</table></div>
+<p>
+        注意在请求值中的数字索引不见了，代替的是一个名字变量。当然如果你愿意可以把数字和名字变量混合使用：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Regex(
+    'archive/(\d+)/page/(\d+)',
+    array( ... ),
+    array('year' =&gt; 1)
+);
+
+    </pre>
+<p>
+        这将导致在请求中有混合的值可用。例如：URL<code class="code">http://domain.com/archive/2006/page/10</code>将在下列结果中：
+    </p>
+<pre class="programlisting">
+$values = array(
+    'year'       =&gt; '2006',
+    2            =&gt; 10,
+    'controller' =&gt; 'archive',
+    'action'     =&gt; 'show'
+);
+
+    </pre>
+<p>
+        因为regex模型不容易颠倒，如果你想用URL助手或这个类中的 assemble方法，你需要准备一个颠倒的URL。这个颠倒的路径用可由sprintf()解析的字符串来表示并定义为第四个构造参数：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Regex(
+    'archive/(\d+)',
+    array( ... ),
+    array('year' =&gt; 1),
+    'archive/%s'
+);
+
+    </pre>
+<p>
+        所有这些都已经可能由标准路由对象完成，那么使用Regex路由的好处在哪里？首先，它允许你不受限制地描述任何类型的URL。想象一下你有一个博客并希望创建象<code class="code">http://domain.com/blog/archive/01-Using_the_Regex_Router.html</code>这样的URLs，还有把解析它路径元素中的最后部分，<code class="code">01-Using_the_Regex_Router.html</code>，到一个文章的ID和文章的标题/描述；这不可能由标准路由完成。用Regex路由，你可以做象下面的方案：
+    </p>
+<pre class="programlisting">
+$route = new Zend_Controller_Router_Route_Regex(
+    'blog/archive/(\d+)-(.+)\.html',
+    array(
+        'controller' =&gt; 'blog',
+        'action'     =&gt; 'view'
+    ),
+    array(
+        1 =&gt; 'id',
+        2 =&gt; 'description'
+    ),
+    'blog/archive/%d-%s.html'
+);
+$router-&gt;addRoute('blogArchive', $route);
+
+    </pre>
+<p>
+        正如你所看到的，这个在标准路由上添加了巨大的灵活性。
+    </p>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.add-config"></a>12.5.7. 使用 Zend_Config with the RewriteRouter</h3></div></div></div>
+<p>
+            有时候，用新路由更新配置文件比修改代码更方便。这个可能通过<code class="code">addConfig()</code>方法来做。基本上，你创建一个Zend_Config-compatible配置，并在你的代码中读入然后传递给RewriteRouter。
+        </p>
+<p>
+            作为例子，考虑下面的 INI 文件：
+        </p>
+<pre class="programlisting">
+[production]
+routes.archive.route = "archive/:year/*"
+routes.archive.defaults.controller = archive
+routes.archive.defaults.action = show
+routes.archive.defaults.year = 2000
+routes.archive.reqs.year = "\d+"
+
+routes.news.type = "Zend_Controller_Router_Route_Static"
+routes.news.route = "news"
+routes.news.defaults.controller = "news"
+routes.news.defaults.action = "list"
+
+routes.archive.type = "Zend_Controller_Router_Route_Regex"
+routes.archive.route = "archive/(\d+)"
+routes.archive.defaults.controller = "archive"
+routes.archive.defaults.action = "show"
+routes.archive.map.1 = "year"
+; OR: routes.archive.map.year = 1
+
+        </pre>
+<p>
+            上述的INI文件可以被读进<code class="code">Zend_Config</code>对象：
+        </p>
+<pre class="programlisting">
+$config = new Zend_Config_Ini('/path/to/config.ini', 'production');
+$router = new Zend_Controller_Router_Rewrite();
+$router-&gt;addConfig($config, 'routes');
+
+        </pre>
+<p>
+            在上面的例子中，我们告诉路由器去使用INI文件'routes'一节给它的路由。每个在这个节下的顶级键将用来定义路由名；上述例子定义了路由'archive'和'news'。每个路由接着要求，至少，一个'route'条目和一个或更多'defaults'条目；可选地，一个或更多'reqs'（'required'的简写）可能要求提供。总之，这些相对应的三个参数提供给<code class="code">Zend_Controller_Router_Route_Interface</code>对象。一个选项键，'type'，可用来指定路由类的类型给特殊的路由；缺省地，它使用<code class="code">Zend_Controller_Router_Route</code>。在上述例子中，'news'路由被定义来使用<code class="code">Zend_Controller_Router_Route_Static</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.router.subclassing"></a>12.5.8. Subclassing the Router</h3></div></div></div>
+<p>
+            标准的rewrite路由器应当最大限度提供你所需的功能；大多时候，为了通过已知的路由提供新的或修改的功能，你将只需要创建一个新的路由类型
+        </p>
+<p>
+            那就是说，你可能想要用不同的路由范例。接口<code class="code">Zend_Controller_Router_Interface</code>提供了需要最少的信息来创建路由器，并包含一个单个的方法。
+        </p>
+<pre class="programlisting">
+interface Zend_Controller_Router_Interface
+{
+  /**
+   * @param  Zend_Controller_Request_Abstract $request
+   * @throws Zend_Controller_Router_Exception
+   * @return Zend_Controller_Request_Abstract
+   */
+  public function route(Zend_Controller_Request_Abstract $request);
+}
+
+        </pre>
+<p>
+            路由只发生一次：当请求第一次接收到系统。路由器的意图是基于请求的环境决定控制器、动作和可选的参数，并把它们发给请求。请求对象接着传递给派遣器。如果不可能映射一个路由到一个派遣令牌，路由器对请求对象就什么也不做。
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.controller.request.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.controller.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.controller.dispatcher.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">12.4. 请求对象 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 12.6. 分发器</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

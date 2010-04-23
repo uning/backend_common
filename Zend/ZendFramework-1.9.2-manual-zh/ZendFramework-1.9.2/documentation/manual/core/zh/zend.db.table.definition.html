@@ -1,0 +1,298 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>15.9. Zend_Db_Table_Definition</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="prev" href="zend.db.table.relationships.html" title="15.8. Zend_Db_Table Relationships">
+<link rel="next" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.db.table.definition.html#zend.db.table.definition.introduction" title="15.9.1. Introduction">
+<link rel="subsection" href="zend.db.table.definition.html#zend.db.table.definition.usage" title="15.9.2. Basic Usage">
+<link rel="subsection" href="zend.db.table.definition.html#zend.db.table.definition.advanced-usage" title="15.9.3. Advanced Usage">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">15.9. Zend_Db_Table_Definition</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.db.table.relationships.html">上一页</a> </td>
+<th width="60%" align="center">第 15 章 Zend_Db</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.debug.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.db.table.definition"></a>15.9. Zend_Db_Table_Definition</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.definition.introduction"></a>15.9.1. Introduction</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Db_Table_Definition</code> is a class that can be used to
+            describe the relationships and configuration options that should be used when
+            <code class="classname">Zend_Db_Table</code> is used via concrete instantiation.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.definition.usage"></a>15.9.2. Basic Usage</h3></div></div></div>
+<p>
+            For all of the same options that are available when configuring an extended
+            <code class="classname">Zend_Db_Table_Abstract</code> class, those options are also available
+            when describing a definition file. This definition file should be passed to the class at
+            instantiation time so that it can know the full definition of all tables
+            in said definition.
+        </p>
+<p>
+            Below is a definition that will describe the table names and relationships
+            between table objects. Note: if 'name' is left out of the definition, it
+            will be taken as the key of the defined table (an example of this is in the
+            'genre' section in the example below.)
+        </p>
+<div class="example">
+<a name="zend.db.table.definition.example1"></a><p class="title"><b>例 15.24. Describing the Definition of a Database Data Model</b></p>
+<div class="example-contents"><pre class="programlisting">
+$definition = new Zend_Db_Table_Definition(array(
+    'author' =&gt; array(
+        'name' =&gt; 'author',
+        'dependentTables' =&gt; array('book')
+        ),
+    'book' =&gt; array(
+        'name' =&gt; 'book',
+        'referenceMap' =&gt; array(
+            'author' =&gt; array(
+                'columns' =&gt; 'author_id',
+                'refTableClass' =&gt; 'author',
+                'refColumns' =&gt; 'id'
+                )
+            )
+        ),
+    'genre' =&gt; null,
+    'book_to_genre' =&gt; array(
+        'referenceMap' =&gt; array(
+            'book' =&gt; array(
+                'columns' =&gt; 'book_id',
+                'refTableClass' =&gt; 'book',
+                'refColumns' =&gt; 'id'
+                ),
+            'genre' =&gt; array(
+                'columns' =&gt; 'genre_id',
+                'refTableClass' =&gt; 'genre',
+                'refColumns' =&gt; 'id'
+                )
+            )
+        )
+    ));
+</pre></div>
+</div>
+<br class="example-break"><p>
+            As you can see, the same options you'd generally see inside of an
+            extended <code class="classname">Zend_Db_Table_Abstract</code> class are documented in this
+            array as well. When passed into <code class="classname">Zend_Db_Table</code> constructor, this
+            definition is <span class="emphasis"><em>persisted</em></span> to any tables it will need
+            to create in order to return the proper rows.
+        </p>
+<p>
+            Below is an example of the primary table instantiation as well as
+            the <code class="methodname">findDependentRowset()</code> and
+            <code class="methodname">findManyToManyRowset()</code> calls that will
+            correspond to the data model described above:
+        </p>
+<div class="example">
+<a name="zend.db.table.definition.example2"></a><p class="title"><b>例 15.25. Interacting with the described definition</b></p>
+<div class="example-contents"><pre class="programlisting">
+$authorTable = new Zend_Db_Table('author', $definition);
+$authors = $authorTable-&gt;fetchAll();
+
+foreach ($authors as $author) {
+    echo $author-&gt;id
+       . ': '
+       . $author-&gt;first_name
+       . ' '
+       . $author-&gt;last_name
+       . PHP_EOL;
+    $books = $author-&gt;findDependentRowset('book');
+    foreach ($books as $book) {
+        echo '    Book: ' . $book-&gt;title . PHP_EOL;
+        $genreOutputArray = array();
+        $genres = $book-&gt;findManyToManyRowset('genre', 'book_to_genre');
+        foreach ($genres as $genreRow) {
+            $genreOutputArray[] = $genreRow-&gt;name;
+        }
+        echo '        Genre: ' . implode(', ', $genreOutputArray) . PHP_EOL;
+    }
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.definition.advanced-usage"></a>15.9.3. Advanced Usage</h3></div></div></div>
+<p>
+            Sometimes you want to use both paradigms for defining and using the
+            table gateway: both by extension and concrete instantiation. To do this
+            simply leave out any table configurations out of the definition. This will
+            allow <code class="classname">Zend_Db_Table</code> to look for the actual refered class instead
+            of the definition key.
+        </p>
+<p>
+            Building on the example above, we will allow for one of the table configurations
+            to be a <code class="classname">Zend_Db_Table_Abstract</code> extended class, while keeping the
+            rest of the tables as part of the definition. We will also show how one would interact
+            with this new definition.
+        </p>
+<div class="example">
+<a name="zend.db.table.definition.example3"></a><p class="title"><b>例 15.26. Interacting A Mixed Use Zend_Db_Table Definition</b></p>
+<div class="example-contents"><pre class="programlisting">
+class MyBook extends Zend_Db_Table_Abstract
+{
+    protected $_name = 'book';
+    protected $_referenceMap = array(
+        'author' =&gt; array(
+            'columns' =&gt; 'author_id',
+            'refTableClass' =&gt; 'author',
+            'refColumns' =&gt; 'id'
+            )
+        );
+}
+
+$definition = new Zend_Db_Table_Definition(array(
+    'author' =&gt; array(
+        'name' =&gt; 'author',
+        'dependentTables' =&gt; array('MyBook')
+        ),
+    'genre' =&gt; null,
+    'book_to_genre' =&gt; array(
+        'referenceMap' =&gt; array(
+            'book' =&gt; array(
+                'columns' =&gt; 'book_id',
+                'refTableClass' =&gt; 'MyBook',
+                'refColumns' =&gt; 'id'
+                ),
+            'genre' =&gt; array(
+                'columns' =&gt; 'genre_id',
+                'refTableClass' =&gt; 'genre',
+                'refColumns' =&gt; 'id'
+                )
+            )
+        )
+    ));
+
+$authorTable = new Zend_Db_Table('author', $definition);
+$authors = $authorTable-&gt;fetchAll();
+
+foreach ($authors as $author) {
+    echo $author-&gt;id
+       . ': '
+       . $author-&gt;first_name
+       . ' '
+       . $author-&gt;last_name
+       . PHP_EOL;
+    $books = $author-&gt;findDependentRowset(new MyBook());
+    foreach ($books as $book) {
+        echo '    Book: ' . $book-&gt;title . PHP_EOL;
+        $genreOutputArray = array();
+        $genres = $book-&gt;findManyToManyRowset('genre', 'book_to_genre');
+        foreach ($genres as $genreRow) {
+            $genreOutputArray[] = $genreRow-&gt;name;
+        }
+        echo '        Genre: ' . implode(', ', $genreOutputArray) . PHP_EOL;
+    }
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.db.table.relationships.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.db.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.debug.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">15.8. Zend_Db_Table Relationships </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 16 章 Zend_Debug</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

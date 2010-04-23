@@ -1,0 +1,307 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 58 章 Zend_Uri</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.translate.migration.html" title="57.7. Migrating from previous versions">
+<link rel="next" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.uri.html#zend.uri.chapter" title="58.1. Zend_Uri">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 58 章 Zend_Uri</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.translate.migration.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.validate.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.uri"></a>第 58 章 Zend_Uri</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.uri.html#zend.uri.chapter">58.1. Zend_Uri</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.uri.html#zend.uri.overview">58.1.1. 概述</a></span></dt>
+<dt><span class="sect2"><a href="zend.uri.html#zend.uri.creation">58.1.2. 新建一个URI</a></span></dt>
+<dt><span class="sect2"><a href="zend.uri.html#zend.uri.manipulation">58.1.3. 操作现有的URI</a></span></dt>
+<dt><span class="sect2"><a href="zend.uri.html#zend.uri.validation">58.1.4. URI 验证</a></span></dt>
+<dt><span class="sect2"><a href="zend.uri.html#zend.uri.instance-methods">58.1.5. 公共实例方法</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.uri.html#zend.uri.instance-methods.getscheme">58.1.5.1. 取得URI的Schema</a></span></dt>
+<dt><span class="sect3"><a href="zend.uri.html#zend.uri.instance-methods.geturi">58.1.5.2. 取得整个URI</a></span></dt>
+<dt><span class="sect3"><a href="zend.uri.html#zend.uri.instance-methods.valid">58.1.5.3. 验证URI</a></span></dt>
+</dl></dd>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.uri.chapter"></a>58.1. Zend_Uri</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.uri.overview"></a>58.1.1. 概述</h3></div></div></div>
+<p>
+      <code class="code">Zend_Uri</code> 是一个辅助于操作和验证<a href="http://www.w3.org/Addressing/" target="_top">统一资源标识符</a> (URIs)的组件.
+      <code class="code">Zend_Uri</code> 的存在主要是为其他组件服务的,比如<code class="code">Zend_Http_Client</code>,但是作为一个独立的工具也是有用的.
+    </p>
+<p>
+      URIs 总是以一个schema(模式,协议)开始,后跟一个冒号(colon).<code class="code">Zend_Uri</code>类提供一个工厂,
+       返回一个它本身的 适应于每种模式(scheme)的 子类,子类被命名为<code class="code">Zend_Uri_&lt;scheme&gt;</code>,
+      <code class="code">&lt;scheme&gt;</code>是首字母大写的模式名称.一个例外是HTTPS,它也是由<code class="code">Zend_Uri_Http</code>处理的.
+    </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.uri.creation"></a>58.1.2. 新建一个URI</h3></div></div></div>
+<p>
+      如果仅有一个模式被传递给<code class="code">Zend_Uri::factory()</code>,<code class="code">Zend_Uri</code>将从头构造一个新的URI.
+    </p>
+<div class="example">
+<a name="id3053978"></a><p class="title"><b>例 58.1. 使用<code class="code">Zend_Uri::factory()</code>创建一个新的URI</b></p>
+<div class="example-contents"><pre class="programlisting">
+&lt;?php
+
+require_once 'Zend/Uri.php';
+
+// 重新创建一个新的URI,仅传递模式.
+$uri = Zend_Uri::factory('http');
+
+// $uri instanceof Zend_Uri_Http
+
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+      从头创建一个的新的URI,仅仅需要传递模式给<code class="code">Zend_Uri::factory()</code><sup>[<a name="id3054006" href="#ftn.id3054006">23</a>]</sup> .
+      如果传递了一个未支持的模式,<code class="code">Zend_Uri_Exception</code>异常将被抛出.
+    </p>
+<p>
+      如果传递的模式或者URI被支持,<code class="code">Zend_Uri::factory()</code>返回一个它本身的 适应于特定模式(scheme)的 子类
+    </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.uri.manipulation"></a>58.1.3. 操作现有的URI</h3></div></div></div>
+<p>
+      要操作一个现有的URL,把整个URI传递给<code class="code">Zend_Uri::factory()</code>.
+    </p>
+<div class="example">
+<a name="id3054050"></a><p class="title"><b>例 58.2. 使用<code class="code">Zend_Uri::factory()</code>操作一个现有的URI</b></p>
+<div class="example-contents"><pre class="programlisting">
+&lt;?php
+
+require_once 'Zend/Uri.php';
+
+// 操作一个现有的URI,把他传入到Zend_Uri::factory().
+$uri = Zend_Uri::factory('http://www.zend.com');
+
+// $uri instanceof Zend_Uri_Http
+
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+      这个URI将被解析并且验证.如果发现它是无效的,<code class="code">Zend_Uri_Exception</code>异常立即抛出.否则<code class="code">Zend_Uri::factory()</code>
+      返回一个它本身的 适应于特定模式(scheme)的 子类
+    </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.uri.validation"></a>58.1.4. URI 验证</h3></div></div></div>
+<p>
+      <code class="code">Zend_Uri::check()</code> 函数仅在需要验证一个现有的URI时使用.
+    </p>
+<div class="example">
+<a name="id3054108"></a><p class="title"><b>例 58.3. 使用<code class="code">Zend_Uri::check()</code>进行URI 验证</b></p>
+<div class="example-contents"><pre class="programlisting">
+&lt;?php
+
+require_once 'Zend/Uri.php';
+
+// 验证一个给定的URI是否是格式良好的
+$valid = Zend_Uri::check('http://uri.in.question');
+
+// 对于一个有效的URI,$valid为TRUE,否则为FALSE
+
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+      <code class="code">Zend_Uri::check()</code> 返回布尔值,它比使用<code class="code">Zend_Uri::factory()</code>更便捷,并且能够捕获异常.
+    </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.uri.instance-methods"></a>58.1.5. 公共实例方法</h3></div></div></div>
+<p>
+      每个<code class="code">Zend_Uri</code>子类的实例(如:<code class="code">Zend_Uri_Http</code>)有多个 有用的 处理任何类型的 URI的实例方法.
+    </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.uri.instance-methods.getscheme"></a>58.1.5.1. 取得URI的Schema</h4></div></div></div>
+<p>
+      URI模式是冒号之前的部分.例如<code class="code">http://www.zend.com</code>的模式是<code class="code">http</code>.
+      </p>
+<div class="example">
+<a name="id3054190"></a><p class="title"><b>例 58.4. 从<code class="code">Zend_Uri_*</code> 对象取得模式</b></p>
+<div class="example-contents"><pre class="programlisting">
+&lt;?php
+
+require_once 'Zend/Uri.php';
+
+$uri = Zend_Uri::factory('http://www.zend.com');
+
+$scheme = $uri-&gt;getScheme();  // "http"
+
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+        <code class="code">getScheme()</code>实例方法仅返回URI对象的模式部分.
+      </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.uri.instance-methods.geturi"></a>58.1.5.2. 取得整个URI</h4></div></div></div>
+<div class="example">
+<a name="id3054229"></a><p class="title"><b>例 58.5. 从一个<code class="code">Zend_Uri_*</code> 对象取得整个URI</b></p>
+<div class="example-contents"><pre class="programlisting">
+&lt;?php
+
+require_once 'Zend/Uri.php';
+
+$uri = Zend_Uri::factory('http://www.zend.com');
+
+echo $uri-&gt;getUri();  // "http://www.zend.com"
+
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+        <code class="code">getUri()</code>方法返回整个URI的字符串标识.
+      </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.uri.instance-methods.valid"></a>58.1.5.3. 验证URI</h4></div></div></div>
+<p>
+        <code class="code">Zend_Uri::factory()</code>总是验证传递给它的任何URI,如果给定的URI被认为是无效的,它将不会实例化一个新的<code class="code">Zend_Uri</code> 子类.但是
+        <code class="code">Zend_Uri</code>子类为 一个新URI 或者 一个现有的有效的URL 被实例化后,在操作后 该URI可能会变得无效.
+      </p>
+<div class="example">
+<a name="id3054288"></a><p class="title"><b>例 58.6. 验证一个 <code class="code">Zend_Uri_*</code> 对象</b></p>
+<div class="example-contents"><pre class="programlisting">
+&lt;?php
+
+require_once 'Zend/Uri.php';
+
+$uri = Zend_Uri::factory('http://www.zend.com');
+
+$isValid = $uri-&gt;valid();  // TRUE
+
+?&gt;</pre></div>
+</div>
+<br class="example-break"><p>
+        <code class="code">valid()</code>实例方法检查URI对象是否仍是有效的.
+      </p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<br><hr width="100" align="left">
+<div class="footnote"><p><sup>[<a name="ftn.id3054006" href="#id3054006">23</a>] </sup>
+      在撰写本文时,Zend_Uri仅支持HTTP和HTTPS模式.</p></div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.translate.migration.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.validate.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">57.7. Migrating from previous versions </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 59 章 Zend_Validate</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

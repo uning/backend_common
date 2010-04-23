@@ -1,0 +1,827 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>57.5. Additional features for translation</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="prev" href="zend.translate.sourcecreation.html" title="57.4. Creating source files">
+<link rel="next" href="zend.translate.plurals.html" title="57.6. Plural notations for Translation">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.translate.additional.html#zend.translate.additional.options" title="57.5.1. Options for adapters">
+<link rel="subsection" href="zend.translate.additional.html#zend.translate.additional.languages" title="57.5.2. Handling languages">
+<link rel="subsection" href="zend.translate.additional.html#zend.translate.additional.detection" title="57.5.3. Automatic source detection">
+<link rel="subsection" href="zend.translate.additional.html#zend.translate.additional.istranslated" title="57.5.4. Checking for translations">
+<link rel="subsection" href="zend.translate.additional.html#zend.translate.additional.logging" title="57.5.5. How to log not found translations">
+<link rel="subsection" href="zend.translate.additional.html#zend.translate.additional.sourcedata" title="57.5.6. Accessing source data">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">57.5. Additional features for translation</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.translate.sourcecreation.html">上一页</a> </td>
+<th width="60%" align="center">第 57 章 Zend_Translate</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.translate.plurals.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.translate.additional"></a>57.5. Additional features for translation</h2></div></div></div>
+<p>
+        There are several additional features which are supported by
+        <code class="classname">Zend_Translate</code>. Read here for these additional informations.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.translate.additional.options"></a>57.5.1. Options for adapters</h3></div></div></div>
+<p>
+            Options can be used with all adapters. Of course the options are different for all
+            adapters. You can set options when you create the adapter. Actually there is one option
+            which is available to all adapters: '<code class="code">clear</code>' sets if translation data
+            should be added to existing one or not. Standard behaviour is to add new translation
+            data to existing one. But the translation data is only cleared for the selected
+            language. So other languages remain untouched.
+        </p>
+<p>
+            You can set options temporarily when using <code class="code">addTranslation($data, $locale, array
+            $options = array())</code> as third and optional parameter. And you can use the method
+            <code class="methodname">setOptions()</code> to set the options permanently.
+        </p>
+<div class="example">
+<a name="zend.translate..additional.options.example"></a><p class="title"><b>例 57.7. Using translation options</b></p>
+<div class="example-contents"><pre class="programlisting">
+// define ':' as separator for the translation source files
+$options = array('delimiter' =&gt; ':');
+$translate = new Zend_Translate(
+    'csv',
+    '/path/to/mytranslation.csv',
+    'de',
+    $options);
+
+...
+
+// clear the defined language and use new translation data
+$options = array('clear' =&gt; true);
+$translate-&gt;addTranslation('/path/to/new.csv', 'fr', $options);
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Here you can find all available options for the different adapters with a description
+            of their usage:
+        </p>
+<div class="table">
+<a name="zend.translate.additional.options.alloptions"></a><p class="title"><b>表 57.2. Options for translation adapters</b></p>
+<div class="table-contents"><table summary="Options for translation adapters" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>Option</th>
+<th>Adapter</th>
+<th>Description</th>
+<th>Default value</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>clear</td>
+<td>all</td>
+<td>
+                            If set to true, the already read translations will be cleared. This can
+                            be used instead of creating a new instance when reading new translation
+                            data
+                        </td>
+<td><span class="emphasis"><em>false</em></span></td>
+</tr>
+<tr>
+<td>disableNotices</td>
+<td>all</td>
+<td>
+                            If set to true, all notices regarding not available translations will
+                            be disabled. You should set this option to true in production
+                            environment
+                        </td>
+<td><span class="emphasis"><em>false</em></span></td>
+</tr>
+<tr>
+<td>ignore</td>
+<td>all</td>
+<td>
+                            All directories and files beginning with this prefix will be ignored
+                            when searching for files. This value defaults to
+                            <span class="emphasis"><em>'.'</em></span> which leads to the behavior that all hidden
+                            files will be ignored. Setting this value to <code class="code">'tmp'</code> would
+                            mean that directories and files like <code class="code">'tmpImages'</code> and
+                            <code class="code">'tmpFiles'</code> would be ignored as well as all subsequent
+                            directories
+                        </td>
+<td><span class="emphasis"><em>.</em></span></td>
+</tr>
+<tr>
+<td>log</td>
+<td>all</td>
+<td>
+                            An instance of <code class="classname">Zend_Log</code> where untranslated
+                            messages and notices will be written to
+                        </td>
+<td><span class="emphasis"><em>null</em></span></td>
+</tr>
+<tr>
+<td>logMessage</td>
+<td>all</td>
+<td>
+                            The message which will be written into the log
+                        </td>
+<td>
+                            <span class="emphasis"><em>Untranslated message within '%locale%': %message%</em></span>
+                        </td>
+</tr>
+<tr>
+<td>logUntranslated</td>
+<td>all</td>
+<td>
+                            When this option is set to true, all message IDs which can not be
+                            translated will be written into the attached log
+                        </td>
+<td><span class="emphasis"><em>false</em></span></td>
+</tr>
+<tr>
+<td>scan</td>
+<td>all</td>
+<td>
+                            If set to null, no scanning of the directory structure will be done.
+                            If set to <code class="constant">Zend_Translate::LOCALE_DIRECTORY</code> the
+                            locale will be detected within the directory. If set to
+                            <code class="constant">Zend_Translate::LOCALE_FILENAME</code> the locale will
+                            be detected within the filename. See <a href="zend.translate.additional.html#zend.translate.additional.detection" title="57.5.3. Automatic source detection">第 57.5.3 节 “Automatic source detection”</a> for details
+                        </td>
+<td><span class="emphasis"><em>null</em></span></td>
+</tr>
+<tr>
+<td>delimiter</td>
+<td>Csv</td>
+<td>
+                            Defines which sign is used as delimiter for separating source and
+                            translation
+                        </td>
+<td><span class="emphasis"><em>;</em></span></td>
+</tr>
+<tr>
+<td>enclosure</td>
+<td>Csv</td>
+<td>
+                            Defines the enclosure character to be used. Defaults to a doublequote
+                        </td>
+<td><span class="emphasis"><em>"</em></span></td>
+</tr>
+<tr>
+<td>length</td>
+<td>Csv</td>
+<td>
+                            Defines the maximum length of a csv line. When set to 0 it will be
+                            detected automatically
+                        </td>
+<td><span class="emphasis"><em>0</em></span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<br class="table-break"><p>
+            When you want to have self defined options, you are also able to use them within all
+            adapters. The <code class="methodname">setOptions()</code> method can be used to define your option.
+            <code class="methodname">setOptions()</code> needs an array with the options you want to set. If an given
+            option exists it will be signed over. You can define as much options as needed as they
+            will not be checked by the adapter. Just make sure not to overwrite any existing option
+            which is used by an adapter.
+        </p>
+<p>
+            To return the option you can use the <code class="methodname">getOptions()</code> method. When
+            <code class="methodname">getOptions()</code> is called without a parameter it will return all options set.
+            When the optional parameter is given you will only get the specified option.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.translate.additional.languages"></a>57.5.2. Handling languages</h3></div></div></div>
+<p>
+            When working with different languages there are a few methods which will be useful.
+        </p>
+<p>
+            The <code class="methodname">getLocale()</code> method can be used to get the currently set language. It
+            can either hold an instance of <code class="classname">Zend_Locale</code> or the identifier of
+            a locale.
+        </p>
+<p>
+            The <code class="methodname">setLocale()</code> method sets a new standard language for translation. This
+            prevents the need of setting the optional language parameter more than once to the
+            <code class="methodname">translate()</code> method. If the given language does not exist, or no
+            translation data is available for the language, <code class="methodname">setLocale()</code> tries to
+            downgrade to the language without the region if any was given. A language of
+            <code class="code">en_US</code> would be downgraded to <code class="code">en</code>. When even the downgraded
+            language can not be found an exception will be thrown.
+        </p>
+<p>
+            The <code class="methodname">isAvailable()</code> method checks if a given language is already available.
+            It returns <code class="constant">TRUE</code> if data for the given language exist.
+        </p>
+<p>
+            And finally the <code class="methodname">getList()</code> method can be used to get all currently set
+            languages for an adapter returned as array.
+        </p>
+<div class="example">
+<a name="zend.translate.additional.languages.example"></a><p class="title"><b>例 57.8. Handling languages with adapters</b></p>
+<div class="example-contents"><pre class="programlisting">
+// returns the currently set language
+$actual = $translate-&gt;getLocale();
+
+// you can use the optional parameter while translating
+echo $translate-&gt;_("my_text", "fr");
+// or set a new language
+$translate-&gt;setLocale("fr");
+echo $translate-&gt;_("my_text");
+// refer to the base language
+// fr_CH will be downgraded to fr
+$translate-&gt;setLocale("fr_CH");
+echo $translate-&gt;_("my_text");
+
+// check if this language exist
+if ($translate-&gt;isAvailable("fr")) {
+    // language exists
+}
+</pre></div>
+</div>
+<br class="example-break"><div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.translate.additional.languages.automatic"></a>57.5.2.1. Automatical handling of languages</h4></div></div></div>
+<p>
+                Note that as long as you only add new translation sources with the
+                <code class="methodname">addTranslation()</code> method <code class="classname">Zend_Translate</code> will
+                automatically set the best fitting language for your environment when you use one
+                of the automatic locales which are '<code class="code">auto</code>' or '<code class="code">browser</code>'.
+                So normally you will not need to call <code class="methodname">setLocale()</code>. This should only be
+                used in conjunction with automatic source detection.
+            </p>
+<p>
+                The algorithm will search for the best fitting locale depending on the user's
+                browser and your environment. See the following example for details:
+            </p>
+<div class="example">
+<a name="zend.translate.additional.languages.automatic.example"></a><p class="title"><b>例 57.9. Automatically language detection</b></p>
+<div class="example-contents"><pre class="programlisting">
+// Let's expect the browser returns these language settings:
+// HTTP_ACCEPT_LANGUAGE = "de_AT=1;fr=1;en_US=0.8";
+
+// Example 1:
+// When no fitting language is found, the message ID is returned
+$translate = new Zend_Translate(
+    'gettext',
+    'my_it.mo',
+    'auto',
+    array('scan' =&gt; Zend_Translate::LOCALE_FILENAME));
+
+// Example 2:
+// Best found fitting language is 'fr'
+$translate = new Zend_Translate(
+    'gettext',
+    'my_fr.mo',
+    'auto',
+    array('scan' =&gt; Zend_Translate::LOCALE_FILENAME));
+
+// Example 3:
+// Best found fitting language is 'de' ('de_AT' will be degraded)
+$translate = new Zend_Translate(
+    'gettext',
+    'my_de.mo',
+    'auto',
+    array('scan' =&gt; Zend_Translate::LOCALE_FILENAME));
+
+// Example 4:
+// Returns 'it' as translation source and overrides the automatic settings
+$translate = new Zend_Translate(
+    'gettext',
+    'my_it.mo',
+    'auto',
+    array('scan' =&gt; Zend_Translate::LOCALE_FILENAME));
+
+$translate-&gt;addTranslation('my_ru.mo', 'ru');
+$translate-&gt;setLocale('it_IT');
+</pre></div>
+</div>
+<br class="example-break"><p>
+                After setting a language manually with the <code class="methodname">setLocale()</code> method the
+                automatic detection will be switched off and overridden.
+            </p>
+<p>
+                If you want to use it again, you can set the language
+                <span class="emphasis"><em>auto</em></span> with <code class="methodname">setLocale()</code> which will reactivate
+                the automatic detection for <code class="classname">Zend_Translate</code>.
+            </p>
+<p>
+                Since Zend Framework 1.7.0 <code class="classname">Zend_Translate</code> also recognises an
+                application wide locale. You can simply set a <code class="classname">Zend_Locale</code>
+                instance to the registry like shown below. With this notation you can forget about
+                setting the locale manually with each instance when you want to use the same locale
+                multiple times.
+            </p>
+<pre class="programlisting">
+// in your bootstrap file
+$locale = new Zend_Locale();
+Zend_Registry::set('Zend_Locale', $locale);
+
+// default language when requested language is not available
+$defaultlanguage = 'en';
+
+// somewhere in your application
+$translate = new Zend_Translate('gettext', 'my_de.mo');
+
+if (!$translate-&gt;isAvailable($locale-&gt;getLanguage())) {
+    // not available languages are rerouted to another language
+    $translate-&gt;setLocale($defaultlanguage);
+}
+
+$translate-&gt;getLocale();
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.translate.additional.detection"></a>57.5.3. Automatic source detection</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Translate</code> can detect translation sources automatically. So
+            you don't have to declare each source file manually. You can let
+            <code class="classname">Zend_Translate</code> do this job and scan the complete directory
+            structure for source files.
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                Automatic source detection is available since Zend Framework version 1.5 .
+            </p></td></tr>
+</table></div>
+<p>
+            The usage is quite the same as initiating a single translation source with one
+            difference. You must give a directory which has to be scanned instead a file.
+        </p>
+<div class="example">
+<a name="zend.translate.additional.languages.directory.example"></a><p class="title"><b>例 57.10. Scanning a directory structure for sources</b></p>
+<div class="example-contents"><pre class="programlisting">
+// assuming we have the following structure
+//  /language/
+//  /language/login/login.tmx
+//  /language/logout/logout.tmx
+//  /language/error/loginerror.tmx
+//  /language/error/logouterror.tmx
+
+$translate = new Zend_Translate('tmx', '/language');
+</pre></div>
+</div>
+<br class="example-break"><p>
+            So <code class="classname">Zend_Translate</code> does not only search the given directory, but
+            also all subdirectories for translation source files. This makes the usage quite
+            simple. But <code class="classname">Zend_Translate</code> will ignore all files which are not
+            sources or which produce failures while reading the translation data. So you have to
+            make sure that all of your translation sources are correct and readable because you
+            will not get any failure if a file is bogus or can not be read.
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                Depending on how deep your directory structure is and how much files are within
+                this structure it can take a long time for <code class="classname">Zend_Translate</code>
+                to complete.
+            </p></td></tr>
+</table></div>
+<p>
+            In our example we have used the TMX format which includes the language to be used
+            within the source. But many of the other source formats are not able to include the
+            language within the file. Even this sources can be used with automatic scanning if you
+            do some pre-requisits as described below:
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.translate.additional.detection.directory"></a>57.5.3.1. Language through naming directories</h4></div></div></div>
+<p>
+                One way to include automatic language detection is to name the directories related
+                to the language which is used for the sources within this directory. This is the
+                easiest way and is used for example within standard gettext implementations.
+            </p>
+<p>
+                <code class="classname">Zend_Translate</code> needs the '<code class="code">scan</code>' option to know
+                that it should search the names of all directories for languages. See the following
+                example for details:
+            </p>
+<div class="example">
+<a name="zend.translate.additional.detection.directory.example"></a><p class="title"><b>例 57.11. Directory scanning for languages</b></p>
+<div class="example-contents"><pre class="programlisting">
+// assuming we have the following structure
+//  /language/
+//  /language/de/login/login.mo
+//  /language/de/error/loginerror.mo
+//  /language/en/login/login.mo
+//  /language/en/error/loginerror.mo
+
+$translate = new Zend_Translate(
+    'gettext',
+    '/language',
+    null,
+    array('scan' =&gt; Zend_Translate::LOCALE_DIRECTORY));
+</pre></div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    This works only for adapters which do not include the language within the
+                    source file. Using this option for example with TMX will be ignored. Also
+                    language definitions within the filename will be ignored when using this
+                    option.
+                </p></td></tr>
+</table></div>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    You should be aware if you have several subdirectories under the same
+                    structure. Assuming we have a structure like
+                    <code class="code">/language/module/de/en/file.mo</code>. In this case the path contains
+                    multiple strings which would be detected as locale. It could be either
+                    <code class="code">de</code> or <code class="code">en</code>. In such a case the behaviour is
+                    undefined and it is recommended to use file detection in such situations.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.translate.additional.detection.filename"></a>57.5.3.2. Language through filenames</h4></div></div></div>
+<p>
+                Another way to detect the language automatically is to use special filenames. You
+                can either name the complete file or parts of a file after the used language. To
+                use this way of detection you will have to set the '<code class="code">scan</code>' option at
+                initiation. There are several ways of naming the sourcefiles which are described
+                below:
+            </p>
+<div class="example">
+<a name="zend.translate.additional.detection.filename.example"></a><p class="title"><b>例 57.12. Filename scanning for languages</b></p>
+<div class="example-contents"><pre class="programlisting">
+// assuming we have the following structure
+//  /language/
+//  /language/login/login_en.mo
+//  /language/login/login_de.mo
+//  /language/error/loginerror_en.mo
+//  /language/error/loginerror_de.mo
+
+$translate = new Zend_Translate(
+    'gettext',
+    '/language',
+    null,
+    array('scan' =&gt; Zend_Translate::LOCALE_FILENAME));
+</pre></div>
+</div>
+<br class="example-break"><div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.translate.additional.detection.filename.complete"></a>57.5.3.2.1. Complete filename</h5></div></div></div>
+<p>
+                    Having the whole file named after the language is the simplest way but only
+                    viable if you have only one file per language.
+                </p>
+<pre class="programlisting">
+/languages/
+/languages/en.mo
+/languages/de.mo
+/languages/es.mo
+</pre>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.translate.additional.detection.filename.extension"></a>57.5.3.2.2. Extension of the file</h5></div></div></div>
+<p>
+                    Another simple way to use the extension of the file for language detection.
+                    But this may be confusing since you will no longer have an idea which extension
+                    the file originally had.
+                </p>
+<pre class="programlisting">
+/languages/
+/languages/view.en
+/languages/view.de
+/languages/view.es
+</pre>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.translate.additional.detection.filename.token"></a>57.5.3.2.3. Filename tokens</h5></div></div></div>
+<p>
+                    <code class="classname">Zend_Translate</code> is also capable of detecting the language
+                    if it is included within the filename. But if you go this way you will have to
+                    separate the language with a token. There are three supported tokens which can
+                    be used: a dot '.', an underscore '_', or a hyphen '-'.
+                </p>
+<pre class="programlisting">
+/languages/
+/languages/view_en.mo -&gt; detects english
+/languages/view_de.mo -&gt; detects german
+/languages/view_it.mo -&gt; detects italian
+</pre>
+<p>
+                    The first found string delimited by a token which can be interpreted as a
+                    locale will be used. See the following example for details.
+                </p>
+<pre class="programlisting">
+/languages/
+/languages/view_en_de.mo -&gt; detects english
+/languages/view_en_es.mo -&gt; detects english and overwrites the first file
+/languages/view_it_it.mo -&gt; detects italian
+</pre>
+<p>
+                    All three tokens are used to detect the locale. When the filename contains
+                    multiple tokens, the first found token depends on the order of the tokens
+                    which are used. See the following example for details.
+                </p>
+<pre class="programlisting">
+/languages/
+/languages/view_en-it.mo -&gt; detects english because '_' will be used before '-'
+/languages/view-en_it.mo -&gt; detects italian because '_' will be used before '-'
+/languages/view_en.it.mo -&gt; detects italian because '.' will be used before '_'
+</pre>
+</div>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.translate.additional.istranslated"></a>57.5.4. Checking for translations</h3></div></div></div>
+<p>
+            Normally text will be translated without any computation. But sometimes it is necessary
+            to know if a text is translated or not, therefor the <code class="methodname">isTranslated()</code>
+            method can be used.
+        </p>
+<p>
+            <code class="methodname">isTranslated($messageId, $original = false, $locale = null)</code> takes
+            the text you want to check as its first parameter, and as optional third parameter the
+            locale for which you want to do the check. The optional second parameter declares
+            whether translation is fixed to the declared language or a lower set of translations
+            can be used. If you have a text which can be returned for 'en' but not for 'en_US' you
+            will normally get the translation returned, but by setting <code class="varname">$original</code> to
+            true, <code class="methodname">isTranslated()</code> will return false.
+        </p>
+<div class="example">
+<a name="zend.translate.additional.istranslated.example"></a><p class="title"><b>例 57.13. Checking if a text is translatable</b></p>
+<div class="example-contents"><pre class="programlisting">
+$english = array(
+    'message1' =&gt; 'Nachricht 1',
+    'message2' =&gt; 'Nachricht 2',
+    'message3' =&gt; 'Nachricht 3');
+
+$translate = new Zend_Translate('array', $english, 'de_AT');
+
+if ($translate-&gt;isTranslated('message1')) {
+    print "'message1' can be translated";
+}
+
+if (!($translate-&gt;isTranslated('message1', true, 'de'))) {
+    print "'message1' can not be translated to 'de'"
+        . " as it's available only in 'de_AT'";
+}
+
+if ($translate-&gt;isTranslated('message1', false, 'de')) {
+    print "'message1' can be translated in 'de_AT' as it falls back to 'de'";
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.translate.additional.logging"></a>57.5.5. How to log not found translations</h3></div></div></div>
+<p>
+            When you have a bigger site or you are creating the translation files manually, you
+            often have the problem that some messages are not translated. But there is an easy
+            solution for you when you are using <code class="classname">Zend_Translate</code>.
+        </p>
+<p>
+            You have to follow two or three simple steps. First, you have to create an instance of
+            <code class="classname">Zend_Log</code>. Then you have to attach this instance to
+            <code class="classname">Zend_Translate</code>. See the following example:
+        </p>
+<div class="example">
+<a name="zend.translate.additional.logging.example"></a><p class="title"><b>例 57.14. Log translations</b></p>
+<div class="example-contents"><pre class="programlisting">
+$translate = new Zend_Translate('gettext', $path, 'de');
+
+// Create a log instance
+$writer = new Zend_Log_Writer_Stream('/path/to/file.log');
+$log    = new Zend_Log($writer);
+
+// Attach it to the translation instance
+$translate-&gt;setOptions(array(
+    'log'             =&gt; $log,
+    'logUntranslated' =&gt; true));
+
+$translate-&gt;translate('unknown string');
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Now you will have a new notice in the log: <code class="code">Untranslated message within 'de':
+            unknown string</code>.
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                You should note that any translation which can not be found will be logged. This
+                means all translations when a user requests a language which is not supported. Also
+                every request for a message which can not be translated will be logged. Be aware,
+                that 100 people requesting the same translation, will result 100 logged notices.
+            </p></td></tr>
+</table></div>
+<p>
+            This feature can not only be used to log messages but also to attach this untranslated
+            messages into an empty translation file. To do so you will have to write your own log
+            writer which writes the format you want to have and strips the prepending "Untranslated
+            message".
+        </p>
+<p>
+            You can also set the '<code class="code">logMessage</code>' option when you want to have your own
+            log message. Use the '<code class="code">%message%</code>' token for placing the messageId within
+            your log message, and the '<code class="code">%locale%</code>' token for the requested locale. See
+            the following example for a self defined log message:
+        </p>
+<div class="example">
+<a name="zend.translate.additional.logging.example2"></a><p class="title"><b>例 57.15. Self defined log messages</b></p>
+<div class="example-contents"><pre class="programlisting">
+$translate = new Zend_Translate('gettext', $path, 'de');
+
+// Create a log instance
+$writer = new Zend_Log_Writer_Stream('/path/to/file.log');
+$log    = new Zend_Log($writer);
+
+// Attach it to the translation instance
+$translate-&gt;setOptions(array(
+    'log'             =&gt; $log,
+    'logMessage'      =&gt; "Missing '%message%' within locale '%locale%'",
+    'logUntranslated' =&gt; true));
+
+$translate-&gt;translate('unknown string');
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.translate.additional.sourcedata"></a>57.5.6. Accessing source data</h3></div></div></div>
+<p>
+            Sometimes it is useful to have access to the translation source data. Therefor
+            the following two functions are provided.
+        </p>
+<p>
+            The <code class="methodname">getMessageIds($locale = null)</code> method returns all known message IDs as
+            array.
+        </p>
+<p>
+            The <code class="methodname">getMessages($locale = null)</code> method returns the complete translation
+            source as an array. The message ID is used as key and the translation data as value.
+        </p>
+<p>
+            Both methods accept an optional parameter <code class="varname">$locale</code> which, if set, returns
+            the translation data for the specified language. If this parameter is not given, the
+            actual set language will be used. Keep in mind that normally all translations should be
+            available in all languages. Which means that in a normal situation you will not have to
+            set this parameter.
+        </p>
+<p>
+            Additionally the <code class="methodname">getMessages()</code> method can be used to return the complete
+            translation dictionary using the pseudo-locale 'all'. This will return all available
+            translation data for each added locale.
+        </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                Attention: the returned array can be <span class="emphasis"><em>very big</em></span>,
+                depending on the number of added locales and the amount of translation data.
+            </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.translate.additional.sourcedata.example"></a><p class="title"><b>例 57.16. Handling languages with adapters</b></p>
+<div class="example-contents"><pre class="programlisting">
+// returns all known message IDs
+$messageIds = $translate-&gt;getMessageIds();
+print_r($messageIds);
+
+// or just for the specified language
+$messageIds = $translate-&gt;getMessageIds('en_US');
+print_r($messageIds);
+
+// returns all the complete translation data
+$source = $translate-&gt;getMessages();
+print_r($source);
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.translate.sourcecreation.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.translate.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.translate.plurals.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">57.4. Creating source files </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 57.6. Plural notations for Translation</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

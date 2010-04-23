@@ -1,0 +1,225 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>22.2.  标准过滤器类</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="prev" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="next" href="zend.filter.filter_chains.html" title="22.3. 过滤器链">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.alnum" title="22.2.1. Alnum">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.alpha" title="22.2.2. Alpha">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.basename" title="22.2.3. BaseName">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.digits" title="22.2.4. Digits">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.dir" title="22.2.5. Dir">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.htmlentities" title="22.2.6. HtmlEntities">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.int" title="22.2.7. Int">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.stripnewlines" title="22.2.8. StripNewlines">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.realpath" title="22.2.9. RealPath">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.stringtolower" title="22.2.10. StringToLower">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.stringtoupper" title="22.2.11. StringToUpper">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.stringtrim" title="22.2.12. StringTrim">
+<link rel="subsection" href="zend.filter.set.html#zend.filter.set.striptags" title="22.2.13. StripTags">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">22.2.  标准过滤器类 </th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.filter.html">上一页</a> </td>
+<th width="60%" align="center">第 22 章 Zend_Filter</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.filter.filter_chains.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.filter.set"></a>22.2.  标准过滤器类 </h2></div></div></div>
+<p>
+        Zend Framework 带有一组标准的过滤器。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.alnum"></a>22.2.1. Alnum</h3></div></div></div>
+<p>
+            返回只保留字母和数字的字符串 <code class="code">$value</code>，这个过滤器包括一个允许空白字符的选项。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.alpha"></a>22.2.2. Alpha</h3></div></div></div>
+<p>
+            返回只保留字母的字符串 <code class="code">$value</code>，这个过滤器包括一个允许空白字符的选项。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.basename"></a>22.2.3. BaseName</h3></div></div></div>
+<p>
+            给定包含一个文件的路径字符串，这个过路器将返回这个文件的基本名（base name）。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.digits"></a>22.2.4. Digits</h3></div></div></div>
+<p>
+            返回只保留数字的字符串 <code class="code">$value</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.dir"></a>22.2.5. Dir</h3></div></div></div>
+<p>
+            返回路径的名字部分。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.htmlentities"></a>22.2.6. HtmlEntities</h3></div></div></div>
+<p>
+            返回转换成它们对应 HTML 实体的字符串 <code class="code">$value</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.int"></a>22.2.7. Int</h3></div></div></div>
+<p>
+            返回整数 <code class="code">$value</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.stripnewlines"></a>22.2.8. StripNewlines</h3></div></div></div>
+<p>
+            返回不带任何新行控制符的字符串 <code class="code">$value</code> 。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.realpath"></a>22.2.9. RealPath</h3></div></div></div>
+<p>
+            扩展所有符号的链接和解析指向在输入路径里的 '/./', '/../' 和额外的 '/' 字符并且返回规范化后的绝对路径名，返回的结果路径将没有符号链接 '/./' 或 '/../' 部分。
+        </p>
+<p>
+            如果失败，例如文件不存在，<code class="code">Zend_Filter_RealPath</code> 将返回 <code class="code">FALSE</code>。在 BSD 系统，如果只有路径最后部分不存在， <code class="code">Zend_Filter_RealPath</code> 不会失败，但其它系统返回 <code class="code">FALSE</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.stringtolower"></a>22.2.10. StringToLower</h3></div></div></div>
+<p>
+            返回按需转换字母成小写的字符串 <code class="code">$value</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.stringtoupper"></a>22.2.11. StringToUpper</h3></div></div></div>
+<p>
+            返回按需转换字母成大写的字符串 <code class="code">$value</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.stringtrim"></a>22.2.12. StringTrim</h3></div></div></div>
+<p>
+            返回从头到尾整理过的字符串 <code class="code">$value</code>。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.filter.set.striptags"></a>22.2.13. StripTags</h3></div></div></div>
+<p>
+            返回把 HTML 和 PHP 标签已剥离的（声明为允许的标签不会剥离）输入的字符串。除了能指定允许哪个标签，开发者也可以在所有允许的标签（或只对特定的标签）中指定哪个属性被允许。最后，这个过滤器提供控制是否注释（如 <code class="code">&lt;!-- ... --&gt;</code>）被删除或允许。
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.filter.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.filter.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.filter.filter_chains.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 22 章 Zend_Filter </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 22.3. 过滤器链</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

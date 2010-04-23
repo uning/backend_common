@@ -1,0 +1,375 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>40.8. Zend_Pdf module usage example</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="prev" href="zend.pdf.info.html" title="40.7. Document Info and Metadata">
+<link rel="next" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">40.8. Zend_Pdf module usage example</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.pdf.info.html">上一页</a> </td>
+<th width="60%" align="center">第 40 章 Zend_Pdf</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.progressbar.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.pdf.usage"></a>40.8. Zend_Pdf module usage example</h2></div></div></div>
+<p>
+    This section provides an example of module usage.
+    </p>
+<p>
+    This example can be found in a <code class="filename">demos/Zend/Pdf/demo.php</code> file.
+    </p>
+<p>
+    There are also <code class="filename">test.pdf</code> file, which can be used with this demo
+    for test purposes.
+    </p>
+<div class="example">
+<a name="zend.pdf.usage.example-1"></a><p class="title"><b>例 40.19. Zend_Pdf module usage demo</b></p>
+<div class="example-contents"><pre class="programlisting">
+/**
+ * @package Zend_Pdf
+ * @subpackage demo
+ */
+
+if (!isset($argv[1])) {
+    echo "USAGE: php demo.php &lt;pdf_file&gt; [&lt;output_pdf_file&gt;]\n";
+    exit;
+}
+
+try {
+    $pdf = Zend_Pdf::load($argv[1]);
+} catch (Zend_Pdf_Exception $e) {
+    if ($e-&gt;getMessage() == 'Can not open \'' . $argv[1] .
+                            '\' file for reading.') {
+        // Create new PDF if file doesn't exist
+        $pdf = new Zend_Pdf();
+
+        if (!isset($argv[2])) {
+            // force complete file rewriting (instead of updating)
+            $argv[2] = $argv[1];
+        }
+    } else {
+        // Throw an exception if it's not the "Can't open file
+        // exception
+        throw $e;
+    }
+}
+
+//------------------------------------------------------------------------
+// Reverse page order
+$pdf-&gt;pages = array_reverse($pdf-&gt;pages);
+
+// Create new Style
+$style = new Zend_Pdf_Style();
+$style-&gt;setFillColor(new Zend_Pdf_Color_Rgb(0, 0, 0.9));
+$style-&gt;setLineColor(new Zend_Pdf_Color_GrayScale(0.2));
+$style-&gt;setLineWidth(3);
+$style-&gt;setLineDashingPattern(array(3, 2, 3, 4), 1.6);
+$fontH = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA_BOLD);
+$style-&gt;setFont($fontH, 32);
+
+try {
+    // Create new image object
+    $imageFile = dirname(__FILE__) . '/stamp.jpg';
+    $stampImage = Zend_Pdf_Image::imageWithPath($imageFile);
+} catch (Zend_Pdf_Exception $e) {
+    // Example of operating with image loading exceptions.
+    if ($e-&gt;getMessage() != 'Image extension is not installed.' &amp;&amp;
+        $e-&gt;getMessage() != 'JPG support is not configured properly.') {
+        throw $e;
+    }
+    $stampImage = null;
+}
+
+// Mark page as modified
+foreach ($pdf-&gt;pages as $page){
+    $page-&gt;saveGS()
+         -&gt;setAlpha(0.25)
+         -&gt;setStyle($style)
+         -&gt;rotate(0, 0, M_PI_2/3);
+
+    $page-&gt;saveGS();
+    $page-&gt;clipCircle(550, -10, 50);
+    if ($stampImage != null) {
+        $page-&gt;drawImage($stampImage, 500, -60, 600, 40);
+    }
+    $page-&gt;restoreGS();
+
+    $page-&gt;drawText('Modified by Zend Framework!', 150, 0)
+         -&gt;restoreGS();
+}
+
+// Add new page generated by Zend_Pdf object
+// (page is attached to the specified the document)
+$pdf-&gt;pages[] = ($page1 = $pdf-&gt;newPage('A4'));
+
+// Add new page generated by Zend_Pdf_Page object
+// (page is not attached to the document)
+$page2 = new Zend_Pdf_Page(Zend_Pdf_Page::SIZE_LETTER_LANDSCAPE);
+$pdf-&gt;pages[] = $page2;
+
+// Create new font
+$font = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_HELVETICA);
+
+// Apply font and draw text
+$page1-&gt;setFont($font, 36)
+      -&gt;setFillColor(Zend_Pdf_Color_Html::color('#9999cc'))
+      -&gt;drawText('Helvetica 36 text string', 60, 500);
+
+// Use font object for another page
+$page2-&gt;setFont($font, 24)
+      -&gt;drawText('Helvetica 24 text string', 60, 500);
+
+// Use another font
+$fontT = Zend_Pdf_Font::fontWithName(Zend_Pdf_Font::FONT_TIMES);
+$page2-&gt;setFont($fontT, 32)
+      -&gt;drawText('Times-Roman 32 text string', 60, 450);
+
+// Draw rectangle
+$page2-&gt;setFillColor(new Zend_Pdf_Color_GrayScale(0.8))
+      -&gt;setLineColor(new Zend_Pdf_Color_GrayScale(0.2))
+      -&gt;setLineDashingPattern(array(3, 2, 3, 4), 1.6)
+      -&gt;drawRectangle(60, 400, 400, 350);
+
+// Draw circle
+$page2-&gt;setLineDashingPattern(Zend_Pdf_Page::LINE_DASHING_SOLID)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 0))
+      -&gt;drawCircle(85, 375, 25);
+
+// Draw sectors
+$page2-&gt;drawCircle(200, 375, 25, 2*M_PI/3, -M_PI/6)
+      -&gt;setFillColor(new Zend_Pdf_Color_Cmyk(1, 0, 0, 0))
+      -&gt;drawCircle(200, 375, 25, M_PI/6, 2*M_PI/3)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 1, 0))
+      -&gt;drawCircle(200, 375, 25, -M_PI/6, M_PI/6);
+
+// Draw ellipse
+$page2-&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 0))
+      -&gt;drawEllipse(250, 400, 400, 350)
+      -&gt;setFillColor(new Zend_Pdf_Color_Cmyk(1, 0, 0, 0))
+      -&gt;drawEllipse(250, 400, 400, 350, M_PI/6, 2*M_PI/3)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 1, 0))
+      -&gt;drawEllipse(250, 400, 400, 350, -M_PI/6, M_PI/6);
+
+// Draw and fill polygon
+$page2-&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 1));
+$x = array();
+$y = array();
+for ($count = 0; $count &lt; 8; $count++) {
+    $x[] = 140 + 25*cos(3*M_PI_4*$count);
+    $y[] = 375 + 25*sin(3*M_PI_4*$count);
+}
+$page2-&gt;drawPolygon($x, $y,
+                    Zend_Pdf_Page::SHAPE_DRAW_FILL_AND_STROKE,
+                    Zend_Pdf_Page::FILL_METHOD_EVEN_ODD);
+
+// ----------- Draw figures in modified coordination system --------------
+
+// Coordination system movement
+$page2-&gt;saveGS();
+$page2-&gt;translate(60, 250); // Shift coordination system
+
+// Draw rectangle
+$page2-&gt;setFillColor(new Zend_Pdf_Color_GrayScale(0.8))
+      -&gt;setLineColor(new Zend_Pdf_Color_GrayScale(0.2))
+      -&gt;setLineDashingPattern(array(3, 2, 3, 4), 1.6)
+      -&gt;drawRectangle(0, 50, 340, 0);
+
+// Draw circle
+$page2-&gt;setLineDashingPattern(Zend_Pdf_Page::LINE_DASHING_SOLID)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 0))
+      -&gt;drawCircle(25, 25, 25);
+
+// Draw sectors
+$page2-&gt;drawCircle(140, 25, 25, 2*M_PI/3, -M_PI/6)
+      -&gt;setFillColor(new Zend_Pdf_Color_Cmyk(1, 0, 0, 0))
+      -&gt;drawCircle(140, 25, 25, M_PI/6, 2*M_PI/3)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 1, 0))
+      -&gt;drawCircle(140, 25, 25, -M_PI/6, M_PI/6);
+
+// Draw ellipse
+$page2-&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 0))
+      -&gt;drawEllipse(190, 50, 340, 0)
+      -&gt;setFillColor(new Zend_Pdf_Color_Cmyk(1, 0, 0, 0))
+      -&gt;drawEllipse(190, 50, 340, 0, M_PI/6, 2*M_PI/3)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 1, 0))
+      -&gt;drawEllipse(190, 50, 340, 0, -M_PI/6, M_PI/6);
+
+// Draw and fill polygon
+$page2-&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 1));
+$x = array();
+$y = array();
+for ($count = 0; $count &lt; 8; $count++) {
+    $x[] = 80 + 25*cos(3*M_PI_4*$count);
+    $y[] = 25 + 25*sin(3*M_PI_4*$count);
+}
+$page2-&gt;drawPolygon($x, $y,
+                    Zend_Pdf_Page::SHAPE_DRAW_FILL_AND_STROKE,
+                    Zend_Pdf_Page::FILL_METHOD_EVEN_ODD);
+
+// Draw line
+$page2-&gt;setLineWidth(0.5)
+      -&gt;drawLine(0, 25, 340, 25);
+
+$page2-&gt;restoreGS();
+
+// Coordination system movement, skewing and scaling
+$page2-&gt;saveGS();
+$page2-&gt;translate(60, 150)     // Shift coordination system
+      -&gt;skew(0, 0, 0, -M_PI/9) // Skew coordination system
+      -&gt;scale(0.9, 0.9);       // Scale coordination system
+
+// Draw rectangle
+$page2-&gt;setFillColor(new Zend_Pdf_Color_GrayScale(0.8))
+      -&gt;setLineColor(new Zend_Pdf_Color_GrayScale(0.2))
+      -&gt;setLineDashingPattern(array(3, 2, 3, 4), 1.6)
+      -&gt;drawRectangle(0, 50, 340, 0);
+
+// Draw circle
+$page2-&gt;setLineDashingPattern(Zend_Pdf_Page::LINE_DASHING_SOLID)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 0))
+      -&gt;drawCircle(25, 25, 25);
+
+// Draw sectors
+$page2-&gt;drawCircle(140, 25, 25, 2*M_PI/3, -M_PI/6)
+      -&gt;setFillColor(new Zend_Pdf_Color_Cmyk(1, 0, 0, 0))
+      -&gt;drawCircle(140, 25, 25, M_PI/6, 2*M_PI/3)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 1, 0))
+      -&gt;drawCircle(140, 25, 25, -M_PI/6, M_PI/6);
+
+// Draw ellipse
+$page2-&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 0))
+      -&gt;drawEllipse(190, 50, 340, 0)
+      -&gt;setFillColor(new Zend_Pdf_Color_Cmyk(1, 0, 0, 0))
+      -&gt;drawEllipse(190, 50, 340, 0, M_PI/6, 2*M_PI/3)
+      -&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 1, 0))
+      -&gt;drawEllipse(190, 50, 340, 0, -M_PI/6, M_PI/6);
+
+// Draw and fill polygon
+$page2-&gt;setFillColor(new Zend_Pdf_Color_Rgb(1, 0, 1));
+$x = array();
+$y = array();
+for ($count = 0; $count &lt; 8; $count++) {
+    $x[] = 80 + 25*cos(3*M_PI_4*$count);
+    $y[] = 25 + 25*sin(3*M_PI_4*$count);
+}
+$page2-&gt;drawPolygon($x, $y,
+                    Zend_Pdf_Page::SHAPE_DRAW_FILL_AND_STROKE,
+                    Zend_Pdf_Page::FILL_METHOD_EVEN_ODD);
+
+// Draw line
+$page2-&gt;setLineWidth(0.5)
+      -&gt;drawLine(0, 25, 340, 25);
+
+$page2-&gt;restoreGS();
+
+//------------------------------------------------------------------------
+
+if (isset($argv[2])) {
+    $pdf-&gt;save($argv[2]);
+} else {
+    $pdf-&gt;save($argv[1], true /* update */);
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.pdf.info.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.pdf.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.progressbar.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">40.7. Document Info and Metadata </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 41 章 Zend_ProgressBar</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

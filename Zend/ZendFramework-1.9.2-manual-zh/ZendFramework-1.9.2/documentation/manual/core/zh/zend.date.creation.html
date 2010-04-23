@@ -1,0 +1,263 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>14.5. 生成日期</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="prev" href="zend.date.overview.html" title="14.4. Zend_Date API 概述">
+<link rel="next" href="zend.date.constants.html" title="14.6.  一般日期函数的常量">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.date.creation.html#zend.date.creation.actual" title="14.5.1. 生成当前日期">
+<link rel="subsection" href="zend.date.creation.html#zend.date.creation.database" title="14.5.2.  从数据库生成日期">
+<link rel="subsection" href="zend.date.creation.html#zend.date.creation.array" title="14.5.3.  从数组生成日期">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">14.5. 生成日期</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.date.overview.html">上一页</a> </td>
+<th width="60%" align="center">第 14 章 Zend_Date</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.date.constants.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.date.creation"></a>14.5. 生成日期</h2></div></div></div>
+<p>
+        因为需求的不同，<code class="code">Zend_Date</code> 提供了若干不同的办法来创建自己的实例，本章将介绍最方便的办法。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.date.creation.actual"></a>14.5.1. 生成当前日期</h3></div></div></div>
+<p>
+            最简单的创建日期对象是生成当前的日期，通过创建<span class="strong"><strong>new Zend_Date()</strong></span>的实例
+            或使用静态方法 <span class="strong"><strong>Zend_Date::now()</strong></span> 都可以，它们都返回当前日期的 <code class="code">Zend_Date</code> 实例。
+            当前的日期总是包括当前的日期和时间以及当前的时区。
+        </p>
+<div class="example">
+<a name="zend.date.creation.actual.example-1"></a><p class="title"><b>例 14.10. 通过实例生成日期</b></p>
+<div class="example-contents">
+<p>
+                通过创建一个新的实例来生成日期意味着你不需要给出参数。当然有若干个参数我们将以后来描述，但一般
+                来说这是最简单和最常用的方法来获得当期日期为 <code class="code">Zend_Date</code> 的实例。
+            </p>
+<pre class="programlisting">
+$date = new Zend_Date();
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.date.creation.actual.example-2"></a><p class="title"><b>例 14.11.  静态日期生成 </b></p>
+<div class="example-contents">
+<p>
+                有时候用静态方法生成日期更容易。因此，你可以使用  <span class="strong"><strong><code class="code">now()</code></strong></span> 方法，
+                它返回 <code class="code">Zend_Date</code> 的一个新实例，就象你用 <code class="code">new Zend_Date()</code> 一样。
+                但它将总返回当前日期并且不能用可选的参数修改。
+            </p>
+<pre class="programlisting">
+$date = Zend_Date::now();
+
+            </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.date.creation.database"></a>14.5.2.  从数据库生成日期 </h3></div></div></div>
+<p>
+            数据库常用来存储数据。问题是，每个数据库用不同的方式输出数据。<code class="code">MsSQL</code> 数据库和 <code class="code">MySQL</code>
+            数据库的日期标准就不一样。为简化起见，<code class="code">Zend_Date</code> 可以很容易从数据库数据生成日期。
+        </p>
+<p>
+            当然每个数据库都可以说把输出转换成定义好的特殊值。例如，你可以把 <code class="code">datetime</code> 转换成输出分钟值。
+            但这很耗时并且当查询数据库时你确实需要用其它方法来处理日期。
+        </p>
+<p>
+            所以我们有一个快速并方便的方法从数据库值生成日期。
+        </p>
+<div class="example">
+<a name="zend.date.creation.database.example-1"></a><p class="title"><b>例 14.12.  快速从数据库生成日期 </b></p>
+<div class="example-contents">
+<p>
+                众所周知，所有的数据库都想尽可能快地查询数据，它们与生俱来就要快速响应。从数据库取得日期的最快
+                方法是使用unix时间戳。所有数据库在内部把日期值都存成时间戳（不是unix时间戳）。这意味着通过查询生
+                成时间戳要比转换成其它格式快。
+            </p>
+<pre class="programlisting">
+// SELECT UNIX_TIMESTAMP(my_datetime_column) FROM my_table
+$date = new Zend_Date($unixtimestamp, Zend_Date::TIMESTAMP);
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.date.creation.database.example-2"></a><p class="title"><b>例 14.13.  从数据库方便地生成日期 </b></p>
+<div class="example-contents">
+<p>
+                即使是你乍一看它们都相同，但是所有数据库的标准输出还是不一样的。但它们都是 <code class="code">ISO</code> 标准的一部分
+                并解释它，所以最容易的生成日期的方法是使用 <code class="code">Zend_Date::ISO_8601</code>。
+                例如数据库里众所周知的 <code class="code">MySQL</code> 和 <code class="code">MsSQL</code> 被 <code class="code">Zend_Date::ISO_8601</code> 认可。
+                但所有数据库也都可以返回一个 <code class="code">ISO 8601</code> 表示的日期列。
+                <code class="code">ISO 8601</code> 一个巨大的有点是人类可读。缺点是 <code class="code">ISO 8601</code> 比 unix 时间戳需要更多
+                的时间来处理，但也应该知道 unix 时间戳只支持 1970年1月1日以后的日期。
+            </p>
+<pre class="programlisting">
+// SELECT datecolumn FROM my_table
+$date = new Zend_Date($datecolumn, Zend_Date::ISO_8601);
+
+            </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.date.creation.array"></a>14.5.3.  从数组生成日期 </h3></div></div></div>
+<p>
+            日期也可以从数组生成，这是个简单并容易的方法，使用的数组键是：
+        </p>
+<p>
+            </p>
+<div class="itemizedlist"><ul type="opencircle">
+<li style="list-style-type: circle"><p>
+                        <span class="strong"><strong>日</strong></span>: 日期的天数
+                    </p></li>
+<li style="list-style-type: circle"><p>
+                        <span class="strong"><strong>月</strong></span>: 日期的月数
+                    </p></li>
+<li style="list-style-type: circle"><p>
+                        <span class="strong"><strong>年</strong></span>: full year of the date
+                    </p></li>
+<li style="list-style-type: circle"><p>
+                        <span class="strong"><strong>小时</strong></span>: 小时数
+                    </p></li>
+<li style="list-style-type: circle"><p>
+                        <span class="strong"><strong>分钟</strong></span>: 分钟数
+                    </p></li>
+<li style="list-style-type: circle"><p>
+                        <span class="strong"><strong>秒</strong></span>: 秒数
+                    </p></li>
+</ul></div>
+<p>
+        </p>
+<div class="example">
+<a name="zend.date.creation.array.example"></a><p class="title"><b>例 14.14.  通过数组生成日期 </b></p>
+<div class="example-contents">
+<p>
+                一般地你需要给出一个完整的日期数组用于新的日期实例的生成，但当你没有给出所有值，未给出的值就是零。
+                这意味着如果没有给出小时值，那么就用 <span class="strong"><strong>0</strong></span> 小时。
+            </p>
+<pre class="programlisting">
+$datearray = array('year' =&gt; 2006,
+                   'month' =&gt; 4,
+                   'day' =&gt; 18,
+                   'hour' =&gt; 12,
+                   'minute' =&gt; 3,
+                   'second' =&gt; 10);
+$date = new Zend_Date($datearray);
+
+            </pre>
+<pre class="programlisting">
+$datearray = array('year' =&gt; 2006, 'month' =&gt; 4, 'day' =&gt; 18);
+$date = new Zend_Date($datearray);
+
+            </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.date.overview.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.date.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.date.constants.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">14.4. Zend_Date API 概述 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 14.6.  一般日期函数的常量 </td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

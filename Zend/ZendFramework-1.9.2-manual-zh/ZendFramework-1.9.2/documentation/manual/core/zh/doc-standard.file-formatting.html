@@ -1,0 +1,591 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>C.2. Documentation File Formatting</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="prev" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="next" href="doc-standard.recommendations.html" title="C.3. Recommendations">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.xml-tags" title="C.2.1. XML Tags">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.max-line-length" title="C.2.2. Maximum Line Length">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.indentation" title="C.2.3. Indentation">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.line-termination" title="C.2.4. Line Termination">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.empty-tags" title="C.2.5. Empty tags">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.whitespace" title="C.2.6. Usage of whitespace within documents">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.program-listing" title="C.2.7. Program Listings">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.inline-tags" title="C.2.8. Notes on specific inline tags">
+<link rel="subsection" href="doc-standard.file-formatting.html#doc-standard.file-formatting.block-tags" title="C.2.9. Notes on specific block tags">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">C.2. Documentation File Formatting</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="doc-standard.html">上一页</a> </td>
+<th width="60%" align="center">附录 C. Zend Framework Documentation Standard</th>
+<td width="20%" align="right"> <a accesskey="n" href="doc-standard.recommendations.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="doc-standard.file-formatting"></a>C.2. Documentation File Formatting</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.xml-tags"></a>C.2.1. XML Tags</h3></div></div></div>
+<p>
+                Each manual file must include the following <acronym class="acronym">XML</acronym> declarations at
+                the top of the file:
+            </p>
+<pre class="programlisting">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- Reviewed: no --&gt;
+</pre>
+<p>
+                <acronym class="acronym">XML</acronym> files from translated languages must also include a revision
+                tag containing the revision of the corresponding English-language file the
+                translation was based on.
+            </p>
+<pre class="programlisting">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- EN-Revision: 14978 --&gt;
+&lt;!-- Reviewed: no --&gt;
+</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.max-line-length"></a>C.2.2. Maximum Line Length</h3></div></div></div>
+<p>
+                The maximum line length, including tags, attributes, and indentation, is not to
+                exceed 100 characters. There is only one exception to this rule: attribute and value
+                pairs are allowed to exceed the 100 chars as they are not allowed to be seperated.
+            </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.indentation"></a>C.2.3. Indentation</h3></div></div></div>
+<p>Indentation should consist of 4 spaces. Tabs are not allowed.</p>
+<p>Tags which are at the same level must have the same indentation.</p>
+<pre class="programlisting">
+&lt;sect1&gt;
+&lt;/sect1&gt;
+
+&lt;sect1&gt;
+&lt;/sect1&gt;
+</pre>
+<p>
+                Tags which are one level under the previous tag must be indented with 4 additional
+                spaces.
+            </p>
+<pre class="programlisting">
+&lt;sect1&gt;
+    &lt;sect2&gt;
+    &lt;/sect2&gt;
+&lt;/sect1&gt;
+</pre>
+<p>
+                Multiple block tags within the same line are not allowed; multiple inline tags are
+                allowed, however.
+            </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED: --&gt;
+&lt;sect1&gt;&lt;sect2&gt;
+&lt;/sect2&gt;&lt;/sect1&gt;
+
+&lt;!-- ALLOWED --&gt;
+&lt;para&gt;
+    &lt;classname&gt;Zend_Magic&lt;/classname&gt; does not exist. &lt;classname&gt;Zend_Acl&lt;/classname&gt; does.
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.line-termination"></a>C.2.4. Line Termination</h3></div></div></div>
+<p>
+                Line termination follows the Unix text file convention. Lines must end with a
+                single linefeed (LF) character. Linefeed characters are represented as ordinal 10,
+                or hexadecimal 0x0A.
+            </p>
+<p>
+                Note: Do not use carriage returns (<acronym class="acronym">CR</acronym>) as is the convention in
+                Apple OS's (0x0D) or the carriage return - linefeed combination
+                (<acronym class="acronym">CRLF</acronym>) as is standard for the Windows OS (0x0D, 0x0A).
+            </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.empty-tags"></a>C.2.5. Empty tags</h3></div></div></div>
+<p>
+                Empty tags are not allowed; all tags must contain text or child tags.
+            </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;para&gt;
+    Some text. &lt;link&gt;&lt;/link&gt;
+&lt;/para&gt;
+
+&lt;para&gt;
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.whitespace"></a>C.2.6. Usage of whitespace within documents</h3></div></div></div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.whitespace.trailing"></a>C.2.6.1. Whitespace within tags</h4></div></div></div>
+<p>
+                    Opening block tags should have no whitespace immediately following them other
+                    than line breaks (and indentation on the following line).
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;sect1&gt;WHITESPACE
+&lt;/sect1&gt;
+</pre>
+<p>
+                    Opening inline tags should have no whitespace immediately following them.
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+This is the class &lt;classname&gt; Zend_Class&lt;/classname&gt;.
+
+&lt;!-- OK --&gt;
+This is the class &lt;classname&gt;Zend_Class&lt;/classname&gt;.
+</pre>
+<p>
+                    Closing block tags may be preceded by whitespace equivalent to the current
+                    indentation level, but no more than that amount.
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+    &lt;sect1&gt;
+     &lt;/sect1&gt;
+
+&lt;!-- OK --&gt;
+    &lt;sect1&gt;
+    &lt;/sect1&gt;
+</pre>
+<p>
+                    Closing inline tags must not be preceded by any whitespace.
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+This is the class &lt;classname&gt;Zend_Class &lt;/classname&gt;
+
+&lt;!-- OK --&gt;
+This is the class &lt;classname&gt;Zend_Class&lt;/classname&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.whitespace.multiple-line-breaks"></a>C.2.6.2. Multiple line breaks</h4></div></div></div>
+<p>
+                    Multiple line breaks within or between tags are not allowed.
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;para&gt;
+    Some text...
+
+    ... and more text
+&lt;/para&gt;
+
+
+&lt;para&gt;
+    Another paragraph.
+&lt;/para&gt;
+
+&lt;!-- OK --&gt;
+&lt;para&gt;
+    Some text...
+    ... and more text
+&lt;/para&gt;
+
+&lt;para&gt;
+    Another paragraph.
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.whitespace.tag-separation"></a>C.2.6.3. Separation between tags</h4></div></div></div>
+<p>
+                    Tags at the same level must be separated by an empty line to improve
+                    readability.
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;para&gt;
+    Some text...
+&lt;/para&gt;
+&lt;para&gt;
+    More text...
+&lt;/para&gt;
+
+&lt;!-- OK --&gt;
+&lt;para&gt;
+    Some text...
+&lt;/para&gt;
+
+&lt;para&gt;
+    More text...
+&lt;/para&gt;
+</pre>
+<p>
+                    The first child tag should open directly below its parent, with no empty line
+                    between them; the last child tag should close directly before the closing tag of
+                    its parent.
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;sect1&gt;
+
+    &lt;sect2&gt;
+    &lt;/sect2&gt;
+
+    &lt;sect2&gt;
+    &lt;/sect2&gt;
+
+    &lt;sect2&gt;
+    &lt;/sect2&gt;
+
+&lt;/sect1&gt;
+
+&lt;!-- OK --&gt;
+&lt;sect1&gt;
+    &lt;sect2&gt;
+    &lt;/sect2&gt;
+
+    &lt;sect2&gt;
+    &lt;/sect2&gt;
+
+    &lt;sect2&gt;
+    &lt;/sect2&gt;
+&lt;/sect1&gt;
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.program-listing"></a>C.2.7. Program Listings</h3></div></div></div>
+<p>
+                The opening <span class="emphasis"><em>&lt;programlisting&gt;</em></span> tag must indicate the
+                appropriate "language" attribute and be indented at the same level as its sibling
+                blocks.
+            </p>
+<pre class="programlisting">
+&lt;para&gt;Sibling paragraph.&lt;/para&gt;
+
+&lt;programlisting language="php"&gt;&lt;![CDATA[
+</pre>
+<p>
+                <acronym class="acronym">CDATA</acronym> should be used around all program listings.
+            </p>
+<p>
+                <span class="emphasis"><em>&lt;programlisting&gt;</em></span> sections must not add linebreaks or
+                whitespace at the beginning or end of the section, as these are then represented in
+                the final output.
+            </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;programlisting language="php"&gt;&lt;![CDATA[
+
+$render = "xxx";
+
+]]&gt;&lt;/programlisting&gt;
+
+&lt;!-- OK --&gt;
+&lt;programlisting language="php"&gt;&lt;![CDATA[
+$render = "xxx";
+]]&gt;&lt;/programlisting&gt;
+</pre>
+<p>
+                Ending <acronym class="acronym">CDATA</acronym> and <span class="emphasis"><em>&lt;programlisting&gt;</em></span>
+                tags should be on the same line, without any indentation.
+            </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+    &lt;programlisting language="php"&gt;&lt;![CDATA[
+$render = "xxx";
+]]&gt;
+    &lt;/programlisting&gt;
+
+&lt;!-- NOT ALLOWED --&gt;
+    &lt;programlisting language="php"&gt;&lt;![CDATA[
+$render = "xxx";
+    ]]&gt;&lt;/programlisting&gt;
+
+&lt;!-- OK --&gt;
+    &lt;programlisting language="php"&gt;&lt;![CDATA[
+$render = "xxx";
+]]&gt;&lt;/programlisting&gt;
+</pre>
+<p>
+                The <span class="emphasis"><em>&lt;programlisting&gt;</em></span> tag should contain the "language"
+                attribute with a value appropriate to the contents of the program listing. Typical
+                values include "css", "html", "ini", "javascript", "php", "text", and "xml".
+            </p>
+<pre class="programlisting">
+&lt;!-- PHP --&gt;
+&lt;programlisting language="php"&gt;&lt;![CDATA[
+
+&lt;!-- Javascript --&gt;
+&lt;programlisting language="javascript"&gt;&lt;![CDATA[
+
+&lt;!-- XML --&gt;
+&lt;programlisting language="xml"&gt;&lt;![CDATA[
+</pre>
+<p>
+                For program listings containing only <acronym class="acronym">PHP</acronym> code,
+                <acronym class="acronym">PHP</acronym> tags (e.g., "&lt;?php", "?&gt;") are not required, and
+                should not be used. They simply clutter the narrative, and are implied by the use
+                of the <span class="emphasis"><em>&lt;programlisting&gt;</em></span> tag.
+            </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;programlisting language="php"&lt;![CDATA[&lt;?php
+    // ...
+?&gt;]]&gt;&lt;/programlisting&gt;
+
+&lt;programlisting language="php"&lt;![CDATA[
+&lt;?php
+    // ...
+?&gt;
+]]&gt;&lt;/programlisting&gt;
+</pre>
+<p>
+                Line lengths within program listings should follow the <a href="coding-standard.php-file-formatting.html#coding-standard.php-file-formatting.max-line-length" title="B.2.3.  行的最大长度">coding standards
+                recommendations</a>.
+            </p>
+<p>
+                Refrain from using <code class="methodname">require_once()</code>,
+                <code class="methodname">require()</code>, <code class="methodname">include_once()</code>, and
+                <code class="methodname">include()</code> calls within <acronym class="acronym">PHP</acronym> listings.
+                They simply clutter the narrative, and are largely obviated when using an
+                autoloader. Use them only when they are essential to the example.
+            </p>
+<div class="note"><table border="0" summary="Note: Never use short tags">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Never use short tags</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    Short tags (e.g., "&lt;?", "&lt;?=") should never be used within
+                    <span class="emphasis"><em>programlisting</em></span> or the narrative of a document.
+                </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.inline-tags"></a>C.2.8. Notes on specific inline tags</h3></div></div></div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.inline-tags.classname"></a>C.2.8.1. classname</h4></div></div></div>
+<p>
+                    The tag <span class="emphasis"><em>&lt;classname&gt;</em></span> must be used each time a class
+                    name is represented by itself; it should not be used when combined with a
+                    method name, variable name, or constant, and no other content is allowed within
+                    the tag.
+                </p>
+<pre class="programlisting">
+&lt;para&gt;
+    The class &lt;classname&gt;Zend_Class&lt;/classname&gt;.
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.inline-tags.varname"></a>C.2.8.2. varname</h4></div></div></div>
+<p>
+                    Variables must be wrapped in the <span class="emphasis"><em>&lt;varname&gt;</em></span> tag.
+                    Variables must be written using the "$" sigil. No other content is allowed
+                    within this tag, unless a class name is used, which indicates a class variable.
+                </p>
+<pre class="programlisting">
+&lt;para&gt;
+    The variable &lt;varname&gt;$var&lt;/varname&gt; and the class variable
+    &lt;varname&gt;Zend_Class::$var&lt;/varname&gt;.
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.inline-tags.methodname"></a>C.2.8.3. methodname</h4></div></div></div>
+<p>
+                    Methods must be wrapped in the <span class="emphasis"><em>&lt;methodname&gt;</em></span> tag.
+                    Methods must either include the full method signature or at the least a pair of
+                    closing parentheses (e.g., "()"). No other content is allowed within this tag,
+                    unless a class name is used, which indicates a class method.
+                </p>
+<pre class="programlisting">
+&lt;para&gt;
+    The method &lt;methodname&gt;foo()&lt;/methodname&gt; and the class method
+    &lt;methodname&gt;Zend_Class::foo()&lt;/methodname&gt;. A method with a full signature:
+    &lt;methodname&gt;foo($bar, $baz)&lt;/methodname&gt;
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.inline-tags.constant"></a>C.2.8.4. constant</h4></div></div></div>
+<p>
+                    Use the <span class="emphasis"><em>&lt;constant&gt;</em></span> tag when denoting constants.
+                    Constants must be written in <acronym class="acronym">UPPERCASE</acronym>. No other content is
+                    allowed within this tag, unless a class name is used, which indicates a class
+                    constant.
+                </p>
+<pre class="programlisting">
+&lt;para&gt;
+    The constant &lt;constant&gt;FOO&lt;/constant&gt; and the class constant
+    &lt;constant&gt;Zend_Class::FOO&lt;/constant&gt;.
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.inline-tags.filename"></a>C.2.8.5. filename</h4></div></div></div>
+<p>
+                    Filenames and paths must be wrapped in the
+                    <span class="emphasis"><em>&lt;filename&gt;</em></span> tag. No other content is allowed in this
+                    tag.
+                </p>
+<pre class="programlisting">
+&lt;para&gt;
+    The filename &lt;filename&gt;application/Bootstrap.php&lt;/filename&gt;.
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.inline-tags.command"></a>C.2.8.6. command</h4></div></div></div>
+<p>
+                    Commands, shell scripts, and program calls must be wrapped in the
+                    <span class="emphasis"><em>&lt;command&gt;</em></span> tag. If the command includes arguments,
+                    these should also be included within the tag.
+                </p>
+<pre class="programlisting">
+&lt;para&gt;
+    Execute &lt;command&gt;zf.sh create project&lt;/command&gt;.
+&lt;/para&gt;
+</pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.inline-tags.code"></a>C.2.8.7. code</h4></div></div></div>
+<p>
+                    Usage of the <span class="emphasis"><em>&lt;code&gt;</em></span> tag is discouraged, in favor of
+                    the other inline tasks discussed previously.
+                </p>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="doc-standard.file-formatting.block-tags"></a>C.2.9. Notes on specific block tags</h3></div></div></div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="doc-standard.file-formatting.block-tags.title"></a>C.2.9.1. title</h4></div></div></div>
+<p>
+                    The <span class="emphasis"><em>&lt;title&gt;</em></span> tag is not allowed to hold other tags.
+                </p>
+<pre class="programlisting">
+&lt;!-- NOT ALLOWED --&gt;
+&lt;title&gt;Using &lt;classname&gt;Zend_Class&lt;/classname&gt;&lt;/title&gt;
+
+&lt;!-- OK --&gt;
+&lt;title&gt;Using Zend_Class&lt;/title&gt;
+</pre>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="doc-standard.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="doc-standard.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="doc-standard.recommendations.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">附录 C. Zend Framework Documentation Standard </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> C.3. Recommendations</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

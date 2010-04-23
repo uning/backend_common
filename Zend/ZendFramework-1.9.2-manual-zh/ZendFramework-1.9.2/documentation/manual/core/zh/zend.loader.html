@@ -1,0 +1,292 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 30 章 Zend_Loader</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.ldap.ldif.html" title="29.7. Serializing LDAP data to and from LDIF">
+<link rel="next" href="zend.loader.autoloader.html" title="30.2. The Autoloader">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.loader.html#zend.loader.load" title="30.1.  动态加载文件和类">
+<link rel="section" href="zend.loader.autoloader.html" title="30.2. The Autoloader">
+<link rel="section" href="zend.loader.autoloader-resource.html" title="30.3. Resource Autoloaders">
+<link rel="section" href="zend.loader.pluginloader.html" title="30.4.  加载插件">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 30 章 Zend_Loader</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.ldap.ldif.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.loader.autoloader.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.loader"></a>第 30 章 Zend_Loader</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.loader.html#zend.loader.load">30.1.  动态加载文件和类 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.loader.html#zend.loader.load.file">30.1.1.  加载文件 </a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.html#zend.loader.load.class">30.1.2.  加载类 </a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.html#zend.loader.load.isreadable">30.1.3.  判定某个文件是否可读 </a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.html#zend.loader.load.autoload">30.1.4.  使用 Autoloader</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.loader.autoloader.html">30.2. The Autoloader</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.loader.autoloader.html#zend.loader.autoloader.usage">30.2.1. Using the Autoloader</a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.autoloader.html#zend.loader.autoloader.interface">30.2.2. The Autoloader Interface</a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.autoloader.html#zend.loader.autoloader.reference">30.2.3. Autoloader Reference</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.loader.autoloader-resource.html">30.3. Resource Autoloaders</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.loader.autoloader-resource.html#zend.loader.autoloader-resource.usage">30.3.1. Resource autoloader usage</a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.autoloader-resource.html#zend.loader.autoloader-resource.module">30.3.2. The Module Resource Autoloader</a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.autoloader-resource.html#zend.loader.autoloader-resource.factory">30.3.3. Using Resource Autoloaders as Object Factories</a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.autoloader-resource.html#zend.loader.autoloader-resource.reference">30.3.4. Resource Autoloader Reference</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.loader.pluginloader.html">30.4.  加载插件 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.loader.pluginloader.html#zend.loader.pluginloader.usage">30.4.1.  基本用例 </a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.pluginloader.html#zend.loader.pluginloader.paths">30.4.2.  处理插件路径 </a></span></dt>
+<dt><span class="sect2"><a href="zend.loader.pluginloader.html#zend.loader.pluginloader.checks">30.4.3.  测试插件和获取类的名字 </a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.loader.load"></a>30.1.  动态加载文件和类 </h2></div></div></div>
+<p>
+        Zend_Loader类可以帮助你动态加载文件。
+    </p>
+<div class="tip"><table border="0" summary="Tip: Zend_Loader vs. require_once()">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[提示]" src="images/tip.png"></td>
+<th align="left">Zend_Loader vs. require_once()</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            <code class="code">Zend_Loader</code> 最适合于加载的文件名是变量的情况（例如你要加载的文件的名称来自于用户的输入或者某个方法的参数）。如果你加载的文件名或类名是一个常量（即确定的文件，如/lib/test.php），则使用 <code class="code">Zend_Loader</code> 并不比传统的PHP函数 <a href="http://php.net/require_once" target="_top"><code class="code">require_once()</code></a>有什么优势。
+        </p></td></tr>
+</table></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.loader.load.file"></a>30.1.1.  加载文件 </h3></div></div></div>
+<p>
+            静态方法 <code class="code">Zend_Loader::loadFile()</code> 加载PHP文件，被加载的文件可包含任何 PHP 代码。它其实是将PHP的<a href="http://php.net/include" target="_top"><code class="code">include()</code></a>函数封装而成的一个静态方法。当包含文件失败时，会抛出异常Zend_Exception，例如指定的文件不存在。
+        </p>
+<div class="example">
+<a name="zend.loader.load.file.example"></a><p class="title"><b>例 30.1. loadFile() 方法范例 </b></p>
+<div class="example-contents"><pre class="programlisting">
+Zend_Loader::loadFile($filename, $dirs=null, $once=false);
+
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            <code class="code">$filename</code>参数指定需要加载的文件，注意<code class="code">$filename</code>不需要指定任何路径，只需要文件名即可。ZF会对文件作安全性检查。<code class="code">$filename</code> 只能由字母，数字，连接符-,下划线_及英文句号.组成(半角)。<code class="code">$dirs</code>参数则不限，可以使用中文等。
+        </p>
+<p>
+            <code class="code">$dirs</code> 参数用来指定文件所在目录，可以是一个字符串或者数组。如果为 <code class="code">NULL</code>，则程序将会到系统的 <code class="code">include_path</code> 下寻找文件是否存在（include_path可在php.ini中设置--Haohappy注），如果是字符串或数组，则会到指定的目录下去找，然后才是 <code class="code">include_path</code>。
+        </p>
+<p>
+            <code class="code">$once</code> 参数为布尔类型，如果为 <code class="code">TRUE</code>，<code class="code">Zend_Loader::loadFile()</code> 使用 PHP 函数 <a href="http://php.net/include" target="_top"><code class="code">include_once()</code></a> 加载文件，否则就是 PHP 函数 <a href="http://php.net/include_once" target="_top"><code class="code">include()</code></a>。（本参数只能是true或false，两者区别就和include()和include_once()的区别一样。）
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.loader.load.class"></a>30.1.2.  加载类 </h3></div></div></div>
+<p>
+            静态方法<code class="code">Zend_Loader::loadClass($class, $dirs)</code>用来加载一个 PHP 类文件，该文件名格式为“$className.php”（也就是说加载的文件名称必须和文件中的类同名）。loadClass()会检查文件中的类是否存在。
+        </p>
+<div class="example">
+<a name="zend.loader.load.class.example"></a><p class="title"><b>例 30.2. Example of loadClass() method</b></p>
+<div class="example-contents"><pre class="programlisting">
+Zend_Loader::loadClass('Container_Tree',
+    array(
+        '/home/production/mylib',
+        '/home/production/myapp'
+    )
+);
+
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            类名将会根据下划线（作为目录分隔线）对应到相应目录下的PHP文件，并加上'.php'，比如Container_Tree会指向Container\\Tree.php。
+        </p>
+<p>
+            如果<code class="code">$dirs</code>是一个字符串或数组， <code class="code">Zend_Loader::loadClass()</code>会根据顺序查找相应目录，并加载第一个匹配的文件。如果文件不存在，则会查找 <code class="code">inculde_path</code> 指定的目录。
+        </p>
+<p>
+            如果文件不存在或者文件中相应的类不存在，那么 <code class="code">Zend_Loader::loadClass()</code> 就会抛出一个 <code class="code">Zend_Exception</code> 异常。
+        </p>
+<p>
+            <code class="code">Zend_Loader::loadFile()</code> 用来加载文件，所以类名中只能包含字母数字、连接符('-')、下划线('_')和句点('.')。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.loader.load.isreadable"></a>30.1.3.  判定某个文件是否可读 </h3></div></div></div>
+<p>
+            静态方法<code class="code">Zend_Loader::isReadable($pathname)</code>判定某个文件是否存在并可读，可读则返回 <code class="code">TRUE</code> ，否则返回 <code class="code">FALSE</code>。
+        </p>
+<div class="example">
+<a name="zend.loader.load.isreadable.example"></a><p class="title"><b>例 30.3. isReadable()示例：</b></p>
+<div class="example-contents"><pre class="programlisting">
+if (Zend_Loader::isReadable($filename)) {
+    // do something with $filename
+}
+
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            <code class="code">$filename</code>参数指定了要检查的文件名，包括路径信息。这个方法是将 PHP 函数<a href="http://php.net/is_readable" target="_top"><code class="code">is_readable()</code></a>封装而成的，<code class="code">is_readable()</code> 不会自动查找 <code class="code">include_path</code> 下的文件，而 <code class="code">Zend::isReadable()</code> 可以。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.loader.load.autoload"></a>30.1.4.  使用 Autoloader</h3></div></div></div>
+<p>
+            <code class="code">Zend_Loader</code> 类包括一个可以用 PHP SPL autoloader 注册的方法。<code class="code">Zend_Loader::autoload()</code> 是 callback 方法。为方便起见，<code class="code">Zend_Loader</code> 提供 <code class="code">registerAutoload()</code> 函数注册它的 <code class="code">autoload()</code> 方法。如果 <code class="code">spl_autoload</code> 扩展不在你的 PHP 环境中，那么 <code class="code">registerAutoload()</code> 方法将抛出 <code class="code">Zend_Exception</code>。
+        </p>
+<div class="example">
+<a name="zend.loader.load.autoload.example"></a><p class="title"><b>例 30.4.  注册 autoloader callback 方法范例 </b></p>
+<div class="example-contents"><pre class="programlisting">
+Zend_Loader::registerAutoload();
+
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            注册 Zend Framework autoload callback 后，可以不需要显式加载就可以从 Zend Framework 引用那些类。当应用一个类，<code class="code">autoload()</code> 方法自动地使用 <code class="code">Zend_Loader::loadClass()</code> 。
+        </p>
+<p>
+            如果继承 <code class="code">Zend_Loader</code> 类，可以给 <code class="code">registerAutoload()</code> 一个可选的参数通过注册一个 <code class="code">autoload()</code> 方法来指定类。
+        </p>
+<div class="example">
+<a name="zend.loader.load.autoload.example-extended"></a><p class="title"><b>例 30.5.  从继承类注册 autoload callback 方法范例 </b></p>
+<div class="example-contents">
+<p>
+                因为在 PHP 中静态函数引用的语义，你必须实现 <code class="code">loadClass()</code> 和 <code class="code">autoload()</code>，<code class="code">autoload()</code> 必须调用 <code class="code">self::loadClass()</code>。如果 <code class="code">autoload()</code> 方法代表它的父类调用 <code class="code">self::loadClass()</code>，那么它调用在父类中的方法，而不是子类中。
+            </p>
+<pre class="programlisting">
+class My_Loader extends Zend_Loader
+{
+    public static function loadClass($class, $dirs = null)
+    {
+        parent::loadClass($class, $dirs);
+    }
+
+    public static function autoload($class)
+    {
+        try {
+            self::loadClass($class);
+            return $class;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+}
+
+Zend_Loader::registerAutoload('My_Loader');
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><p>
+            你可以删除 autoload callback，<code class="code">registerAutoload()</code> 有个可选的第二个参数，缺省为 <code class="code">true</code> 。如果这个参数是 <code class="code">false</code>， 那么 autoload callback 从 SPL autoload 栈里 unregistered 掉而不是注册。
+        </p>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.ldap.ldif.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.loader.autoloader.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">29.7. Serializing LDAP data to and from LDIF </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 30.2. The Autoloader</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

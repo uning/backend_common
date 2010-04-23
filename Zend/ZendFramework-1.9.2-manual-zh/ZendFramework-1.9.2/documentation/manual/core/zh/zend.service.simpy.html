@@ -1,0 +1,411 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>48.22. Zend_Service_Simpy</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="prev" href="zend.service.recaptcha.html" title="48.21. Zend_Service_ReCaptcha">
+<link rel="next" href="zend.service.slideshare.html" title="48.23. Introduction">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.service.simpy.html#zend.service.simpy.introduction" title="48.22.1. Introduction">
+<link rel="subsection" href="zend.service.simpy.html#zend.service.simpy.links" title="48.22.2. Links">
+<link rel="subsection" href="zend.service.simpy.html#zend.service.simpy.tags" title="48.22.3. Tags">
+<link rel="subsection" href="zend.service.simpy.html#zend.service.simpy.notes" title="48.22.4. Notes">
+<link rel="subsection" href="zend.service.simpy.html#zend.service.simpy.watchlists" title="48.22.5. Watchlists">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">48.22. Zend_Service_Simpy</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.service.recaptcha.html">上一页</a> </td>
+<th width="60%" align="center">第 48 章 Zend_Service</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.service.slideshare.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.service.simpy"></a>48.22. Zend_Service_Simpy</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.simpy.introduction"></a>48.22.1. Introduction</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Service_Simpy</code> is a lightweight wrapper for the free REST <acronym class="acronym">API</acronym> available
+            for the Simpy social bookmarking service.
+        </p>
+<p>
+            In order to use <code class="classname">Zend_Service_Simpy</code>, you should already have a Simpy account.
+            To get an account, visit the <a href="http://simpy.com" target="_top">Simpy web site</a>. For more
+            information on the Simpy REST <acronym class="acronym">API</acronym>, refer to the
+            <a href="http://www.simpy.com/doc/api/rest" target="_top">Simpy REST <acronym class="acronym">API</acronym> documentation</a>.
+        </p>
+<p>
+            The Simpy REST <acronym class="acronym">API</acronym> allows developers to interact with specific aspects of the service that
+            the Simpy web site offers. The sections following will outline the use of
+            <code class="classname">Zend_Service_Simpy</code> for each of these areas.
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        Links: Create, Retrieve, Update, Delete
+                    </p></li>
+<li><p>
+                        Tags: Retrieve, Delete, Rename, Merge, Split
+                    </p></li>
+<li><p>
+                        Notes: Create, Retrieve, Update, Delete
+                    </p></li>
+<li><p>
+                        Watchlists: Get, Get All
+                    </p></li>
+</ul></div>
+<p>
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.simpy.links"></a>48.22.2. Links</h3></div></div></div>
+<p>
+            When querying links, results are returned in descending order by date added. Links can be
+            searched by title, nickname, tags, note, or even the content of the web page associated
+            with the link. Simpy offers searching by any or all of these fields with phrases, boolean
+            operators, and wildcards. See the
+            <a href="http://www.simpy.com/faq#searchSyntax" target="_top">search syntax</a> and
+            <a href="http://www.simpy.com/faq#searchFieldsLinks" target="_top">search fields</a>
+            sections of the Simpy FAQ for more information.
+        </p>
+<div class="example">
+<a name="zend.service.simpy.links.querying"></a><p class="title"><b>例 48.101. Querying Links</b></p>
+<div class="example-contents"><pre class="programlisting">
+$simpy = new Zend_Service_Simpy('yourusername', 'yourpassword');
+
+/* Search for the 10 links added most recently */
+$linkQuery = new Zend_Service_Simpy_LinkQuery();
+$linkQuery-&gt;setLimit(10);
+
+/* Get and display the links */
+$linkSet = $simpy-&gt;getLinks($linkQuery);
+foreach ($linkSet as $link) {
+    echo '&lt;a href="';
+    echo $link-&gt;getUrl();
+    echo '"&gt;';
+    echo $link-&gt;getTitle();
+    echo '&lt;/a&gt;&lt;br /&gt;';
+}
+
+/* Search for the 5 links added most recently with 'PHP' in
+the title */
+$linkQuery-&gt;setQueryString('title:PHP');
+$linkQuery-&gt;setLimit(5);
+
+/* Search for all links with 'French' in the title and
+'language' in the tags */
+$linkQuery-&gt;setQueryString('+title:French +tags:language');
+
+/* Search for all links with 'French' in the title and without
+'travel' in the tags */
+$linkQuery-&gt;setQueryString('+title:French -tags:travel');
+
+/* Search for all links added on 12/9/06 */
+$linkQuery-&gt;setDate('2006-12-09');
+
+/* Search for all links added after 12/9/06 (excluding that
+date) */
+$linkQuery-&gt;setAfterDate('2006-12-09');
+
+/* Search for all links added before 12/9/06 (excluding that
+date) */
+$linkQuery-&gt;setBeforeDate('2006-12-09');
+
+/* Search for all links added between 12/1/06 and 12/9/06
+(excluding those two dates) */
+$linkQuery-&gt;setBeforeDate('2006-12-01');
+$linkQuery-&gt;setAfterDate('2006-12-09');
+</pre></div>
+</div>
+<br class="example-break"><p>
+            Links are represented uniquely by their <acronym class="acronym">URL</acronym>s. In other words, if an attempt is made to save
+            a link that has the same <acronym class="acronym">URL</acronym> as an existing link, data for the existing link will be
+            overwritten with the data specified in the save attempt.
+        </p>
+<div class="example">
+<a name="zend.service.simpy.links.modifying"></a><p class="title"><b>例 48.102. Modifying Links</b></p>
+<div class="example-contents"><pre class="programlisting">
+$simpy = new Zend_Service_Simpy('yourusername', 'yourpassword');
+
+/* Save a link */
+$simpy-&gt;saveLink(
+    'Zend Framework' // Title
+    'http://framework.zend.com', // URL
+    Zend_Service_Simpy_Link::ACCESSTYPE_PUBLIC, // Access Type
+    'zend, framework, php' // Tags
+    'Zend Framework home page' // Alternative title
+    'This site rocks!' // Note
+);
+
+/* Overwrite the existing link with new data */
+$simpy-&gt;saveLink(
+    'Zend Framework'
+    'http://framework.zend.com',
+    Zend_Service_Simpy_Link::ACCESSTYPE_PRIVATE, // Access Type has changed
+    'php, zend, framework' // Tags have changed order
+    'Zend Framework' // Alternative title has changed
+    'This site REALLY rocks!' // Note has changed
+);
+
+/* Delete the link */
+$simpy-&gt;deleteLink('http://framework.zend.com');
+
+/* A really easy way to do spring cleaning on your links ;) */
+$linkSet = $this-&gt;_simpy-&gt;getLinks();
+foreach ($linkSet as $link) {
+    $this-&gt;_simpy-&gt;deleteLink($link-&gt;getUrl());
+}
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.simpy.tags"></a>48.22.3. Tags</h3></div></div></div>
+<p>
+            When retrieved, tags are sorted in decreasing order (i.e. highest
+            first) by the number of links that use the tag.
+        </p>
+<div class="example">
+<a name="zend.service.simpy.tags.working"></a><p class="title"><b>例 48.103. Working With Tags</b></p>
+<div class="example-contents"><pre class="programlisting">
+$simpy = new Zend_Service_Simpy('yourusername', 'yourpassword');
+
+/* Save a link with tags */
+$simpy-&gt;saveLink(
+    'Zend Framework' // Title
+    'http://framework.zend.com', // URL
+    Zend_Service_Simpy_Link::ACCESSTYPE_PUBLIC, // Access Type
+    'zend, framework, php' // Tags
+);
+
+/* Get a list of all tags in use by links and notes */
+$tagSet = $simpy-&gt;getTags();
+
+/* Display each tag with the number of links using it */
+foreach ($tagSet as $tag) {
+    echo $tag-&gt;getTag();
+    echo ' - ';
+    echo $tag-&gt;getCount();
+    echo '&lt;br /&gt;';
+}
+
+/* Remove the 'zend' tag from all links using it */
+$simpy-&gt;removeTag('zend');
+
+/* Rename the 'framework' tag to 'frameworks' */
+$simpy-&gt;renameTag('framework', 'frameworks');
+
+/* Split the 'frameworks' tag into 'framework' and
+'development', which will remove the 'frameworks' tag for
+all links that use it and add the tags 'framework' and
+'development' to all of those links */
+$simpy-&gt;splitTag('frameworks', 'framework', 'development');
+
+/* Merge the 'framework' and 'development' tags back into
+'frameworks', basically doing the opposite of splitting them */
+$simpy-&gt;mergeTags('framework', 'development', 'frameworks');
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.simpy.notes"></a>48.22.4. Notes</h3></div></div></div>
+<p>
+            Notes can be saved, retrieved, and deleted. They are uniquely
+            identified by a numeric ID value.
+        </p>
+<div class="example">
+<a name="zend.service.simpy.notes.working"></a><p class="title"><b>例 48.104. Working With Notes</b></p>
+<div class="example-contents"><pre class="programlisting">
+$simpy = new Zend_Service_Simpy('yourusername', 'yourpassword');
+
+/* Save a note */
+$simpy-&gt;saveNote(
+    'Test Note', // Title
+    'test,note', // Tags
+    'This is a test note.' // Description
+);
+
+/* Overwrite an existing note */
+$simpy-&gt;saveNote(
+    'Updated Test Note', // Title
+    'test,note,updated', // Tags
+    'This is an updated test note.', // Description
+    $note-&gt;getId() // Unique identifier
+);
+
+/* Search for the 10 most recently added notes */
+$noteSet = $simpy-&gt;getNotes(null, 10);
+
+/* Display the notes */
+foreach ($noteSet as $note) {
+    echo '&lt;p&gt;';
+    echo $note-&gt;getTitle();
+    echo '&lt;br /&gt;';
+    echo $note-&gt;getDescription();
+    echo '&lt;br &gt;';
+    echo $note-&gt;getTags();
+    echo '&lt;/p&gt;';
+}
+
+/* Search for all notes with 'PHP' in the title */
+$noteSet = $simpy-&gt;getNotes('title:PHP');
+
+/* Search for all notes with 'PHP' in the title and
+without 'framework' in the description */
+$noteSet = $simpy-&gt;getNotes('+title:PHP -description:framework');
+
+/* Delete a note */
+$simpy-&gt;deleteNote($note-&gt;getId());
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.service.simpy.watchlists"></a>48.22.5. Watchlists</h3></div></div></div>
+<p>
+            Watchlists cannot be created or removed using the <acronym class="acronym">API</acronym>, only
+            retrieved. Thus, you must set up a watchlist via the Simpy web
+            site prior to attempting to access it using the <acronym class="acronym">API</acronym>.
+        </p>
+<div class="example">
+<a name="zend.service.simpy.watchlists.retrieving"></a><p class="title"><b>例 48.105. Retrieving Watchlists</b></p>
+<div class="example-contents"><pre class="programlisting">
+$simpy = new Zend_Service_Simpy('yourusername', 'yourpassword');
+
+/* Get a list of all watchlists */
+$watchlistSet = $simpy-&gt;getWatchlists();
+
+/* Display data for each watchlist */
+foreach ($watchlistSet as $watchlist) {
+    echo $watchlist-&gt;getId();
+    echo '&lt;br /&gt;';
+    echo $watchlist-&gt;getName();
+    echo '&lt;br /&gt;';
+    echo $watchlist-&gt;getDescription();
+    echo '&lt;br /&gt;';
+    echo $watchlist-&gt;getAddDate();
+    echo '&lt;br /&gt;';
+    echo $watchlist-&gt;getNewLinks();
+    echo '&lt;br /&gt;';
+
+    foreach ($watchlist-&gt;getUsers() as $user) {
+        echo $user;
+        echo '&lt;br /&gt;';
+    }
+
+    foreach ($watchlist-&gt;getFilters() as $filter) {
+        echo $filter-&gt;getName();
+        echo '&lt;br /&gt;';
+        echo $filter-&gt;getQuery();
+        echo '&lt;br /&gt;';
+    }
+}
+
+/* Get an individual watchlist by its identifier */
+$watchlist = $simpy-&gt;getWatchlist($watchlist-&gt;getId());
+$watchlist = $simpy-&gt;getWatchlist(1);
+</pre></div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.service.recaptcha.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.service.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.service.slideshare.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">48.21. Zend_Service_ReCaptcha </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 48.23. Introduction</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

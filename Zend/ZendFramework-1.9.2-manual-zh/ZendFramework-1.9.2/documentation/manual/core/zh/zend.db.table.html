@@ -1,0 +1,450 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>15.5. Zend_Db_Table</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="prev" href="zend.db.select.html" title="15.4. Zend_Db_Select">
+<link rel="next" href="zend.db.table.row.html" title="15.6. Zend_Db_Table_Row">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.%E7%AE%80%E4%BB%8B" title="15.5.1. 简介">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.getting-started" title="15.5.2. 开始">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.name-and-key" title="15.5.3. 表名和主键">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.insert" title="15.5.4. 插入数据">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.udpate" title="15.5.5. 更新数据">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.delete" title="15.5.6. Deleting Rows">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.findbykey" title="15.5.7. 根据主键查找数据">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.fetchonerow" title="15.5.8. 取回一条记录">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.fetchmultiple" title="15.5.9. 取回多条记录">
+<link rel="subsection" href="zend.db.table.html#zend.db.table.domain-logic" title="15.5.10. Adding Domain Logic">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">15.5. Zend_Db_Table</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.db.select.html">上一页</a> </td>
+<th width="60%" align="center">第 15 章 Zend_Db</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.db.table.row.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.db.table"></a>15.5. Zend_Db_Table</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.%E7%AE%80%E4%BB%8B"></a>15.5.1. 简介</h3></div></div></div>
+<p>
+            Zend_Db_Table 是Zend Framework的表模块.它通过zend_db_adapter连接到
+            数据库,为数据库模式检查表对象,并对该表进行操作和查询.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.getting-started"></a>15.5.2. 开始</h3></div></div></div>
+<p>
+            首先需要为抽象类zend_db_table(ares注:该类为抽象类,所以不能直接实例
+            化,只能先继承该类,然后实例化子类)设定一个默认对数据库adapter;除非你
+            指定其他类型数据库adapter,否则,所有的zend_db_table类实例都会使用
+            默认adapter.
+        </p>
+<pre class="programlisting">&lt;?php
+// 建立一个 adapter
+require_once 'Zend/Db.php';
+$params = array (
+    'host'     =&gt; '127.0.0.1',
+    'username' =&gt; 'malory',
+    'password' =&gt; '******',
+    'dbname'   =&gt; 'camelot'
+);
+
+$db = Zend_Db::factory('PDO_MYSQL', $params);
+
+// 为所有的Zend_Db_Table对象设定默认的adapter
+require_once 'Zend/Db/Table.php';
+Zend_Db_Table::setDefaultAdapter($db);
+?&gt;
+        </pre>
+<p>
+            接下来,我们假定数据库中存在一个名为”round_table”的表.要对该表
+            使用zend_db_table,只需继承zend_db_table类创建一个名为RoundTable的
+            新类.然后我就可以通过该类在数据库中的round_table表中检查,操作数据
+            行并且取得数据结果.
+        </p>
+<pre class="programlisting">&lt;?php
+class RoundTable extends Zend_Db_Table {}
+$table = new RoundTable();
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.name-and-key"></a>15.5.3. 表名和主键</h3></div></div></div>
+<p>
+            默认情况下,zend_db_table类会将其类名当作数据库中表名(大小写不同
+            的地方需要添加"_").例如,一个名为SomeTableName的zend_db_table类在
+            数据库中就对应表”some_table_name”.假如不希望将类名与数据库表名以
+            这种添加下划线的形式进行对应,可以在定义该类时对$_name进行重构.
+        </p>
+<pre class="programlisting">&lt;?php
+class ClassName extends Zend_Db_Table
+{
+    // 默认表名为 'class_name'
+    // 但是我们也可以对应其它表
+    protected $_name = 'another_table_name';
+}
+?&gt;
+        </pre>
+<p>
+            zend_db_table类默认字段”id”为表的主键(该字段最好为自增的,但并不
+            是必须的).假如该表的主键并不是名为”$id”,你可以在定义表实体类时
+            对$_primary进行重构
+        </p>
+<pre class="programlisting">&lt;?php
+class ClassName extends Zend_Db_Table
+{
+    // 默认主键为’id’
+    // 但我们也可以设定其他列名为主键
+    protected $_primary = 'another_column_name';
+}
+?&gt;
+        </pre>
+<p>
+            你也可以通过表实体类中_setup()方法设定这些变量;但是需要确保在修改
+            后再执行一次parent::_setup()方法.
+        </p>
+<pre class="programlisting">&lt;?php
+class ClassName extends Zend_Db_Table
+{
+    protected function _setup()
+    {
+        $this-&gt;_name = 'another_table_name';
+        $this-&gt;_primary = 'another_column_name';
+        parent::_setup();
+    }
+}
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.insert"></a>15.5.4. 插入数据</h3></div></div></div>
+<p>
+            要在表中插入一行新数据,只需要将列名:数据的关联数组作为参数,调
+            用insert()方法即可.(zend framework)会自动对数据进行加引号处理,
+            并返回插入的最后一行的id值(注意:这里不同于
+            zend_db_adapter::insert方法,后者返回的是插入的行数).
+        </p>
+<pre class="programlisting">&lt;?php
+//
+// INSERT INTO round_table
+//     (noble_title, first_name, favorite_color)
+//     VALUES ("King", "Arthur", "blue")
+//
+
+class RoundTable extends Zend_Db_Table {}
+
+$table = new RoundTable();
+
+$data = array(
+    'noble_title' =&gt; 'King',
+    'first_name'  =&gt; 'Arthur',
+    'favorite_color' =&gt; 'blue',
+)
+
+$id = $table-&gt;insert($data);
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.udpate"></a>15.5.5. 更新数据</h3></div></div></div>
+<p>
+            要修改表中的任意行数据,我们可以设定一个列名:数据的关联数组作为参数,调
+            用update()方法,同是通过一个where条件从句来决定需要改变的行.该方法将会
+            修改表中数据并返回被修改的行数.
+        </p>
+<p>
+            (Zend frameword)将会自动对修改对数据进行加引号处理,但是这种检查不包括
+            条件分句,所以你需要使用该表的zend_db_adapter对象完成该工作.
+        </p>
+<pre class="programlisting">&lt;?php
+//
+// UPDATE round_table
+//     SET favorite_color = "yellow"
+//     WHERE first_name = "Robin"
+//
+
+class RoundTable extends Zend_Db_Table {}
+
+$table = new RoundTable();
+$db = $table-&gt;getAdapter();
+
+$set = array(
+    'favorite_color' =&gt; 'yellow',
+)
+
+$where = $db-&gt;quoteInto('first_name = ?', 'Robin');
+
+$rows_affected = $table-&gt;update($set, $where);
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.delete"></a>15.5.6. Deleting Rows</h3></div></div></div>
+<p>
+            要删除表中的数据,我们可以调用delete()方法,同时通过一个where条件
+            分句来决定需要删除的行.该方法将会返回被删除的行数.
+        </p>
+<p>
+           (zend framework)不会对条件分句进行加引号处理,所以你需要使用该表
+           的zend_db_adapter对象完成该工作.
+        </p>
+<pre class="programlisting">&lt;?php
+//
+// DELETE FROM round_table
+//     WHERE first_name = "Patsy"
+//
+
+class RoundTable extends Zend_Db_Table {}
+
+$table = new RoundTable();
+$db = $table-&gt;getAdapter();
+
+$where = $db-&gt;quoteInto('first_name = ?', 'Patsy');
+
+$rows_affected = $table-&gt;delete($where);
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.findbykey"></a>15.5.7. 根据主键查找数据</h3></div></div></div>
+<p>
+            通过调用find()方法,可以使用主键值轻松地在表中检索数据.假如你只想要查询某
+            一条数据,该方法将回返回一个zend_db_table_row对象,而当你想要查询多条记录时
+            ,将会返回一个zend_db_table_rowset对象.
+        </p>
+<pre class="programlisting">&lt;?php
+class RoundTable extends Zend_Db_Table {}
+
+$table = new RoundTable();
+
+// SELECT * FROM round_table WHERE id = "1"
+$row = $table-&gt;find(1);
+
+// SELECT * FROM round_table WHERE id IN("1", "2", 3")
+$rowset = $table-&gt;find(array(1, 2, 3));
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.fetchonerow"></a>15.5.8. 取回一条记录</h3></div></div></div>
+<p>
+            虽然通过主键找到相应数据行是很便利的事情,但是在更多的时候,我们是
+            通过其他一些非主键的条件来查找数据行的.zend_db_table提供了一个
+            fetchRow()方法可以实现这个功能.我们可以通过一个where条件语句(和一
+            个可选的order语句)调用fetchRow()方法,然后zend_db_tabel将会返回满
+            足条件的第一行数据的zend_db_table_row对象.
+        </p>
+<p>
+            注意,(zend framework) 将不会对where语句进行加引号处理,所以你需要
+            通过zend_db_adapter进行数据处理.
+        </p>
+<pre class="programlisting">&lt;?php
+//
+// SELECT * FROM round_table
+//     WHERE noble_title = "Sir"
+//     AND first_name = "Robin"
+//     ORDER BY favorite_color
+//
+
+class RoundTable extends Zend_Db_Table {}
+
+$table = new RoundTable();
+$db = $table-&gt;getAdapter();
+
+$where = $db-&gt;quoteInto('noble_title = ?', 'Sir')
+       . $db-&gt;quoteInto('AND first_name = ?', 'Robin');
+
+$order = 'favorite_color';
+
+$row = $table-&gt;fetchRow($where, $order);
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.fetchmultiple"></a>15.5.9. 取回多条记录</h3></div></div></div>
+<p>
+            假如需要一次检索多条记录.可以使用fetchAll()方法.和使用fetchRow()方法类
+            似,该方法不仅仅可以设定where和order分句,也可以设定limit-count和
+            limit-offset值来限制返回的结果数.执行该方法后,把选择的结果作为一个
+            Zend_Db_Table_Rowset对象返回.
+        </p>
+<p>
+            注意,(zend framework) 将不会对where语句进行加引号处理,所以你需要
+            通过zend_db_adapter进行数据处理.
+        </p>
+<pre class="programlisting">&lt;?php
+class RoundTable extends Zend_Db_Table {}
+
+$table = new RoundTable();
+$db = $table-&gt;getAdapter();
+
+// SELECT * FROM round_table
+//     WHERE noble_title = "Sir"
+//     ORDER BY first_name
+//     LIMIT 10 OFFSET 20
+
+$where = $db-&gt;quoteInto('noble_title = ?', 'Sir');
+$order = 'first_name';
+$count = 10;
+$offset = 20;
+
+$rowset = $table-&gt;fetchAll($where, $order, $count, $offset);
+?&gt;
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.table.domain-logic"></a>15.5.10. Adding Domain Logic</h3></div></div></div>
+<p>
+            作为Zend Framework的表模块,Zend_Db_Table将它自己很好的封装到独特的domain logic下.
+            例如,你可以重载insert()和update()方法,以实现在数据更改提交前的操作和验证.
+
+        </p>
+<pre class="programlisting">&lt;?php
+class RoundTable extends Zend_Db_Table
+{
+    public function insert($data)
+    {
+        // 添加一个时间戳
+        if (empty($data['created_on'])) {
+            $data['created_on'] = time();
+        }
+        return parent::insert($data);
+    }
+
+    public function update($data)
+    {
+        // 添加一个时间戳
+        if (empty($data['updated_on'])) {
+            $data['updated_on'] = time();
+        }
+        return parent::update($data);
+    }
+}
+?&gt;
+        </pre>
+<p>
+            类似的,你也可以设定自己的find()方法,通过主键外的其他字段来查询数据.
+        </p>
+<pre class="programlisting">&lt;?php
+class RoundTable extends Zend_Db_Table
+{
+    public function findAllWithName($name)
+    {
+        $db = $this-&gt;getAdapter();
+        $where = $db-&gt;quoteInto("name = ?", $name);
+        $order = "first_name";
+        return $this-&gt;fetchAll($where, $order);
+    }
+}
+?&gt;
+        </pre>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.db.select.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.db.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.db.table.row.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">15.4. Zend_Db_Select </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 15.6. Zend_Db_Table_Row</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

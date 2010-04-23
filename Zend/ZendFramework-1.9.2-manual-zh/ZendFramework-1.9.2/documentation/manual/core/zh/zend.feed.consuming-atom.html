@@ -1,0 +1,178 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>20.5. Atom Feed的使用</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="prev" href="zend.feed.consuming-rss.html" title="20.4. RSS Feed的使用">
+<link rel="next" href="zend.feed.consuming-atom-single-entry.html" title="20.6. 单个Atom条目的处理">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">20.5. Atom Feed的使用</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.feed.consuming-rss.html">上一页</a> </td>
+<th width="60%" align="center">第 20 章 Zend_Feed</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.feed.consuming-atom-single-entry.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.feed.consuming-atom"></a>20.5. Atom Feed的使用</h2></div></div></div>
+<p>
+        <code class="code">Zend_Feed_Atom</code>在使用上有许多方法与<code class="code">Zend_Feed_Rss</code>是大相径庭的。它提供了相同的方法访问Feed中的属性和遍历所有Feed中的所有条目。不同之处在于Atom协议结构自身。Atom作为RSS的继承者，它是一个更广泛的协议，在处理Feed中提供的所有内容方面它被设计的更加容易，RSS中的<code class="code">description</code>标记在Atom中被分割成两个元素<code class="code">summary</code> 和
+         <code class="code">content</code>就是为了这个目的。
+    </p>
+<div class="example">
+<a name="zend.feed.consuming-atom.example.usage"></a><p class="title"><b>例 20.2. Atom Feed的基本用法</b></p>
+<div class="example-contents">
+<p>
+            读取一个Atom Feed并打印出每个条目的<code class="code">title</code> 和 <code class="code">summary</code>：
+        </p>
+<pre class="programlisting">&lt;?php
+
+$feed = new Zend_Feed_Atom('http://atom.example.com/feed/');
+echo 'The feed contains ' . $feed-&gt;count() . ' entries.' . "\n\n";
+foreach ($feed as $entry) {
+    echo '标题: ' . $entry-&gt;title() . "\n";
+    echo '摘要: ' . $entry-&gt;summary() . "\n\n";
+}</pre>
+</div>
+</div>
+<br class="example-break"><p>
+        在Atom Feed中你能找到以下Feed属性：
+    </p>
+<p>
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">title</code> - Feed的标题, 和RSS中的channel标题一样</p></li>
+<li><p><code class="code">id</code> - 在Atom中的每个Feed和条目都有一个唯一的标识符(id)</p></li>
+<li>
+<p><code class="code">link</code> - Feed可以有多个链接，它们之间用<code class="code">type</code>属性区别</p>
+<p>
+                    当<code class="code">type="text/html"</code>时与RSS的channel中的link是一样的。如果这个链接是一个在Feed中相同内容的候选版本，那么它将有一个<code class="code">rel="alternate"</code>属性。
+                </p>
+</li>
+<li>
+<p><code class="code">subtitle</code> - Feed的描述，等同于RSS中的频道描述
+                </p>
+<p><code class="code">author-&gt;name()</code> - Feed作者名</p>
+<p><code class="code">author-&gt;email()</code> - Feed作者的email地址</p>
+</li>
+</ul></div>
+<p>
+    </p>
+<p>
+        Atom 条目通常具有以下属性：
+    </p>
+<p>
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">id</code> - 条目唯一标识符</p></li>
+<li><p><code class="code">title</code> - 条目标题，和RSS的item标题相同</p></li>
+<li><p><code class="code">link</code> - 一个到另外一种格式的链接或者当前条目的一个候选观点</p></li>
+<li><p><code class="code">summary</code> - 条目内容摘要</p></li>
+<li><p><code class="code">content</code> - 条目的全部内容；如果feed就包含摘要可以被挑过</p></li>
+<li><p><code class="code">author</code> - 有 <code class="code">name</code> 和 <code class="code">email</code> 子标记就像feed的author一样</p></li>
+<li><p><code class="code">published</code> - 条目的发布日期(RFC 3339格式)</p></li>
+<li><p><code class="code">updated</code> - 条目的最后更新日期(RFC 3339格式)</p></li>
+</ul></div>
+<p>
+    </p>
+<p>
+        更多关于Atom的信息和丰富的资源，请参看<a href="http://www.atomenabled.org/" target="_top">http://www.atomenabled.org/</a>.
+    </p>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.feed.consuming-rss.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.feed.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.feed.consuming-atom-single-entry.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">20.4. RSS Feed的使用 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 20.6. 单个Atom条目的处理</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

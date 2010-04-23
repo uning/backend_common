@@ -1,0 +1,560 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 15 章 Zend_Db</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.date.additional.html" title="14.7. Working 范例">
+<link rel="next" href="zend.db.statement.html" title="15.2. Zend_Db_Statement">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.db.html#zend.db.adapter" title="15.1. Zend_Db_Adapter">
+<link rel="section" href="zend.db.statement.html" title="15.2. Zend_Db_Statement">
+<link rel="section" href="zend.db.profiler.html" title="15.3. Zend_Db_Profiler">
+<link rel="section" href="zend.db.select.html" title="15.4. Zend_Db_Select">
+<link rel="section" href="zend.db.table.html" title="15.5. Zend_Db_Table">
+<link rel="section" href="zend.db.table.row.html" title="15.6. Zend_Db_Table_Row">
+<link rel="section" href="zend.db.tablerowset.html" title="15.7. Zend_Db_Table_Rowset">
+<link rel="section" href="zend.db.table.relationships.html" title="15.8. Zend_Db_Table Relationships">
+<link rel="section" href="zend.db.table.definition.html" title="15.9. Zend_Db_Table_Definition">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 15 章 Zend_Db</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.date.additional.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.db.statement.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.db"></a>第 15 章 Zend_Db</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.db.html#zend.db.adapter">15.1. Zend_Db_Adapter</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.introduction">15.1.1. 简介 </a></span></dt>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.quoting">15.1.2. 添加引号防止数据库攻击</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.%E6%9F%A5%E8%AF%A2">15.1.3. 直接查询</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86">15.1.4. 事务处理</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.insert">15.1.5. 插入数据行</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.update">15.1.6. 更新数据行</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.delete">15.1.7. 删除数据行</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.html#zend.db.adapter.fetch">15.1.8. 取回查询结果</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.statement.html">15.2. Zend_Db_Statement</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.statement.html#zend.db.statement.creating">15.2.1. Creating a Statement</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.statement.html#zend.db.statement.executing">15.2.2. Executing a Statement</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.statement.html#zend.db.statement.fetching">15.2.3. Fetching Results from a SELECT Statement</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.db.statement.html#zend.db.statement.fetching.fetch">15.2.3.1. Fetching a Single Row from a Result Set</a></span></dt>
+<dt><span class="sect3"><a href="zend.db.statement.html#zend.db.statement.fetching.fetchall">15.2.3.2. Fetching a Complete Result Set</a></span></dt>
+<dt><span class="sect3"><a href="zend.db.statement.html#zend.db.statement.fetching.fetch-mode">15.2.3.3. Changing the Fetch Mode</a></span></dt>
+<dt><span class="sect3"><a href="zend.db.statement.html#zend.db.statement.fetching.fetchcolumn">15.2.3.4. Fetching a Single Column from a Result Set</a></span></dt>
+<dt><span class="sect3"><a href="zend.db.statement.html#zend.db.statement.fetching.fetchobject">15.2.3.5. Fetching a Row as an Object</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.profiler.html">15.3. Zend_Db_Profiler</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.profiler.html#zend.db.profiler.introduction">15.3.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.profiler.html#zend.db.profiler.using">15.3.2. Using the Profiler</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.profiler.html#zend.db.profiler.advanced">15.3.3. Advanced Profiler Usage</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.db.profiler.html#zend.db.profiler.advanced.filtertime">15.3.3.1. Filter by query elapsed time</a></span></dt>
+<dt><span class="sect3"><a href="zend.db.profiler.html#zend.db.profiler.advanced.filtertype">15.3.3.2. Filter by query type</a></span></dt>
+<dt><span class="sect3"><a href="zend.db.profiler.html#zend.db.profiler.advanced.getbytype">15.3.3.3. Retrieve profiles by query type</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.db.profiler.html#zend.db.profiler.profilers">15.3.4. Specialized Profilers</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.db.profiler.html#zend.db.profiler.profilers.firebug">15.3.4.1. Profiling with Firebug</a></span></dt></dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.select.html">15.4. Zend_Db_Select</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.%E7%AE%80%E4%BB%8B">15.4.1. 简介 </a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.fromcols">15.4.2. 同一表中查询多列数据</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2">15.4.3. 多表联合查询</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.where">15.4.4. WHERE条件</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.group">15.4.5. GROUP BY分句</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.having">15.4.6. HAVING 条件</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.order">15.4.7. ORDER BY 分句</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.limit">15.4.8. 通过总数和偏移量进行LIMIT限制</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.select.html#zend.db.select.%E5%88%86%E9%A1%B5">15.4.9. 通过页数和总数进行LIMIT限制</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.table.html">15.5. Zend_Db_Table</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.%E7%AE%80%E4%BB%8B">15.5.1. 简介</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.getting-started">15.5.2. 开始</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.name-and-key">15.5.3. 表名和主键</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.insert">15.5.4. 插入数据</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.udpate">15.5.5. 更新数据</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.delete">15.5.6. Deleting Rows</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.findbykey">15.5.7. 根据主键查找数据</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.fetchonerow">15.5.8. 取回一条记录</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.fetchmultiple">15.5.9. 取回多条记录</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.html#zend.db.table.domain-logic">15.5.10. Adding Domain Logic</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.table.row.html">15.6. Zend_Db_Table_Row</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.table.row.html#zend.db.table.row.introduction">15.6.1. 简介</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.row.html#zend.db.table.row.fetch">15.6.2. 取回一条记录</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.row.html#zend.db.table.row.modify">15.6.3. 修改数据</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.tablerowset.html">15.7. Zend_Db_Table_Rowset</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.tablerowset.html#zend.db.table.rowset.introduction">15.7.1. 简介</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.tablerowset.html#zend.db.table.rowset.fetch">15.7.2. 取回结果集</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.tablerowset.html#zend.db.table.rowset.iterate">15.7.3. 遍历结果集</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.table.relationships.html">15.8. Zend_Db_Table Relationships</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.table.relationships.html#zend.db.table.relationships.introduction">15.8.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.relationships.html#zend.db.table.relationships.defining">15.8.2. Defining Relationships</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.relationships.html#zend.db.table.relationships.fetching.dependent">15.8.3. Fetching a Dependent Rowset</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.relationships.html#zend.db.table.relationships.fetching.parent">15.8.4. Fetching a Parent Row</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.relationships.html#zend.db.table.relationships.fetching.many-to-many">15.8.5. Fetching a Rowset via a Many-to-many Relationship</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.relationships.html#zend.db.table.relationships.cascading">15.8.6. Cascading Write Operations</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.db.table.relationships.html#zend.db.table.relationships.cascading.notes">15.8.6.1. Notes Regarding Cascading Operations</a></span></dt></dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.db.table.definition.html">15.9. Zend_Db_Table_Definition</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.db.table.definition.html#zend.db.table.definition.introduction">15.9.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.definition.html#zend.db.table.definition.usage">15.9.2. Basic Usage</a></span></dt>
+<dt><span class="sect2"><a href="zend.db.table.definition.html#zend.db.table.definition.advanced-usage">15.9.3. Advanced Usage</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.db.adapter"></a>15.1. Zend_Db_Adapter</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.introduction"></a>15.1.1. 简介 </h3></div></div></div>
+<p>
+            <code class="code">Zend_Db_Adapter</code>是zendfrmaeword的数据库抽象层api.
+            基于pdo, 你可以使用 <code class="code">Zend_Db_Adapter</code> 连接和处理多种
+            数据库,包括:microsoft SQL Server,MySql,SQLite等等.
+        </p>
+<p>要针对不同的数据库实例化一个 <code class="code">Zend_Db_Adapter</code> 对象, 需要
+              将adapter的名字和描述数据库连接的参数数组作为参数，静态调用
+              <code class="code">Zend_Db::factory()</code>方法。例如，连接到一个数据库名称为
+              “camelot”，用户名为“malory”的本地mysql数据库，可以进行如下操作:
+        </p>
+<pre class="programlisting">&lt;?php
+
+require_once 'Zend/Db.php';
+
+$params = array ('host'     =&gt; '127.0.0.1',
+                 'username' =&gt; 'malory',
+                 'password' =&gt; '******',
+                 'dbname'   =&gt; 'camelot');
+
+$db = Zend_Db::factory('PDO_MYSQL', $params);
+
+?&gt;</pre>
+<p>
+           同样，连接到一个库名为“camelot”的SQLite数据库:
+        </p>
+<pre class="programlisting">&lt;?php
+
+require_once 'Zend/Db.php';
+
+$params = array ('dbname' =&gt; 'camelot');
+
+$db = Zend_Db::factory('PDO_SQLITE', $params);
+
+?&gt;</pre>
+<p>
+          任一种方法都可以让你使用同样的api查询数据库。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.quoting"></a>15.1.2. 添加引号防止数据库攻击</h3></div></div></div>
+<p>
+            你应该处理将在sql语句中使用的条件值；这对于防止sql语句攻击是很有好处的。
+            <code class="code">Zend_Db_Adapter</code> (通过pdo)提供了两种方法帮助你手动的为条件值加上引号。
+        </p>
+<p>
+            第一种是<code class="code">quote()</code> 方法.  该方法会根据数据库adapter为标量加上
+            合适的引号;假如你试图对一个数组做quote操作, 它将为数组中
+            每个元素加上引号,并用","分隔返回. (对于参数很多的函数来说,这点是很有帮助的).
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象,假设数据库adapter为mysql.
+
+// 为标量加引号
+$value = $db-&gt;quote('St John"s Wort');
+// $value 现在变成了 '"St John\"s Wort"' (注意两边的引号)
+
+// 为数组加引号
+$value = $db-&gt;quote(array('a', 'b', 'c');
+// $value 现在变成了 '"a", "b", "c"' (","分隔的字符串)
+
+?&gt;</pre>
+<p>
+            第二种是 <code class="code">quoteInto()</code> 方法. 你提供一个包含问号占
+            位符的基础字符串 , 然后在该位置加入带引号的标量或者数组. 该
+            方法对于随需构建查询sql语句和条件语句是很有帮助的. 使用
+            quoteInto处理过的标量和数组返回结果与<code class="code">quote()</code> 方法相同.
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象,假设数据库adapter为mysql.
+
+// 在where语句中为标量加上引号
+$where = $db-&gt;quoteInto('id = ?', 1);
+// $where 现在为 'id = "1"' (注意两边的引号)
+
+// 在where语句中为数组加上引号
+$where = $db-&gt;quoteInto('id IN(?)', array(1, 2, 3));
+// $where 现在为 'id IN("1", "2", "3")' (一个逗号分隔的字符串)
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.%E6%9F%A5%E8%AF%A2"></a>15.1.3. 直接查询</h3></div></div></div>
+<p>
+            一旦你得到了一个<code class="code">Zend_Db_Adapter</code> 实例, 你可以直接
+            执行sql语句进行查询.  <code class="code">Zend_Db_Adapter</code> 传送这些sql语
+            句到底层的PDO对象，由PDO对象组合并执行他们，在有查询结果的情况
+            下，返回一个PDOStatement对象以便对结果进行处理。
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象,然后查询数据库
+// 使用完整的sql语句直接进行查询.
+$sql = $db-&gt;quoteInto(
+    'SELECT * FROM example WHERE date &gt; ?',
+    '2006-01-01'
+);
+$result = $db-&gt;query($sql);
+
+// 使用PDOStatement对象$result将所有结果数据放到一个数组中
+$rows = $result-&gt;fetchAll();
+
+?&gt;</pre>
+<p>
+            你可以将数据自动的绑定到你的查询中。这意味着你在查询中可以设定
+            多个指定的占位符，然后传送一个数组数据以代替这些占位符。这些替
+            换的数据是自动进行加引号处理的，为防止数据库攻击提供了更强的安
+            全性。
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象,然后查询数据库.
+// 这一次，使用绑定的占位符.
+$result = $db-&gt;query(
+    'SELECT * FROM example WHERE date &gt; :placeholder',
+    array('placeholder' =&gt; '2006-01-01')
+);
+
+// 使用PDOStatement对象$result将所有结果数据放到一个数组中
+$rows = $result-&gt;fetchAll();
+
+?&gt;</pre>
+<p>
+            或者,你也可以手工设置sql语句和绑定数据到sql语句。这一功能通过
+            <code class="code">prepare()</code> 方法得到一个设定好的PDOStatement对象，以便直
+            接进行数据库操作.
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象,然后查询数据库.
+// 这次, 设定一个 PDOStatement 对象进行手工绑定.
+$stmt = $db-&gt;prepare('SELECT * FROM example WHERE date &gt; :placeholder');
+$stmt-&gt;bindValue('placeholder', '2006-01-01');
+$stmt-&gt;execute();
+
+// 使用PDOStatement对象$result将所有结果数据放到一个数组中
+$rows = $stmt-&gt;fetchAll();
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86"></a>15.1.4. 事务处理</h3></div></div></div>
+<p>
+            默认情况下，PDO(因此 <code class="code"> Zend_Db_Adapter</code> 也是)是采用自动commit模式。
+            也就是说，所有的数据库操作执行时就做了commit操作。假如你试图执行事务处理，最
+            简单的是调用<code class="code"> beginTransaction() </code>方法，然后选择commit或者rollback。
+            之后,<code class="code">Zend_Db_Adapter</code>会回到自动commit模式下，直到你再次调用
+            <code class="code">beginTransaction()</code>方法
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个 $db对象, 然后开始做一个事务处理.
+$db-&gt;beginTransaction();
+
+// 尝试数据库操作.
+// 假如成功,commit该操作;
+// 假如, roll back.
+try {
+    $db-&gt;query(...);
+    $db-&gt;commit();
+} catch (Exception $e) {
+    $db-&gt;rollBack();
+    echo $e-&gt;getMessage();
+}
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.insert"></a>15.1.5. 插入数据行</h3></div></div></div>
+<p>
+            为了方便起见，你可以使用 <code class="code"> insert()</code>方法将要插入的数据绑定并创建
+            一个insert语句（绑定的数据是自动进行加引号处理以避免数据库攻击的）
+        </p>
+<p>
+            返回值并 <span class="emphasis"><em>不是 </em></span> 最后插入的数据的id，这样做的原因在于一些表
+            并没有一个自增的字段；相反的，这个插入的返回值是改变的数据行数(通常情况为1)。
+            假如你需要最后插入的数据id，可以在insert执行后调用 <code class="code">lastInsertId() </code>方法。
+        </p>
+<pre class="programlisting">&lt;?php
+
+//
+// INSERT INTO round_table
+//     (noble_title, first_name, favorite_color)
+//     VALUES ("King", "Arthur", "blue");
+//
+
+// 创建一个 $db对象, 然后...
+// 以"列名"=&gt;"数据"的格式格式构造插入数组,插入数据行
+$row = array (
+    'noble_title'    =&gt; 'King',
+    'first_name'     =&gt; 'Arthur',
+    'favorite_color' =&gt; 'blue',
+);
+
+// 插入数据的数据表
+$table = 'round_table';
+
+// i插入数据行并返回行数
+$rows_affected = $db-&gt;insert($table, $row);
+$last_insert_id = $db-&gt;lastInsertId();
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.update"></a>15.1.6. 更新数据行</h3></div></div></div>
+<p>
+            为了方便起见，你可以使用 <code class="code">update() </code>方法确定需要update的数据并且创建一个
+            update语句（确定的数据是自动加引号处理以避免数据库攻击的）。
+        </p>
+<p>
+            你可以提供一个可选的where语句说明update的条件（注意：where语句并
+            不是一个绑定参数，所以你需要自己数据进行加引号的操作）。
+        </p>
+<pre class="programlisting">&lt;?php
+
+//
+// UPDATE round_table
+//     SET favorite_color = "yellow"
+//     WHERE first_name = "Robin";
+//
+
+// 创建一个 $db对象, 然后...
+// 以"列名"=&gt;"数据"的格式构造更新数组,更新数据行
+$set = array (
+    'favorite_color' =&gt; 'yellow',
+);
+
+// 更新的数据表
+$table = 'round_table';
+
+// where语句
+$where = $db-&gt;quoteInto('first_name = ?', 'Robin');
+
+// 更新表数据,返回更新的行数
+$rows_affected = $db-&gt;update($table, $set, $where);
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.delete"></a>15.1.7. 删除数据行</h3></div></div></div>
+<p>
+            为了方便起见，你可以使用 <code class="code">delete() </code>方法创建一个delete语句；你
+            也可以提供一个where语句以说明数据的删除条件。（注意：where语句并不是一个绑
+            定参数，所以你需要自己进行数据加引号处理）。
+        </p>
+<pre class="programlisting">&lt;?php
+
+//
+// 需要删除数据的表
+//     WHERE first_name = "Patsy";
+//
+
+// 创建一个 $db对象, 然后...
+// 设定需要删除数据的表
+$table = 'round_table';
+
+// where条件语句
+$where = $db-&gt;quoteInto('first_name = ?', 'Patsy');
+
+// 删除数据并得到影响的行数
+$rows_affected = $db-&gt;delete($table, $where);
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.adapter.fetch"></a>15.1.8. 取回查询结果</h3></div></div></div>
+<p>
+            尽管你可以使用<code class="code">query()</code>方法直接对数据库进行操作，但是通常情况
+            下，仍然还是需要选择数据行并返回结果。<code class="code">以fetch开头</code>的一系列的
+            方法可以实现这个要求。对于每一种 <code class="code">fetch系列 </code>的方法来说，你需
+            要传送一个select的sql语句；假如你在操作语句中使用指定的占位符，你也可以
+            传送一个绑定数据的数组对你的操作语句进行处理和替换。 <code class="code">Fetch系列 </code>
+            的方法包括：
+         </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">fetchAll()</code></p></li>
+<li><p><code class="code">fetchAssoc()</code></p></li>
+<li><p><code class="code">fetchCol()</code></p></li>
+<li><p><code class="code">fetchOne()</code></p></li>
+<li><p><code class="code">fetchPairs()</code></p></li>
+<li><p><code class="code">fetchRow()</code></p></li>
+</ul></div>
+<pre class="programlisting">&lt;?php
+
+// 创建一个 $db对象, 然后...
+
+// 取回结果集中所有字段的值,作为连续数组返回
+$result = $db-&gt;fetchAll(
+    "SELECT * FROM round_table WHERE noble_title = :title",
+    array('title' =&gt; 'Sir')
+);
+
+// 取回结果集中所有字段的值,作为关联数组返回
+// 第一个字段作为码
+$result = $db-&gt;fetchAssoc(
+    "SELECT * FROM round_table WHERE noble_title = :title",
+    array('title' =&gt; 'Sir')
+);
+
+// 取回所有结果行的第一个字段名
+$result = $db-&gt;fetchCol(
+    "SELECT first_name FROM round_table WHERE noble_title = :title",
+    array('title' =&gt; 'Sir')
+);
+
+// 只取回第一个字段值
+$result = $db-&gt;fetchOne(
+    "SELECT COUNT(*) FROM round_table WHERE noble_title = :title",
+    array('title' =&gt; 'Sir')
+);
+
+// 取回一个相关数组,第一个字段值为码
+// 第二个字段为值
+$result = $db-&gt;fetchPairs(
+    "SELECT first_name, favorite_color FROM round_table WHERE noble_title = :title",
+    array('title' =&gt; 'Sir')
+);
+
+// 只取回结果集的第一行
+$result = $db-&gt;fetchRow(
+    "SELECT * FROM round_table WHERE first_name = :name",
+    array('name' =&gt; 'Lancelot')
+);
+
+?&gt;</pre>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.date.additional.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.db.statement.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">14.7. Working 范例  </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 15.2. Zend_Db_Statement</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

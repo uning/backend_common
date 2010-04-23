@@ -1,0 +1,560 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>4.6. Available Resource Plugins</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="prev" href="zend.application.core-functionality.html" title="4.5. Core Functionality">
+<link rel="next" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.application.available-resources.html#zend.application.available-resources.db" title="4.6.1. Zend_Application_Resource_Db">
+<link rel="subsection" href="zend.application.available-resources.html#zend.application.available-resources.frontcontroller" title="4.6.2. Zend_Application_Resource_Frontcontroller">
+<link rel="subsection" href="zend.application.available-resources.html#zend.application.available-resources.modules" title="4.6.3. Zend_Application_Resource_Modules">
+<link rel="subsection" href="zend.application.available-resources.html#zend.application.available-resources.navigation" title="4.6.4. Zend_Application_Resource_Navigation">
+<link rel="subsection" href="zend.application.available-resources.html#zend.application.available-resources.session" title="4.6.5. Zend_Application_Resource_Session">
+<link rel="subsection" href="zend.application.available-resources.html#zend.application.available-resources.view" title="4.6.6. Zend_Application_Resource_View">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">4.6. Available Resource Plugins</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.application.core-functionality.html">上一页</a> </td>
+<th width="60%" align="center">第 4 章 Zend_Application</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.auth.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.application.available-resources"></a>4.6. Available Resource Plugins</h2></div></div></div>
+<p>
+        Here you'll find <acronym class="acronym">API</acronym>-like documentation about all resource plugins
+        available by default in <code class="classname">Zend_Application</code>.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.application.available-resources.db"></a>4.6.1. Zend_Application_Resource_Db</h3></div></div></div>
+<p>
+        <code class="classname">Zend_Application_Resource_Db</code> will initialize a
+        <code class="classname">Zend_Db</code> adapter based on the options passed to it. By
+        default, it also sets the adapter as the default adapter for use with
+        <code class="classname">Zend_Db_Table</code>.
+    </p>
+<p>
+        The following configuration keys are recognized:
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+            <span class="emphasis"><em><span class="property">adapter</span></em></span>: <code class="classname">Zend_Db</code>
+            adapter type.
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">params</span></em></span>: associative array of configuration
+            parameters to use when retrieving the adapter instance.
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">isDefaultTableAdapter</span></em></span>: whether or not to
+            establish this adapter as the default table adapter.
+        </p></li>
+</ul></div>
+<div class="example">
+<a name="zend.application.available-resources.db.configExample"></a><p class="title"><b>例 4.1. Sample DB adapter resource configuration</b></p>
+<div class="example-contents">
+<p>
+            Below is an example <acronym class="acronym">INI</acronym> configuration that can be used to initialize
+            the DB resource.
+        </p>
+<pre class="programlisting">
+[production]
+resources.db.adapter = "pdo_mysql"
+resources.db.params.host = "localhost"
+resources.db.params.username = "webuser"
+resources.db.params.password = "XXXXXXX"
+resources.db.params.dbname = "test"
+resources.db.isDefaultTableAdapter = true
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note: Retrieving the Adapter instance">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Retrieving the Adapter instance</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+            If you choose not to make the adapter instantiated with this
+            resource the default table adapter, how do you retrieve the adapter
+            instance?
+        </p>
+<p>
+            As with any resource plugin, you can fetch the DB resource plugin
+            from your bootstrap:
+        </p>
+<pre class="programlisting">
+$resource = $bootstrap-&gt;getPluginResource('db');
+</pre>
+<p>
+            Once you have the resource object, you can fetch the DB adapter
+            using the <code class="methodname">getDbAdapter()</code> method:
+        </p>
+<pre class="programlisting">
+$db = $resource-&gt;getDbAdapter();
+</pre>
+</td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.application.available-resources.frontcontroller"></a>4.6.2. Zend_Application_Resource_Frontcontroller</h3></div></div></div>
+<p>
+        Probably the most common resource you will load with
+        <code class="classname">Zend_Application</code> will be the Front Controller resource,
+        which provides the ability to configure
+        <code class="classname">Zend_Controller_Front</code>. This resource provides the ability
+        to set arbitrary front controller parameters, specify plugins to
+        initialize, and much more.
+    </p>
+<p>
+        Once initialized, the resource assigns the <code class="varname">$frontController</code>
+        property of the bootstrap to the <code class="classname">Zend_Controller_Front</code>
+        instance.
+    </p>
+<p>
+        Available configuration keys include the following, and are case
+        insensitive:
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+            <span class="emphasis"><em><span class="property">controllerDirectory</span></em></span>: either a string value
+            specifying a single controller directory, or an array of
+            module to controller directory pairs.
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">moduleControllerDirectoryName</span></em></span>: a string value
+            indicating the subdirectory under a module that contains
+            controllers.
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">moduleDirectory</span></em></span>: directory under which
+            modules may be found.
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">defaultControllerName</span></em></span>: base name of the
+            default controller (normally "index").
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">defaultAction</span></em></span>: base name of the default
+            action (normally "index").
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">defaultModule</span></em></span>: base name of the default
+            module (normally "default").
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">baseUrl</span></em></span>: explicit base <acronym class="acronym">URL</acronym>
+            to the application (normally auto-detected).
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">plugins</span></em></span>: array of front controller plugin
+            class names. The resource will instantiate each class (with no constructor
+            arguments) and then register the instance with the front controller.
+        </p></li>
+<li><p>
+            <span class="emphasis"><em><span class="property">params</span></em></span>: array of key to value pairs to
+            register with the front controller.
+        </p></li>
+</ul></div>
+<p>
+        If an unrecognized key is provided, it is registered as a front
+        controller parameter by passing it to <code class="methodname">setParam()</code>.
+    </p>
+<div class="example">
+<a name="zend.application.available-resources.frontcontroller.configExample"></a><p class="title"><b>例 4.2. Sample Front Controller resource configuration</b></p>
+<div class="example-contents">
+<p>
+            Below is a sample <acronym class="acronym">INI</acronym> snippet showing how to configure the front
+            controller resource.
+        </p>
+<pre class="programlisting">
+[production]
+resources.frontController.controllerDirectory = APPLICATION_PATH "/controllers"
+resources.frontController.moduleControllerDirectoryName = "actions"
+resources.frontController.moduleDirectory = APPLICATION_PATH "/modules"
+resources.frontController.defaultControllerName = "site"
+resources.frontController.defaultAction = "home"
+resources.frontController.defaultModule = "static"
+resources.frontController.baseUrl = "/subdir"
+resources.frontController.plugins.foo = "My_Plugin_Foo"
+resources.frontController.plugins.bar = "My_Plugin_Bar"
+resources.frontController.env = APPLICATION_ENV
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.application.available-resources.frontcontroller.propertyExample"></a><p class="title"><b>例 4.3. Retrieving the Front Controller in your bootstrap</b></p>
+<div class="example-contents">
+<p>
+            Once your Front Controller resource has been initialized, you can
+            fetch the Front Controller instance via the
+            <code class="varname">$frontController</code> property of your bootstrap.
+        </p>
+<pre class="programlisting">
+$bootstrap-&gt;bootstrap('frontController');
+$front = $bootstrap-&gt;frontController;
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.application.available-resources.modules"></a>4.6.3. Zend_Application_Resource_Modules</h3></div></div></div>
+<p>
+        <code class="classname">Zend_Application_Resource_Modules</code> is used to initialize
+        your application modules. If your module has a
+        <code class="filename">Bootstrap.php</code> file in its root, and it contains a class
+        named <code class="classname">Module_Bootstrap</code> (where "Module" is the module name),
+        then it will use that class to bootstrap the module.
+    </p>
+<p>
+        By default, an instance of
+        <code class="classname">Zend_Application_Module_Autoloader</code> will be created for the
+        module, using the module name and directory to initialize it.
+    </p>
+<p>
+        Since the Modules resource does not take any arguments by default, in order to enable it
+        via configuration, you need to create it as an empty array. In <acronym class="acronym">INI</acronym> style
+        configuration, this looks like:
+    </p>
+<pre class="programlisting">
+resources.modules[] =
+</pre>
+<p>
+        In <acronym class="acronym">XML</acronym> style configuration, this looks like:
+    </p>
+<pre class="programlisting">
+&lt;resources&gt;
+    &lt;modules&gt;
+        &lt;!-- Placeholder to ensure an array is created
+        &lt;placeholder /&gt;
+    &lt;/modules&gt;
+&lt;/resources&gt;
+</pre>
+<p>
+        Using a standard <acronym class="acronym">PHP</acronym> array, simply create it as an empty array:
+    </p>
+<pre class="programlisting">
+$options = array(
+    'resources' =&gt; array(
+        'modules' =&gt; array(),
+    ),
+);
+</pre>
+<div class="note"><table border="0" summary="Note: Front Controller Resource Dependency">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Front Controller Resource Dependency</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            The Modules resource has a dependency on the <a href="zend.application.available-resources.html#zend.application.available-resources.frontcontroller" title="4.6.2. Zend_Application_Resource_Frontcontroller">Front
+            Controller resource</a>. You can, of course, provide your own
+            replacement for that resource via a custom Front Controller resource
+            class or a class initializer method -- so long as the resource
+            plugin class ends in "Frontcontroller" or the initializer method is
+            named "_initFrontController" (case insensitive).
+        </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.application.available-resources.modules.configExample"></a><p class="title"><b>例 4.4. Configuring Modules</b></p>
+<div class="example-contents">
+<p>
+            You can specify module-specific configuration using the module name
+            as a prefix or sub-section in your configuration file.
+        </p>
+<p>
+            For example, let's assume that your application has a "news" module.
+            The following are <acronym class="acronym">INI</acronym> and <acronym class="acronym">XML</acronym> examples showing
+            configuration of resources in that module.
+        </p>
+<pre class="programlisting">
+[production]
+news.resources.db.adapter = "pdo_mysql"
+news.resources.db.params.host = "localhost"
+news.resources.db.params.username = "webuser"
+news.resources.db.params.password = "XXXXXXX"
+news.resources.db.params.dbname = "news"
+</pre>
+<pre class="programlisting">
+&lt;?xml version="1.0"?&gt;
+&lt;config&gt;
+    &lt;production&gt;
+        &lt;news&gt;
+            &lt;resources&gt;
+                &lt;db&gt;
+                    &lt;adapter&gt;pdo_mysql&lt;/adapter&gt;
+                    &lt;params&gt;
+                        &lt;host&gt;localhost&lt;/host&gt;
+                        &lt;username&gt;webuser&lt;/username&gt;
+                        &lt;password&gt;XXXXXXX&lt;/password&gt;
+                        &lt;dbname&gt;news&lt;/dbname&gt;
+                    &lt;/params&gt;
+                    &lt;isDefaultAdapter&gt;true&lt;/isDefaultAdapter&gt;
+                &lt;/db&gt;
+            &lt;/resources&gt;
+        &lt;/news&gt;
+    &lt;/production&gt;
+&lt;/config&gt;
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.application.available-resources.modules.retrieveBootstrapExample"></a><p class="title"><b>例 4.5. Retrieving a specific module bootstrap</b></p>
+<div class="example-contents">
+<p>
+            On occasion, you may need to retrieve the bootstrap object for a
+            specific module -- perhaps to run discrete bootstrap methods, or to
+            fetch the autoloader in order to configure it. This can be done
+            using the Modules resource's <code class="methodname">getExecutedBootstraps()</code>
+            method.
+        </p>
+<pre class="programlisting">
+$resource = $bootstrap-&gt;getPluginResource('modules');
+$moduleBootstraps = $resource-&gt;getExecutedBootstraps();
+$newsBootstrap = $moduleBootstraps['news'];
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.application.available-resources.navigation"></a>4.6.4. Zend_Application_Resource_Navigation</h3></div></div></div>
+<p>
+        <code class="classname">Zend_Application_Resource_Navigation</code> can be used to configure
+        a <code class="classname">Zend_Navigation</code> instance. Configuration options are per <a href="zend.navigation.pages.html#zend.navigation.pages.common.options" title="表 37.1. Common page options">the
+            <code class="classname">Zend_Navigation</code> options</a>.
+    </p>
+<p>
+        Once done configuring the navigation instance, it by assigns the instance to
+        <code class="classname">Zend_View_Helper_Navigation</code> by default
+        -- from which you may retrieve it later.
+    </p>
+<div class="example">
+<a name="zend.application.available-resources.navigation.configExample"></a><p class="title"><b>例 4.6. Sample Navigation resource configuration</b></p>
+<div class="example-contents">
+<p>
+            Below is a sample <acronym class="acronym">INI</acronym> snippet showing how to
+            configure the navigation resource.
+        </p>
+<pre class="programlisting">
+resources.navigation.pages.page1.label = "Label of the first page"
+resources.navigation.pages.page1.route = "Route that belongs to the first page"
+
+; Page 2 is a subpage of page 1
+resources.navigation.pages.page1.pages.page2.type = "Zend_Navigation_Page_Uri"
+resources.navigation.pages.page1.pages.page2.label = "Label of the second page"
+resources.navigation.pages.page1.pages.page2.uri = "/url/to/page/2"
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.application.available-resources.session"></a>4.6.5. Zend_Application_Resource_Session</h3></div></div></div>
+<p>
+        <code class="classname">Zend_Application_Resource_Session</code> allows you to configure
+        <code class="classname">Zend_Session</code> as well as optionally initialize a session
+        SaveHandler.
+    </p>
+<p>
+        To set a session save handler, simply pass the <span class="property">saveHandler</span>
+        (case insensitive) option key to the resource. The value of this option
+        may be one of the following:
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+            <span class="type">String</span>: A string indicating a class implementing
+            <code class="classname">Zend_Session_SaveHandler_Interface</code> that should be
+            instantiated.
+        </p></li>
+<li><p>
+            <span class="type">Array</span>: An array with the keys "class" and, optionally,
+            "options", indicating a class implementing
+            <code class="classname">Zend_Session_SaveHandler_Interface</code> that should be
+            instantiated and an array of options to provide to its constructor.
+        </p></li>
+<li><p>
+            <code class="classname">Zend_Session_SaveHandler_Interface</code>: an object
+            implementing this interface.
+        </p></li>
+</ul></div>
+<p>
+        Any other option keys passed will be passed to
+        <code class="methodname">Zend_Session::setOptions()</code> to configure
+        <code class="classname">Zend_Session</code>.
+    </p>
+<div class="example">
+<a name="zend.application.available-resources.session.configExample"></a><p class="title"><b>例 4.7. Sample Session resource configuration</b></p>
+<div class="example-contents">
+<p>
+            Below is a sample <acronym class="acronym">INI</acronym> snippet showing how to configure the session
+            resource. It sets several <code class="classname">Zend_Session</code> options, as well
+            as configures a <code class="classname">Zend_Session_SaveHandler_DbTable</code> instance.
+        </p>
+<pre class="programlisting">
+resources.session.save_path = APPLICATION_PATH "/../data/session"
+resources.session.use_only_cookies = true
+resources.session.remember_me_seconds = 864000
+resources.session.saveHandler.class = "Zend_Session_SaveHandler_DbTable"
+resources.session.saveHandler.options.name = "session"
+resources.session.saveHandler.options.primary.session_id = "session_id"
+resources.session.saveHandler.options.primary.save_path = "save_path"
+resources.session.saveHandler.options.primary.name = "name"
+resources.session.saveHandler.options.primaryAssignment.sessionId = "sessionId"
+resources.session.saveHandler.options.primaryAssignment.sessionSavePath = "sessionSavePath"
+resources.session.saveHandler.options.primaryAssignment.sessionName = "sessionName"
+resources.session.saveHandler.options.modifiedColumn = "modified"
+resources.session.saveHandler.options.dataColumn = "session_data"
+resources.session.saveHandler.options.lifetimeColumn = "lifetime"
+</pre>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note: Bootstrap your database first!">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Bootstrap your database first!</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            If you are configuring the
+            <code class="classname">Zend_Session_SaveHandler_DbTable</code> session save
+            handler, you must first configure your database connection for it to
+            work. Do this by either using the <a href="zend.application.available-resources.html#zend.application.available-resources.db" title="4.6.1. Zend_Application_Resource_Db">Db</a>
+            resource -- and make sure the "<span class="property">resources.db</span>" key comes prior to
+            the "<span class="property">resources.session</span>" key -- or by writing your own resource
+            that initializes the database, and specifically sets the default
+            <code class="classname">Zend_Db_Table</code> adapter.
+        </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.application.available-resources.view"></a>4.6.6. Zend_Application_Resource_View</h3></div></div></div>
+<p>
+        <code class="classname">Zend_Application_Resource_View</code> can be used to configure
+        a <code class="classname">Zend_View</code> instance. Configuration options are per <a href="zend.view.html#zend.view.introduction.options" title="61.1.3. 选项">the <code class="classname">Zend_View</code>
+            options</a>.
+    </p>
+<p>
+        Once done configuring the view instance, it creates an instance of
+        <code class="classname">Zend_Controller_Action_Helper_ViewRenderer</code> and registers
+        the ViewRenderer with <code class="classname">Zend_Controller_Action_HelperBroker</code>
+        -- from which you may retrieve it later.
+    </p>
+<div class="example">
+<a name="zend.application.available-resources.view.configExample"></a><p class="title"><b>例 4.8. Sample View resource configuration</b></p>
+<div class="example-contents">
+<p>
+            Below is a sample <acronym class="acronym">INI</acronym> snippet showing how to configure the view
+            resource.
+        </p>
+<pre class="programlisting">
+resources.view.encoding = "UTF-8"
+resources.view.basePath = APPLICATION_PATH "/views/scripts"
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.application.core-functionality.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.application.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.auth.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">4.5. Core Functionality </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 5 章 Zend_Auth</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

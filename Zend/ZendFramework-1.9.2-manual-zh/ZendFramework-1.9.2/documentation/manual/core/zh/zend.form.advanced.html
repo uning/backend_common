@@ -1,0 +1,704 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>23.9. Zend_Form 的高级用法</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="prev" href="zend.form.i18n.html" title="23.8.  Zend_Form 的国际化">
+<link rel="next" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.form.advanced.html#zend.form.advanced.arrayNotation" title="23.9.1.  数组符号（Notation）">
+<link rel="subsection" href="zend.form.advanced.html#zend.form.advanced.multiPage" title="23.9.2.  多页表单">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">23.9. Zend_Form 的高级用法 </th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.form.i18n.html">上一页</a> </td>
+<th width="60%" align="center">第 23 章 Zend_Form</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.gdata.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.form.advanced"></a>23.9. Zend_Form 的高级用法 </h2></div></div></div>
+<p>
+        <code class="code">Zend_Form</code> 有丰富的函数，其中许多面向有经验的开发者。这一章打算用例子和用例来介绍这些函数。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.advanced.arrayNotation"></a>23.9.1.  数组符号（Notation）</h3></div></div></div>
+<p>
+            许多有经验的 web 开发者喜欢在元素名上用数组符号把相关的表单元素组成组。例如，如果有两个地址在表单上，一个邮寄地址和一个帐单地址，你可能会有相同的元素，通过把它们用数组组成组，你可以确保它们能分别被抓取。用下面的表单做个例子：
+        </p>
+<pre class="programlisting">
+&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Shipping Address&lt;/legend&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;&lt;label for="recipient"&gt;Ship to:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="recipient" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="address"&gt;Address:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="address" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="municipality"&gt;City:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="municipality" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="province"&gt;State:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="province" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="postal"&gt;Postal Code:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="postal" type="text" value="" /&gt;&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;Billing Address&lt;/legend&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;&lt;label for="payer"&gt;Bill To:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="payer" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="address"&gt;Address:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="address" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="municipality"&gt;City:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="municipality" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="province"&gt;State:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="province" type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="postal"&gt;Postal Code:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="postal" type="text" value="" /&gt;&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/fieldset&gt;
+
+    &lt;dl&gt;
+        &lt;dt&gt;&lt;label for="terms"&gt;I agree to the Terms of Service&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input name="terms" type="checkbox" value="" /&gt;&lt;/dd&gt;
+
+        &lt;dt&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input name="save" type="submit" value="Save" /&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/form&gt;
+</pre>
+<p>
+            在本例中，帐单地址和邮寄地址包含一些相同的字段，这意味着一个可能会覆盖另一个。我们可以用数组符号来解决这个问题：
+        </p>
+<pre class="programlisting">
+&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Shipping Address&lt;/legend&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;&lt;label for="shipping-recipient"&gt;Ship to:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="shipping[recipient]" id="shipping-recipient"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="shipping-address"&gt;Address:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="shipping[address]" id="shipping-address"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="shipping-municipality"&gt;City:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="shipping[municipality]" id="shipping-municipality"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="shipping-province"&gt;State:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="shipping[province]" id="shipping-province"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="shipping-postal"&gt;Postal Code:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="shipping[postal]" id="shipping-postal"
+                type="text" value="" /&gt;&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+        &lt;legend&gt;Billing Address&lt;/legend&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;&lt;label for="billing-payer"&gt;Bill To:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="billing[payer]" id="billing-payer"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="billing-address"&gt;Address:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="billing[address]" id="billing-address"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="billing-municipality"&gt;City:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="billing[municipality]" id="billing-municipality"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="billing-province"&gt;State:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="billing[province]" id="billing-province"
+                type="text" value="" /&gt;&lt;/dd&gt;
+
+            &lt;dt&gt;&lt;label for="billing-postal"&gt;Postal Code:&lt;/label&gt;&lt;/dt&gt;
+            &lt;dd&gt;&lt;input name="billing[postal]" id="billing-postal"
+                type="text" value="" /&gt;&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/fieldset&gt;
+
+    &lt;dl&gt;
+        &lt;dt&gt;&lt;label for="terms"&gt;I agree to the Terms of Service&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input name="terms" type="checkbox" value="" /&gt;&lt;/dd&gt;
+
+        &lt;dt&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input name="save" type="submit" value="Save" /&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/form&gt;
+</pre>
+<p>
+            在上例中，我们有了两个单独的地址。在提交的表单，我们有三个元素，'save' 元素表示提交，和两个数组 'shipping' 和 'billing'，每个都有键对应它们的元素。
+        </p>
+<p>
+            <code class="code">Zend_Form</code> 尝试用 <a href="zend.form.forms.html#zend.form.forms.subforms" title="23.4.4.  子表单">sub forms</a> 自动完成这个过程。缺省地，子表单用前面 HTML 表单列表包括 ids 所示的数组符号来解析，数组名基于子表单名，键基于包含在子表单中的元素。子表单的嵌套有任意深度，这将生成嵌套数组来反映它的结构。另外，<code class="code">Zend_Form</code> 中不同的校验程序遵循数组结构，不论子表单的嵌套有多深，都确保表单校验正确。你不需要做任何事情来获得这些好处，缺省是打开（enabled）的。
+        </p>
+<p>
+            另外，有工具让你有条件地打开数组符号，也可以指定特定的数组给元素和集合所属的（子表单或表单）：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    <code class="code">Zend_Form::setIsArray($flag)</code>：通过设置标志为 true，你可以让整个表单当作数组。缺省地，表单名将是数组名，除非调用了 <code class="code">setElementsBelongTo()</code>。如果表单没有名称，或如果 <code class="code">setElementsBelongTo()</code> 没有设置，这个标志将被忽略（因为没有数组名给元素所属于的表单）。
+                </p>
+<p>
+                    你可以用 <code class="code">isArray()</code> 访问器来决定一个表单是否被当作数组。
+                </p>
+</li>
+<li><p>
+                    <code class="code">Zend_Form::setElementsBelongTo($array)</code>：用这个方法，你可以指定数组名给元素所属的表单，也可以使用 <code class="code">getElementsBelongTo()</code> 访问器来确定（获得？）它的名字。
+            </p></li>
+</ul></div>
+<p>
+            另外，在元素一级，你可以用 <code class="code">Zend_Form_Element::setBelongsTo()</code> 方法指定可能属于特定的数组的独立的元素。
+            为了找出这个值是什么 － 是否显式或隐式地通过表单 － 可以用 <code class="code">getBelongsTo()</code> 访问器来做。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.advanced.multiPage"></a>23.9.2.  多页表单 </h3></div></div></div>
+<p>
+            目前，<code class="code">Zend_Form</code> 没有正式支持多页表单，然而，可以用一些额外的工具来实现。
+        </p>
+<p>
+            生成多页表单的关键是利用子表单，但每个页面只显示一个子表单。这让你一次提交一个单个的表单并校验它，直到所有表单都提交了才处理。
+        </p>
+<div class="example">
+<a name="zend.form.advanced.multiPage.registration"></a><p class="title"><b>例 23.8.  注册表单示例 </b></p>
+<div class="example-contents">
+<p>
+                让我们用注册表单作为例子，我们的意图是在第一页上读取期望的用户名和密码，还有用户的元数据 －－ 用户的名字、姓和地点 －－ 最后让他们决定使用哪个邮件列表（如果有的话）。
+            </p>
+<p>
+                首先，来生成表单，并在里面定义一些子表单：
+            </p>
+<pre class="programlisting">&lt;?php
+class My_Form_Registration extends Zend_Form
+{
+    public function init()
+    {
+        // Create user sub form: username and password
+        $user = new Zend_Form_SubForm();
+        $user-&gt;addElements(array(
+            new Zend_Form_Element_Text('username', array(
+                'required'   =&gt; true,
+                'label'      =&gt; 'Username:',
+                'filters'    =&gt; array('StringTrim', 'StringToLower'),
+                'validators' =&gt; array(
+                    'Alnum',
+                    array('Regex', false, array('/^[a-z][a-z0-9]{2,}$/'))
+                )
+            )),
+
+            new Zend_Form_Element_Password('password', array(
+                'required'   =&gt; true,
+                'label'      =&gt; 'Password:',
+                'filters'    =&gt; array('StringTrim'),
+                'validators' =&gt; array(
+                    'NotEmpty',
+                    array('StringLength', false, array(6))
+                )
+            )),
+        ));
+
+        // Create demographics sub form: given name, family name, and location
+        $demog = new Zend_Form_SubForm();
+        $demog-&gt;addElements(array(
+            new Zend_Form_Element_Text('givenName', array(
+                'required'   =&gt; true,
+                'label'      =&gt; 'Given (First) Name:',
+                'filters'    =&gt; array('StringTrim'),
+                'validators' =&gt; array(
+                    array('Regex', false, array('/^[a-z][a-z0-9., \'-]{2,}$/i'))
+                )
+            )),
+
+            new Zend_Form_Element_Text('familyName', array(
+                'required'   =&gt; true,
+                'label'      =&gt; 'Family (Last) Name:',
+                'filters'    =&gt; array('StringTrim'),
+                'validators' =&gt; array(
+                    array('Regex', false, array('/^[a-z][a-z0-9., \'-]{2,}$/i'))
+                )
+            )),
+
+            new Zend_Form_Element_Text('location', array(
+                'required'   =&gt; true,
+                'label'      =&gt; 'Your Location:',
+                'filters'    =&gt; array('StringTrim'),
+                'validators' =&gt; array(
+                    array('StringLength', false, array(2))
+                )
+            )),
+        ));
+
+        // Create mailing lists sub form
+        $listOptions = array(
+            'none'        =&gt; 'No lists, please',
+            'fw-general'  =&gt;  'Zend Framework General List',
+            'fw-mvc'      =&gt;  'Zend Framework MVC List',
+            'fw-auth'     =&gt;  'Zend Framwork Authentication and ACL List',
+            'fw-services' =&gt; 'Zend Framework Web Services List',
+        );
+        $lists = new Zend_Form_SubForm();
+        $lists-&gt;addElements(array(
+            new Zend_Form_Element_MultiCheckbox('subscriptions', array(
+                'label'        =&gt; 'Which lists would you like to subscribe to?',
+                'multiOptions' =&gt; $listOptions,
+                'required'     =&gt; true,
+                'filters'      =&gt; array('StringTrim'),
+                'validators'   =&gt; array(
+                    array('InArray', false, array(array_keys($listOptions)))
+                )
+            )),
+        ));
+
+        // Attach sub forms to main form
+        $this-&gt;addSubForms(array(
+            'user'  =&gt; $user,
+            'demog' =&gt; $demog,
+            'lists' =&gt; $lists
+        ));
+    }
+}
+</pre>
+<p>
+                注意还没有提交按钮，而起我们对子表单的装饰器也没有做任何事情 －－ 意思是缺省地他们作为字段（fieldsets）显示。我们将能够 override 这些因为我们显示每个独立的子表单，并加入提交按钮这样我们就可以处理它们了 －－ 也要求有动作和方法（注：这里的方法是 'post' 或 'get'）属性。来给我们的类添砖加瓦让它提供那些信息：
+            </p>
+<pre class="programlisting">
+class My_Form_Registration extends Zend_Form
+{
+    // ...
+
+    /**
+     * Prepare a sub form for display
+     *
+     * @param  string|Zend_Form_SubForm $spec
+     * @return Zend_Form_SubForm
+     */
+    public function prepareSubForm($spec)
+    {
+        if (is_string($spec)) {
+            $subForm = $this-&gt;{$spec};
+        } elseif ($spec instanceof Zend_Form_SubForm) {
+            $subForm = $spec;
+        } else {
+            throw new Exception('Invalid argument passed to ' . __FUNCTION__ . '()');
+        }
+        $this-&gt;setSubFormDecorators($subForm)
+             -&gt;addSubmitButton($subForm)
+             -&gt;addSubFormActions($subForm);
+        return $subForm;
+    }
+
+    /**
+     * Add form decorators to an individual sub form
+     *
+     * @param  Zend_Form_SubForm $subForm
+     * @return My_Form_Registration
+     */
+    public function setSubFormDecorators(Zend_Form_SubForm $subForm)
+    {
+        $subForm-&gt;setDecorators(array(
+            'FormElements',
+            array('HtmlTag', array('tag' =&gt; 'dl', 'class' =&gt; 'zend_form')),
+            'Form',
+        ));
+        return $this;
+    }
+
+    /**
+     * Add a submit button to an individual sub form
+     *
+     * @param  Zend_Form_SubForm $subForm
+     * @return My_Form_Registration
+     */
+    public function addSubmitButton(Zend_Form_SubForm $subForm)
+    {
+        $subForm-&gt;addElement(new Zend_Form_Element_Submit(
+            'save',
+            array(
+                'label'    =&gt; 'Save and continue',
+                'required' =&gt; false,
+                'ignore'   =&gt; true,
+            )
+        ));
+        return $this;
+    }
+
+    /**
+     * Add action and method to sub form
+     *
+     * @param  Zend_Form_SubForm $subForm
+     * @return My_Form_Registration
+     */
+    public function addSubFormActions(Zend_Form_SubForm $subForm)
+    {
+        $subForm-&gt;setAction('/registration/process')
+                -&gt;setMethod('post');
+        return $this;
+    }
+}
+</pre>
+<p>
+                接着，我们也需要为动作控制器添加一些辅助东西，并有若干考虑。首先，我们需要确保在请求之间保持表单数据，这样可以确定何时退出。第二，我们需要一些逻辑来确定表单的哪部分已经提交，哪个子表单需要基于这些信息来显示。我们使用 <code class="code">Zend_Session_Namespace</code> 来保持数据，它也会告诉我们提交哪个表单。
+            </p>
+<p>
+                让我们来创建控制器，并添加用于获取表单实例的方法：
+            </p>
+<pre class="programlisting">&lt;?php
+class RegistrationController extends Zend_Controller_Action
+{
+    protected $_form;
+
+    public function getForm()
+    {
+        if (null === $this-&gt;_form) {
+            require_once 'My/Form/Registration.php';
+            $this-&gt;_form = new My_Form_Registration();
+        }
+        return $this-&gt;_form;
+    }
+}
+</pre>
+<p>
+                现在，添加一些函数来确定显示哪个表单。基本上，直到整个表单被认为有效，我们才需要继续显示表单片段。另外，我们可能想确保它们是按一定的顺序：用户、demog 和 列表。我们在可以通过检查出现在每个子表单上的特定键的会话命名空间确定哪个数据被提交。
+            </p>
+<pre class="programlisting">
+class RegistrationController extends Zend_Controller_Action
+{
+    // ...
+
+    protected $_namespace = 'RegistrationController';
+    protected $_session;
+
+    /**
+     * Get the session namespace we're using
+     *
+     * @return Zend_Session_Namespace
+     */
+    public function getSessionNamespace()
+    {
+        if (null === $this-&gt;_session) {
+            require_once 'Zend/Session/Namespace.php';
+            $this-&gt;_session = new Zend_Session_Namespace($this-&gt;_namespace);
+        }
+
+        return $this-&gt;_session;
+    }
+
+    /**
+     * Get a list of forms already stored in the session
+     *
+     * @return array
+     */
+    public function getStoredForms()
+    {
+        $stored = array();
+        foreach ($this-&gt;getSessionNamespace() as $key =&gt; $value) {
+            $stored[] = $key;
+        }
+
+        return $stored;
+    }
+
+    /**
+     * Get list of all subforms available
+     *
+     * @return array
+     */
+    public function getPotentialForms()
+    {
+        return array_keys($this-&gt;getForm()-&gt;getSubForms());
+    }
+
+    /**
+     * What sub form was submitted?
+     *
+     * @return false|Zend_Form_SubForm
+     */
+    public function getCurrentSubForm()
+    {
+        $request = $this-&gt;getRequest();
+        if (!$request-&gt;isPost()) {
+            return false;
+        }
+
+        foreach ($this-&gt;getPotentialForms() as $name) {
+            if ($data = $request-&gt;getPost($name, false)) {
+                if (is_array($data)) {
+                    return $this-&gt;getForm()-&gt;getSubForm($name);
+                    break;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Get the next sub form to display
+     *
+     * @return Zend_Form_SubForm|false
+     */
+    public function getNextSubForm()
+    {
+        $storedForms    = $this-&gt;getStoredForms();
+        $potentialForms = $this-&gt;getPotentialForms();
+
+        foreach ($potentialForms as $name) {
+            if (!in_array($name, $storedForms)) {
+                return $this-&gt;getForm()-&gt;getSubForm($name);
+            }
+        }
+
+        return false;
+    }
+}
+</pre>
+<p>
+                上述方法让我们使用符合如 "<code class="code">$subForm = $this-&gt;getCurrentSubForm();</code>" 来读取当前子表单来校验，或者 "<code class="code">$next = $this-&gt;getNextSubForm();</code>" 来获得下一个来显示。
+            </p>
+<p>
+                现在，让我们看一下如何处理和显示不同的子表单。我们可以使用 <code class="code">getCurrentSubForm()</code> 来确定表单是否提交（返回 false 值表示没有显示或提交），并且用 <code class="code">getNextSubForm()</code> 来获取表单来显示。我们还可以用表单的 <code class="code">prepareSubForm()</code> 方法来确保表单已准备好显示。
+            </p>
+<p>
+                当我们收到表单提交，可以校验子表单并接着检查是否整个表单有效。为完成这些任务，我们需要另外的方法确保提交的数据添加到会话和什么时候校验整个表单，我们依靠从会话来的所有片段（segments）来校验：
+            </p>
+<pre class="programlisting">&lt;?php
+class My_Form_Registration extends Zend_Form
+{
+    // ...
+
+    /**
+     * Is the sub form valid?
+     *
+     * @param  Zend_Form_SubForm $subForm
+     * @param  array $data
+     * @return bool
+     */
+    public function subFormIsValid(Zend_Form_SubForm $subForm, array $data)
+    {
+        $name = $subForm-&gt;getName();
+        if ($subForm-&gt;isValid($data)) {
+            $this-&gt;getSessionNamespace()-&gt;$name = $subForm-&gt;getValues();
+            return true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Is the full form valid?
+     *
+     * @return bool
+     */
+    public function formIsValid()
+    {
+        $data = array();
+        foreach ($this-&gt;getSessionNamespace() as $key =&gt; $info) {
+            $data[$key] = $info;
+        }
+
+        return $this-&gt;getForm()-&gt;isValid($data);
+    }
+}
+</pre>
+<p>
+                八字已经画了一撇，让我们来为控制器构造一个动作。我们需要为表单做一个 landing 页面，接着'process' 动作来处理表单。
+            </p>
+<pre class="programlisting">&lt;?php
+class RegistrationController extends Zend_Controller_Action
+{
+    // ...
+
+    public function indexAction()
+    {
+        // Either re-display the current page, or grab the "next" (first)
+        // sub form
+        if (!$form = $this-&gt;getCurrentSubForm()) {
+            $form = $this-&gt;getNextSubForm();
+        }
+        $this-&gt;view-&gt;form = $this-&gt;getForm()-&gt;prepareSubForm($form);
+    }
+
+    public function processAction()
+    {
+        if (!$form = $this-&gt;getCurrentSubForm()) {
+            return $this-&gt;_forward('index');
+        }
+
+        if (!$this-&gt;subFormIsValid($form, $this-&gt;getRequest()-&gt;getPost())) {
+            $this-&gt;view-&gt;form = $this-&gt;getForm()-&gt;prepareSubForm($form);
+            return $this-&gt;render('index');
+        }
+
+        if (!$this-&gt;formIsValid()) {
+            $form = $this-&gt;getNextSubForm();
+            $this-&gt;view-&gt;form = $this-&gt;getForm()-&gt;prepareSubForm($form);
+            return $this-&gt;render('index');
+        }
+
+        // Valid form!
+        // Render information in a verification page
+        $this-&gt;view-&gt;info = $this-&gt;getSessionNamespace();
+        $this-&gt;render('verification');
+    }
+}
+</pre>
+<p>
+                正如你注意到的，处理表单的代码相当简单。我们检查是否有一个子表单提交，如果没有，就回到 landing 页面。如果我们确实有一个子表单，就尝试校验它，如果失败，重新显示。如果子表单有效，那么我们就检查表单是否有效，它将指示我们是否完成，如果没有，我们就显示下一个表单片段。最后，我们显示一个确认过的带有会话内容的页面。
+            </p>
+<p>
+                The view scripts are very simple:
+            </p>
+<pre class="programlisting">
+&lt;? // registration/index.phtml ?&gt;
+&lt;h2&gt;Registration&lt;/h2&gt;
+&lt;?= $this-&gt;form ?&gt;
+
+&lt;? // registration/verification.phtml ?&gt;
+&lt;h2&gt;Thank you for registering!&lt;/h2&gt;
+&lt;p&gt;
+    这里是你所提供的信息：
+&lt;/p&gt;
+
+&lt;?
+// Have to do this construct due to how items are stored in session namespaces
+foreach ($this-&gt;info as $info):
+    foreach ($info as $form =&gt; $data): ?&gt;
+&lt;h4&gt;&lt;?= ucfirst($form) ?&gt;:&lt;/h4&gt;
+&lt;dl&gt;
+    &lt;? foreach ($data as $key =&gt; $value): ?&gt;
+    &lt;dt&gt;&lt;?= ucfirst($key) ?&gt;&lt;/dt&gt;
+    &lt;? if (is_array($value)):
+        foreach ($value as $label =&gt; $val): ?&gt;
+    &lt;dd&gt;&lt;?= $val ?&gt;&lt;/dd&gt;
+        &lt;? endforeach;
+       else: ?&gt;
+    &lt;dd&gt;&lt;?= $this-&gt;escape($value) ?&gt;&lt;/dd&gt;
+    &lt;? endif;
+    endforeach; ?&gt;
+&lt;/dl&gt;
+&lt;? endforeach;
+endforeach ?&gt;
+</pre>
+<p>
+                Zend Framework 的下次发行将通过抽象会话和顺序逻辑来提供制作多页面表单的组件。在这期间，上述例子对如何为你的站点生成多页面是个合理的指南。
+            </p>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.form.i18n.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.form.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.gdata.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">23.8.  Zend_Form 的国际化  </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 24 章 Zend_Gdata</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

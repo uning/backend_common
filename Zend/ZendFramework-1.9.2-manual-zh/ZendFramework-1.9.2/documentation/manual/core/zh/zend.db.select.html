@@ -1,0 +1,486 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>15.4. Zend_Db_Select</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="prev" href="zend.db.profiler.html" title="15.3. Zend_Db_Profiler">
+<link rel="next" href="zend.db.table.html" title="15.5. Zend_Db_Table">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.%E7%AE%80%E4%BB%8B" title="15.4.1. 简介">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.fromcols" title="15.4.2. 同一表中查询多列数据">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2" title="15.4.3. 多表联合查询">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.where" title="15.4.4. WHERE条件">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.group" title="15.4.5. GROUP BY分句">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.having" title="15.4.6. HAVING 条件">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.order" title="15.4.7. ORDER BY 分句">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.limit" title="15.4.8. 通过总数和偏移量进行LIMIT限制">
+<link rel="subsection" href="zend.db.select.html#zend.db.select.%E5%88%86%E9%A1%B5" title="15.4.9. 通过页数和总数进行LIMIT限制">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">15.4. Zend_Db_Select</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.db.profiler.html">上一页</a> </td>
+<th width="60%" align="center">第 15 章 Zend_Db</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.db.table.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.db.select"></a>15.4. Zend_Db_Select</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.%E7%AE%80%E4%BB%8B"></a>15.4.1. 简介 </h3></div></div></div>
+<p>
+            使用Zend_Db_Select方法是一种不受数据库约束构建select的sql语句的工具
+            （ares注：用户可以使用该方法生成查询的sql语句，而不需要考虑各种数据
+            库sql语句的差别）。虽然该方法明显还不完善，但是的确为我们提供一种方
+            法，帮助我们在不同的后台数据库进行相同的查询工作。除此之外，它还可
+            以避免sql语句攻击。
+        </p>
+<p>
+            创建一个zend_db_select实例最简单的方法就是使用zend_db_adapter::select()方法
+        </p>
+<pre class="programlisting">&lt;?php
+
+require_once 'Zend/Db.php';
+
+$params = array (
+    'host'     =&gt; '127.0.0.1',
+    'username' =&gt; 'malory',
+    'password' =&gt; '******',
+    'dbname'   =&gt; 'camelot'
+);
+
+$db = Zend_Db::factory('PDO_MYSQL', $params);
+
+$select = $db-&gt;select();
+// $select现在是一个Zend_Db_Select_PdoMysql对象
+
+?&gt;</pre>
+<p>
+            你可以使用该对象和它的相应方法构建一个select查询语句，然后生成
+            字符串符用来传送给zend_db_adapter进行查询或者读取结果。
+        </p>
+<pre class="programlisting">&lt;?php
+
+//
+// SELECT *
+//     FROM round_table
+//     WHERE noble_title = "Sir"
+//     ORDER BY first_name
+//     LIMIT 10 OFFSET 20
+//
+
+// 你可以使用一种重复定义的方式...
+$select-&gt;from('round_table', '*');
+$select-&gt;where('noble_title = ?', 'Sir');
+$select-&gt;order('first_name');
+$select-&gt;limit(10,20);
+
+// ...或者使用一种连续定义的方式:
+$select-&gt;from('round_table', '*')
+       -&gt;where('noble_title = ?', 'Sir')
+       -&gt;order('first_name')
+       -&gt;limit(10,20);
+
+// 但是，读取数据的方法相同
+$sql = $select-&gt;__toString();
+$result = $db-&gt;fetchAll($sql);
+
+// 对于以上任一种方式，你都可以传送$select对象本身
+// 使用Zend_Db_Select对象的 __toString()方法就可以得到查询语句
+
+$result = $db-&gt;fetchAll($select);
+
+?&gt;</pre>
+<p>
+            你也可以在你的查询语句中使用绑定的参数，而不需要自己为参数加引号。
+        </p>
+<pre class="programlisting">&lt;?php
+
+//
+// SELECT *
+//     FROM round_table
+//     WHERE noble_title = "Sir"
+//     ORDER BY first_name
+//     LIMIT 10 OFFSET 20
+//
+
+$select-&gt;from('round_table', '*')
+       -&gt;where('noble_title = :title')
+       -&gt;order('first_name')
+       -&gt;limit(10,20);
+
+// 读取结果使用绑定的参数
+$params = array('title' =&gt; 'Sir');
+$result = $db-&gt;fetchAll($select, $params);
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.fromcols"></a>15.4.2. 同一表中查询多列数据</h3></div></div></div>
+<p>
+            当需要从某一个指定的表查询某几列时，可以使用from()方法，将需要
+            查询的表名和列名都在该方法中指定。表名和列名都可以通过别名代替
+            ，而且也可以根据需要多次使用from()方法。
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象，假定adapter为Mysql
+$select = $db-&gt;select();
+
+// 从some_table表中读取a,b,c三列
+$select-&gt;from('some_table', 'a, b, c');
+// 同样可以:
+$select-&gt;from('some_table', array('a', 'b', 'c');
+
+// 从foo AS bar表中读取列bar.col
+$select-&gt;from('foo AS bar', 'bar.col');
+
+// 从foo, bar两个表中读取foo.col 别名为col1，bar.col别名为col2
+$select-&gt;from('foo', 'foo.col AS col1');
+$select-&gt;from('bar', 'bar.col AS col2');
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2"></a>15.4.3. 多表联合查询</h3></div></div></div>
+<p>
+            当需要进行表联合查询时，可以使用join()方法。首先，设定进行表
+            联合查询的表名，然后是表联合的条件(ares注：该条件是针对多表
+            内部连接的条件)，最后是查询的列名。同样，你可以根据需要多次
+            使用join()方法。
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象，假定adapter为Mysql.
+$select = $db-&gt;select();
+
+//
+// SELECT foo.*, bar.*
+//     FROM foo
+//     JOIN bar ON foo.id = bar.id
+//
+$select-&gt;from('foo', '*');
+$select-&gt;join('bar', 'foo.id = bar.id', '*');
+
+?&gt;</pre>
+<p>
+            目前为止，zend framework只支持普通的内部表结合语法，而不支持左结合
+            ，右结合，等等外部连接方式。未来版本，将会更多的支持更多的连接方式。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.where"></a>15.4.4. WHERE条件</h3></div></div></div>
+<p>
+            当需要要增加where条件时，可以使用where（）方法。你可以传送一个
+            普通的查询语句字符串，也可以传送一个使用？作为占位符的字符串,然
+            后在占位符处加入通过加引号处理后的数据(将使用Zend_Db_Adapter::quoteInto方法进行数据处理)
+        </p>
+<p>
+            Multiple calls to where() will AND the conditions together;
+            if you need to OR a condition, use orWhere().
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象，调用SELECT方法.
+$select = $db-&gt;select();
+
+//
+// SELECT *
+//     FROM round_table
+//     WHERE noble_title = "Sir"
+//     AND favorite_color = "yellow"
+//
+$select-&gt;from('round_table', '*');
+$select-&gt;where('noble_title = "Sir"'); // embedded value
+$select-&gt;where('favorite_color = ?', 'yellow'); // quoted value
+
+//
+// SELECT *
+//     FROM foo
+//     WHERE bar = "baz"
+//     OR id IN("1", "2", "3")
+//
+$select-&gt;from('foo', '*');
+$select-&gt;where('bar = ?', 'baz');
+$select-&gt;orWhere('id IN(?)', array(1, 2, 3);
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.group"></a>15.4.5. GROUP BY分句</h3></div></div></div>
+<p>
+            根据需要，可以多次使用group()方法给查询到的数据进行分组
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象，调用SELECT方法.
+$select = $db-&gt;select();
+
+//
+// SELECT COUNT(id)
+//     FROM foo
+//     GROUP BY bar, baz
+//
+$select-&gt;from('foo', 'COUNT(id)');
+$select-&gt;group('bar');
+$select-&gt;group('baz');
+
+// 同样可以这样调用 group() 方法:
+$select-&gt;group('bar, baz');
+
+// 还可以:
+$select-&gt;group(array('bar', 'baz'));
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.having"></a>15.4.6. HAVING 条件</h3></div></div></div>
+<p>
+           当需要在查询结果中加入having条件时，可以使用having()方法。
+           这种方法与where()方法的功能一样。.
+        </p>
+<p>
+           当你多次调用having（）方法时，各个having的条件会“并”在一起进行操作；
+           假如你需要实现“或 ”操作，可以使用orHaving()方法
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象，调用SELECT方法.
+$select = $db-&gt;select();
+
+//
+// SELECT COUNT(id) AS count_id
+//     FROM foo
+//     GROUP BY bar, baz
+//     HAVING count_id &gt; "1"
+//
+$select-&gt;from('foo', 'COUNT(id) AS count_id');
+$select-&gt;group('bar, baz');
+$select-&gt;having('count_id &gt; ?', 1);
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.order"></a>15.4.7. ORDER BY 分句</h3></div></div></div>
+<p>
+            根据需要，可以多次使用order()方法给查询到的数据进行排序
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 创建一个$db对象，调用SELECT方法.
+$select = $db-&gt;select();
+
+//
+// SELECT * FROM round_table
+//     ORDER BY noble_title DESC, first_name ASC
+//
+$select-&gt;from('round_table', '*');
+$select-&gt;order('noble_title DESC');
+$select-&gt;order('first_name');
+
+// 同样可以这样调用 order() 方法:
+$select-&gt;order('noble_title DESC, first_name');
+
+// 还可以:
+$select-&gt;order(array('noble_title DESC', 'first_name'));
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.limit"></a>15.4.8. 通过总数和偏移量进行LIMIT限制</h3></div></div></div>
+<p>
+            Zend_db_select可以支持数据库层的limit语句限制。对于一些数据库，例如mysql
+            和postgresql，实现这些是相对容易的，因为这些数据库本身就支持“limit：count”
+            语法。
+        </p>
+<p>
+            对于其他一些数据库来说，例如微软的sqlserver和oracle，要实现limit功能
+            就不那么简单了，因为他们本身就根本不支持limit语句。MS-SQL有一个top语
+            句来实现，而oracle要实现limit功能，查询语句的写法就更特殊一些。由于
+            zend_db_select内在地工作的方式，我们可以重写select语句以在oracle中
+            实现上述开源数据库系统的limit功能。
+        </p>
+<p>
+            要通过设定查询的总数和偏移量对返回的结果进行限制,可以使用limit()方法，
+            总数值和一个可选的偏移量作为调用该方法的参数。
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 首先，一个简单的 "LIMIT :count"
+$select = $db-&gt;select();
+$select-&gt;from('foo', '*');
+$select-&gt;order('id');
+$select-&gt;limit(10);
+
+//
+// 在mysql/psotgreSql/SQLite,可以得到这样的语句：
+//
+// SELECT * FROM foo
+//     ORDER BY id ASC
+//     LIMIT 10
+//
+// 但是在Microsoft SQL下,可以得到这样的语句：
+//
+// SELECT TOP 10 * FROM FOO
+//     ORDER BY id ASC
+//
+//
+
+// 现在, 是更复杂的 "LIMIT :count OFFSET :offset"方法
+$select = $db-&gt;select();
+$select-&gt;from('foo', '*');
+$select-&gt;order('id');
+$select-&gt;limit(10, 20);
+
+//
+// 在mysql/psotgreSql/SQLite,可以得到这样的语句：
+//
+// SELECT * FROM foo
+//     ORDER BY id ASC
+//     LIMIT 10 OFFSET 20
+//
+// 但是在Microsoft SQL下,由于不支持偏移量功能,可以得到这样sql语句:
+//
+// SELECT * FROM (
+//     SELECT TOP 10 * FROM (
+//         SELECT TOP 30 * FROM foo ORDER BY id DESC
+//     ) ORDER BY id ASC
+// )
+//
+// Zend_Db_Adapter 可以自动的完成sql语句的动态创建.
+//
+
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.db.select.%E5%88%86%E9%A1%B5"></a>15.4.9. 通过页数和总数进行LIMIT限制</h3></div></div></div>
+<p>
+            Zend_db_select同样也提供了翻页的limit功能。假如你想要从结果中找到
+            特定“页数”的结果，使用limitPage()方法；将你需要的页数值和每页显示
+            的数据值数作为参数传过去即可.
+        </p>
+<pre class="programlisting">&lt;?php
+
+// 构造基础的select方法:
+$select = $db-&gt;select();
+$select-&gt;from('foo', '*');
+$select-&gt;order('id');
+
+// ... 限制到第三页,每页包括10行数据
+$select-&gt;limitPage(3, 10);
+
+//
+// 在MySQL/PostgreSQL/SQLite下, 可以得到:
+//
+// SELECT * FROM foo
+//     ORDER BY id ASC
+//     LIMIT 10 OFFSET 20
+//
+
+?&gt;</pre>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.db.profiler.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.db.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.db.table.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">15.3. Zend_Db_Profiler </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 15.5. Zend_Db_Table</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

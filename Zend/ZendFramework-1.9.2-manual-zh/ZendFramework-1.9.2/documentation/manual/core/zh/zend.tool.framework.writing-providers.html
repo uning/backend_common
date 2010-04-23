@@ -1,0 +1,227 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>55.4. Creating Providers to use with Zend_Tool_Framework</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="prev" href="zend.tool.framework.architecture.html" title="55.3. Architecture">
+<link rel="next" href="zend.tool.framework.system-providers.html" title="55.5. Shipped System Providers">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.tool.framework.writing-providers.html#zend.tool.framework.writing-providers.basic" title="55.4.1. Basic Instructions for Creating Providers">
+<link rel="subsection" href="zend.tool.framework.writing-providers.html#zend.tool.framework.writing-providers.advanced" title="55.4.2. Advanced Development Information">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">55.4. Creating Providers to use with Zend_Tool_Framework</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.tool.framework.architecture.html">上一页</a> </td>
+<th width="60%" align="center">第 55 章 Zend_Tool_Framework</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.tool.framework.system-providers.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.tool.framework.writing-providers"></a>55.4. Creating Providers to use with Zend_Tool_Framework</h2></div></div></div>
+<p>
+        In general, a provider, on its own, is nothing more than the shell for a
+        developer to bundle up some capabilities they wish to dispatch with the
+        command line (or other) clients. It is an analogue to what a
+        "controller" is inside of your <acronym class="acronym">MVC</acronym> application.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.tool.framework.writing-providers.basic"></a>55.4.1. Basic Instructions for Creating Providers</h3></div></div></div>
+<p>
+            As an example, if a developer wants to add the capability of showing
+            the version of a datafile that his 3rd party component is working
+            from, there is only one class the developer would need to implement.
+            Assuming the component is called <code class="classname">My_Component</code>, he would
+            create a class named <code class="classname">My_Component_HelloProvider</code> in a
+            file named <code class="filename">HelloProvider.php</code> somewhere on the
+            <span class="property">include_path</span>. This class would implement
+            <code class="classname">Zend_Tool_Framework_Provider_Interface</code>, and the body of
+            this file would only have to look like the following:
+        </p>
+<pre class="programlisting">
+class My_Component_HelloProvider
+    implements Zend_Tool_Framework_Provider_Interface
+{
+    public function say()
+    {
+        echo 'Hello from my provider!';
+    }
+}
+</pre>
+<p>
+            Given that code above, and assuming the developer wishes to access
+            this functionality through the console client, the call would look
+            like this:
+        </p>
+<pre class="programlisting">
+% zf say hello
+Hello from my provider!
+</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.tool.framework.writing-providers.advanced"></a>55.4.2. Advanced Development Information</h3></div></div></div>
+<p>
+            The above "Hello World" example is great for simple commands, but
+            what about something more advanced? As your scripting and tooling
+            needs grow, you might find that you need the ability to accept
+            variables. Much like function signatures have parameters, your
+            tooling requests can also accept parameters.
+        </p>
+<p>
+            Just as each tooling request can be isolated to a method within a
+            class, the parameters of a tooling request can also be isolated in a
+            very well known place. Parameters of the action methods of a
+            provider can include the same parameters you want your client to
+            utilize when calling that provider and action combination. For
+            example, if you wanted to accept a name in the above example, you
+            would probably do this in OO code:
+        </p>
+<pre class="programlisting">
+class My_Component_HelloProvider
+    implements Zend_Tool_Framework_Provider_Interface
+{
+    public function say($name = 'Ralph')
+    {
+        echo 'Hello' . $name . ', from my provider!';
+    }
+}
+</pre>
+<p>
+            The above example can then be called via the command line
+            <span><strong class="command">zf say hello Joe</strong></span>. "Joe" will be supplied to the provider as
+            a parameter of the method call. Also note, as you see that the
+            parameter is optional, that means it is also optional on the command
+            line, so that <span><strong class="command">zf say hello</strong></span> will still work, and default
+            to the name "Ralph".
+        </p>
+<p>
+            Another interesting feature you might wish to implement is
+            <span class="emphasis"><em>pretendability</em></span>. Pretendabilty is the ability
+            for your provider to "pretend" as if it is doing the requested
+            action and provider combination and give the user as much
+            information about what it <span class="emphasis"><em>would</em></span> do without
+            actually doing it. This might be an important notion when doing
+            heavy database or filesystem modifications that the user might not
+            otherwise want to do.
+        </p>
+<p>
+            Pretendability is easy to implement. There are two parts to this
+            feature: 1) marking the provider as having the ability to "pretend",
+            and 2) checking the request to ensure the current request was indeed
+            asked to be "pretended". This feature is demonstrated in the code
+            sample below.
+        </p>
+<pre class="programlisting">
+class My_Component_HelloProvider
+    extends    Zend_Tool_Framework_Provider_Abstract
+    implements Zend_Tool_Framework_Provider_Pretendable
+{
+    public function say($name = 'Ralph')
+    {
+        if ($this-&gt;_registry-&gt;getRequest()-&gt;isPretend()) {
+            echo 'I would say hello to ' . $name . '.';
+        } else {
+            echo 'Hello' . $name . ', from my provider!';
+        }
+    }
+}
+</pre>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.tool.framework.architecture.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.tool.framework.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.tool.framework.system-providers.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">55.3. Architecture </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 55.5. Shipped System Providers</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

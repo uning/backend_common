@@ -1,0 +1,236 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>49.2. 基本用法</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="prev" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="next" href="zend.session.advanced_usage.html" title="49.3. 高级用法">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.session.basic_usage.html#zend.session.basic_usage.basic_examples" title="49.2.1. 实例教程">
+<link rel="subsection" href="zend.session.basic_usage.html#zend.session.basic_usage.iteration" title="49.2.2. 迭代会话命名空间">
+<link rel="subsection" href="zend.session.basic_usage.html#zend.session.basic_usage.accessors" title="49.2.3. 会话命名空间的访问器">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">49.2. 基本用法</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.session.html">上一页</a> </td>
+<th width="60%" align="center">第 49 章 Zend_Session</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.session.advanced_usage.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.session.basic_usage"></a>49.2. 基本用法</h2></div></div></div>
+<p>
+        在Zend Framework中，<code class="code">Zend_Session_Namespace</code>实例提供了操作会话数据主要的API。命名空间常用于隔离所有的会话数据，尽管也为所有会话数据只需要一个命名空间的情况提供了一个默认的命名空间。Zend_Session利用了PHP内置的会话模块（ext/session），以及它特有的<code class="code">$_SESSION</code>全局数组做为会话状态数据的存储机制。虽然<code class="code">$_SESSION</code>在PHP的全局命名空间内仍然可以访问，但是开发者不应该直接访问它，这样<code class="code">Zend_Session</code> 和 <code class="code">Zend_Session_Namespace</code>可以提供一组最可靠、安全的处理会话相关的功能。
+    </p>
+<p>
+        每个<code class="code">Zend_Session_Namespace</code>的实例对应于<code class="code">$_SESSION</code>全局数组的一个条目，在那里命名空间被用作键。
+
+        </p>
+<pre class="programlisting">&lt;?php
+require_once 'Zend/Session/Namespace.php';
+
+$myNamespace = new Zend_Session_Namespace('myNamespace');
+
+// $myNamespace corresponds to $_SESSION['myNamespace']
+        </pre>
+<p>
+
+         用Zend_Session直接和其它使用 <code class="code">$_SESSION</code>的代码协同工作是可能的。然而，为避免问题，强烈建议这样的代码只使用<code class="code">$_SESSION</code>中不和<code class="code">Zend_Session_Namespace</code>的实例想对应的部分。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.session.basic_usage.basic_examples"></a>49.2.1. 实例教程</h3></div></div></div>
+<p>
+            在初始化Zend_Session时，如果没有指定命名空间，所有的数据将被透明地储存在<code class="code">'Default'</code>命名空间下。<code class="code">Zend_Session</code>不打算直接处理会话命名空间容器的内容，取而代之，我们可以使用<code class="code">Zend_Session_Namespace</code>。下面的例子演示了缺省命名空间的使用，和怎样计算用户访问页面的次数：
+        </p>
+<div class="example">
+<a name="zend.session.basic_usage.basic_examples.example.counting_page_views"></a><p class="title"><b>例 49.1. 页面浏览计数</b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+require_once 'Zend/Session/Namespace.php';
+
+$defaultNamespace = new Zend_Session_Namespace('Default');
+
+if (isset($defaultNamespace-&gt;numberOfPageRequests)) {
+    $defaultNamespace-&gt;numberOfPageRequests++; // 每次页面加载，这个将递增
+} else {
+    $defaultNamespace-&gt;numberOfPageRequests = 1; // 第一次
+}
+
+echo "Page requests this session: ", $defaultNamespace-&gt;numberOfPageRequests;
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            当多个模块使用<code class="code">Zend_Session_Namespace</code>的实例拥有不同的命名空间，每个模块为它自己的会话数据获得数据封装。可以传递给<code class="code">Zend_Session_Namespace</code>构造函数一个可选的<code class="code">$namespace</code>参数，它允许开发者分割会话数据到分离的命名空间。命名空间机制提供了一个有效的、流行的方法来确保处于命名空间之下的会话数据不遭到意外地改变。
+        </p>
+<p>
+            命名空间的名称被限定为字符序列，它表示为不以下划线("<code class="code">_</code>")开头的非空PHP字符串。只有Zend Framework的核心模块可使用以"<code class="code">Zend</code>"开头的命名空间的名称。
+        </p>
+<div class="example">
+<a name="zend.session.basic_usage.basic_examples.example.namespaces.new"></a><p class="title"><b>例 49.2. 新方法： 使用命名空间避免冲突</b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+require_once 'Zend/Session/Namespace.php';
+
+// in the Zend_Auth component
+$authNamespace = new Zend_Session_Namespace('Zend_Auth');
+$authNamespace-&gt;user = "myusername";
+
+// in a web services component
+$webServiceNamespace = new Zend_Session_Namespace('Some_Web_Service');
+$webServiceNamespace-&gt;user = "mywebusername";
+            </pre></div>
+</div>
+<br class="example-break"><p>
+            上述例子中的代码与下面的代码有相同的效果，不过，上述例子中的会话对象把会话数据封装进了各自的命名空间。
+        </p>
+<div class="example">
+<a name="zend.session.basic_usage.basic_examples.example.namespaces.old"></a><p class="title"><b>例 49.3. 老方法: PHP会话访问</b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+$_SESSION['Zend_Auth']['user'] = "myusername";
+$_SESSION['Some_Web_Service']['user'] = "mywebusername";
+            </pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.session.basic_usage.iteration"></a>49.2.2. 迭代会话命名空间</h3></div></div></div>
+<p>
+            <code class="code">Zend_Session_Namespace</code>提供了<a href="http://www.php.net/~helly/php/ext/spl/interfaceIteratorAggregate.html" target="_top">IteratorAggregate接口</a>所有的能力，包括对<code class="code">foreach</code>语句的支持：
+        </p>
+<div class="example">
+<a name="zend.session.basic_usage.iteration.example"></a><p class="title"><b>例 49.4. 会话迭代</b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+require_once 'Zend/Session/Namespace.php';
+
+$aNamespace = new Zend_Session_Namespace('some_namespace_with_data_present');
+
+foreach ($aNamespace as $index =&gt; $value) {
+    echo "aNamespace-&gt;$index = '$value';\n";
+}
+            </pre></div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.session.basic_usage.accessors"></a>49.2.3. 会话命名空间的访问器</h3></div></div></div>
+<p>
+            <code class="code">Zend_Session_Namespace</code>实现<code class="code">__get()</code>, <code class="code">__set()</code>, <code class="code">__isset()</code>, and <code class="code">__unset()</code>这些 <a href="http://www.php.net/manual/en/language.oop5.overloading.php" target="_top">魔术方法</a>，除了在一个子类里，这些魔术方法不能被直接调用。相反，正常的操作符自动调用这些方法，如下例所示：
+        </p>
+<div class="example">
+<a name="zend.session.basic_usage.accessors.example"></a><p class="title"><b>例 49.5. 访问会话数据</b></p>
+<div class="example-contents"><pre class="programlisting">&lt;?php
+require_once 'Zend/Session/Namespace.php';
+
+$namespace = new Zend_Session_Namespace(); // 缺省的命名空间
+
+$namespace-&gt;foo = 100;
+
+echo "\$namespace-&gt;foo = $namespace-&gt;foo\n";
+
+if (!isset($namespace-&gt;bar)) {
+    echo "\$namespace-&gt;bar not set\n";
+}
+
+unset($namespace-&gt;foo);
+            </pre></div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.session.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.session.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.session.advanced_usage.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 49 章 Zend_Session </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 49.3. 高级用法</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

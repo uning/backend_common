@@ -1,0 +1,495 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>17.5. Zend_Dojo build layer support</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="prev" href="zend.dojo.form.html" title="17.4. Dojo 表单元素和装饰器">
+<link rel="next" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.dojo.build-layers.html#zend.dojo.build-layers.introduction" title="17.5.1. Introduction">
+<link rel="subsection" href="zend.dojo.build-layers.html#zend.dojo.build-layers.usage" title="17.5.2. Generating Custom Module Layers with Zend_Dojo_BuildLayer">
+<link rel="subsection" href="zend.dojo.build-layers.html#zend.dojo.build-layers.profiles" title="17.5.3. Generating Build Profiles with Zend_Dojo_BuildLayer">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">17.5. Zend_Dojo build layer support</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.dojo.form.html">上一页</a> </td>
+<th width="60%" align="center">第 17 章 Zend_Dojo</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.dom.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.dojo.build-layers"></a>17.5. Zend_Dojo build layer support</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.dojo.build-layers.introduction"></a>17.5.1. Introduction</h3></div></div></div>
+<p>
+            Dojo build layers provide a clean path from development to
+            production when using Dojo for your UI layer. In development, you
+            can have load-on-demand, rapid application prototyping; a build
+            layer takes all Dojo dependencies and compiles them to a single
+            file, optionally stripping whitespace and comments, and performing
+            code heuristics to allow further minification of variable names.
+            Additionally, it can do <acronym class="acronym">CSS</acronym> minification.
+        </p>
+<p>
+            In order to create a build layer, you would traditionally create a
+            JavaScript file that has <code class="code">dojo.require</code> statements for
+            each dependency, and optionally some additional code that might run
+            when the script is loaded. As an example:
+        </p>
+<pre class="programlisting">
+dojo.provide("custom.main");
+
+dojo.require("dijit.layout.TabContainer");
+dojo.require("dijit.layout.ContentPane");
+dojo.require("dijit.form.Form");
+dojo.require("dijit.form.Button");
+dojo.require("dijit.form.TextBox");
+</pre>
+<p>
+            This script is generally referred to as a "layer" script.
+        </p>
+<p>
+            Then, in your application's layout, you'd instruct Dojo to load this
+            module:
+        </p>
+<pre class="programlisting">
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script type="text/javascript" src="/js/dojo/dojo.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript"&gt;
+        dojo.registerModulePath("custom", "../custom/");
+        dojo.require("custom.main");
+    &lt;/script&gt;
+</pre>
+<p>
+            If you use <code class="classname">Zend_Dojo</code> to do this, you'd do the
+            following:
+        </p>
+<pre class="programlisting">
+$view-&gt;dojo()-&gt;registerModulePath('custom', '../custom/')
+             -&gt;requireModule('custom.main');
+</pre>
+<p>
+            But since <code class="classname">Zend_Dojo</code> aggregates your various
+            <code class="code">dojo.require</code> statements, how do you create your layer
+            script? You could open each page and view the generated
+            <code class="code">dojo.require</code> statements, and cut and paste them into a
+            layer script file manually.
+        </p>
+<p>
+            However, a better solution exists: since
+            <code class="classname">Zend_Dojo</code> aggregates this information
+            already, you can simply pull that information and build your layer
+            file. This is the purpose of
+            <code class="classname">Zend_Dojo_BuildLayer</code>.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.dojo.build-layers.usage"></a>17.5.2. Generating Custom Module Layers with Zend_Dojo_BuildLayer</h3></div></div></div>
+<p>
+            At its simplest, you simply instantiate
+            <code class="classname">Zend_Dojo_BuildLayer</code>, feed it the view object
+            and the name of your custom module layer, and have it generate the
+            content of the layer file; it is up to you to then write it to disk.
+        </p>
+<p>
+            As an example, let's say you wanted to create the module layer
+            "custom.main". Assuming you follow the recommended project directory
+            structure, and that you are storing your JavaScript files under
+            <code class="filename">public/js/</code>, you could do the following:
+        </p>
+<pre class="programlisting">
+$build = new Zend_Dojo_BuildLayer(array(
+    'view'      =&gt; $view,
+    'layerName' =&gt; 'custom.main',
+));
+
+$layerContents = $build-&gt;generateLayerScript();
+$filename      = APPLICATION_PATH . '/../public/js/custom/main.js';
+if (!dir_exists(dirname($filename))) {
+    mkdir(dirname($filename));
+}
+file_put_contents($filename, $layerContents);
+</pre>
+<p>
+            When should you do the above? For it to work correctly, you need to
+            do it after all view scripts and the layout have been rendered, to
+            ensure that the <code class="methodname">dojo()</code> helper is fully populated. One
+            easy way to do so is using a front controller plugin, with a
+            <code class="methodname">dispatchLoopShutdown()</code> hook:
+        </p>
+<pre class="programlisting">
+class App_Plugin_DojoLayer extends Zend_Controller_Plugin_Abstract
+{
+    public $layerScript = APPLICATION_PATH . '/../public/js/custom/main.js';
+    protected $_build;
+
+    public function dispatchLoopShutdown()
+    {
+        if (!file_exists($this-&gt;layerScript)) {
+            $this-&gt;generateDojoLayer();
+        }
+    }
+
+    public function getBuild()
+    {
+        if (null === $this-&gt;_build) {
+            $this-&gt;_build = new Zend_Dojo_BuildLayer(array(
+                'view'      =&gt; $view,
+                'layerName' =&gt; 'custom.main',
+            ));
+        }
+        return $this-&gt;_build;
+    }
+
+    public function generateDojoLayer()
+    {
+        $build = $this-&gt;getBuild();
+        $layerContents = $build-&gt;generateLayerScript();
+        if (!dir_exists(dirname($this-&gt;layerScript))) {
+            mkdir(dirname($this-&gt;layerScript));
+        }
+        file_put_contents($this-&gt;layerScript, $layerContents);
+    }
+}
+</pre>
+<div class="note"><table border="0" summary="Note: Do not generate the layer on every page">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Do not generate the layer on every page</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                It's tempting to generate the layer script on each and every
+                page. However, this is resource intensive, as it must write to
+                the disk on each page. Additionally, since the mtime of the file
+                will keep changing, you will get no benefits of client-side
+                caching. Write the file once.
+            </p></td></tr>
+</table></div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.dojo.build-layers.usage.options"></a>17.5.2.1. BuildLayer options</h4></div></div></div>
+<p>
+                The above functionality will suffice for most situations. For
+                those needing more customization, a variety of options may be
+                invoked.
+            </p>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.dojo.build-layers.usage.options.view"></a>17.5.2.1.1. Setting the view object</h5></div></div></div>
+<p>
+                    While the view object may be passed during instantiation,
+                    you may also pass it in to an instance via the
+                    <code class="methodname">setView()</code> method:
+                </p>
+<pre class="programlisting">
+$build-&gt;setView($view);
+</pre>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.dojo.build-layers.usage.options.layername"></a>17.5.2.1.2. Setting the layer name</h5></div></div></div>
+<p>
+                    While the layer name may be passed during instantiation,
+                    you may also pass it in to an instance via the
+                    <code class="methodname">setLayerName()</code> method:
+                </p>
+<pre class="programlisting">
+$build-&gt;setLayerName("custom.main");
+</pre>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.dojo.build-layers.usage.options.onload"></a>17.5.2.1.3. Including onLoad events in the generated layer</h5></div></div></div>
+<p>
+                    <code class="code">dojo.addOnLoad</code> is a useful utility for
+                    specifying actions that should trigger when the <acronym class="acronym">DOM</acronym> has
+                    finished loading. The <code class="methodname">dojo()</code> view helper can
+                    create these statements via its
+                    <code class="methodname">addOnLoad()</code> and
+                    <code class="methodname">onLoadCapture*()</code> methods. In some
+                    cases, it makes sense to push these into your layer file
+                    instead of rendering them via your view scripts.
+                </p>
+<p>
+                    By default, these are not rendered; to enable them, pass the
+                    <span class="property">consumeOnLoad</span> configuration key during
+                    instantiation:
+                </p>
+<pre class="programlisting">
+$build = new Zend_Dojo_BuildLayer(array(
+    'view'          =&gt; $view,
+    'layerName'     =&gt; 'custom.main',
+    'consumeOnLoad' =&gt; true,
+));
+</pre>
+<p>
+                    Alternately, you can use the
+                    <code class="methodname">setConsumeOnLoad()</code> method after
+                    instantiation:
+                </p>
+<pre class="programlisting">
+$build-&gt;setConsumeOnLoad(true);
+</pre>
+</div>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.dojo.build-layers.usage.options.javascript"></a>17.5.2.1.4. Including captured JavaScript in the generated layer</h5></div></div></div>
+<p>
+                    The <code class="methodname">dojo()</code> view helper includes methods for
+                    capturing arbitrary JavaScript to include in the
+                    &lt;script&gt; tag containing the various
+                    <code class="code">dojo.require</code> and <code class="code">dojo.addOnLoad</code>
+                    statements. This can be useful when creating default data
+                    stores or globally scoped objects used throughout your
+                    application.
+                </p>
+<p>
+                    By default, these are not rendered; to enable them, pass the
+                    <span class="property">consumeJavascript</span> configuration key during
+                    instantiation:
+                </p>
+<pre class="programlisting">
+$build = new Zend_Dojo_BuildLayer(array(
+    'view'              =&gt; $view,
+    'layerName'         =&gt; 'custom.main',
+    'consumeJavascript' =&gt; true,
+));
+</pre>
+<p>
+                    Alternately, you can use the
+                    <code class="methodname">setConsumeJavascript()</code> method after
+                    instantiation:
+                </p>
+<pre class="programlisting">
+$build-&gt;setConsumeJavascript(true);
+</pre>
+</div>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.dojo.build-layers.profiles"></a>17.5.3. Generating Build Profiles with Zend_Dojo_BuildLayer</h3></div></div></div>
+<p>
+            One of the chief benefits of a Dojo module layer is that it
+            facilitates the creation of a custom build.
+            <code class="classname">Zend_Dojo_BuildLayer</code> has functionality for
+            generate build profiles.
+        </p>
+<p>
+            The simplest use case is to utilize the
+            <code class="methodname">generateBuildProfile()</code> method and send the
+            output to a file:
+        </p>
+<pre class="programlisting">
+$build = new Zend_Dojo_BuildLayer(array(
+    'view'      =&gt; $view,
+    'layerName' =&gt; 'custom.main',
+));
+
+$profile   = $build-&gt;generateBuildProfile();
+$filename  = APPLICATION_PATH . '/../misc/scripts/custom.profile.js';
+file_put_contents($filename, $profile);
+</pre>
+<p>
+            Just like generating layers, you may want to automate this via a
+            <code class="methodname">dispatchLoopShutdown()</code> plugin hook; you
+            could even simply modify the one shown for generating layers to read
+            as follows:
+        </p>
+<pre class="programlisting">
+class App_Plugin_DojoLayer extends Zend_Controller_Plugin_Abstract
+{
+    public $layerScript  = APPLICATION_PATH
+                         . '/../public/js/custom/main.js';
+    public $buildProfile = APPLICATION_PATH
+                         . '/../misc/scripts/custom.profile.js';
+    protected $_build;
+
+    public function dispatchLoopShutdown()
+    {
+        if (!file_exists($this-&gt;layerScript)) {
+            $this-&gt;generateDojoLayer();
+        }
+        if (!file_exists($this-&gt;buildProfile)) {
+            $this-&gt;generateBuildProfile();
+        }
+    }
+
+    public function generateDojoLayer() { /* ... */ }
+
+    public function generateBuildProfile()
+    {
+        $profile = $this-&gt;getBuild()-&gt;generateBuildProfile();
+        file_put_contents($this-&gt;buildProfile, $profile);
+    }
+
+}
+</pre>
+<p>
+            As noted, with module layers, you should only create the file once.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.dojo.build-layers.profiles.options"></a>17.5.3.1. Build Profile options</h4></div></div></div>
+<p>
+                The above functionality will suffice for most situations. The
+                only way to customize build profile generation is to provide
+                additional build profile options to utilize.
+            </p>
+<p>
+                As an example, you may want to specify what type of
+                optimizations should be performed, whether or not to optimize
+                <acronym class="acronym">CSS</acronym> files in the layer, whether or not to copy tests into the
+                build, etc. For a listing of available options, you should read
+                the <a href="http://docs.dojocampus.org/build/index" target="_top">Dojo
+                    Build documentation</a> and <a href="http://www.dojotoolkit.org/book/dojo-book-0-9/part-4-meta-dojo/package-system-and-custom-builds" target="_top">accompanying
+                documentation</a>.
+            </p>
+<p>
+                Setting these options is trivial: use the
+                <code class="methodname">addProfileOption()</code>,
+                <code class="methodname">addProfileOptions()</code>, or
+                <code class="methodname">setProfileOptions()</code> methods. The first
+                method adds a single key and value option pair, the second will add
+                several, and the third will overwrite any options with the list
+                of key and value pairs provided.
+            </p>
+<p>
+                By default, the following options are set:
+            </p>
+<pre class="programlisting">
+{
+    action:        "release",
+    optimize:      "shrinksafe",
+    layerOptimize: "shrinksafe",
+    copyTests:     false,
+    loader:        "default",
+    cssOptimize:   "comments"
+}
+</pre>
+<p>
+                You can pass in whatever key and value pairs you want; the Dojo
+                build script will ignore those it does not understand.
+            </p>
+<p>
+                As an example of setting options:
+            </p>
+<pre class="programlisting">
+// A single option:
+$build-&gt;addProfileOption('version', 'zend-1.3.1');
+
+// Several options:
+$build-&gt;addProfileOptions(array(
+    'loader'   =&gt; 'xdomain',
+    'optimize' =&gt; 'packer',
+));
+
+// Or overwrite options:
+$build-&gt;setProfileOptions(array(
+    'version'  =&gt; 'custom-1.3.1',
+    'loader'   =&gt; 'shrinksafe',
+    'optimize' =&gt; 'shrinksafe',
+));
+</pre>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.dojo.form.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.dojo.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.dom.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">17.4. Dojo 表单元素和装饰器  </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 18 章 Zend_Dom</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

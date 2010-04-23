@@ -1,0 +1,242 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>28.3. Zend_Layout 配置选项</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="prev" href="zend.layout.quickstart.html" title="28.2. Zend_Layout 快速入门">
+<link rel="next" href="zend.layout.advanced.html" title="28.4. Zend_Layout 高级用法">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.layout.options.html#zend.layout.options.examples" title="28.3.1. 范例">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">28.3. Zend_Layout 配置选项</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.layout.quickstart.html">上一页</a> </td>
+<th width="60%" align="center">第 28 章 Zend_Layout</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.layout.advanced.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.layout.options"></a>28.3. Zend_Layout 配置选项</h2></div></div></div>
+<p>
+        <code class="code">Zend_Layout</code>有多种配置选项。这些都可以用调用适当的访问器来设置，传递数组或<code class="code">Zend_Config</code>对象给构造器或<code class="code">startMvc()</code>，传递选项数组给<code class="code">setOptions()</code>，或传递<code class="code">Zend_Config</code>对象给to <code class="code">setConfig()</code>。
+    </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                <span class="emphasis"><em>layout</em></span>：被使用的布局。使用当前变形器来解析提供给合适的布局视图脚本的名称。缺省地，这个值是'layout'并解析为'layout.phtml'。访问器是<code class="code">setLayout()</code> 和 <code class="code">getLayout()</code>。
+        </p></li>
+<li><p>
+                <span class="emphasis"><em>layoutPath</em></span>:  布局视图脚本的基本路径。访问器是<code class="code">setLayoutPath()</code> 和 <code class="code">getLayoutPath()</code>。
+        </p></li>
+<li><p>
+                <span class="emphasis"><em>contentKey</em></span>: 用于缺省内容（和MVC一起使用）的布局变量。缺省值是'content'。访问器是<code class="code">setContentKey()</code> 和 <code class="code">getContentKey()</code>。
+        </p></li>
+<li><p>
+                <span class="emphasis"><em>mvcSuccessfulActionOnly</em></span>: 当使用MVC，当动作抛出一个异常并且这个标志为true，布局将不被解析（这是为了防止当<a href="zend.controller.plugins.html#zend.controller.plugins.standard.errorhandler" title="12.10.5.2. Zend_Controller_Plugin_ErrorHandler">ErrorHandler plugin</a> 在使用时，布局被双重解析）。缺省地，这个标记是true。访问器是<code class="code">setMvcSuccessfulActionOnly()</code> 和 <code class="code">getMvcSuccessfulActionOnly()</code>。
+        </p></li>
+<li><p>
+                <span class="emphasis"><em>view</em></span>: 当解析时使用的视图对象。当和MVC一起使用时，如果没有视图对象被显式传递，<code class="code">Zend_Layout</code> 将尝试使用用<a href="zend.controller.actionhelpers.html#zend.controller.actionhelpers.viewrenderer" title="12.8.4.7. ViewRenderer">the ViewRenderer</a> 注册的视图对象。访问器是<code class="code">setView()</code> 和 <code class="code">getView()</code>。
+        </p></li>
+<li><p>
+                <span class="emphasis"><em>helperClass</em></span>: 当和MVC组件一起使用<code class="code">Zend_Layout</code> 时的动作助手。  缺省是 <code class="code">Zend_Layout_Controller_Action_Helper_Layout</code>。访问器是 <code class="code">setHelperClass()</code> 和 <code class="code">getHelperClass()</code>。
+        </p></li>
+<li><p>
+                <span class="emphasis"><em>pluginClass</em></span>: 当和MVC组件一起使用<code class="code">Zend_Layout</code> 时的前端控制器插件类。缺省是 <code class="code">Zend_Layout_Controller_Plugin_Layout</code>。访问器是 <code class="code">setPluginClass()</code> 和 <code class="code">getPluginClass()</code>。
+        </p></li>
+<li><p>
+                <span class="emphasis"><em>inflector</em></span>: 当解析布局名给布局视图脚本路径时的变形器；参见<a href="zend.layout.advanced.html#zend.layout.advanced.inflector" title="28.4.4. 定制布局脚本路径解析（Resolution）：使用变形器（Inflector）"> <code class="code">Zend_Layout</code> 变形器文档有更多细节 </a>。访问器是 <code class="code">setInflector()</code> 和 <code class="code">getInflector()</code>。
+        </p></li>
+</ul></div>
+<div class="note"><table border="0" summary="Note: 助手类和插件类必须传递给startMvc()">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">助手类和插件类必须传递给startMvc()</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            为了<code class="code">helperClass</code>和<code class="code">pluginClass</code>设置有效，它们必须作为选项传递给<code class="code">startMvc()</code>；如果以后设置，它们就没有影响。
+        </p></td></tr>
+</table></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.layout.options.examples"></a>28.3.1. 范例</h3></div></div></div>
+<p>
+            下面的例子假定使用<code class="code">$options</code>数组和<code class="code">$config</code>对象：
+        </p>
+<pre class="programlisting">&lt;?php
+$options = array(
+    'layout'     =&gt; 'foo',
+    'layoutPath' =&gt; '/path/to/layouts',
+    'contentKey' =&gt; 'CONTENT',           // ignored when MVC not used
+);
+?&gt;</pre>
+<pre class="programlisting">&lt;?php
+/**
+[layout]
+layout = "foo"
+layoutPath = "/path/to/layouts"
+contentKey = "CONTENT"
+*/
+$config = new Zend_Config_Ini('/path/to/layout.ini', 'layout');
+?&gt;</pre>
+<div class="example">
+<a name="zend.layout.options.examples.constructor"></a><p class="title"><b>例 28.1. 传递选项给构造器或startMvc()</b></p>
+<div class="example-contents">
+<p>
+                为了配置<code class="code">Zend_Layout</code>实例，构造器和<code class="code">startMvc()</code> 静态方法都可以接受选项数组或带有选项的<code class="code">Zend_Config</code> 对象。
+            </p>
+<p>
+                首先，看一下传递数组：
+            </p>
+<pre class="programlisting">&lt;?php
+// Using constructor:
+$layout = new Zend_Layout($options);
+
+// Using startMvc():
+$layout = Zend_Layout::startMvc($options);
+?&gt;</pre>
+<p>
+                现在使用配置对象：
+            </p>
+<pre class="programlisting">&lt;?php
+$config = new Zend_Config_Ini('/path/to/layout.ini', 'layout');
+
+// Using constructor:
+$layout = new Zend_Layout($config);
+
+// Using startMvc():
+$layout = Zend_Layout::startMvc($config);
+?&gt;</pre>
+<p>
+               基本上，这是定制<code class="code">Zend_Layout</code>实例的最简单的方法。
+            </p>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.layout.options.examples.setoptionsconfig"></a><p class="title"><b>例 28.2. 使用setOption() 和 setConfig()</b></p>
+<div class="example-contents">
+<p>
+                有时候在<code class="code">Zend_Layout</code> 对象初始化以后才需要配置；<code class="code">setOptions()</code> 和 <code class="code">setConfig()</code>让你快速而起容易地来做：
+            </p>
+<pre class="programlisting">&lt;?php
+// Using an array of options:
+$layout-&gt;setOptions($options);
+
+// Using a Zend_Config object:
+$layout-&gt;setConfig($options);
+?&gt;</pre>
+<p>
+                然而要注意特定的选项，如<code class="code">pluginClass</code> 和 <code class="code">helperClass</code>，当用这个方法传递，将没有效果；它们需要传递给构造器或者<code class="code">startMvc()</code> 方法。
+            </p>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.layout.options.examples.accessors"></a><p class="title"><b>例 28.3. 使用访问器</b></p>
+<div class="example-contents">
+<p>
+                最后，通过访问器来配置<code class="code">Zend_Layout</code> 实例。所有的访问器实现一个流畅的接口，意味这它们的调用可能被链接：
+            </p>
+<pre class="programlisting">&lt;?php
+$layout-&gt;setLayout('foo')
+       -&gt;setLayoutPath('/path/to/layouts')
+       -&gt;setContentKey('CONTENT');
+?&gt;</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.layout.quickstart.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.layout.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.layout.advanced.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">28.2. Zend_Layout 快速入门 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 28.4. Zend_Layout 高级用法</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

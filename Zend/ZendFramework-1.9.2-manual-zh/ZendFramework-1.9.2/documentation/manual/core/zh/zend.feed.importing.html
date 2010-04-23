@@ -1,0 +1,324 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>20.2.  导入Feeds</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="prev" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="next" href="zend.feed.findFeeds.html" title="20.3. 从网页上获得Feed">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.feed.importing.html#zend.feed.importing.custom" title="20.2.1.  定制 feeds">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">20.2.  导入Feeds </th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.feed.html">上一页</a> </td>
+<th width="60%" align="center">第 20 章 Zend_Feed</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.feed.findFeeds.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.feed.importing"></a>20.2.  导入Feeds </h2></div></div></div>
+<p>
+        <code class="code">Zend_Feed</code> 能让开发者轻松获得 Feeds 。如果你知道 Feeds 的URI，用<code class="code">Zend_Feed::import()</code>方法就可以非常容易的获得它:
+    </p>
+<pre class="programlisting">&lt;?php
+$feed = Zend_Feed::import('http://feeds.example.com/feedName');
+    </pre>
+<p>
+        你也能用<code class="code">Zend_Feed</code>从一个文件或者一个PHP字符串变量来获得一个feed的内容:
+    </p>
+<pre class="programlisting">&lt;?php
+// importing a feed from a text file
+$feedFromFile = Zend_Feed::importFile('feed.xml');
+
+// importing a feed from a PHP string variable
+$feedFromPHP = Zend_Feed::importString($feedString);
+    </pre>
+<p>
+        在上面的例子中，根据feed类型的不同，一个从<code class="code">Zend_Feed_Abstract</code>继承而来的类对象被返回。如果导入方法获得的是一个RSS feed，那么一个<code class="code">Zend_Feed_Rss</code>对象将被返回(Seateng译注:以Factory模式实现)。另一方面，如果一个Atom feed被导入，那么将返回一个<code class="code">Zend_Feed_Atom</code>对象。如果feed不可读或者不符合规范，导致导入失败那么Zend_Feed将抛出一个<code class="code">Zend_Feed_Exception</code>异常。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.feed.importing.custom"></a>20.2.1.  定制 feeds </h3></div></div></div>
+<p>
+            <code class="code">Zend_Feed</code> 能让开发者轻松创建定制 feeds，只需要创建一个数组用 Zend_Feed 导入它。这个数组可以用 <code class="code">Zend_Feed::importArray()</code> 或 <code class="code">Zend_Feed::importBuilder()</code> 导入。最后数组用定制的实现了 <code class="code">Zend_Feed_Builder_Interface</code> 数据源来处理。
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.feed.importing.custom.importarray"></a>20.2.1.1.  导入定制的数组 </h4></div></div></div>
+<pre class="programlisting">&lt;?php
+// 从数组导入 feed
+$atomFeedFromArray = Zend_Feed::importArray($array);
+
+// 下面一行和上面相同；缺省地 Zend_Feed_Atom 实例被返回
+$atomFeedFromArray = Zend_Feed::importArray($array, 'atom');
+
+// 从数组导入 rss feed
+$rssFeedFromArray = Zend_Feed::importArray($array, 'rss');
+            </pre>
+<p>
+                数组格式必须和这个结构一致：
+            </p>
+<pre class="programlisting">&lt;?php
+array(
+      'title'       =&gt; 'title of the feed', //required
+      'link'        =&gt; 'canonical url to the feed', //required
+      'lastUpdate'  =&gt; 'timestamp of the update date', // optional
+      'published'   =&gt; 'timestamp of the publication date', //optional
+      'charset'     =&gt; 'charset of the textual data', // required
+      'description' =&gt; 'short description of the feed', //optional
+      'author'      =&gt; 'author/publisher of the feed', //optional
+      'email'       =&gt; 'email of the author', //optional
+      'webmaster'   =&gt; 'email address for person responsible for technical issues' // optional, ignored if atom is used
+      'copyright'   =&gt; 'copyright notice', //optional
+      'image'       =&gt; 'url to image', //optional
+      'generator'   =&gt; 'generator', // optional
+      'language'    =&gt; 'language the feed is written in', // optional
+      'ttl'         =&gt; 'how long in minutes a feed can be cached before refreshing', // optional, ignored if atom is used
+      'rating'      =&gt; 'The PICS rating for the channel.', // optional, ignored if atom is used
+      'cloud'       =&gt; array(
+                             'domain'            =&gt; 'domain of the cloud, e.g. rpc.sys.com' // required
+                             'port'              =&gt; 'port to connect to' // optional, default to 80
+                             'path'              =&gt; 'path of the cloud, e.g. /RPC2' //required
+                             'registerProcedure' =&gt; 'procedure to call, e.g. myCloud.rssPleaseNotify' // required
+                             'protocol'          =&gt; 'protocol to use, e.g. soap or xml-rpc' // required
+                             ), // a cloud to be notified of updates // optional, ignored if atom is used
+      'textInput'   =&gt; array(
+                             'title'       =&gt; 'the label of the Submit button in the text input area' // required,
+                             'description' =&gt; 'explains the text input area' // required
+                             'name'        =&gt; 'the name of the text object in the text input area' // required
+                             'link'        =&gt; 'the URL of the CGI script that processes text input requests' // required
+                             ) // a text input box that can be displayed with the feed // optional, ignored if atom is used
+      'skipHours'   =&gt; array(
+                             'hour in 24 format', // e.g 13 (1pm)
+                             // up to 24 rows whose value is a number between 0 and 23
+                             ) // Hint telling aggregators which hours they can skip // optional, ignored if atom is used
+      'skipDays '   =&gt; array(
+                             'a day to skip', // e.g Monday
+                             // up to 7 rows whose value is a Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday
+                             ) // Hint telling aggregators which days they can skip // optional, ignored if atom is used
+      'itunes'      =&gt; array(
+                             'author'       =&gt; 'Artist column' // optional, default to the main author value
+                             'owner'        =&gt; array(
+                                                     'name' =&gt; 'name of the owner' // optional, default to main author value
+                                                     'email' =&gt; 'email of the owner' // optional, default to main email value
+                                                     ) // Owner of the podcast // optional
+                             'image'        =&gt; 'album/podcast art' // optional, default to the main image value
+                             'subtitle'     =&gt; 'short description' // optional, default to the main description value
+                             'summary'      =&gt; 'longer description' // optional, default to the main description value
+                             'block'        =&gt; 'Prevent an episode from appearing (yes|no)' // optional
+                             'category'     =&gt; array(
+                                                     array('main' =&gt; 'main category', // required
+                                                           'sub'  =&gt; 'sub category' // optional
+                                                           ),
+                                                     // up to 3 rows
+                                                     ) // 'Category column and in iTunes Music Store Browse' // required
+                             'explicit'     =&gt; 'parental advisory graphic (yes|no|clean)' // optional
+                             'keywords'     =&gt; 'a comma separated list of 12 keywords maximum' // optional
+                             'new-feed-url' =&gt; 'used to inform iTunes of new feed URL location' // optional
+                             ) // Itunes extension data // optional, ignored if atom is used
+      'entries'     =&gt; array(
+                             array(
+                                   'title'        =&gt; 'title of the feed entry', //required
+                                   'link'         =&gt; 'url to a feed entry', //required
+                                   'description'  =&gt; 'short version of a feed entry', // only text, no html, required
+                                   'guid'         =&gt; 'id of the article, if not given link value will used', //optional
+                                   'content'      =&gt; 'long version', // can contain html, optional
+                                   'lastUpdate'   =&gt; 'timestamp of the publication date', // optional
+                                   'comments'     =&gt; 'comments page of the feed entry', // optional
+                                   'commentRss'   =&gt; 'the feed url of the associated comments', // optional
+                                   'source'       =&gt; array(
+                                                           'title' =&gt; 'title of the original source' // required,
+                                                           'url' =&gt; 'url of the original source' // required
+                                                           ) // original source of the feed entry // optional
+                                   'category'     =&gt; array(
+                                                           array(
+                                                                 'term' =&gt; 'first category label' // required,
+                                                                 'scheme' =&gt; 'url that identifies a categorization scheme' // optional
+                                                                 ),
+                                                           array(
+                                                                 //data for the second category and so on
+                                                                 )
+                                                           ) // list of the attached categories // optional
+                                   'enclosure'    =&gt; array(
+                                                           array(
+                                                                 'url' =&gt; 'url of the linked enclosure' // required
+                                                                 'type' =&gt; 'mime type of the enclosure' // optional
+                                                                 'length' =&gt; 'length of the linked content in octets' // optional
+                                                                 ),
+                                                           array(
+                                                                 //data for the second enclosure and so on
+                                                                 )
+                                                           ) // list of the enclosures of the feed entry // optional
+                                   ),
+                             array(
+                                   //data for the second entry and so on
+                                   )
+                             )
+       );
+            </pre>
+<p>
+                References:
+                </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                            RSS 2.0 规范： <a href="http://blogs.law.harvard.edu/tech/rss" target="_top">RSS 2.0</a>
+                        </p></li>
+<li><p>
+                            Atom 规范：<a href="http://tools.ietf.org/html/rfc4287" target="_top">RFC 4287</a>
+                        </p></li>
+<li><p>
+                            WFW 规范：<a href="http://wellformedweb.org/news/wfw_namespace_elements" target="_top">Well
+                            Formed Web</a>
+                        </p></li>
+<li><p>
+                            iTunes 规范：
+                            <a href="http://www.apple.com/itunes/store/podcaststechspecs.html" target="_top">iTunes Technical
+                            Specifications</a>
+                        </p></li>
+</ul></div>
+<p>
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.feed.importing.custom.importbuilder"></a>20.2.1.2.  导入定制的数据源 </h4></div></div></div>
+<p>
+                你可以从任何实现 <code class="code">Zend_Feed_Builder_Interface</code> 的数据源创建 Zeed_Feed 实例，只需要实现 <code class="code">getHeader()</code> 和 <code class="code">getEntries()</code> 方法来和 <code class="code">Zend_Feed::importBuilder()</code> 一起使用你的对象。作为一个简单的参考实现，你可以使用 <code class="code">Zend_Feed_Builder</code> 它在构造器里带有一个数组，执行一些校验，然后可以在 <code class="code">importBuilder()</code> 方法中使用。<code class="code">getHeader()</code> 方法必须返回 <code class="code">Zend_Feed_Builder_Header</code> 的实例， <code class="code">getEntries()</code> 必须返回 <code class="code">Zend_Feed_Builder_Entry</code> 实例的数组。
+            </p>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    <code class="code">Zend_Feed_Builder</code> 作为具体实现来实现它的用法，（我们）鼓励用户写自己的类来实现 <code class="code">Zend_Feed_Builder_Interface</code>。
+                </p></td></tr>
+</table></div>
+<p>
+                <code class="code">Zend_Feed::importBuilder()</code> 用法的例子：
+            </p>
+<pre class="programlisting">&lt;?php
+// 从定制的 builder 源导入 feed
+$atomFeedFromArray = Zend_Feed::importBuilder(new Zend_Feed_Builder($array));
+
+// 和上面一样，缺省地 Zend_Feed_Atom 实例被返回
+$atomFeedFromArray = Zend_Feed::importArray(new Zend_Feed_Builder($array), 'atom');
+
+// 从定制的 builder 数组导入 rss feed
+$rssFeedFromArray = Zend_Feed::importArray(new Zend_Feed_Builder($array), 'rss');
+            </pre>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.feed.importing.custom.dump"></a>20.2.1.3.  Dumping feed 内容 </h4></div></div></div>
+<p>
+                为了 dump <code class="code">Zend_Feed_Abstract</code> 实例的内容，使用 <code class="code">send()</code> 或 <code class="code">saveXml()</code> 方法。
+            </p>
+<pre class="programlisting">&lt;?php
+assert($feed instanceof Zend_Feed_Abstract);
+
+// dump feed 到标准输出
+print $feed-&gt;saveXML();
+
+// 发送 http 头和 dump the feed
+$feed-&gt;send();
+            </pre>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.feed.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.feed.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.feed.findFeeds.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 20 章 Zend_Feed </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 20.3. 从网页上获得Feed</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

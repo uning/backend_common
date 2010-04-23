@@ -1,0 +1,353 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>12.6. 分发器</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="prev" href="zend.controller.router.html" title="12.5. 标准路由器">
+<link rel="next" href="zend.controller.action.html" title="12.7. 动作控制器">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.controller.dispatcher.html#zend.controller.dispatcher.overview" title="12.6.1. 概述">
+<link rel="subsection" href="zend.controller.dispatcher.html#zend.controller.dispatcher.subclassing" title="12.6.2. 子类化分发器">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">12.6. 分发器</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.controller.router.html">上一页</a> </td>
+<th width="60%" align="center">第 12 章 Zend_Controller</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.controller.action.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.controller.dispatcher"></a>12.6. 分发器</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.dispatcher.overview"></a>12.6.1. 概述</h3></div></div></div>
+<p>
+            分发是取得请求对象，提取其中的模块名，控制器名，动作名以及可选参数，然后实例化控制器并调用其中的动作的整过过程。如果其中的模块、控制器或者动作没能找到，将使用它们的默认值。<code class="code">Zend_Controller_Dispatcher_Standard</code>指定每个控制器和动作的默认值为 <code class="code">index</code>，模块的默认值为<code class="code">default</code>，允许开发人通过<code class="code">setDefaultController()</code>、<code class="code">setDefaultAction()</code>和<code class="code">setDefaultModule()</code>改变默认值设定。
+        </p>
+<div class="note"><table border="0" summary="Note: 缺省模块">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">缺省模块</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+                当创建模块程序，你可能也需要缺省模块的命名空间（缺省配置中，缺省模块<span class="emphasis"><em>没有</em></span>命名空间）。从 1.5.0 开始，可以在前端控制器或你的派遣器里通过指定 <code class="code">prefixDefaultModule</code>  为 true 来实现。
+             </p>
+<pre class="programlisting">
+// 在你的前端控制器中：
+$front-&gt;setParam('prefixDefaultModule', true);
+
+// 在你的分发器中：
+$dispatcher-&gt;setParam('prefixDefaultModule', true);
+
+            </pre>
+<p>
+                这允许你重定义一个已存在的模块为程序的缺省模块。
+            </p>
+</td></tr>
+</table></div>
+<p>
+            分发发生在前端控制器中的一个循环（loop）中。分发之前，前端控制器通过路由请求，找到用户指定的模块、控制器、动作和可选参数。然后进入分发循环，分发请求。
+        </p>
+<p>
+           每次迭代（iteration）过程开始时，在请求对象中设置一个标志指示该动作已分发。如果在动作或者前/后分发（pre/postDispatch）插件重置了该标志，分发循环将继续下去并试图分发新的请求。通过改变请求中的控制器或者动作并重置已分发标志，开发人员可以定制执行一个请求链。
+        </p>
+<p>
+           控制这种分发过程的动作控制器方法是<code class="code">_forward()</code>；在任意的<code class="code">pre/postDispatch()</code>或者动作中调用该方法，并传入动作、控制器、模块、以及可选的附加参数，就可以进入新的动作。
+        </p>
+<pre class="programlisting">
+public function fooAction()
+{
+    // forward to another action in the current controller and module:
+    $this-&gt;_forward('bar', null, null, array('baz' =&gt; 'bogus'));
+}
+
+public function barAction()
+{
+    // forward to an action in another controller:
+    // FooController::bazAction(),
+    // in the current module:
+    $this-&gt;_forward('baz', 'foo', null, array('baz' =&gt; 'bogus'));
+}
+
+public function bazAction()
+{
+    // forward to an action in another controller in another module,
+    // Foo_BarController::bazAction():
+    $this-&gt;_forward('baz', 'bar', 'foo', array('baz' =&gt; 'bogus'));
+}
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.controller.dispatcher.subclassing"></a>12.6.2. 子类化分发器</h3></div></div></div>
+<p>
+            <code class="code">Zend_Controller_Front</code>首先调用路由器找到请求中的第一个动作，然后进入分发循环，调用分发器分发动作。
+        </p>
+<p>
+            分发器需要大量数据完成任务——它需要知道如何格式化控制器和动作的名称，到哪儿找到控制器类文件，模块名是否有效，以及基于其它可用信息判定请求是否能分发的API。
+        </p>
+<p>
+            <code class="code">Zend_Controller_Dispatcher_Interface</code>定义了下列所有分发器需要实现的方法。
+        </p>
+<pre class="programlisting">
+interface Zend_Controller_Dispatcher_Interface
+{
+    /**
+     * Format a string into a controller class name.
+     *
+     * @param string $unformatted
+     * @return string
+     */
+    public function formatControllerName($unformatted);
+
+    /**
+     * Format a string into an action method name.
+     *
+     * @param string $unformatted
+     * @return string
+     */
+    public function formatActionName($unformatted);
+
+    /**
+     * Determine if a request is dispatchable
+     *
+     * @param  Zend_Controller_Request_Abstract $request
+     * @return boolean
+     */
+    public function isDispatchable(
+        Zend_Controller_Request_Abstract $request
+    );
+
+    /**
+     * Set a user parameter (via front controller, or for local use)
+     *
+     * @param string $name
+     * @param mixed $value
+     * @return Zend_Controller_Dispatcher_Interface
+     */
+    public function setParam($name, $value);
+
+    /**
+     * Set an array of user parameters
+     *
+     * @param array $params
+     * @return Zend_Controller_Dispatcher_Interface
+     */
+    public function setParams(array $params);
+
+    /**
+     * Retrieve a single user parameter
+     *
+     * @param string $name
+     * @return mixed
+     */
+    public function getParam($name);
+
+    /**
+     * Retrieve all user parameters
+     *
+     * @return array
+     */
+    public function getParams();
+
+    /**
+     * Clear the user parameter stack, or a single user parameter
+     *
+     * @param null|string|array single key or array of keys for
+     *        params to clear
+     * @return Zend_Controller_Dispatcher_Interface
+     */
+    public function clearParams($name = null);
+
+    /**
+     * Set the response object to use, if any
+     *
+     * @param Zend_Controller_Response_Abstract|null $response
+     * @return void
+     */
+    public function setResponse(
+        Zend_Controller_Response_Abstract $response = null
+    );
+
+    /**
+     * Retrieve the response object, if any
+     *
+     * @return Zend_Controller_Response_Abstract|null
+     */
+    public function getResponse();
+
+    /**
+     * Add a controller directory to the controller directory stack
+     *
+     * @param string $path
+     * @param string $args
+     * @return Zend_Controller_Dispatcher_Interface
+     */
+    public function addControllerDirectory($path, $args = null);
+
+    /**
+     * Set the directory (or directories) where controller files are
+     * stored
+     *
+     * @param string|array $dir
+     * @return Zend_Controller_Dispatcher_Interface
+     */
+    public function setControllerDirectory($path);
+
+    /**
+     * Return the currently set directory(ies) for controller file
+     * lookup
+     *
+     * @return array
+     */
+    public function getControllerDirectory();
+
+    /**
+     * Dispatch a request to a (module/)controller/action.
+     *
+     * @param  Zend_Controller_Request_Abstract $request
+     * @param  Zend_Controller_Response_Abstract $response
+     * @return Zend_Controller_Request_Abstract|boolean
+     */
+    public function dispatch(
+        Zend_Controller_Request_Abstract $request,
+        Zend_Controller_Response_Abstract $response
+    );
+
+    /**
+     * Whether or not a given module is valid
+     *
+     * @param string $module
+     * @return boolean
+     */
+    public function isValidModule($module);
+
+    /**
+     * Retrieve the default module name
+     *
+     * @return string
+     */
+    public function getDefaultModule();
+
+    /**
+     * Retrieve the default controller name
+     *
+     * @return string
+     */
+    public function getDefaultControllerName();
+
+    /**
+     * Retrieve the default action
+     *
+     * @return string
+     */
+    public function getDefaultAction();
+}
+
+        </pre>
+<p>
+           不过大多数情况下，只需要简单地扩展抽象类<code class="code">Zend_Controller_Dispatcher_Abstract</code>，其中已经定义好了上面的大部分方法。或者扩展<code class="code">Zend_Controller_Dispatcher_Standard</code>类，基于标准分发器来修改功能。
+        </p>
+<p>
+            需要子类化分发器的可能原因包括：期望在动作控制器中使用不同的类和方法命名模式，或者期望使用不同的分发方式，比如分发到控制器目录下的动作文件，而不是控制器类的动作方法。
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.controller.router.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.controller.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.controller.action.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">12.5. 标准路由器 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 12.7. 动作控制器</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

@@ -1,0 +1,558 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>23.2. Zend_Form 快速起步</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="prev" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="next" href="zend.form.elements.html" title="23.3.  使用 Zend_Form_Element 生成表单元素">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.create" title="23.2.1.  创建表单对象">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.elements" title="23.2.2.  添加表单元素">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.render" title="23.2.3.  解析（Render）表单">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.validate" title="23.2.4.  检查表单是否有效">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.errorstatus" title="23.2.5.  获得错误状态">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.puttingtogether" title="23.2.6.  放到一起">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.config" title="23.2.7.  使用 Zend_Config 对象">
+<link rel="subsection" href="zend.form.quickstart.html#zend.form.quickstart.conclusion" title="23.2.8.  结论">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">23.2. Zend_Form 快速起步 </th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.form.html">上一页</a> </td>
+<th width="60%" align="center">第 23 章 Zend_Form</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.form.elements.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.form.quickstart"></a>23.2. Zend_Form 快速起步 </h2></div></div></div>
+<p>
+        本快速起步指南覆盖使用 <code class="code">Zend_Form</code> 创建、校验和解析表单的基础。
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.create"></a>23.2.1.  创建表单对象 </h3></div></div></div>
+<p>
+            创建表单对象非常简单：只要实现 <code class="code">Zend_Form</code>：
+        </p>
+<pre class="programlisting">&lt;?php
+$form = new Zend_Form;
+?&gt;</pre>
+<p>
+            对于高级用例，需要创建 <code class="code">Zend_Form</code> 的子类，但对于简单的表单，程序可以用 <code class="code">Zend_Form</code> 的对象来创建。
+        </p>
+<p>
+            如果想指定表单的动作和方法（总是好主意），用 <code class="code">setAction()</code> 和 <code class="code">setMethod()</code> 来完成：
+        </p>
+<pre class="programlisting">&lt;?php
+$form-&gt;setAction('/resource/process')
+     -&gt;setMethod('post');
+?&gt;</pre>
+<p>
+            上述代码设置表单动作为部分 URL "/resource/process" 和表单方法为 HTTP POST，这将在解析的最后期间表现出来。
+        </p>
+<p>
+            你可以通过使用 setAttrib() 或 setAttribs() 方法为 <code class="code">&lt;form&gt;</code> 标签设置另外的 HTML 属性，例如：如果想设置 id, 则设置 "id" 属性：
+        </p>
+<pre class="programlisting">&lt;?php
+$form-&gt;setAttrib('id', 'login');
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.elements"></a>23.2.2.  添加表单元素 </h3></div></div></div>
+<p>
+            没有元素，表单就什么都不是。<code class="code">Zend_Form</code> 带有一些缺省的通过 <code class="code">Zend_View</code> 助手解析 XHTML 的元素：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                button
+            </p></li>
+<li><p>
+                checkbox (or many checkboxes at once with multiCheckbox)
+            </p></li>
+<li><p>
+                hidden
+            </p></li>
+<li><p>
+                image
+            </p></li>
+<li><p>
+                password
+            </p></li>
+<li><p>
+                radio
+            </p></li>
+<li><p>
+                reset
+            </p></li>
+<li><p>
+                select (both regular and multi-select types)
+            </p></li>
+<li><p>
+                submit
+            </p></li>
+<li><p>
+                text
+            </p></li>
+<li><p>
+                textarea
+            </p></li>
+</ul></div>
+<p>
+            有两个方法添加表单元素：实例化具体的元素并传递这些对象，或者传递元素类型并使 <code class="code">Zend_Form</code> 实例化一个正确类型的对象。
+        </p>
+<p>
+            一些例子：
+        </p>
+<pre class="programlisting">&lt;?php
+// Instantiating an element and passing to the form object:
+$form-&gt;addElement(new Zend_Form_Element_Text('username'));
+
+// Passing a form element type to the form object:
+$form-&gt;addElement('text', 'username');
+?&gt;</pre>
+<p>
+            缺省地，这些没有校验器和过滤器，你需要用最基本的校验器和可能的过滤器来配置元素。有三个方法：(a) 在传递元素给表单之前，(b) 通过用 <code class="code">Zend_Form</code> 创建元素时传递的配置选项，(c) 从表单把元素拉出来并在以后配置。
+        </p>
+<p>
+            让我们首先看看为一个具体的元素实例创建校验器。可以传递 <code class="code">Zend_Validate_*</code> 对象，或校验器的名称：
+        </p>
+<pre class="programlisting">&lt;?php
+$username = new Zend_Form_Element_Text('username');
+
+// Passing a Zend_Validate_* object:
+$username-&gt;addValidator(new Zend_Validate_Alnum());
+
+// Passing a validator name:
+$username-&gt;addValidator('alnum');
+?&gt;</pre>
+<p>
+            当使用第二个方法，如果校验器可接受构造器参数，可以把它们放到数组里作为第三个参数：
+        </p>
+<pre class="programlisting">&lt;?php
+// Pass a pattern
+$username-&gt;addValidator('regex', false, array('/^[a-z]/i'));
+?&gt;</pre>
+<p>
+            （第二个参数用来指示是否这个校验失败时停止后面的校验，缺省为 false。）
+        </p>
+<p>
+            你也可能希望指定一个必需的元素，可以通过使用访问器或当创建该元素时传递一个选项来完成，在前面的例子中：
+        </p>
+<pre class="programlisting">&lt;?php
+// 使这个元素成为必需：
+$username-&gt;setRequired(true);
+?&gt;</pre>
+<p>
+            当一个元素是必需的，一个 'NotEmpty' 校验器被添加到校验器链的顶部，确保该元素有一个值。
+        </p>
+<p>
+            过滤器会像校验器一样注册，为了演示，让我们添加一个来把最终值变小写的过滤器：
+        </p>
+<pre class="programlisting">&lt;?php
+$username-&gt;addFilter('StringtoLower');
+?&gt;</pre>
+<p>
+            这样，最终元素设置看起来像这样：
+        </p>
+<pre class="programlisting">&lt;?php
+$username-&gt;addValidator('alnum')
+         -&gt;addValidator('regex', false, array('/^[a-z]/'))
+         -&gt;setRequired(true)
+         -&gt;addFilter('StringToLower');
+
+// or, more compactly:
+$username-&gt;addValidators(array('alnum',
+        array('regex', false, '/^[a-z]/i')
+    ))
+    -&gt;setRequired(true)
+    -&gt;addFilters(array('StringToLower'));
+?&gt;</pre>
+<p>
+            就算这样简单，在表单中为每个元素都做这样的工作也是单调乏味的。让我们试一试上述的方法(b)，当使用工厂模式 <code class="code">Zend_Form::addElement()</code> 创建一个新元素，我们可以可选地传递配置选项，包括校验器和过滤器。这样，可以简单地完成上述任务：
+        </p>
+<pre class="programlisting">&lt;?php
+$form-&gt;addElement('text', 'username', array(
+    'validators' =&gt; array(
+        'alnum',
+        array('regex', false, '/^[a-z]/i')
+    ),
+    'required' =&gt; true,
+    'filters'  =&gt; array('StringToLower'),
+));
+?&gt;</pre>
+<div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            如果你发现在许多地方用同样的选项来设置元素，可以考虑创建自己的 <code class="code">Zend_Form_Element</code> 的子类并使用它，这样长远来说会减少很多打字的任务。
+        </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.render"></a>23.2.3.  解析（Render）表单 </h3></div></div></div>
+<p>
+            解析表单很简单，大部分元素使用  <code class="code">Zend_View</code> 助手来解析，这样需要视图对象来解析。除了这以外，还有两个方法：使用表单的 render() 方法或简单地 echo 它。
+        </p>
+<pre class="programlisting">&lt;?php
+// Explicitly calling render(), and passing an optional view object:
+echo $form-&gt;render($view);
+
+// Assuming a view object has been previously set via setView():
+echo $form;
+?&gt;</pre>
+<p>
+            缺省地，<code class="code">Zend_Form</code> 和 <code class="code">Zend_Form_Element</code> 将企图使用在 <code class="code">ViewRenderer</code> 中初始化过的视图对象，你不需要在Zend Framework MVC 中手工设置视图。在视图脚本中解析表单是如此的简单：
+        </p>
+<pre class="programlisting">
+&lt;?= $this-&gt;form ?&gt;
+</pre>
+<p>
+            在内部，<code class="code">Zend_Form</code> 使用 "decorators" （装饰器） 来执行解析，这些装饰器可以替换内容、追加内容或预先准备内容，并拥有传递给它们的元素的 full introspection 。结果，你可以组合多个装饰器来完成定制效果。缺省地，<code class="code">Zend_Form_Element</code> 实际上组合了四个装饰器来完成输出，参见下例的设置：
+        </p>
+<pre class="programlisting">&lt;?php
+$element-&gt;addDecorators(array(
+    'ViewHelper',
+    'Errors',
+    array('HtmlTag', array('tag' =&gt; 'dd')),
+    array('Label', array('tag' =&gt; 'dt')),
+));
+?&gt;</pre>
+<p>
+            （ &lt;HELPERNAME&gt; 是视图助手的名称，并根据元素不同而不同）
+        </p>
+<p>
+            上述的例子创建的输出如下：
+        </p>
+<pre class="programlisting">
+&lt;dt&gt;&lt;label for="username" class="required"&gt;Username&lt;/dt&gt;
+&lt;dd&gt;
+    &lt;input type="text" name="username" value="123-abc" /&gt;
+    &lt;ul class="errors"&gt;
+        &lt;li&gt;'123-abc' has not only alphabetic and digit characters&lt;/li&gt;
+        &lt;li&gt;'123-abc' does not match against pattern '/^[a-z]/i'&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/dd&gt;
+</pre>
+<p>
+            （虽然没有使用相同的格式。）
+        </p>
+<p>
+            如果你想输出不同的东西，可以修改由元素使用的装饰器，参见装饰器一节有更多内容。
+        </p>
+<p>
+            表单循环检查所有元素，并把它们放到 HTML <code class="code">&lt;form&gt;</code>。当设置表单时，你提供的动作和方法被提供给 <code class="code">&lt;form&gt;</code> 标签，还有任何通过 <code class="code">setAttribs()</code> 和它的家族设置的属性。
+        </p>
+<p>
+            元素或者按注册的顺序循环，或者如果元素包含顺序属性，就按这个顺序循环。可以使用下列方法设置元素顺序：
+        </p>
+<pre class="programlisting">&lt;?php
+$element-&gt;setOrder(10);
+?&gt;</pre>
+<p>
+            或者，当创建元素，作为一个选项传递给它：
+        </p>
+<pre class="programlisting">&lt;?php
+$form-&gt;addElement('text', 'username', array('order' =&gt; 10));
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.validate"></a>23.2.4.  检查表单是否有效 </h3></div></div></div>
+<p>
+            表单提交之后，需要检查它是否能通过校验。每个元素根据提供的数据来检查，如果匹配元素名的键没有出现，并该条目被标记为必需，就用 null 值来校验。
+        </p>
+<p>
+            数据从哪里来？用 <code class="code">$_POST</code> 或 <code class="code">$_GET</code> 或者其它手头上的数据源 （例如 web 服务请求）：
+        </p>
+<pre class="programlisting">&lt;?php
+if ($form-&gt;isValid($_POST)) {
+    // success!
+} else {
+    // failure!
+}
+?&gt;</pre>
+<p>
+            用 AJAX 请求， 有时候可以侥幸成功校验单个元素或一组元素。<code class="code">isValidPartial()</code> 将校验局部的表单，不像 <code class="code">isValid()</code>，如果特定的键没有出现，那个特定部分的元素就不校验：
+        </p>
+<pre class="programlisting">&lt;?php
+if ($form-&gt;isValidPartial($_POST)) {
+    // elements present all passed validations
+} else {
+    // one or more elements tested failed validations
+}
+?&gt;</pre>
+<p>
+            一个可选的方法，<code class="code">processAjax()</code>，也可以用来校验局部表单，不像 <code class="code">isValidPartial()</code>，如果失败，它返回一个包含错误消息的 JSON 格式的字符串。
+        </p>
+<p>
+            假设校验都通过，现在就可以取得过滤后的值：
+        </p>
+<pre class="programlisting">&lt;?php
+$values = $form-&gt;getValues();
+?&gt;</pre>
+<p>
+            如果任何时候需要没有过滤的值，使用：
+        </p>
+<pre class="programlisting">&lt;?php
+$unfiltered = $form-&gt;getUnfilteredValues();
+?&gt;</pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.errorstatus"></a>23.2.5.  获得错误状态 </h3></div></div></div>
+<p>
+            如果表单校验失败，在大多数情况下，可以再次解析表单，如果使用了缺省的装饰器，错误信息就会显示出来：
+        </p>
+<pre class="programlisting">&lt;?php
+if (!$form-&gt;isValid($_POST)) {
+    echo $form;
+
+    // or assign to the view object and render a view...
+    $this-&gt;view-&gt;form = $form;
+    return $this-&gt;render('form');
+}
+?&gt;</pre>
+<p>
+            如果想插入错误消息，有两个方法： <code class="code">getErrors()</code> 返回一个元素名/代码对的联合数组（这里的代码是指一个错误代码数组）。<code class="code">getMessages()</code> 返回一个元素名/消息对的联合数组（这里的消息是指错误代码/错误消息对的联合数组）。如果给定的元素没有任何错误，数组就不包含它。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.puttingtogether"></a>23.2.6.  放到一起 </h3></div></div></div>
+<p>
+            来创建一个简单的登录表单，我们需要这些元素：
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>username</p></li>
+<li><p>password</p></li>
+<li><p>submit</p></li>
+</ul></div>
+<p>
+            让我们假设有效的用户名应当只是字母数字字符，以字母开头，最少 6 个字符，最长 20 个字符，最后格式化成小写；密码最少 6 个字符，当完成这些，我们就提交，保持未校验。
+        </p>
+<p>
+            我们使用 <code class="code">Zend_Form</code> 的配置选项的能力来建立表单：
+        </p>
+<pre class="programlisting">&lt;?php
+
+
+$form = new Zend_Form();
+$form-&gt;setAction('/user/login')
+     -&gt;setMethod('post');
+
+// Create and configure username element:
+$username = $form-&gt;createElement('text', 'username');
+$username-&gt;addValidator('alnum')
+         -&gt;addValidator('regex', false, array('/^[a-z]+/'))
+         -&gt;addValidator('stringLength', false, array(6, 20))
+         -&gt;setRequired(true)
+         -&gt;addFilter('StringToLower');
+
+// Create and configure password element:
+$password = $form-&gt;createElement('password', 'password');
+$password-&gt;addValidator('StringLength', false, array(6))
+         -&gt;setRequired(true);
+
+// Add elements to form:
+$form-&gt;addElement($username)
+     -&gt;addElement($password)
+     // use addElement() as a factory to create 'Login' button:
+     -&gt;addElement('submit', 'login', array('label' =&gt; 'Login'));
+?&gt;</pre>
+<p>
+            接着，我们将创建控制器来处理这些：
+        </p>
+<pre class="programlisting">&lt;?php
+class UserController extends Zend_Controller_Action
+{
+    public function getForm()
+    {
+        // create form as above
+        return $form;
+    }
+
+    public function indexAction()
+    {
+        // render user/form.phtml
+        $this-&gt;view-&gt;form = $this-&gt;getForm();
+        $this-&gt;render('form');
+    }
+
+    public function loginAction()
+    {
+        if (!$this-&gt;getRequest()-&gt;isPost()) {
+            return $this-&gt;_forward('index');
+        }
+        $form = $this-&gt;getForm();
+        if (!$form-&gt;isValid($_POST)) {
+            // Failed validation; redisplay form
+            $this-&gt;view-&gt;form = $form;
+            return $this-&gt;render('form');
+        }
+
+        $values = $form-&gt;getValues();
+        // now try and authenticate....
+    }
+}
+?&gt;</pre>
+<p>
+            和一个视图脚本来显示表单：
+        </p>
+<pre class="programlisting">
+&lt;h2&gt;Please login:&lt;/h2&gt;
+&lt;?= $this-&gt;form ?&gt;
+</pre>
+<p>
+            注意在控制器代码中，还有很多需要做：例如在提交后，需要用 <code class="code">Zend_Auth</code> 来认证。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.config"></a>23.2.7.  使用 Zend_Config 对象 </h3></div></div></div>
+<p>
+            所有 <code class="code">Zend_Form</code> 类可以用 <code class="code">Zend_Config</code> 来配置，可以传递 <code class="code">Zend_Config</code> 对象给构造器或者通过 <code class="code">setConfig()</code> 来传递。来看一下如何用 INI 文件来创建上述表单，首先，遵循建议，把配置放到反映发行位置的节里面，并集中到 'development' 节，接着，为给定控制器（'user'）设置一个节，为表单（'login'）设置一个键：
+        </p>
+<pre class="programlisting">
+[development]
+; general form metainformation
+user.login.action = "/user/login"
+user.login.method = "post"
+
+; username element
+user.login.elements.username.type = "text"
+user.login.elements.username.options.validators.alnum.validator = "alnum"
+user.login.elements.username.options.validators.regex.validator = "regex"
+user.login.elements.username.options.validators.regex.options.pattern = "/^[a-z]/i"
+user.login.elements.username.options.validators.strlen.validator = "StringLength"
+user.login.elements.username.options.validators.strlen.options.min = "6"
+user.login.elements.username.options.validators.strlen.options.max = "20"
+user.login.elements.username.options.required = true
+user.login.elements.username.options.filters.lower.filter = "StringToLower"
+
+; password element
+user.login.elements.password.type = "password"
+user.login.elements.password.options.validators.strlen.validator = "StringLength"
+user.login.elements.password.options.validators.strlen.options.min = "6"
+user.login.elements.password.options.required = true
+
+; submit element
+user.login.elements.submit.type = "submit"
+</pre>
+<p>
+            接着，你可以把它传递给表单构造器：
+        </p>
+<pre class="programlisting">&lt;?php
+$config = new Zend_Config_Ini($configFile, 'development');
+$form   = new Zend_Form($config-&gt;user-&gt;login);
+?&gt;</pre>
+<p>
+            整个表单就定义好了。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.form.quickstart.conclusion"></a>23.2.8.  结论 </h3></div></div></div>
+<p>
+            希望通过这个小教程，你能接触和理解 <code class="code">Zend_Form</code> 的强大和灵活性，然后接着读更深的资料！
+        </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.form.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.form.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.form.elements.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 23 章 Zend_Form </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 23.3.  使用 Zend_Form_Element 生成表单元素 </td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

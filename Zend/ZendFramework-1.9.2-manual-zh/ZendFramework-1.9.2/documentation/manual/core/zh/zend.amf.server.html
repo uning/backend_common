@@ -1,0 +1,801 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>3.2. Zend_Amf_Server</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="prev" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="next" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.amf.server.html#zend.amf.server.flex" title="3.2.1. Connecting to the Server from Flex">
+<link rel="subsection" href="zend.amf.server.html#zend.amf.server.errors" title="3.2.2. Error Handling">
+<link rel="subsection" href="zend.amf.server.html#zend.amf.server.response" title="3.2.3. AMF Responses">
+<link rel="subsection" href="zend.amf.server.html#zend.amf.server.typedobjects" title="3.2.4. Typed Objects">
+<link rel="subsection" href="zend.amf.server.html#zend.amf.server.resources" title="3.2.5. Resources">
+<link rel="subsection" href="zend.amf.server.html#zend.amf.server.flash" title="3.2.6. Connecting to the Server from Flash">
+<link rel="subsection" href="zend.amf.server.html#zend.amf.server.auth" title="3.2.7. Authentication">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">3.2. Zend_Amf_Server</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.amf.html">上一页</a> </td>
+<th width="60%" align="center">第 3 章 Zend_Amf</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.application.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.amf.server"></a>3.2. Zend_Amf_Server</h2></div></div></div>
+<p>
+        <code class="classname">Zend_Amf_Server</code> provides an <acronym class="acronym">RPC</acronym>-style server for
+        handling requests made from the Adobe Flash Player using the <acronym class="acronym">AMF</acronym>
+        protocol. Like all Zend Framework server classes, it follows the SoapServer
+        <acronym class="acronym">API</acronym>, providing an easy to remember interface for creating servers.
+    </p>
+<div class="example">
+<a name="zend.amf.server.basic"></a><p class="title"><b>例 3.1. Basic AMF Server</b></p>
+<div class="example-contents">
+<p>
+            Let's assume that you have created a class <code class="classname">Foo</code> with a
+            variety of public methods. You may create an <acronym class="acronym">AMF</acronym> server using the
+            following code:
+        </p>
+<pre class="programlisting">
+$server = new Zend_Amf_Server();
+$server-&gt;setClass('Foo');
+$response = $server-&gt;handle();
+echo $response;
+</pre>
+<p>
+            Alternately, you may choose to attach a simple function as a
+            callback instead:
+        </p>
+<pre class="programlisting">
+$server = new Zend_Amf_Server();
+$server-&gt;addFunction('myUberCoolFunction');
+$response = $server-&gt;handle();
+echo $response;
+</pre>
+<p>
+            You could also mix and match multiple classes and functions. When
+            doing so, we suggest namespacing each to ensure that no method name
+            collisions occur; this can be done by simply passing a second string
+            argument to either <code class="methodname">addFunction()</code> or
+            <code class="methodname">setClass()</code>:
+        </p>
+<pre class="programlisting">
+$server = new Zend_Amf_Server();
+$server-&gt;addFunction('myUberCoolFunction', 'my')
+       -&gt;setClass('Foo', 'foo')
+       -&gt;setClass('Bar', 'bar');
+$response = $server-&gt;handle();
+echo $response;
+</pre>
+<p>
+            The <code class="classname">Zend_Amf_Server</code> also allows services to be dynamically
+            loaded based on a supplied directory path. You may add as many directories as you wish
+            to the server. The order that you add the directories to the server will be the
+            order that the <acronym class="acronym">LIFO</acronym> search will be performed on the directories to
+            match the class. Adding directories is completed with the
+            <code class="methodname">addDirectory()</code> method.
+        </p>
+<pre class="programlisting">
+$server-&gt;addDirectory(dirname(__FILE__) .'/../services/');
+$server-&gt;addDirectory(dirname(__FILE__) .'/../package/');
+</pre>
+<p>
+            When calling remote services your source name can have underscore ("_") and dot (".")
+            directory delimiters. When an underscore is used <acronym class="acronym">PEAR</acronym> and Zend
+            Framework class naming conventions will be respected. This means that if you call the
+            service com_Foo_Bar the server will look for the file
+            <code class="filename">Bar.php</code> in the each of the included paths at
+            <code class="filename">com/Foo/Bar.php</code>. If the dot notation is used for your remote
+            service such as <code class="filename">com.Foo.Bar</code> each included path will have
+            <code class="filename">com/Foo/Bar.php</code> append to the end to autoload
+            <code class="filename">Bar.php</code>
+        </p>
+<p>
+            All <acronym class="acronym">AMF</acronym> requests sent to the script will then be handled by the
+            server, and an <acronym class="acronym">AMF</acronym> response will be returned.
+        </p>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note: All Attached Methods and Functions Need Docblocks">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">All Attached Methods and Functions Need Docblocks</th>
+</tr>
+<tr><td align="left" valign="top">
+<p>
+            Like all other server components in Zend Framework, you must document your class
+            methods using <acronym class="acronym">PHP</acronym> docblocks. At the minimum, you
+            need to provide annotations for each required argument as well as
+            the return value. As examples:
+        </p>
+<pre class="programlisting">
+// Function to attach:
+
+/**
+ * @param  string $name
+ * @param  string $greeting
+ * @return string
+ */
+function helloWorld($name, $greeting = 'Hello')
+{
+    return $greeting . ', ' . $name;
+}
+</pre>
+<pre class="programlisting">
+// Attached class
+
+class World
+{
+    /**
+     * @param  string $name
+     * @param  string $greeting
+     * @return string
+     */
+    public function hello($name, $greeting = 'Hello')
+    {
+        return $greeting . ', ' . $name;
+    }
+}
+</pre>
+<p>
+            Other annotations may be used, but will be ignored.
+        </p>
+</td></tr>
+</table></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.amf.server.flex"></a>3.2.1. Connecting to the Server from Flex</h3></div></div></div>
+<p>
+            Connecting to your <code class="classname">Zend_Amf_Server</code> from your Flex
+            project is quite simple; you simply need to point your endpoint <acronym class="acronym">URI</acronym>
+            to your <code class="classname">Zend_Amf_Server</code> script.
+        </p>
+<p>
+            Say, for instance, you have created your server and placed it in the
+            <code class="filename">server.php</code> file in your application root, and thus the
+            <acronym class="acronym">URI</acronym> is <code class="filename">http://example.com/server.php</code>. In this
+            case, you would modify your <code class="filename">services-config.xml</code> file to set the
+            channel endpoint uri attribute to this value.
+        </p>
+<p>
+            If you have never created a <code class="filename">service-config.xml</code> file you can do so
+            by opening your project in your Navigator window. Right click on the project name and
+            select 'properties'. In the Project properties dialog go into 'Flex Build Path' menu,
+            'Library path' tab and be sure the '<code class="filename">rpc.swc</code>' file is added to your
+            projects path and Press Ok to close the window.
+        </p>
+<p>
+            You will also need to tell the compiler to use the
+            <code class="filename">service-config.xml</code> to find the RemoteObject endpoint. To do this
+            open your project properties panel again by right clicking on the project folder from
+            your Navigator and selecting properties. From the properties popup select 'Flex
+            Compiler' and add the string: <span><strong class="command">-services "services-config.xml"</strong></span>. Press
+            Apply then OK to return to update the option. What you have just done is told the Flex
+            compiler to look to the <code class="filename">services-config.xml</code> file for runtime
+            variables that will be used by the RemotingObject class.
+        </p>
+<p>
+            We now need to tell Flex which services configuration file to use for connecting to
+            our remote methods. For this reason create a new
+            '<code class="filename">services-config.xml</code>' file into your Flex project src folder. To
+            do this right click on the project folder and select 'new' 'File' which will popup a
+            new window. Select the project folder and then name the file
+            '<code class="filename">services-config.xml</code>' and press finish.
+        </p>
+<p>
+            Flex has created the new <code class="filename">services-config.xml</code> and has it open. Use
+            the following example text for your <code class="filename">services-config.xml</code> file. Make
+            sure that you update your endpoint to match that of your testing server. Make sure you
+            save the file.
+        </p>
+<pre class="programlisting">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;services-config&gt;
+    &lt;services&gt;
+        &lt;service id="zend-service"
+            class="flex.messaging.services.RemotingService"
+            messageTypes="flex.messaging.messages.RemotingMessage"&gt;
+            &lt;destination id="zend"&gt;
+                &lt;channels&gt;
+                    &lt;channel ref="zend-endpoint"/&gt;
+                &lt;/channels&gt;
+                &lt;properties&gt;
+                    &lt;source&gt;*&lt;/source&gt;
+                &lt;/properties&gt;
+            &lt;/destination&gt;
+        &lt;/service&gt;
+    &lt;/services&gt;
+    &lt;channels&gt;
+        &lt;channel-definition id="zend-endpoint"
+            class="mx.messaging.channels.AMFChannel"&gt;
+            &lt;endpoint uri="http://example.com/server.php"
+                class="flex.messaging.endpoints.AMFEndpoint"/&gt;
+        &lt;/channel-definition&gt;
+    &lt;/channels&gt;
+&lt;/services-config&gt;
+</pre>
+<p>
+            There are two key points in the example. First, but last in the
+            listing, we create an <acronym class="acronym">AMF</acronym> channel, and specify the endpoint as the
+            <acronym class="acronym">URL</acronym> to our <code class="classname">Zend_Amf_Server</code>:
+        </p>
+<pre class="programlisting">
+&lt;channel-definition id="zend-endpoint"
+    &lt;endpoint uri="http://example.com/server.php"
+        class="flex.messaging.endpoints.AMFEndpoint"/&gt;
+&lt;/channel-definition&gt;
+</pre>
+<p>
+            Notice that we've given this channel an identifier, "zend-endpoint".
+            The example create a service destination that refers to this channel,
+            assigning it an ID as well -- in this case "zend".
+        </p>
+<p>
+            Within our Flex <acronym class="acronym">MXML</acronym> files, we need to bind a RemoteObject to the
+            service. In <acronym class="acronym">MXML</acronym>, this might be done as follows:
+        </p>
+<pre class="programlisting">
+&lt;mx:RemoteObject id="myservice"
+    fault="faultHandler(event)"
+    showBusyCursor="true"
+    destination="zend"&gt;
+</pre>
+<p>
+            Here, we've defined a new remote object identified by "myservice"
+            bound to the service destination "zend" we defined in the
+            <code class="filename">services-config.xml</code> file. We then call methods on it
+            in our ActionScript by simply calling "myservice.&lt;method&gt;".
+            As an example:
+        </p>
+<pre class="programlisting">
+myservice.hello("Wade");
+</pre>
+<p>
+            When namespacing, you would use
+            "myservice.&lt;namespace&gt;.&lt;method&gt;":
+        </p>
+<pre class="programlisting">
+myservice.world.hello("Wade");
+</pre>
+<p>
+            For more information on Flex RemoteObject invocation, <a href="http://livedocs.adobe.com/flex/3/html/help.html?content=data_access_4.html" target="_top">
+            visit the Adobe Flex 3 Help site</a>.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.amf.server.errors"></a>3.2.2. Error Handling</h3></div></div></div>
+<p>
+            By default, all exceptions thrown in your attached classes or
+            functions will be caught and returned as <acronym class="acronym">AMF</acronym> ErrorMessages. However,
+            the content of these ErrorMessage objects will vary based on whether
+            or not the server is in "production" mode (the default state).
+        </p>
+<p>
+            When in production mode, only the exception code will be returned.
+            If you disable production mode -- something that should be done for
+            testing only -- most exception details will be returned: the
+            exception message, line, and backtrace will all be attached.
+        </p>
+<p>
+            To disable production mode, do the following:
+        </p>
+<pre class="programlisting">
+$server-&gt;setProduction(false);
+</pre>
+<p>
+            To re-enable it, pass a <code class="constant">TRUE</code> boolean value instead:
+        </p>
+<pre class="programlisting">
+$server-&gt;setProduction(true);
+</pre>
+<div class="note"><table border="0" summary="Note: Disable production mode sparingly!">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Disable production mode sparingly!</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                We recommend disabling production mode only when in development.
+                Exception messages and backtraces can contain sensitive system
+                information that you may not wish for outside parties to access.
+                Even though <acronym class="acronym">AMF</acronym> is a binary format, the specification is now
+                open, meaning anybody can potentially deserialize the payload.
+            </p></td></tr>
+</table></div>
+<p>
+            One area to be especially careful with is <acronym class="acronym">PHP</acronym> errors themselves.
+            When the <span class="property">display_errors</span> <acronym class="acronym">INI</acronym> directive is
+            enabled, any <acronym class="acronym">PHP</acronym> errors for the current error reporting level are
+            rendered directly in the output -- potentially disrupting the <acronym class="acronym">AMF</acronym>
+            response payload. We suggest turning off the <span class="property">display_errors</span>
+            directive in production to prevent such problems
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.amf.server.response"></a>3.2.3. AMF Responses</h3></div></div></div>
+<p>
+            Occasionally you may desire to manipulate the response object
+            slightly, typically to return extra message headers. The
+            <code class="methodname">handle()</code> method of the server returns the response
+            object, allowing you to do so.
+        </p>
+<div class="example">
+<a name="zend.amf.server.response.messageHeaderExample"></a><p class="title"><b>例 3.2. Adding Message Headers to the AMF Response</b></p>
+<div class="example-contents">
+<p>
+                In this example, we add a 'foo' MessageHeader with the value
+                'bar' to the response prior to returning it.
+            </p>
+<pre class="programlisting">
+$response = $server-&gt;handle();
+$response-&gt;addAmfHeader(new Zend_Amf_Value_MessageHeader('foo', true, 'bar'))
+echo $response;
+</pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.amf.server.typedobjects"></a>3.2.4. Typed Objects</h3></div></div></div>
+<p>
+            Similar to <acronym class="acronym">SOAP</acronym>, <acronym class="acronym">AMF</acronym> allows passing objects
+            between the client and server. This allows a great amount of flexibility and
+            coherence between the two environments.
+        </p>
+<p>
+            <code class="classname">Zend_Amf</code> provides three methods for mapping
+            ActionScript and <acronym class="acronym">PHP</acronym> objects.
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li>
+<p>
+                    First, you may create explicit bindings at the server level,
+                    using the <code class="methodname">setClassMap()</code> method. The first
+                    argument is the ActionScript class name, the second the <acronym class="acronym">PHP</acronym>
+                    class name it maps to:
+                </p>
+<pre class="programlisting">
+// Map the ActionScript class 'ContactVO' to the PHP class 'Contact':
+$server-&gt;setClassMap('ContactVO', 'Contact');
+</pre>
+</li>
+<li>
+<p>
+                    Second, you can set the public property <code class="varname">$_explicitType</code>
+                    in your <acronym class="acronym">PHP</acronym> class, with the
+                    value representing the ActionScript class to map to:
+                </p>
+<pre class="programlisting">
+class Contact
+{
+    public $_explicitType = 'ContactVO';
+}
+</pre>
+</li>
+<li>
+<p>
+                    Third, in a similar vein, you may define the public method
+                    <code class="methodname">getASClassName()</code> in your <acronym class="acronym">PHP</acronym> class;
+                    this method should return the appropriate ActionScript class:
+                </p>
+<pre class="programlisting">
+class Contact
+{
+    public function getASClassName()
+    {
+        return 'ContactVO';
+    }
+}
+</pre>
+</li>
+</ul></div>
+<p>
+            Although we have created the ContactVO on the server we now need to make its
+            corresponding class in <acronym class="acronym">AS3</acronym> for the server object to be mapped to.
+        </p>
+<p>
+            Right click on the src folder of the Flex project and select New -&gt; ActionScript
+            File. Name the file ContactVO and press finish to see the new file. Copy the
+            following code into the file to finish creating the class.
+        </p>
+<pre class="programlisting">
+package
+{
+    [Bindable]
+    [RemoteClass(alias="ContactVO")]
+    public class ContactVO
+    {
+        public var id:int;
+        public var firstname:String;
+        public var lastname:String;
+        public var email:String;
+        public var mobile:String;
+        public function ProductVO():void {
+        }
+    }
+}
+</pre>
+<p>
+            The class is syntactically equivalent to the <acronym class="acronym">PHP</acronym> of the same name.
+            The variable names are exactly the same and need to be in the same case
+            to work properly. There are two unique <acronym class="acronym">AS3</acronym> meta tags in this class.
+            The first is bindable which makes fire a change event when it is updated.
+            The second tag is the RemoteClass tag which defines that this class can
+            have a remote object mapped with the alias name in this case
+            <span class="emphasis"><em>ContactVO</em></span>. It is mandatory that this tag the value that was set
+            is the <acronym class="acronym">PHP</acronym> class are strictly equivalent.
+        </p>
+<pre class="programlisting">
+[Bindable]
+private var myContact:ContactVO;
+
+private function getContactHandler(event:ResultEvent):void {
+    myContact = ContactVO(event.result);
+}
+</pre>
+<p>
+            The following result event from the service call is cast instantly onto the Flex
+            ContactVO. Anything that is bound to myContact will be updated with the returned
+            ContactVO data.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.amf.server.resources"></a>3.2.5. Resources</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Amf</code> provides tools for mapping resource types
+            returned by service classes into data consumable by ActionScript.
+        </p>
+<p>
+            In order to handle specific resource type, the user needs to create a plugin class named
+            after the resource name, with words capitalized and spaces removed (so, resource
+            type "mysql result" becomes MysqlResult), with some prefix, e.g.
+            <code class="classname">My_MysqlResult</code>. This class should implement one method,
+            <code class="methodname">parse()</code>, receiving one argument - the resource - and returning
+            the value that should be sent to ActionScript. The class should be located in the file
+            named after the last component of the name, e.g. <code class="filename">MysqlResult.php</code>.
+        </p>
+<p>
+            The directory containing the resource handling plugins should be registered with
+            <code class="classname">Zend_Amf</code> type loader:
+        </p>
+<pre class="programlisting">
+Zend_Amf_Parse_TypeLoader::addResourceDirectory(
+    "My",
+    "application/library/resources/My"
+));
+</pre>
+<p>
+            For detailed discussion of loading plugins, please see
+            the <a href="zend.loader.pluginloader.html" title="30.4.  加载插件">plugin loader</a> section.
+        </p>
+<p>
+            Default directory for <code class="classname">Zend_Amf</code> resources is registered
+            automatically and currently contains handlers for "mysql result" and "stream"
+            resources.
+        </p>
+<pre class="programlisting">
+// Example class implementing handling resources of type mysql result
+class Zend_Amf_Parse_Resource_MysqlResult
+{
+    /**
+     * Parse resource into array
+     *
+     * @param resource $resource
+     * @return array
+     */
+    public function parse($resource) {
+        $result = array();
+        while($row = mysql_fetch_assoc($resource)) {
+            $result[] = $row;
+        }
+        return $result;
+    }
+}
+</pre>
+<p>
+            Trying to return unknown resource type (i.e., one for which no handler plugin exists)
+            will result in an exception.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.amf.server.flash"></a>3.2.6. Connecting to the Server from Flash</h3></div></div></div>
+<p>
+            Connecting to your <code class="classname">Zend_Amf_Server</code> from your Flash project is
+            slightly different than from Flex. However once the connection Flash functions with
+            <code class="classname">Zend_Amf_Server</code> the same way is flex. The following example can
+            also be used from a Flex <acronym class="acronym">AS3</acronym> file. We will reuse the same
+            <code class="classname">Zend_Amf_Server</code> configuration along with the World class for our
+            connection.
+        </p>
+<p>
+            Open Flash CS and create and new Flash File (ActionScript 3). Name the document
+            <code class="filename">ZendExample.fla</code> and save the document into a folder that you will
+            use for this example. Create a new <acronym class="acronym">AS3</acronym> file in the same directory
+            and call the file <code class="filename">Main.as</code>. Have both files open in your editor. We
+            are now going to connect the two files via the document class. Select ZendExample and
+            click on the stage. From the stage properties panel change the Document class to Main.
+            This links the <code class="filename">Main.as</code> ActionScript file with the user interface
+            in <code class="filename">ZendExample.fla</code>. When you run the Flash file ZendExample the
+            <code class="filename">Main.as</code> class will now be run. Next we will add ActionScript to
+            make the <acronym class="acronym">AMF</acronym> call.
+        </p>
+<p>
+            We now are going to make a Main class so that we can send the data to the server and
+            display the result. Copy the following code into your <code class="filename">Main.as</code> file
+            and then we will walk through the code to describe what each element's role is.
+        </p>
+<pre class="programlisting">
+package {
+  import flash.display.MovieClip;
+  import flash.events.*;
+  import flash.net.NetConnection;
+  import flash.net.Responder;
+
+  public class Main extends MovieClip {
+    private var gateway:String = "http://example.com/server.php";
+    private var connection:NetConnection;
+    private var responder:Responder;
+
+    public function Main() {
+      responder = new Responder(onResult, onFault);
+      connection = new NetConnection;
+      connection.connect(gateway);
+    }
+
+    public function onComplete( e:Event ):void{
+      var params = "Sent to Server";
+      connection.call("World.hello", responder, params);
+    }
+
+    private function onResult(result:Object):void {
+      // Display the returned data
+      trace(String(result));
+    }
+    private function onFault(fault:Object):void {
+      trace(String(fault.description));
+    }
+  }
+}
+</pre>
+<p>
+            We first need to import two ActionScript libraries that perform the bulk of the work.
+            The first is NetConnection which acts like a by directional pipe between the client and
+            the server. The second is a Responder object which handles the return values from the
+            server related to the success or failure of the call.
+        </p>
+<pre class="programlisting">
+import flash.net.NetConnection;
+import flash.net.Responder;
+</pre>
+<p>
+            In the class we need three variables to represent the NetConnection, Responder, and
+            the gateway <acronym class="acronym">URL</acronym> to our <code class="classname">Zend_Amf_Server</code>
+            installation.
+        </p>
+<pre class="programlisting">
+private var gateway:String = "http://example.com/server.php";
+private var connection:NetConnection;
+private var responder:Responder;
+</pre>
+<p>
+            In the Main constructor we create a responder and a new connection to the
+            <code class="classname">Zend_Amf_Server</code> endpoint. The responder defines two different
+            methods for handling the response from the server. For simplicity I have called these
+            onResult and onFault.
+        </p>
+<pre class="programlisting">
+responder = new Responder(onResult, onFault);
+connection = new NetConnection;
+connection.connect(gateway);
+</pre>
+<p>
+            In the onComplete function which is run as soon as the construct has completed we send
+            the data to the server. We need to add one more line that makes a call to the
+            <code class="classname">Zend_Amf_Server</code> World-&gt;hello function.
+        </p>
+<pre class="programlisting">
+connection.call("World.hello", responder, params);
+</pre>
+<p>
+            When we created the responder variable we defined an onResult and onFault function to
+            handle the response from the server. We added this function for the successful result
+            from the server. A successful event handler is run every time the connection is handled
+            properly to the server.
+        </p>
+<pre class="programlisting">
+private function onResult(result:Object):void {
+    // Display the returned data
+    trace(String(result));
+}
+</pre>
+<p>
+            The onFault function, is called if there was an invalid response from the server. This
+            happens when there is an error on the server, the <acronym class="acronym">URL</acronym> to the server
+            is invalid, the remote service or method does not exist, and any other connection
+            related issues.
+        </p>
+<pre class="programlisting">
+private function onFault(fault:Object):void {
+    trace(String(fault.description));
+}
+</pre>
+<p>
+            Adding in the ActionScript to make the remoting connection is now complete. Running the
+            ZendExample file now makes a connection to Zend Amf. In review you have added the
+            required variables to open a connection to the remote server, defined what methods
+            should be used when your application receives a response from the server, and finally
+            displayed the returned data to output via <code class="methodname">trace()</code>.
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.amf.server.auth"></a>3.2.7. Authentication</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Amf_Server</code> allows you to specify authentication and
+            authorization hooks to control access to the services. It is using the infrastructure
+            provided by <a href="zend.auth.html" title="第 5 章 Zend_Auth"><code class="classname">Zend_Auth</code></a> and
+            <a href="zend.acl.html" title="第 2 章 Zend_Acl"><code class="classname">Zend_Acl</code></a> components.
+        </p>
+<p>
+            In order to define authentication, the user provides authentication adapter extening
+            <code class="classname">Zend_Amf_Auth_Abstract</code> abstract class. The adapter should
+            implement the <code class="methodname">authenticate()</code> method just like regular
+            <a href="zend.auth.html#zend.auth.introduction.adapters" title="5.1.1. 适配器">authentication adapter</a>.
+        </p>
+<p>
+            The adapter should use properties <span class="emphasis"><em>_username</em></span> and
+            <span class="emphasis"><em>_password</em></span> from the parent
+            <code class="classname">Zend_Amf_Auth_Abstract</code> class in order to authenticate. These
+            values are set by the server using <code class="methodname">setCredentials()</code> method
+            before call to <code class="methodname">authenticate()</code> if the credentials are received
+            in the <acronym class="acronym">AMF</acronym> request headers.
+        </p>
+<p>
+            The identity returned by the adapter should be an object containing property
+            <span class="property">role</span> for the <acronym class="acronym">ACL</acronym> access control to work.
+        </p>
+<p>
+            If the authentication result is not successful, the request is not proceseed further
+            and failure message is returned with the reasons for failure taken from the result.
+        </p>
+<p>
+            The adapter is connected to the server using <code class="methodname">setAuth()</code> method:
+        </p>
+<pre class="programlisting">
+$server-&gt;setAuth(new My_Amf_Auth());
+</pre>
+<p>
+            Access control is performed by using <code class="classname">Zend_Acl</code> object set by
+            <code class="methodname">setAcl()</code> method:
+        </p>
+<pre class="programlisting">
+$acl = new Zend_Acl();
+createPermissions($acl); // create permission structure
+$server-&gt;setAcl($acl);
+</pre>
+<p>
+            If the <acronym class="acronym">ACL</acronym> object is set, and the class being called defines
+            <code class="methodname">initAcl()</code> method, this method will be called with the
+            <acronym class="acronym">ACL</acronym> object as an argument. The class then can create additional
+            <acronym class="acronym">ACL</acronym> rules and return <code class="constant">TRUE</code>, or return
+            <code class="constant">FALSE</code> if no access control is required for this class.
+        </p>
+<p>
+            After <acronym class="acronym">ACL</acronym> have been set up, the server will check if access is
+            allowed with role set by the authentication, resource being the class name (or
+            <code class="constant">NULL</code> for
+            function calls) and privilege being the function name. If no authentication was
+            provided, then if the <span class="emphasis"><em>anonymous</em></span> role was defined, it will be used,
+            otherwise the access will be denied.
+        </p>
+<pre class="programlisting">
+if($this-&gt;_acl-&gt;isAllowed($role, $class, $function)) {
+    return true;
+} else {
+    require_once 'Zend/Amf/Server/Exception.php';
+    throw new Zend_Amf_Server_Exception("Access not allowed");
+}
+</pre>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.amf.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.amf.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.application.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">第 3 章 Zend_Amf </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 第 4 章 Zend_Application</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

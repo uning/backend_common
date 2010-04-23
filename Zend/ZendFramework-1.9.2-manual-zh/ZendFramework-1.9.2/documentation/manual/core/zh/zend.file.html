@@ -1,0 +1,250 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 21 章 Zend_File</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.feed.reader.html" title="20.9. Zend_Feed_Reader">
+<link rel="next" href="zend.file.transfer.validators.html" title="21.2. Validators for Zend_File_Transfer">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.file.html#zend.file.transfer.introduction" title="21.1. Zend_File_Transfer">
+<link rel="section" href="zend.file.transfer.validators.html" title="21.2. Validators for Zend_File_Transfer">
+<link rel="section" href="zend.file.transfer.filters.html" title="21.3. Filters for Zend_File_Transfer">
+<link rel="section" href="zend.file.transfer.migration.html" title="21.4. Migrating from previous versions">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 21 章 Zend_File</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.feed.reader.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.file.transfer.validators.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.file"></a>第 21 章 Zend_File</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.file.html#zend.file.transfer.introduction">21.1. Zend_File_Transfer</a></span></dt>
+<dt><span class="sect1"><a href="zend.file.transfer.validators.html">21.2. Validators for Zend_File_Transfer</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.usage">21.2.1. Using Validators with Zend_File_Transfer</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.count">21.2.2. Count Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.crc32">21.2.3. Crc32 Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.excludeextension">21.2.4. ExcludeExtension Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.excludemimetype">21.2.5. ExcludeMimeType Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.exists">21.2.6. Exists Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.extension">21.2.7. Extension Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.filessize">21.2.8. FilesSize Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.imagesize">21.2.9. ImageSize Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.iscompressed">21.2.10. IsCompressed Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.isimage">21.2.11. IsImage Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.hash">21.2.12. Hash Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.md5">21.2.13. Md5 Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.mimetype">21.2.14. MimeType Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.notexists">21.2.15. NotExists Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.sha1">21.2.16. Sha1 Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.size">21.2.17. Size Validator</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.validators.html#zend.file.transfer.validators.wordcount">21.2.18. WordCount Validator</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.file.transfer.filters.html">21.3. Filters for Zend_File_Transfer</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.file.transfer.filters.html#zend.file.transfer.filters.usage">21.3.1. Using filters with Zend_File_Transfer</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.filters.html#zend.file.transfer.filters.decrypt">21.3.2. Decrypt filter</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.filters.html#zend.file.transfer.filters.encrypt">21.3.3. Encrypt filter</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.filters.html#zend.file.transfer.filters.lowercase">21.3.4. LowerCase filter</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.filters.html#zend.file.transfer.filters.rename">21.3.5. Rename filter</a></span></dt>
+<dt><span class="sect2"><a href="zend.file.transfer.filters.html#zend.file.transfer.filters.uppercase">21.3.6. UpperCase filter</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.file.transfer.migration.html">21.4. Migrating from previous versions</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonenineonetooneten">21.4.1. Migrating from 1.9 to 1.10 or newer</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonenineonetooneten.mimetype">21.4.1.1. MimeType validation</a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven">21.4.2. Migrating from 1.6 to 1.7 or newer</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators">21.4.2.1. Changes when using filters and validators</a></span></dt>
+<dd><dl>
+<dt><span class="sect4"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators.rename">21.4.2.1.1. Filter: Rename</a></span></dt>
+<dt><span class="sect4"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators.count">21.4.2.1.2. Validator: Count</a></span></dt>
+<dt><span class="sect4"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators.extension">21.4.2.1.3. Validator:Extension</a></span></dt>
+<dt><span class="sect4"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators.filessize">21.4.2.1.4. Validator: FilesSize</a></span></dt>
+<dt><span class="sect4"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators.hash">21.4.2.1.5. Validator: Hash</a></span></dt>
+<dt><span class="sect4"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators.imagesize">21.4.2.1.6. Validator: ImageSize</a></span></dt>
+<dt><span class="sect4"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixtooneseven.validators.size">21.4.2.1.7. Validator: Size</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixonetoonesixtwo">21.4.3. Migrating from 1.6.1 to 1.6.2 or newer</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.file.transfer.migration.html#zend.file.transfer.migration.fromonesixonetoonesixtwo.validators">21.4.3.1. Changes when using validators</a></span></dt></dl></dd>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.file.transfer.introduction"></a>21.1. Zend_File_Transfer</h2></div></div></div>
+<p>
+        <code class="code">Zend_File_Transfer</code> 让开发者控制文件上载和下载。它有用于文件的内置的校验器
+        并且甚至可以用过滤器来修改文件。<code class="code">Zend_File_Transfer</code> 使用适配器，这样对于
+        不同的传输协议如 HTTP、 FTP、 WEBDAV 等等就可以使用相同的 API。
+    </p>
+<div class="note"><table border="0" summary="Note: 局限">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">局限</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            当前的 <code class="code">Zend_File_Transfer</code> 实现包含在 1.6.0 版中，仅限于 HTTP Post 上载。文件下载和
+            其它适配器在下次发行时会增加。没实现的功能会抛出异常。所以应该直接使用 <code class="code">Zend_File_Transfer_Adapter_Http</code> 的实例。
+            当多重适配器可用时，这个就会改变。
+        </p></td></tr>
+</table></div>
+<p>
+        <code class="code">Zend_File_Transfer</code> 的用法非常简单。它包括两个部分：用于上载的 HTTP 表单和用
+        <code class="code">Zend_File_Transfer</code> 来处理上载文件。参见下面的例子：
+    </p>
+<div class="example">
+<a name="zend.file.transfer.introduction.example"></a><p class="title"><b>例 21.1.  简单的文件上载表单 </b></p>
+<div class="example-contents">
+<p>
+            本例示范了一个基本的文件上传，它使用 <code class="code">Zend_File_Transfer</code>  来完成。
+            第一部分是文件表单。在例子中，有一个文件要上载。
+        </p>
+<pre class="programlisting">
+&lt;form enctype="multipart/form-data" action="/file/upload" method="POST"&gt;
+    &lt;input type="hidden" name="MAX_FILE_SIZE" value="100000" /&gt;
+        Choose a file to upload: &lt;input name="uploadedfile" type="file" /&gt;
+    &lt;br /&gt;
+    &lt;input type="submit" value="Upload File" /&gt;
+&lt;/form&gt;
+
+</pre>
+<p>
+            注意利用 <a href="">Zend_Form_Element_File</a> 而不需要手工编写 HTML。
+        </p>
+<p>
+            下一步是生成上载的接收者。在本例中接收者是 <code class="code">/file/upload</code> 。所以我们就编写
+            带有动作 <code class="code">upload</code> 的控制器 <code class="code">file</code> 。
+        </p>
+<pre class="programlisting">
+$adapter = new Zend_File_Transfer_Adapter_Http();
+
+$adapter-&gt;setDestination('C:\temp');
+
+if (!$adapter-&gt;receive()) {
+    $messages = $adapter-&gt;getMessages();
+    echo implode("\n", $messages);
+}
+
+        </pre>
+<p>
+            正如你所看到的简单的用法，使用 <code class="code">setDestination</code> 定义一个目的地然后调用 <code class="code">receive()</code>  方法。
+            如果有任何上载错误，就会包含在返回的异常里。
+        </p>
+<div class="note"><table border="0" summary="Note: 注意">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                记住这只是个最简单的用法，应该 <span class="strong"><strong>永远不要</strong></span>仅仅把它用于实际的环境，
+                因为它有严重的安全问题。实际中需要用校验器来增强安全性。
+            </p></td></tr>
+</table></div>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.feed.reader.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.file.transfer.validators.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">20.9. Zend_Feed_Reader </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 21.2. Validators for Zend_File_Transfer</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 14 章 Zend_Date</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.currency.migration.html" title="13.3.  从前面的版本迁移">
+<link rel="next" href="zend.date.definition.theory.html" title="14.2.  操作理论">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.date.html#zend.date.introduction" title="14.1.  简介">
+<link rel="section" href="zend.date.definition.theory.html" title="14.2.  操作理论">
+<link rel="section" href="zend.date.basic.html" title="14.3. 基本方法">
+<link rel="section" href="zend.date.overview.html" title="14.4. Zend_Date API 概述">
+<link rel="section" href="zend.date.creation.html" title="14.5. 生成日期">
+<link rel="section" href="zend.date.constants.html" title="14.6.  一般日期函数的常量">
+<link rel="section" href="zend.date.additional.html" title="14.7. Working 范例">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 14 章 Zend_Date</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.currency.migration.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.date.definition.theory.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.date"></a>第 14 章 Zend_Date</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.date.html#zend.date.introduction">14.1.  简介 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.date.html#zend.date.setdefaulttimezone">14.1.1.  永远设置缺省时区 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.html#zend.date.why">14.1.2.  为什么使用 Zend_Date?</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.date.definition.theory.html">14.2.  操作理论 </a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="zend.date.definition.theory.html#zend.date.theory.internals">14.2.1.  内部（Internals）</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="zend.date.basic.html">14.3. 基本方法</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.date.basic.html#zend.date.basic.creation">14.3.1. 当前日期</a></span></dt>
+<dt><span class="sect2"><a href="zend.date.basic.html#zend.date.basic.functions">14.3.2. Zend_Date 的例子</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.date.basic.html#zend.date.simple.functions.get">14.3.2.1. 输出日期</a></span></dt>
+<dt><span class="sect3"><a href="zend.date.basic.html#zend.date.simple.functions.set">14.3.2.2. 设置日期</a></span></dt>
+<dt><span class="sect3"><a href="zend.date.basic.html#zend.date.simple.functions.add">14.3.2.3. 加减日期</a></span></dt>
+<dt><span class="sect3"><a href="zend.date.basic.html#zend.date.simple.functions.compare">14.3.2.4. 比较日期</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.date.overview.html">14.4. Zend_Date API 概述</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.date.overview.html#zend.date.options">14.4.1. Zend_Date 选项</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.date.overview.html#zend.date.options.formattype">14.4.1.1. 选择日期格式类型</a></span></dt>
+<dt><span class="sect3"><a href="zend.date.overview.html#zend.date.options.fixdst">14.4.1.2. DST 和日期数学 </a></span></dt>
+<dt><span class="sect3"><a href="zend.date.overview.html#zend.date.options.extendmonth">14.4.1.3. 月份计算</a></span></dt>
+<dt><span class="sect3"><a href="zend.date.overview.html#zend.date.options.cache">14.4.1.4.  用 Zend_Cache 加速日期本地化和标准化 </a></span></dt>
+<dt><span class="sect3"><a href="zend.date.overview.html#zend.date.options.timesync">14.4.1.5.  用 Zend_TimeSync 同步时间戳 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.date.overview.html#zend.date.values">14.4.2.  使用日期值 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.overview.html#id.date.basic">14.4.3. Basic <code class="code">Zend_Date</code> Operations Common to Many Date Parts</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.date.overview.html#id.date.basic.parts">14.4.3.1.  日期部件列表 </a></span></dt>
+<dt><span class="sect3"><a href="zend.date.overview.html#id.date.basic.operations">14.4.3.2. List of Date Operations 日期操作列表</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.date.overview.html#zend.date.others.comparison">14.4.4.  比较日期 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.overview.html#zend.date.others.gettingparts">14.4.5. 获取日期和日期部件</a></span></dt>
+<dt><span class="sect2"><a href="zend.date.overview.html#zend.date.others.fractions">14.4.6.  使用秒的片段 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.overview.html#zend.date.other.sun">14.4.7.  日出 / 日落 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.date.creation.html">14.5. 生成日期</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.date.creation.html#zend.date.creation.actual">14.5.1. 生成当前日期</a></span></dt>
+<dt><span class="sect2"><a href="zend.date.creation.html#zend.date.creation.database">14.5.2.  从数据库生成日期 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.creation.html#zend.date.creation.array">14.5.3.  从数组生成日期 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.date.constants.html">14.6.  一般日期函数的常量 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.date.constants.html#zend.date.constants.using">14.6.1.  使用常数 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.constants.html#zend.date.constants.list">14.6.2.  所有常数列表 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.constants.html#zend.date.constants.selfdefinedformats">14.6.3.  自定义 ISO 输出格式 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.constants.html#zend.date.constants.phpformats">14.6.4.  使用 PHP 的 date() 格式指定器的自定义输出格式 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.date.additional.html">14.7. Working 范例 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.date.additional.html#zend.date.additional.checking">14.7.1.  检查日期 </a></span></dt>
+<dt><span class="sect2"><a href="zend.date.additional.html#zend.date.additional.sunrise-sunset">14.7.2. 日出和日落</a></span></dt>
+<dt><span class="sect2"><a href="zend.date.additional.html#zend.date.additional.timezones">14.7.3. 时区</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.date.introduction"></a>14.1.  简介 </h2></div></div></div>
+<p>
+        <code class="code">Zend_Date</code> 组件提供了一个详细而简单的 API 用来处理日期和时间。它的方法接受广泛的信息，包括日期部分、
+        各种组合产生的许多功能和超出 PHP 日期相关函数的可能行。对于最新的手册，请参考
+        <a href="http://framework.zend.com/wiki/display/ZFDOCDEV/Home" target="_top"> 在线手册（及时和 Subversion 同步）</a>。
+    </p>
+<p>
+        虽然保持简单是我们的目标，但是日期和时间的本地化修改、合并和比较是不可避免的复杂。
+        日期、还有时间在不同的地方有不同的写法。例如，一些地方月在前面，一些地方年在前面。
+        关于更多处理本地化和标准化的信息，请参考 <a href="zend.locale.date.datesandtimes.html" title="31.4. Working with Dates and Times"><code class="code">Zend_Locale</code></a>。
+    </p>
+<p>
+        <code class="code">Zend_Date</code> 在许多语言中也支持月名的缩写。 <code class="code">Zend_Locale</code> 简化本地的月和星期名到时间戳的标准化。
+        这样，它们在其它地区就显示为本地化的格式。
+        <code class="code">Zend_Locale</code>
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.date.setdefaulttimezone"></a>14.1.1.  永远设置缺省时区 </h3></div></div></div>
+<p>
+            在 PHP 或 Zend Framework 中使用任何日期相关的函数之前，
+            通过使用 <code class="code">date.timezone</code> php.ini 的设置来设置 TZ 环境变量，或者使用 <a href="http://php.net/date_default_timezone_set" target="_top">date_default_timezone_set()</a>。
+            首先确保你的程序有个正确的缺省时区，
+            在 PHP 中，通过根据用户的期望设置一个缺省的时区，我们可以调整所有日期和时间相关的函数为特定的用户来工作。
+            时区设置的全部列表，请参考 <a href="http://unicode.org/cldr/data/diff/supplemental/territory_containment_un_m_49.html" target="_top">CLDR Timezone Identifier List</a>。
+            </p>
+<div class="example">
+<a name="zend.date.setdefaulttimezone.example-1"></a><p class="title"><b>例 14.1.  设置一个缺省的时区 </b></p>
+<div class="example-contents"><pre class="programlisting">
+// timezone for an American in California
+date_default_timezone_set('America/Los_Angeles');
+// timezone for a German in Germany
+date_default_timezone_set('Europe/Berlin');
+
+                </pre></div>
+</div>
+<p><br class="example-break">
+            <span class="strong"><strong> 当创建 Zend_Date 实例时，它们的时区就自动地变成当前缺省时区！</strong></span>
+            这样，时区设置将有效地解决任何夏时制（DST）问题，不需要显式地指定夏时制。
+        </p>
+<p>
+            请记住时区 <span class="strong"><strong>UTC</strong></span> 和 <span class="strong"><strong>GMT</strong></span> 不包括夏令时。
+            这意味着即使你定义了  <code class="code">Zend_Date</code> 工作于 DST，对于设置为 UTC 或 GMT 的 <code class="code">Zend_Date</code> 实例，它也自动切换回来。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.date.why"></a>14.1.2.  为什么使用 Zend_Date?</h3></div></div></div>
+<p>
+            <code class="code">Zend_Date</code> 提供下列功能，它扩展了 PHP 日期函数的功能：
+        </p>
+<div class="itemizedlist"><ul type="opencircle">
+<li style="list-style-type: circle">
+<p>
+                    简单的 API
+                </p>
+<p>
+                    <code class="code">Zend_Date</code> 提供了非常简单的 API，它结合了四种编程语言中的最好的日期/时间函数。
+                    例如在一行中可以加或者比较两个时间。
+                </p>
+</li>
+<li style="list-style-type: circle">
+<p>
+                    完全国际化
+                </p>
+<p>
+                    支持超过 130 中语言的月和星期名的全称和缩写。以和地方相关联的常规的格式支持使用本地化月和星期名的输入和输出的方法。
+                </p>
+</li>
+<li style="list-style-type: circle">
+<p>
+                    无限制的时间戳
+                </p>
+<p>
+                    尽管 PHP 5.2 声明 “有效的时间戳范围一般是从 1901年12月13日星期五20:45:54 GMT 到 2038年1月19日星期二 2038 03:14:07 GMT”，
+                    <code class="code">Zend_Date</code> 在 BCMath 扩展的帮助下，还是支持一个几乎无限制的范围。
+                    如果 BCMath 不可用，Zend_Date 将只把对时间戳的支持范围减小到你的服务器所支持的 <code class="code">float</code> 类型的范围。
+                    “浮点数的大小和平台无关，虽然最大数 ~1.8e308 是带有大概精确到 14 位十进制数的一个值（64位 IEEE 格式）”[<a href="http://www.php.net/float" target="_top">http://www.php.net/float</a>]。
+                    另外，由于浮点数本身的限制，浮点数的误差可能会带来计算的错误。为避免这个问题，如果 BCMath 扩展可用，ZF I18n 组件就使用它。
+                </p>
+</li>
+<li style="list-style-type: circle">
+<p>
+                    支持 ISO_8601 日期规范
+                </p>
+<p>
+                    支持ISO_8601 日期规范。即使部分兼容 ISO_8601 日期规范将被识别。当和数据库一起使用时，这些日期格式特别有用。
+                    例如，即使 MsSQL 和 <a href="http://dev.mysql.com/doc/refman/5.0/en/date-and-time-functions.html" target="_top">MySQL</a>
+                    有点不同，<code class="code">Zend_Date</code> 都用 <a href="zend.date.constants.html#zend.date.constants.list" title="14.6.2.  所有常数列表">Zend_Date::ISO_8601</a>
+                    格式规范常量来支持它们。当日期字符串符合 "Y/m/d" or "Y-m-d H:i:s" 根据 PHP date() 格式令牌，使用 Zend_Date
+                    的内置的 ISO 8601 日期格式。
+                </p>
+</li>
+<li style="list-style-type: circle">
+<p>
+                    计算日出和日落
+                </p>
+<p>
+                    对于任何地方的一天，可以显示日出和日落的时间，这样你就不会错过一秒的白天时间来工作于你喜欢的 PHP 项目 :)
+                </p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.currency.migration.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.date.definition.theory.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">13.3.  从前面的版本迁移  </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 14.2.  操作理论 </td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

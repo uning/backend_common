@@ -1,0 +1,510 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 50 章 Zend_Soap</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.session.savehandler.dbtable.html" title="49.5. Zend_Session_SaveHandler_DbTable">
+<link rel="next" href="zend.soap.client.html" title="50.2. Zend_Soap_Client">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.soap.html#zend.soap.server" title="50.1. Zend_Soap_Server">
+<link rel="section" href="zend.soap.client.html" title="50.2. Zend_Soap_Client">
+<link rel="section" href="zend.soap.wsdl.html" title="50.3. WSDL Accessor">
+<link rel="section" href="zend.soap.autodiscovery.html" title="50.4. AutoDiscovery">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 50 章 Zend_Soap</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.session.savehandler.dbtable.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.soap.client.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.soap"></a>第 50 章 Zend_Soap</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.soap.html#zend.soap.server">50.1. Zend_Soap_Server</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.soap.html#zend.soap.server.constructor">50.1.1. Zend_Soap_Server constructor</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.soap.html#zend.soap.server.constructor.wsdl_mode">50.1.1.1. Zend_Soap_Server constructor for the WSDL mode</a></span></dt>
+<dt><span class="sect3"><a href="zend.soap.html#zend.soap.server.wsdl_mode">50.1.1.2. Zend_Soap_Server constructor for the non-WSDL mode</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.soap.html#zend.soap.server.api_define_methods">50.1.2. Methods to define Web Service API</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.html#zend.soap.server.request_response">50.1.3. Request and response objects handling</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.soap.html#zend.soap.server.request_response.request">50.1.3.1. Request processing</a></span></dt>
+<dt><span class="sect3"><a href="zend.soap.html#zend.soap.server.request_response.response">50.1.3.2. Response pre-processing</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.soap.client.html">50.2. Zend_Soap_Client</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.soap.client.html#zend.soap.client.constructor">50.2.1. Zend_Soap_Client Constructor</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.client.html#zend.soap.client.calls">50.2.2. Performing SOAP Requests</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.soap.wsdl.html">50.3. WSDL Accessor</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.constructor">50.3.1. Zend_Soap_Wsdl constructor</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.addmessage">50.3.2. addMessage() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_port_type">50.3.3. addPortType() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_port_operation">50.3.4. addPortOperation() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_binding">50.3.5. addBinding() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_binding_operation">50.3.6. addBindingOperation() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_soap_binding">50.3.7. addSoapBinding() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_soap_operation">50.3.8. addSoapOperation() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_service">50.3.9. addService() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.types">50.3.10. Type mapping</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.soap.wsdl.html#zend.soap.wsdl.types.retrieve">50.3.10.1. Retrieving type information</a></span></dt>
+<dt><span class="sect3"><a href="zend.soap.wsdl.html#zend.soap.wsdl.types.add_complex">50.3.10.2. Adding complex type information</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.add_documentation">50.3.11. addDocumentation() method</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.retrieve">50.3.12. Get finalized WSDL document</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.wsdl.html#zend.soap.wsdl.parser">50.3.13. Parsing WSDL documents</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.soap.autodiscovery.html">50.4. AutoDiscovery</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.soap.autodiscovery.html#zend.soap.autodiscovery.introduction">50.4.1. AutoDiscovery Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.autodiscovery.html#zend.soap.autodiscovery.class">50.4.2. Class autodiscovering</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.autodiscovery.html#zend.soap.autodiscovery.functions">50.4.3. Functions autodiscovering</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.autodiscovery.html#zend.soap.autodiscovery.datatypes">50.4.4. Autodiscovering Datatypes</a></span></dt>
+<dt><span class="sect2"><a href="zend.soap.autodiscovery.html#zend.soap.autodiscovery.wsdlstyles">50.4.5. WSDL Binding Styles</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.soap.server"></a>50.1. Zend_Soap_Server</h2></div></div></div>
+<p>
+        <code class="classname">Zend_Soap_Server</code> class is intended to simplify Web Services server part development for <acronym class="acronym">PHP</acronym> programmers.
+    </p>
+<p>
+        It may be used in WSDL or non-WSDL mode, and using classes or functions to define Web Service <acronym class="acronym">API</acronym>.
+    </p>
+<p>
+        When <code class="classname">Zend_Soap_Server</code> component works in the WSDL mode, it uses already prepared WSDL document to define
+        server object behavior and transport layer options.
+    </p>
+<p>
+        WSDL document may be auto-generated with functionality provided by
+        <a href="zend.soap.autodiscovery.html#zend.soap.autodiscovery.introduction" title="50.4.1. AutoDiscovery Introduction">Zend_Soap_AutoDiscovery component</a> or should be constructed manually using
+        <a href="zend.soap.wsdl.html" title="50.3. WSDL Accessor"><code class="classname">Zend_Soap_Wsdl</code> class</a> or any other <acronym class="acronym">XML</acronym> generating tool.
+    </p>
+<p>
+        If the non-WSDL mode is used, then all protocol options have to be set using options mechanism.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.soap.server.constructor"></a>50.1.1. Zend_Soap_Server constructor</h3></div></div></div>
+<p>
+            <code class="classname">Zend_Soap_Server</code> constructor should be used a bit differently for WSDL and non-WSDL modes.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.soap.server.constructor.wsdl_mode"></a>50.1.1.1. Zend_Soap_Server constructor for the WSDL mode</h4></div></div></div>
+<p>
+                <code class="classname">Zend_Soap_Server</code> constructor takes two optional parameters when it works in WSDL mode:
+                </p>
+<div class="orderedlist"><ol type="1">
+<li><p>
+                            <code class="varname">$wsdl</code>, which is an <acronym class="acronym">URI</acronym> of a WSDL file<sup>[<a name="id3039274" href="#ftn.id3039274">15</a>]</sup>.
+                        </p></li>
+<li>
+<p>
+                            <code class="varname">$options</code> - options to create <acronym class="acronym">SOAP</acronym> server object<sup>[<a name="id3039305" href="#ftn.id3039305">16</a>]</sup>.
+                        </p>
+<p>
+                            The following options are recognized in the WSDL mode:
+                            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                                        'soap_version' ('soapVersion') - soap version to use (SOAP_1_1 or <acronym class="acronym">SOAP</acronym>_1_2).
+                                    </p></li>
+<li><p>
+                                        'actor' - the actor <acronym class="acronym">URI</acronym> for the server.
+                                    </p></li>
+<li>
+<p>
+                                        'classmap' ('classMap') which can be used to map some WSDL types to <acronym class="acronym">PHP</acronym> classes.
+                                    </p>
+<p>
+                                        The option must be an array with WSDL types as keys and names of <acronym class="acronym">PHP</acronym> classes as values.
+                                    </p>
+</li>
+<li><p>
+                                        'encoding' - internal character encoding (UTF-8 is always used as an external encoding).
+                                    </p></li>
+<li><p>
+                                        'wsdl' which is equivalent to <code class="methodname">setWsdl($wsdlValue)</code> call.
+                                    </p></li>
+</ul></div>
+<p>
+                        </p>
+</li>
+</ol></div>
+<p>
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.soap.server.wsdl_mode"></a>50.1.1.2. Zend_Soap_Server constructor for the non-WSDL mode</h4></div></div></div>
+<p>
+                The first constructor parameter <span class="emphasis"><em>must</em></span> be set to <code class="constant">NULL</code> if you
+                plan to use <code class="classname">Zend_Soap_Server</code> functionality in non-WSDL mode.
+            </p>
+<p>
+                You also have to set 'uri' option in this case (see below).
+            </p>
+<p>
+                The second constructor parameter (<code class="varname">$options</code>) is an array with options to create
+                <acronym class="acronym">SOAP</acronym> server object<sup>[<a name="id3039449" href="#ftn.id3039449">17</a>]</sup>.
+            </p>
+<p>
+                The following options are recognized in the non-WSDL mode:
+                </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                            'soap_version' ('soapVersion') - soap version to use (SOAP_1_1 or <acronym class="acronym">SOAP</acronym>_1_2).
+                        </p></li>
+<li><p>
+                            'actor' - the actor <acronym class="acronym">URI</acronym> for the server.
+                        </p></li>
+<li>
+<p>
+                            'classmap' ('classMap') which can be used to map some WSDL types to <acronym class="acronym">PHP</acronym> classes.
+                        </p>
+<p>
+                            The option must be an array with WSDL types as keys and names of <acronym class="acronym">PHP</acronym> classes as values.
+                        </p>
+</li>
+<li><p>
+                            'encoding' - internal character encoding (UTF-8 is always used as an external encoding).
+                        </p></li>
+<li><p>
+                            'uri' (required) - <acronym class="acronym">URI</acronym> namespace for <acronym class="acronym">SOAP</acronym> server.
+                        </p></li>
+</ul></div>
+<p>
+            </p>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.soap.server.api_define_methods"></a>50.1.2. Methods to define Web Service API</h3></div></div></div>
+<p>
+            There are two ways to define Web Service <acronym class="acronym">API</acronym> when your want to give access to your <acronym class="acronym">PHP</acronym> code through <acronym class="acronym">SOAP</acronym>.
+        </p>
+<p>
+            The first one is to attach some class to the <code class="classname">Zend_Soap_Server</code> object which has to completely describe
+            Web Service API:
+            </p>
+<pre class="programlisting">
+...
+class MyClass {
+    /**
+     * This method takes ...
+     *
+     * @param integer $inputParam
+     * @return string
+     */
+    public function method1($inputParam) {
+        ...
+    }
+
+    /**
+     * This method takes ...
+     *
+     * @param integer $inputParam1
+     * @param string  $inputParam2
+     * @return float
+     */
+    public function method2($inputParam1, $inputParam2) {
+        ...
+    }
+
+    ...
+}
+...
+$server = new Zend_Soap_Server(null, $options);
+// Bind Class to Soap Server
+$server-&gt;setClass('MyClass');
+// Bind already initialized object to Soap Server
+$server-&gt;setObject(new MyClass());
+...
+$server-&gt;handle();
+</pre>
+<p>
+            </p>
+<div class="note"><table border="0" summary="Note: Important!">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Important!</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                    You should completely describe each method using method docblock if you plan to use autodiscover functionality
+                    to prepare corresponding Web Service WSDL.
+                </p></td></tr>
+</table></div>
+<p>
+        </p>
+<p>
+            The second method of defining Web Service API is using set of functions and <code class="methodname">addFunction()</code> or
+            <code class="methodname">loadFunctions()</code> methods:
+            </p>
+<pre class="programlisting">
+...
+/**
+ * This function ...
+ *
+ * @param integer $inputParam
+ * @return string
+ */
+function function1($inputParam) {
+    ...
+}
+
+/**
+ * This function ...
+ *
+ * @param integer $inputParam1
+ * @param string  $inputParam2
+ * @return float
+ */
+function function2($inputParam1, $inputParam2) {
+    ...
+}
+...
+$server = new Zend_Soap_Server(null, $options);
+$server-&gt;addFunction('function1');
+$server-&gt;addFunction('function2');
+...
+$server-&gt;handle();
+</pre>
+<p>
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.soap.server.request_response"></a>50.1.3. Request and response objects handling</h3></div></div></div>
+<div class="note"><table border="0" summary="Note: Advanced">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">Advanced</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+                This section describes advanced request/response processing options and may be skipped.
+            </p></td></tr>
+</table></div>
+<p>
+            <code class="classname">Zend_Soap_Server</code> component performs request/response processing automatically,
+            but allows to catch it and do some pre- and post-processing.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.soap.server.request_response.request"></a>50.1.3.1. Request processing</h4></div></div></div>
+<p>
+                <code class="methodname">Zend_Soap_Server::handle()</code> method takes request from the standard input stream ('php://input').
+                It may be overridden either by supplying optional parameter to the <code class="methodname">handle()</code> method or
+                by setting request using <code class="methodname">setRequest()</code> method:
+                </p>
+<pre class="programlisting">
+...
+$server = new Zend_Soap_Server(...);
+...
+// Set request using optional $request parameter
+$server-&gt;handle($request);
+...
+// Set request using setRequest() method
+$server-&gt;setRequest();
+$server-&gt;handle();
+</pre>
+<p>
+            </p>
+<p>
+                Request object may be represented using any of the following:
+                </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                            DOMDocument (casted to <acronym class="acronym">XML</acronym>)
+                        </p></li>
+<li><p>
+                            DOMNode (owner document is grabbed and casted to <acronym class="acronym">XML</acronym>)
+                        </p></li>
+<li><p>
+                            SimpleXMLElement (casted to <acronym class="acronym">XML</acronym>)
+                        </p></li>
+<li><p>
+                            stdClass (__toString() is called and verified to be valid <acronym class="acronym">XML</acronym>)
+                        </p></li>
+<li><p>
+                            string (verified to be valid <acronym class="acronym">XML</acronym>)
+                        </p></li>
+</ul></div>
+<p>
+            </p>
+<p>
+                Last processed request may be retrieved using <code class="methodname">getLastRequest()</code> method as an XML string:
+                </p>
+<pre class="programlisting">
+...
+$server = new Zend_Soap_Server(...);
+...
+$server-&gt;handle();
+$request = $server-&gt;getLastRequest();
+</pre>
+<p>
+
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.soap.server.request_response.response"></a>50.1.3.2. Response pre-processing</h4></div></div></div>
+<p>
+                <code class="methodname">Zend_Soap_Server::handle()</code> method automatically emits generated response to the output stream.
+                It may be blocked using <code class="methodname">setReturnResponse()</code> with <code class="constant">TRUE</code> or <code class="constant">FALSE</code>
+                as a parameter<sup>[<a name="id3039826" href="#ftn.id3039826">18</a>]</sup>.
+                Generated response is returned by <code class="methodname">handle()</code> method in this case.
+                </p>
+<pre class="programlisting">
+...
+$server = new Zend_Soap_Server(...);
+...
+// Get a response as a return value of handle() method
+// instead of emitting it to the standard output
+$server-&gt;setReturnResponse(true);
+...
+$response = $server-&gt;handle();
+...
+</pre>
+<p>
+            </p>
+<p>
+                Last response may be also retrieved by <code class="methodname">getLastResponse()</code> method for some post-processing:
+                </p>
+<pre class="programlisting">
+...
+$server = new Zend_Soap_Server(...);
+...
+$server-&gt;handle();
+$response = $server-&gt;getLastResponse();
+...
+</pre>
+<p>
+            </p>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<br><hr width="100" align="left">
+<div class="footnote"><p><sup>[<a name="ftn.id3039274" href="#id3039274">15</a>] </sup>
+                                                                                      May be set later using <code class="methodname">setWsdl($wsdl)</code> method.
+                                                                                  </p></div>
+<div class="footnote"><p><sup>[<a name="ftn.id3039305" href="#id3039305">16</a>] </sup>
+                                                                                                Options may be set later using
+                                                                                                <code class="methodname">setOptions($options)</code> method.
+                                                                                            </p></div>
+<div class="footnote"><p><sup>[<a name="ftn.id3039449" href="#id3039449">17</a>] </sup>
+                                          Options may be set later using <code class="methodname">setOptions($options)</code> method.
+                                      </p></div>
+<div class="footnote"><p><sup>[<a name="ftn.id3039826" href="#id3039826">18</a>] </sup>
+                                    Current state of the Return Response flag may be requested with
+                                    <code class="methodname">setReturnResponse()</code> method.
+                                </p></div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.session.savehandler.dbtable.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.soap.client.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">49.5. Zend_Session_SaveHandler_DbTable </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 50.2. Zend_Soap_Client</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

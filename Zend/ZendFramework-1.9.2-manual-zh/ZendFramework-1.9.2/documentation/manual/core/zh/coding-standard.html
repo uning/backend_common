@@ -1,0 +1,217 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>附录 B. Zend Framework 的 PHP 编码标准</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="requirements.zendcomponents.html" title="A.3. Zend Framework 组件">
+<link rel="next" href="coding-standard.php-file-formatting.html" title="B.2. PHP File 文件格式">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="coding-standard.html#coding-standard.overview" title="B.1.  绪论">
+<link rel="section" href="coding-standard.php-file-formatting.html" title="B.2. PHP File 文件格式">
+<link rel="section" href="coding-standard.naming-conventions.html" title="B.3.  命名约定">
+<link rel="section" href="coding-standard.coding-style.html" title="B.4.  编码风格">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">附录 B. Zend Framework 的 PHP 编码标准 </th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="requirements.zendcomponents.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="coding-standard.php-file-formatting.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="appendix" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="coding-standard"></a>附录 B. Zend Framework 的 PHP 编码标准 </h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="coding-standard.html#coding-standard.overview">B.1.  绪论 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="coding-standard.html#coding-standard.overview.scope">B.1.1.  适用范围 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.html#coding-standard.overview.goals">B.1.2.  目标 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="coding-standard.php-file-formatting.html">B.2. PHP File 文件格式 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="coding-standard.php-file-formatting.html#coding-standard.php-file-formatting.general">B.2.1.  常规 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.php-file-formatting.html#coding-standard.php-file-formatting.indentation">B.2.2.  缩进 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.php-file-formatting.html#coding-standard.php-file-formatting.max-line-length">B.2.3.  行的最大长度 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.php-file-formatting.html#coding-standard.php-file-formatting.line-termination">B.2.4.  行结束标志 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="coding-standard.naming-conventions.html">B.3.  命名约定 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="coding-standard.naming-conventions.html#coding-standard.naming-conventions.classes">B.3.1.  类 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.naming-conventions.html#coding-standard.naming-conventions.filenames">B.3.2.  文件名 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.naming-conventions.html#coding-standard.naming-conventions.functions-and-methods">B.3.3.  函数和方法 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.naming-conventions.html#coding-standard.naming-conventions.variables">B.3.4.  变量 </a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.naming-conventions.html#coding-standard.naming-conventions.constants">B.3.5.  常量 </a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="coding-standard.coding-style.html">B.4.  编码风格 </a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="coding-standard.coding-style.html#coding-standard.coding-style.php-code-demarcation">B.4.1. PHP 代码划分（Demarcation）</a></span></dt>
+<dt><span class="sect2"><a href="coding-standard.coding-style.html#coding-standard.coding-style.strings">B.4.2.  字符串 </a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.strings.literals">B.4.2.1.  字符串文字 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.strings.literals-containing-apostrophes">B.4.2.2.  包含单引号（'）的字符串文字 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.strings.variable-substitution">B.4.2.3.  变量替换 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.strings.string-concatenation">B.4.2.4.  字符串连接 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="coding-standard.coding-style.html#coding-standard.coding-style.arrays">B.4.3.  数组 </a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.arrays.numerically-indexed">B.4.3.1.  数字索引数组 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.arrays.associative">B.4.3.2.  关联数组 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="coding-standard.coding-style.html#coding-standard.coding-style.classes">B.4.4.  类 </a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.classes.declaration">B.4.4.1.  类的声明 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.classes.member-variables">B.4.4.2.  类成员变量 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="coding-standard.coding-style.html#coding-standard.coding-style.functions-and-methods">B.4.5.  函数和方法 </a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.functions-and-methods.declaration">B.4.5.1.  函数和方法声明 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.functions-and-methods.usage">B.4.5.2.  函数和方法的用法 </a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="coding-standard.coding-style.html#coding-standard.coding-style.control-statements">B.4.6.  控制语句 </a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standard.coding-style.control-statements.if-else-elseif">B.4.6.1. if/Else/Elseif</a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standards.coding-style.control-statements.switch">B.4.6.2. Switch</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="coding-standard.coding-style.html#coding-standards.inline-documentation">B.4.7.  注释文档 </a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standards.inline-documentation.documentation-format">B.4.7.1.  格式 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standards.inline-documentation.files">B.4.7.2.  文件 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standards.inline-documentation.classes">B.4.7.3.  类 </a></span></dt>
+<dt><span class="sect3"><a href="coding-standard.coding-style.html#coding-standards.inline-documentation.functions">B.4.7.4.  函数 </a></span></dt>
+</dl></dd>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="coding-standard.overview"></a>B.1.  绪论 </h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="coding-standard.overview.scope"></a>B.1.1.  适用范围 </h3></div></div></div>
+<p>
+                本文档提供的代码格式和文档的指南是给参与 Zend Framework 的个人和团队使用的，许多使用 Zend Framework 的开发者
+                也发现编码标准很有用，因为他们的代码风格和 Zend Framework 的代码保持一致。值得注意的是它要求切实努力来全面
+                详细说明编码标准。
+
+                注：有时候开发者认为在最详细的设计级别上标准的建立比标准所建议的更重要。Zend Framework 编码标准的指南
+                实践上很好地工作于 ZF 项目。你可以根据我们的 <a href="http://framework.zend.com/license" target="_top">license</a> 中的条款来修改或使用它们。
+            </p>
+<p>
+                ZF 编码标准的话题包括：
+
+                </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>PHP File 文件格式</p></li>
+<li><p> 命名约定 </p></li>
+<li><p> 编码风格 </p></li>
+<li><p> 注释文档 </p></li>
+</ul></div>
+<p>
+            </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="coding-standard.overview.goals"></a>B.1.2.  目标 </h3></div></div></div>
+<p>
+                编码标准对任何开发项目都很重要，特别是很多开发者在同一项目上工作。编码标准帮助确保代码的高质量、少 bug 和容易维护。
+            </p>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="requirements.zendcomponents.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="coding-standard.php-file-formatting.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">A.3. Zend Framework 组件 </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> B.2. PHP File 文件格式 </td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

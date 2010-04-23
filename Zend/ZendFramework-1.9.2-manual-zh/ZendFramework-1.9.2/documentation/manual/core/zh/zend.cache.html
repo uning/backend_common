@@ -1,0 +1,316 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 6 章 Zend_Cache</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.auth.adapter.openid.html" title="5.6. Open ID Authentication">
+<link rel="next" href="zend.cache.theory.html" title="6.2. 缓存原理">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.cache.html#zend.cache.introduction" title="6.1. 简介">
+<link rel="section" href="zend.cache.theory.html" title="6.2. 缓存原理">
+<link rel="section" href="zend.cache.frontends.html" title="6.3. Zend_Cache前端">
+<link rel="section" href="zend.cache.backends.html" title="6.4. Zend_Cache后端">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 6 章 Zend_Cache</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.auth.adapter.openid.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.cache.theory.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.cache"></a>第 6 章 Zend_Cache</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.cache.html#zend.cache.introduction">6.1. 简介</a></span></dt>
+<dt><span class="sect1"><a href="zend.cache.theory.html">6.2. 缓存原理</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.cache.theory.html#zend.cache.factory">6.2.1. <code class="code">Zend_Cache</code> 工厂方法 </a></span></dt>
+<dt><span class="sect2"><a href="zend.cache.theory.html#zend.cache.tags">6.2.2. 标记纪录</a></span></dt>
+<dt><span class="sect2"><a href="zend.cache.theory.html#zend.cache.clean">6.2.3. 缓存清理</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.cache.frontends.html">6.3. Zend_Cache前端</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.cache.frontends.html#zend.cache.frontends.core">6.3.1. Zend_Cache_Core</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.core.introduction">6.3.1.1. 简介</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.core.options">6.3.1.2. 可用选项</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.core.examples">6.3.1.3. 例子</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.cache.frontends.html#zend.cache.frontends.output">6.3.2. Zend_Cache_Frontend_Output</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.output.introduction">6.3.2.1. 简介</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.output.options">6.3.2.2. 可用的选项</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.output.examples">6.3.2.3. 例子</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.cache.frontends.html#zend.cache.frontends.function">6.3.3. Zend_Cache_Frontend_Function</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.function.introduction">6.3.3.1. Introduction</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.function.options">6.3.3.2. A可用的选项</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.function.examples">6.3.3.3. 例子</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.cache.frontends.html#zend.cache.frontends.class">6.3.4. Zend_Cache_Frontend_Class</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.class.introduction">6.3.4.1. Introduction</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.class.options">6.3.4.2. Available options</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.class.examples">6.3.4.3. Examples</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.cache.frontends.html#zend.cache.frontends.file">6.3.5. Zend_Cache_Frontend_File</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.file.introduction">6.3.5.1. Introduction</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.file.options">6.3.5.2. Available options</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.file.examples">6.3.5.3. Examples</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.cache.frontends.html#zend.cache.frontends.page">6.3.6. Zend_Cache_Frontend_Page</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.page.introduction">6.3.6.1. Introduction</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.page.options">6.3.6.2. Available options (for this frontend in Zend_Cache factory)</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.page.examples">6.3.6.3. Examples</a></span></dt>
+<dt><span class="sect3"><a href="zend.cache.frontends.html#zend.cache.frontends.page.cancel">6.3.6.4.  特殊的取消方法 </a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.cache.backends.html">6.4. Zend_Cache后端</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.cache.backends.html#zend.cache.backends.file">6.4.1. Zend_Cache_Backend_File</a></span></dt>
+<dt><span class="sect2"><a href="zend.cache.backends.html#zend.cache.backends.sqlite">6.4.2. Zend_Cache_Backend_Sqlite</a></span></dt>
+<dt><span class="sect2"><a href="zend.cache.backends.html#zend.cache.backends.memcached">6.4.3. Zend_Cache_Backend_Memcached</a></span></dt>
+<dt><span class="sect2"><a href="zend.cache.backends.html#zend.cache.backends.apc">6.4.4. Zend_Cache_Backend_Apc</a></span></dt>
+<dt><span class="sect2"><a href="zend.cache.backends.html#zend.cache.backends.xcache">6.4.5. Zend_Cache_Backend_Xcache</a></span></dt>
+<dt><span class="sect2"><a href="zend.cache.backends.html#zend.cache.backends.platform">6.4.6. Zend_Cache_Backend_ZendPlatform</a></span></dt>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.cache.introduction"></a>6.1. 简介</h2></div></div></div>
+<p>
+        <code class="code">Zend_Cache</code> 提供了一个缓存任何数据的一般方法.
+    </p>
+<p>
+      在Zend Framework中缓存由前端操作,同时通过后端适配器(<code class="code">File</code>, <code class="code">Sqlite</code>, <code class="code">Memcache</code>...)和
+    一个灵活的IDs和Tags系统(标识符和标记系统)存储缓存纪录.使用此方法,易于删除特定类型的纪录(例如:"删除所有标记为tag的纪录")
+    </p>
+<p>
+        模块(<code class="code">Zend_Cache_Core</code>) 的核心是通用,灵活和可配置.对于特定的需要,为了便捷,这里有一些继承自<code class="code">Zend_Cache_Core</code>的前端:
+        <code class="code">Output</code>, <code class="code">File</code>, <code class="code">Function</code> 和 <code class="code">Class</code>.
+    </p>
+<div class="example">
+<a name="zend.cache.introduction.example-1"></a><p class="title"><b>例 6.1. 调用 <code class="code">Zend_Cache::factory()</code>取得一个前端</b></p>
+<div class="example-contents">
+<p>
+            <code class="code">Zend_Cache::factory()</code> 实例化正确的对象并把他们捆绑到一起.
+            在这第一个例子中我们将把 <code class="code">Core</code> 前端和 <code class="code">File</code> 后端一起使用.
+        </p>
+<pre class="programlisting">
+$frontendOptions = array(
+   'lifeTime' =&gt; 7200, // 两小时的缓存生命期
+   'automatic_serialization' =&gt; true
+);
+
+$backendOptions = array(
+    'cache_dir' =&gt; './tmp/' // 放缓存文件的目录
+);
+
+// 取得一个Zend_Cache_Core 对象
+$cache = Zend_Cache::factory('Core',
+                             'File',
+                             $frontendOptions,
+                             $backendOptions);
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note: 由多个字组成的前端和后端">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">由多个字组成的前端和后端</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+            一些前端和后端使用多个字命名,例如'ZendPlatform'.当指定给工厂时,使用字分隔符,比如空格(' '),连字符('-'),或则点('.').
+        </p></td></tr>
+</table></div>
+<div class="example">
+<a name="zend.cache.introduction.example-2"></a><p class="title"><b>例 6.2. Caching a database query result</b></p>
+<div class="example-contents">
+<p>
+            现在有了一个前端,可用缓存任何类型的数据了(开了序列化'serialization').例如,能够缓存从昂贵的数据库查询中缓存一个结果.结果被缓存后,不再需要连接到数据库;数据直接在缓存中取回和反序列化.
+        </p>
+<pre class="programlisting">
+// $cache 在先前的例子中已经初始化了
+
+// 查看一个缓存是否存在:
+if(!$result = $cache-&gt;load('myresult')) {
+
+    // 缓存不命中;连接到数据库
+
+    $db = Zend_Db::factory( [...] );
+
+    $result = $db-&gt;fetchAll('SELECT * FROM huge_table');
+
+    $cache-&gt;save($result, 'myresult');
+
+} else {
+
+    // cache hit! shout so that we know
+    echo "This one is from cache!\n\n";
+
+}
+
+print_r($result);
+
+
+
+            </pre>
+</div>
+</div>
+<br class="example-break"><div class="example">
+<a name="zend.cache.introduction.example-3"></a><p class="title"><b>例 6.3. 用<code class="code">Zend_Cache</code> 输出前端缓存输出</b></p>
+<div class="example-contents">
+<p>
+        通过加入条件逻辑,我们'mark up'(标记)那些希望缓存输出的段(sections),在<code class="code">start()</code> 和 <code class="code">end()</code>方法间封装这些section(这类似第一个例子,并且是缓存的核心策略).
+        </p>
+<p>
+            在内部,像往常一样输出你的数据,当执行到<code class="code">end()</code>方法时,所有之前的输出都被缓存.在下一次运行时,整个段(end()方法调用前的代码)将被跳过执行,直接从Cache中取回数据(只要缓存纪录是有效的).
+        </p>
+<pre class="programlisting">
+$frontendOptions = array(
+   'lifeTime' =&gt; 30,                  // cache lifetime of 30 seconds
+   'automatic_serialization' =&gt; false  // this is the default anyway s
+);
+// 翻译时实验系统为Windows,请使用Windows的读者修改cacheDir的路径为实际的路径
+$backendOptions = array('cache_dir' =&gt; './tmp/');
+
+$cache = Zend_Cache::factory('Output',
+                             'File',
+                             $frontendOptions,
+                             $backendOptions);
+
+// 传递一个唯一标识符给start()方法
+if(!$cache-&gt;start('mypage')) {
+    // output as usual:
+
+    echo 'Hello world! ';
+    echo 'This is cached ('.time().') ';
+
+    $cache-&gt;end(); // the output is saved and sent to the browser
+}
+
+echo 'This is never cached ('.time().').';
+
+
+            </pre>
+<p>
+           注意我们两次输出了<code class="code">time()</code>的结果;为演示目的第二次的time()调用是动态的.再运行然后刷新多次;你会注意到当随着时间的流逝第一个数字并没有随时间改变.这是因为第一个数组在缓存段中输出,因此输出是被缓存了.
+           30秒后(我们设置了lifetime为30秒)由于缓存纪录超时而变得无效了,第一个数字再次更新,同时于第二个时间匹配(相同).你应该在你的浏览器或者控制台中试一下.
+       </p>
+</div>
+</div>
+<br class="example-break"><div class="note"><table border="0" summary="Note">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">注意</th>
+</tr>
+<tr><td align="left" valign="top"><p>
+        在使用Zend_Cache是特别要注意的Cache标识(传递给<code class="code">save()</code>和<code class="code">start()</code>的参数).它必须对于你所缓存的每个资源唯一,否则不相关的缓存纪录就会相互覆盖,
+        更糟的是,导致错误的显示结果.
+    </p></td></tr>
+</table></div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.auth.adapter.openid.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.cache.theory.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">5.6. Open ID Authentication </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 6.2. 缓存原理</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

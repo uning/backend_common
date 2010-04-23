@@ -1,0 +1,307 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>65.3. ZendX_JQuery Form Elements and Decorators</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="prev" href="zendx.jquery.view.html" title="65.2. ZendX_JQuery View Helpers">
+<link rel="next" href="requirements.html" title="附录 A. 系统需求">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zendx.jquery.form.html#zendx.jquery.form.usage" title="65.3.1. General Elements and Decorator Usage">
+<link rel="subsection" href="zendx.jquery.form.html#zendx.jquery.form.elements" title="65.3.2. Form Elements">
+<link rel="subsection" href="zendx.jquery.form.html#zendx.jquery.form.decorators" title="65.3.3. Form Decorators">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">65.3. ZendX_JQuery Form Elements and Decorators</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zendx.jquery.view.html">上一页</a> </td>
+<th width="60%" align="center">第 65 章 ZendX_JQuery</th>
+<td width="20%" align="right"> <a accesskey="n" href="requirements.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zendx.jquery.form"></a>65.3. ZendX_JQuery Form Elements and Decorators</h2></div></div></div>
+<p>All View Helpers are pressed into Zend_Form elements or decorators also. They can even be
+        easily integrated into your already existing forms. To enable a Form for Zend_JQuery support
+        you can use two ways: Init your form as <code class="code">$form = new ZendX_JQuery_Form();</code> or
+        use the static method <code class="code">ZendX_JQuery::enableForm($form)</code> to enable jQuery element support.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zendx.jquery.form.usage"></a>65.3.1. General Elements and Decorator Usage</h3></div></div></div>
+<p>Both elements and decorators of the Zend jQuery Form set can be initialized with
+            the option key <code class="code">jQueryParams</code> to set certain jQuery object related parameters.
+            This jQueryParams array of options matches to the <code class="code">$params</code> variable
+            of the corresponding view helpers. For example:</p>
+<pre class="programlisting">
+&lt;?php
+$element = new ZendX_JQuery_Form_Element_DatePicker(
+                    'dp1',
+                    array('jQueryParams' =&gt; array('defaultDate' =&gt; '2007/10/10'))
+                );
+// would internally call to:
+$view-&gt;datePicker("dp1", "", array('defaultDate' =&gt; '2007/10/10'), array());
+?&gt;
+
+        </pre>
+<p>Additionally elements jQuery options can be customized by the following methods:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">setJQueryParam($name, $value)</code>: Set the jQuery option <code class="code">$name</code> to
+                    the given value.</p></li>
+<li><p><code class="code">setJQueryParams($params)</code>: Set key value pairs of jQuery options and merge
+                    them with the already set options.</p></li>
+<li><p><code class="code">getJQueryParam($name)</code>: Return the jQuery option with the given name.</p></li>
+<li><p><code class="code">getJQueryParams()</code>: Return an array of all currently set jQuery options.</p></li>
+</ul></div>
+<p>Each jQuery related Decorator also owns a <code class="code">getJQueryParams()</code> method, to set options you have to
+            use the <code class="code">setDecorators()</code>, <code class="code">addDecorator()</code> or <code class="code">addDecorators()</code> functionality
+            of a form element and set the jQueryParams key as option:</p>
+<pre class="programlisting">
+$form-&gt;setDecorators(array(
+    'FormElements',
+    array('AccordionContainer', array(
+        'id'          =&gt; 'tabContainer',
+        'style'       =&gt; 'width: 600px;',
+        'jQueryParams' =&gt; array(
+            'alwaysOpen' =&gt; false,
+            'animated'   =&gt; "easeslide"
+        ),
+    )),
+    'Form'
+));
+
+        </pre>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zendx.jquery.form.elements"></a>65.3.2. Form Elements</h3></div></div></div>
+<p>The Zend Framework jQuery Extras Extension comes with the following Form Elements:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">ZendX_JQuery_Form_Element_AutoComplete</code>: Proxy to AutoComplete View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Element_ColorPicker</code>: Proxy to ColorPicker View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Element_DatePicker</code>: Proxy to DatePicker View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Element_Slider</code>: Proxy to Slider View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Element_Spinner</code>: Proxy to Spinner View Helper</p></li>
+</ul></div>
+<div class="note"><table border="0" summary="Note: jQuery Decorators: Beware the Marker Interface for UiWidgetElements">
+<tr>
+<td rowspan="2" align="center" valign="top" width="25"><img alt="[注意]" src="images/note.png"></td>
+<th align="left">
+<a name="zendx.jquery.form.elements.markerinterface"></a>jQuery Decorators: Beware the Marker Interface for UiWidgetElements</th>
+</tr>
+<tr><td align="left" valign="top"><p>By default all the jQuery Form elements use the <code class="code">ZendX_JQuery_Form_Decorator_UiWidgetElement</code> decorator
+                for rendering the jQuery element with its specific view helper. This decorator is inheritly different
+                from the ViewHelper decorator that is used for most of the default form elements in Zend_Form.
+                To ensure that rendering works correctly for jQuery form elements at least one decorator has to
+                implement the <code class="code">ZendX_JQuery_Form_Decorator_UiWidgetElementMarker</code> interface, which
+                the default decorator does. If no marker interface is found an exception is thrown. Use the marker
+                interface if you want to implement your own decorator for the jQuery form element specific rendering.
+            </p></td></tr>
+</table></div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zendx.jquery.form.decorators"></a>65.3.3. Form Decorators</h3></div></div></div>
+<p>The following Decorators come with the Zend Framework jQuery Extension:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="code">ZendX_JQuery_Form_Decorator_AccordionContainer</code>: Proxy to AccordionContainer View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Decorator_AccordionPane</code>: Proxy to AccordionPane View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Decorator_DialogContainer</code>: Proxy to DialogContainer View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Decorator_TabContainer</code>: Proxy to TabContainer View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Decorator_TabPane</code>: Proxy to TabPane View Helper</p></li>
+<li><p><code class="code">ZendX_JQuery_Form_Decorator_UiWidgetElement</code>: Decorator to Display jQuery Form Elements</p></li>
+</ul></div>
+<p>Utilizing the Container elements is a bit more complicated, the following example builds a Form with 2 SubForms in a TabContainer:</p>
+<div class="example">
+<a name="zendx.jquery.form.decorators.tabexample"></a><p class="title"><b>例 65.5. SubForms with TabContainer Decorator</b></p>
+<div class="example-contents">
+<p>The following example makes use of all Form elements and wraps them into 2 subforms that are decorated with a tab container. First
+                we build the basic <code class="code">ZendX_JQuery_Form</code>:</p>
+<pre class="programlisting">
+$form = new ZendX_JQuery_Form();
+$form-&gt;setAction('formdemo.php');
+$form-&gt;setAttrib('id', 'mainForm');
+$form-&gt;setAttrib('class', 'flora');
+
+$form-&gt;setDecorators(array(
+    'FormElements',
+    array('TabContainer', array(
+        'id'          =&gt; 'tabContainer',
+        'style'       =&gt; 'width: 600px;',
+    )),
+    'Form',
+));
+
+            </pre>
+<p>Setting the Form Id (in this case to 'mainForm') is an important step for the TabContainer. It is needed that the subforms can relate
+                to the Container Id in a later form building stage. We now initialize two SubForms that will be decorated with the <code class="code">TabPane</code>
+                decorators:</p>
+<pre class="programlisting">
+$subForm1 = new ZendX_JQuery_Form();
+$subForm1-&gt;setDecorators(array(
+    'FormElements',
+    array('HtmlTag',
+          array('tag' =&gt; 'dl')),
+    array('TabPane',
+          array('jQueryParams' =&gt; array('containerId' =&gt; 'mainForm',
+                                        'title' =&gt; 'DatePicker and Slider')))
+));
+
+$subForm2 = new ZendX_JQuery_Form();
+$subForm2-&gt;setDecorators(array(
+   'FormElements',
+   array('HtmlTag',
+         array('tag' =&gt; 'dl')),
+   array('TabPane',
+         array('jQueryParams' =&gt; array('containerId' =&gt; 'mainForm',
+                                       'title' =&gt; 'AutoComplete and Spinner')))
+));
+
+            </pre>
+<p>In this stage it is important that the <code class="code">'containerId'</code> option is set in each SubForm TabPane, or the subforms
+                cannot relate back to the tab Container and would not be displayed. To enforce this setting, an exception of the type <code class="code">ZendX_JQuery_Exception</code>
+                is thrown if the option is not set. We can now add all the desired elements to the subforms:</p>
+<pre class="programlisting">
+// Add Element Date Picker
+$elem = new ZendX_JQuery_Form_Element_DatePicker(
+                "datePicker1", array("label" =&gt; "Date Picker:")
+            );
+$elem-&gt;setJQueryParam('dateFormat', 'dd.mm.yy');
+$subForm1-&gt;addElement($elem);
+
+// Add Element Spinner
+$elem = new ZendX_JQuery_Form_Element_Spinner(
+                "spinner1", array('label' =&gt; 'Spinner:')
+            );
+$elem-&gt;setJQueryParams(array('min' =&gt; 0, 'max' =&gt; 1000, 'start' =&gt; 100));
+$subForm1-&gt;addElement($elem);
+
+// Add Slider Element
+$elem = new ZendX_JQuery_Form_Element_Slider(
+                "slider1", array('label' =&gt; 'Slider:')
+            );
+$elem-&gt;setJQueryParams(array('defaultValue' =&gt; '75'));
+$subForm2-&gt;addElement($elem);
+
+// Add Autocomplete Element
+$elem = new ZendX_JQuery_Form_Element_AutoComplete(
+                "ac1", array('label' =&gt; 'Autocomplete:')
+            );
+$elem-&gt;setJQueryParams(array('data' =&gt; array('New York',
+                                             'Berlin',
+                                             'Bern',
+                                             'Boston')));
+$subForm2-&gt;addElement($elem);
+
+// Submit Button
+$elem = new Zend_Form_Element_Submit("btn1", array('value' =&gt; 'Submit'));
+$subForm1-&gt;addElement($elem);
+
+            </pre>
+<p>Three additional lines are missing to put it all together and we have a jQuery animated form:</p>
+<pre class="programlisting">
+$form-&gt;addSubForm($subForm1, 'subform1');
+$form-&gt;addSubForm($subForm2, 'subform2');
+
+$formString = $form-&gt;render($view);
+
+            </pre>
+</div>
+</div>
+<br class="example-break">
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zendx.jquery.view.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zendx.jquery.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="requirements.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">65.2. ZendX_JQuery View Helpers </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 附录 A. 系统需求</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

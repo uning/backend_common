@@ -1,0 +1,467 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 48 章 Zend_Service</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.server.reflection.html" title="47.2. Zend_Server_Reflection">
+<link rel="next" href="zend.service.akismet.html" title="48.2. Zend_Service_Akismet">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.service.html#zend.service.introduction" title="48.1. 简介">
+<link rel="section" href="zend.service.akismet.html" title="48.2. Zend_Service_Akismet">
+<link rel="section" href="zend.service.amazon.html" title="48.3. Zend_Service_Amazon">
+<link rel="section" href="zend.service.amazon.ec2.html" title="48.4. Zend_Service_Amazon_Ec2">
+<link rel="section" href="zend.service.amazon.ec2.instance.html" title="48.5. Zend_Service_Amazon_Ec2: Instances">
+<link rel="section" href="zend.service.amazon.ec2.windows.instance.html" title="48.6. Zend_Service_Amazon_Ec2: Windows Instances">
+<link rel="section" href="zend.service.amazon.ec2.reserved.instance.html" title="48.7. Zend_Service_Amazon_Ec2: Reserved Instances">
+<link rel="section" href="zend.service.amazon.ec2.cloudwatch.html" title="48.8. Zend_Service_Amazon_Ec2: CloudWatch Monitoring">
+<link rel="section" href="zend.service.amazon.ec2.images.html" title="48.9. Zend_Service_Amazon_Ec2: Amazon Machine Images (AMI)">
+<link rel="section" href="zend.service.amazon.ec2.ebs.html" title="48.10. Zend_Service_Amazon_Ec2: Elastic Block Stroage (EBS)">
+<link rel="section" href="zend.service.amazon.ec2.elasticip.html" title="48.11. Zend_Service_Amazon_Ec2: Elastic IP Addresses">
+<link rel="section" href="zend.service.amazon.ec2.keypairs.html" title="48.12. Zend_Service_Amazon_Ec2: Keypairs">
+<link rel="section" href="zend.service.amazon.ec2.zones.html" title="48.13. Zend_Service_Amazon_Ec2: Regions and Availability Zones">
+<link rel="section" href="zend.service.amazon.ec2.securitygroups.html" title="48.14. Zend_Service_Amazon_Ec2: Security Groups">
+<link rel="section" href="zend.service.amazon.s3.html" title="48.15. Zend_Service_Amazon_S3">
+<link rel="section" href="zend.service.amazon.sqs.html" title="48.16. Zend_Service_Amazon_Sqs">
+<link rel="section" href="zend.service.audioscrobbler.html" title="48.17. Zend_Service_Audioscrobbler">
+<link rel="section" href="zend.service.delicious.html" title="48.18. Zend_Service_Delicious">
+<link rel="section" href="zend.service.flickr.html" title="48.19. Zend_Service_Flickr">
+<link rel="section" href="zend.service.nirvanix.html" title="48.20. Zend_Service_Nirvanix">
+<link rel="section" href="zend.service.recaptcha.html" title="48.21. Zend_Service_ReCaptcha">
+<link rel="section" href="zend.service.simpy.html" title="48.22. Zend_Service_Simpy">
+<link rel="section" href="zend.service.slideshare.html" title="48.23. Introduction">
+<link rel="section" href="zend.service.strikeiron.html" title="48.24. Zend_Service_StrikeIron">
+<link rel="section" href="zend.service.strikeiron.bundled-services.html" title="48.25. Zend_Service_StrikeIron: Bundled Services">
+<link rel="section" href="zend.service.strikeiron.advanced-uses.html" title="48.26. Zend_Service_StrikeIron: Advanced Uses">
+<link rel="section" href="zend.service.technorati.html" title="48.27. Zend_Service_Technorati">
+<link rel="section" href="zend.service.twitter.html" title="48.28. Zend_Service_Twitter">
+<link rel="section" href="zend.service.yahoo.html" title="48.29. Zend_Service_Yahoo">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 48 章 Zend_Service</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.server.reflection.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.service.akismet.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.service"></a>第 48 章 Zend_Service</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.service.html#zend.service.introduction">48.1. 简介</a></span></dt>
+<dt><span class="sect1"><a href="zend.service.akismet.html">48.2. Zend_Service_Akismet</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.akismet.html#zend.service.akismet.introduction">48.2.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.akismet.html#zend.service.akismet.verifykey">48.2.2. Verify an API key</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.akismet.html#zend.service.akismet.isspam">48.2.3. Check for spam</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.akismet.html#zend.service.akismet.submitspam">48.2.4. Submitting known spam</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.akismet.html#zend.service.akismet.submitham">48.2.5. Submitting false positives (ham)</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.akismet.html#zend.service.akismet.accessors">48.2.6. Zend-specific Accessor Methods</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.html">48.3. Zend_Service_Amazon</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.html#zend.service.amazon.introduction">48.3.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.html#zend.service.amazon.countrycodes">48.3.2. Country Codes</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.html#zend.service.amazon.itemlookup">48.3.3. Looking up a Specific Amazon Item by ASIN</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.html#zend.service.amazon.itemsearch">48.3.4. Performing Amazon Item Searches</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.html#zend.service.amazon.query">48.3.5. Using the Alternative Query API</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.query.introduction">48.3.5.1. Introduction</a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.service.amazon.html#zend.service.amazon.classes">48.3.6. Zend_Service_Amazon Classes</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.item">48.3.6.1. Zend_Service_Amazon_Item</a></span></dt>
+<dd><dl>
+<dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.item.asxml">48.3.6.1.1. Zend_Service_Amazon_Item::asXML()</a></span></dt>
+<dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.item.properties">48.3.6.1.2. Properties</a></span></dt>
+</dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.image">48.3.6.2. Zend_Service_Amazon_Image</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.image.properties">48.3.6.2.1. Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.resultset">48.3.6.3. Zend_Service_Amazon_ResultSet</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.resultset.totalresults">48.3.6.3.1. Zend_Service_Amazon_ResultSet::totalResults()</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.offerset">48.3.6.4. Zend_Service_Amazon_OfferSet</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.offerset.parameters">48.3.6.4.1. Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.offer">48.3.6.5. Zend_Service_Amazon_Offer</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.offer.properties">48.3.6.5.1. Zend_Service_Amazon_Offer Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.similarproduct">48.3.6.6. Zend_Service_Amazon_SimilarProduct</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.similarproduct.properties">48.3.6.6.1. Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.accessories">48.3.6.7. Zend_Service_Amazon_Accessories</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.accessories.properties">48.3.6.7.1. Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.customerreview">48.3.6.8. Zend_Service_Amazon_CustomerReview</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.customerreview.properties">48.3.6.8.1. Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.editorialreview">48.3.6.9. Zend_Service_Amazon_EditorialReview</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.editorialreview.properties">48.3.6.9.1. Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.amazon.html#zend.service.amazon.classes.listmania">48.3.6.10. Zend_Service_Amazon_Listmania</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.amazon.html#zend.service.amazon.classes.listmania.properties">48.3.6.10.1. Properties</a></span></dt></dl></dd>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.html">48.4. Zend_Service_Amazon_Ec2</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.html#zend.service.amazon.ec2.introduction">48.4.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.html#zend.service.amazon.ec2.whatis">48.4.2. What is Amazon Ec2?</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.html#zend.service.amazon.ec2.staticmethods">48.4.3. Static Methods</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.instance.html">48.5. Zend_Service_Amazon_Ec2: Instances</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.instance.html#zend.service.amazon.ec2.instance.types">48.5.1. Instance Types</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.instance.html#zend.service.amazon.ec2.instance.operations">48.5.2. Running Amazon EC2 Instances</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.instance.html#zend.service.amazon.ec2.instance.utility">48.5.3. Amazon Instance Utilities</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.windows.instance.html">48.6. Zend_Service_Amazon_Ec2: Windows Instances</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="zend.service.amazon.ec2.windows.instance.html#zend.service.amazon.ec2.windows.instance.operations">48.6.1. Windows Instances Usage</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.reserved.instance.html">48.7. Zend_Service_Amazon_Ec2: Reserved Instances</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.reserved.instance.html#zend.service.amazon.ec2.reserved.instance.howitworks">48.7.1. How Reserved Instances are Applied</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.reserved.instance.html#zend.service.amazon.ec2.reserved.instance.operations">48.7.2. Reserved Instances Usage</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.cloudwatch.html">48.8. Zend_Service_Amazon_Ec2: CloudWatch Monitoring</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="zend.service.amazon.ec2.cloudwatch.html#zend.service.amazon.ec2.cloudwatch.usage">48.8.1. CloudWatch Usage</a></span></dt></dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.images.html">48.9. Zend_Service_Amazon_Ec2: Amazon Machine Images (AMI)</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.images.html#zend.service.amazon.ec2.images.info">48.9.1. AMI Information Utilities</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.images.html#zend.service.amazon.ec2.images.attribute">48.9.2. AMI Attribute Utilities</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.ebs.html">48.10. Zend_Service_Amazon_Ec2: Elastic Block Stroage (EBS)</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.ebs.html#zend.service.amazon.ec2.ebs.creating">48.10.1. Create EBS Volumes and Snapshots</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.ebs.html#zend.service.amazon.ec2.ebs.describing">48.10.2. Describing EBS Volumes and Snapshots</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.ebs.html#zend.service.amazon.ec2.ebs.attachdetach">48.10.3. Attach and Detaching Volumes from Instances</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.ebs.html#zend.service.amazon.ec2.ebs.deleting">48.10.4. Deleting EBS Volumes and Snapshots</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.elasticip.html">48.11. Zend_Service_Amazon_Ec2: Elastic IP Addresses</a></span></dt>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.keypairs.html">48.12. Zend_Service_Amazon_Ec2: Keypairs</a></span></dt>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.zones.html">48.13. Zend_Service_Amazon_Ec2: Regions and Availability Zones</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.zones.html#zend.service.amazon.ec2.zones.regions">48.13.1. Amazon EC2 Regions</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.zones.html#zend.service.amazon.ec2.zones.availability">48.13.2. Amazon EC2 Availability Zones</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.ec2.securitygroups.html">48.14. Zend_Service_Amazon_Ec2: Security Groups</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.securitygroups.html#zend.service.amazon.ec2.securitygroups.maintenance">48.14.1. Security Group Maintenance</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.securitygroups.html#zend.service.amazon.ec2.securitygroups.authorize">48.14.2. Authorizing Access</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.ec2.securitygroups.html#zend.service.amazon.ec2.securitygroups.revoke">48.14.3. Revoking Access</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.s3.html">48.15. Zend_Service_Amazon_S3</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.introduction">48.15.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.registering">48.15.2. Registering with Amazon S3</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.apiDocumentation">48.15.3. API Documentation</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.features">48.15.4. Features</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.storing-your-first">48.15.5. Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.buckets">48.15.6. Bucket operations</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.objects">48.15.7. Object operations</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.s3.html#zend.service.amazon.s3.streams">48.15.8. Stream wrapper</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.amazon.sqs.html">48.16. Zend_Service_Amazon_Sqs</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.amazon.sqs.html#zend.service.amazon.sqs.introduction">48.16.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.sqs.html#zend.service.amazon.sqs.registering">48.16.2. Registering with Amazon SQS</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.sqs.html#zend.service.amazon.sqs.apiDocumentation">48.16.3. API Documentation</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.sqs.html#zend.service.amazon.sqs.features">48.16.4. Features</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.sqs.html#zend.service.amazon.sqs.storing-your-first">48.16.5. Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.sqs.html#zend.service.amazon.sqs.queues">48.16.6. Queue operations</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.amazon.sqs.html#zend.service.amazon.sqs.messages">48.16.7. Message operations</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.audioscrobbler.html">48.17. Zend_Service_Audioscrobbler</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.introduction">48.17.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.users">48.17.2. Users</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.artists">48.17.3. Artists</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.tracks">48.17.4. Tracks</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.tags">48.17.5. Tags</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.groups">48.17.6. Groups</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.audioscrobbler.html#zend.service.audioscrobbler.forums">48.17.7. Forums</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.delicious.html">48.18. Zend_Service_Delicious</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.introduction">48.18.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.retrieving_posts">48.18.2. Retrieving posts</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.postlist">48.18.3. Zend_Service_Delicious_PostList</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.editing_posts">48.18.4. Editing posts</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.deleting_posts">48.18.5. Deleting posts</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.adding_posts">48.18.6. Adding new posts</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.tags">48.18.7. Tags</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.bundles">48.18.8. Bundles</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.public_data">48.18.9. Public data</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.service.delicious.html#zend.service.delicious.public_data.posts">48.18.9.1. Public posts</a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.service.delicious.html#zend.service.delicious.httpclient">48.18.10. HTTP client</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.flickr.html">48.19. Zend_Service_Flickr</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.flickr.html#zend.service.flickr.introduction">48.19.1. 对Flickr搜索的介绍</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.flickr.html#zend.service.flickr.finding-users">48.19.2. 查找 Flickr 用户</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.flickr.html#zend.service.flickr.getimagedetails">48.19.3. 获得 Flickr 图像详细资料</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.flickr.html#zend.service.flickr.classes">48.19.4. Zend_Service_Flickr 类</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.service.flickr.html#zend.service.flickr.classes.resultset">48.19.4.1. Zend_Service_Flickr_ResultSet</a></span></dt>
+<dd><dl>
+<dt><span class="sect4"><a href="zend.service.flickr.html#zend.service.flickr.classes.resultset.properties">48.19.4.1.1. 属性</a></span></dt>
+<dt><span class="sect4"><a href="zend.service.flickr.html#zend.service.flickr.classes.resultset.totalResults">48.19.4.1.2. Zend_Service_Flickr_ResultSet::totalResults()</a></span></dt>
+</dl></dd>
+<dt><span class="sect3"><a href="zend.service.flickr.html#zend.service.flickr.classes.result">48.19.4.2. Zend_Service_Flickr_Result</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.flickr.html#zend.service.flickr.classes.result.properties">48.19.4.2.1. 属性</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.flickr.html#zend.service.flickr.classes.image">48.19.4.3. Zend_Service_Flickr_Image</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.flickr.html#zend.service.flickr.classes.image.properties">48.19.4.3.1. 属性</a></span></dt></dl></dd>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.nirvanix.html">48.20. Zend_Service_Nirvanix</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.introduction">48.20.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.registering">48.20.2. Registering with Nirvanix</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.apiDocumentation">48.20.3. API Documentation</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.features">48.20.4. Features</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.storing-your-first">48.20.5. Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.understanding-proxy">48.20.6. Understanding the Proxy</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.examining-results">48.20.7. Examining Results</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.nirvanix.html#zend.service.nirvanix.handling-errors">48.20.8. Handling Errors</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.recaptcha.html">48.21. Zend_Service_ReCaptcha</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.recaptcha.html#zend.service.recaptcha.introduction">48.21.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.recaptcha.html#zend.service.recaptcha.simplestuse">48.21.2. Simplest use</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.recaptcha.html#zend.service.recaptcha.mailhide">48.21.3. Hiding email addresses</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.simpy.html">48.22. Zend_Service_Simpy</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.simpy.html#zend.service.simpy.introduction">48.22.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.simpy.html#zend.service.simpy.links">48.22.2. Links</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.simpy.html#zend.service.simpy.tags">48.22.3. Tags</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.simpy.html#zend.service.simpy.notes">48.22.4. Notes</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.simpy.html#zend.service.simpy.watchlists">48.22.5. Watchlists</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.slideshare.html">48.23. Introduction</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.slideshare.html#zend.service.slideshare.basicusage">48.23.1. Getting Started with Zend_Service_SlideShare</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.slideshare.html#zend.service.slideshare.slideshowobj">48.23.2. The SlideShow object</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.slideshare.html#zend.service.slideshare.getslideshow">48.23.3. Retrieving a single slide show</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.slideshare.html#zend.service.slideshare.getslideshowlist">48.23.4. Retrieving Groups of Slide Shows</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.slideshare.html#zend.service.slideshare.caching">48.23.5. Zend_Service_SlideShare Caching policies</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.slideshare.html#zend.service.slideshare.httpclient">48.23.6. Changing the behavior of the HTTP Client</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.strikeiron.html">48.24. Zend_Service_StrikeIron</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.strikeiron.html#zend.service.strikeiron.overview">48.24.1. Overview</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.html#zend.service.strikeiron.registering">48.24.2. Registering with StrikeIron</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.html#zend.service.strikeiron.getting-started">48.24.3. Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.html#zend.service.strikeiron.making-first-query">48.24.4. Making Your First Query</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.html#zend.service.strikeiron.examining-results">48.24.5. Examining Results</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.html#zend.service.strikeiron.handling-errors">48.24.6. Handling Errors</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.html#zend.service.strikeiron.checking-subscription">48.24.7. Checking Your Subscription</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.strikeiron.bundled-services.html">48.25. Zend_Service_StrikeIron: Bundled Services</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.strikeiron.bundled-services.html#zend.service.strikeiron.bundled-services.zip-code-information">48.25.1. ZIP Code Information</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.bundled-services.html#zend.service.strikeiron.bundled-services.us-address-verification">48.25.2. U.S. Address Verification</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.bundled-services.html#zend.service.strikeiron.bundled-services.sales-use-tax-basic">48.25.3. Sales &amp; Use Tax Basic</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.strikeiron.advanced-uses.html">48.26. Zend_Service_StrikeIron: Advanced Uses</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.strikeiron.advanced-uses.html#zend.service.strikeiron.advanced-uses.services-by-wsdl">48.26.1. Using Services by WSDL</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.strikeiron.advanced-uses.html#zend.service.strikeiron.viewing-soap-transactions">48.26.2. Viewing SOAP Transactions</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.technorati.html">48.27. Zend_Service_Technorati</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.introduction">48.27.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.getting-started">48.27.2. Getting Started</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.making-first-query">48.27.3. Making Your First Query</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.consuming-results">48.27.4. Consuming Results</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.handling-errors">48.27.5. Handling Errors</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.checking-api-daily-usage">48.27.6. Checking Your API Key Daily Usage</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.queries">48.27.7. Available Technorati Queries</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.cosmos">48.27.7.1. Technorati Cosmos</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.search">48.27.7.2. Technorati Search</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.tag">48.27.7.3. Technorati Tag</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.dailycounts">48.27.7.4. Technorati DailyCounts</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.toptags">48.27.7.5. Technorati TopTags</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.bloginfo">48.27.7.6. Technorati BlogInfo</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.blogposttags">48.27.7.7. Technorati BlogPostTags</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.getinfo">48.27.7.8. Technorati GetInfo</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.queries.keyinfo">48.27.7.9. Technorati KeyInfo</a></span></dt>
+</dl></dd>
+<dt><span class="sect2"><a href="zend.service.technorati.html#zend.service.technorati.classes">48.27.8. Zend_Service_Technorati Classes</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.resultset">48.27.8.1. Zend_Service_Technorati_ResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.cosmosresultset">48.27.8.2. Zend_Service_Technorati_CosmosResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.searchresultset">48.27.8.3. Zend_Service_Technorati_SearchResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.tagresultset">48.27.8.4. Zend_Service_Technorati_TagResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.dailycountsresultset">48.27.8.5. Zend_Service_Technorati_DailyCountsResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.tagsresultset">48.27.8.6. Zend_Service_Technorati_TagsResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.result">48.27.8.7. Zend_Service_Technorati_Result</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.cosmosresult">48.27.8.8. Zend_Service_Technorati_CosmosResult</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.searchresult">48.27.8.9. Zend_Service_Technorati_SearchResult</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.tagresult">48.27.8.10. Zend_Service_Technorati_TagResult</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.dailycountsresult">48.27.8.11. Zend_Service_Technorati_DailyCountsResult</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.tagsresult">48.27.8.12. Zend_Service_Technorati_TagsResult</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.getinforesult">48.27.8.13. Zend_Service_Technorati_GetInfoResult</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.bloginforesult">48.27.8.14. Zend_Service_Technorati_BlogInfoResult</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.technorati.html#zend.service.technorati.classes.keyinforesult">48.27.8.15. Zend_Service_Technorati_KeyInfoResult</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.twitter.html">48.28. Zend_Service_Twitter</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.introduction">48.28.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.authentication">48.28.2. Authentication</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.accout">48.28.3. Account Methods</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.status">48.28.4. Status Methods</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.user">48.28.5. User Methods</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.directmessage">48.28.6. Direct Message Methods</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.friendship">48.28.7. Friendship Methods</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.favorite">48.28.8. Favorite Methods</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.twitter.html#zend.service.twitter.search">48.28.9. Zend_Service_Twitter_Search</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.service.twitter.html#zend.service.twitter.search.introduction">48.28.9.1. Introduction</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.twitter.html#zend.service.twitter.search.trends">48.28.9.2. Twitter Trends</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.twitter.html#zend.service.twitter.search.search">48.28.9.3. Searching Twitter</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.twitter.html#zend.service.twitter.search.accessors">48.28.9.4. Zend-specific Accessor Methods</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.service.yahoo.html">48.29. Zend_Service_Yahoo</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.service.yahoo.html#zend.service.yahoo.introduction">48.29.1. 简介</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.yahoo.html#zend.service.yahoo.websearch">48.29.2. 用Yahoo!来搜索网页</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.yahoo.html#zend.service.yahoo.imagesearch">48.29.3.  用Yahoo!来查找图片</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.yahoo.html#zend.service.yahoo.localsearch">48.29.4. Finding Local Businesses and Services with Yahoo!</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.yahoo.html#zend.service.yahoo.newssearch">48.29.5. 搜索Yahoo! 新闻</a></span></dt>
+<dt><span class="sect2"><a href="zend.service.yahoo.html#zend.service.yahoo.classes">48.29.6. Zend_Service_Yahoo 类</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.resultset">48.29.6.1. Zend_Service_Yahoo_ResultSet</a></span></dt>
+<dd><dl>
+<dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.resultset.totalResults">48.29.6.1.1. Zend_Service_Yahoo_ResultSet::totalResults()</a></span></dt>
+<dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.resultset.properties">48.29.6.1.2. Properties</a></span></dt>
+</dl></dd>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.webresultset">48.29.6.2. Zend_Service_Yahoo_WebResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.imageresultset">48.29.6.3. Zend_Service_Yahoo_ImageResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.localresultset">48.29.6.4. Zend_Service_Yahoo_LocalResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.newsresultset">48.29.6.5. Zend_Service_Yahoo_NewsResultSet</a></span></dt>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.result">48.29.6.6. Zend_Service_Yahoo_Result</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.result.properties">48.29.6.6.1. Properties</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.webresult">48.29.6.7. Zend_Service_Yahoo_WebResult</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.webresult.properties">48.29.6.7.1. 属性</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.imageresult">48.29.6.8. Zend_Service_Yahoo_ImageResult</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.imageresult.properties">48.29.6.8.1. 属性</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.localresult">48.29.6.9. Zend_Service_Yahoo_LocalResult</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.localresult.properties">48.29.6.9.1. 属性</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.newsresult">48.29.6.10. Zend_Service_Yahoo_NewsResult</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.newsresult.properties">48.29.6.10.1. 属性</a></span></dt></dl></dd>
+<dt><span class="sect3"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.image">48.29.6.11. Zend_Service_Yahoo_Image</a></span></dt>
+<dd><dl><dt><span class="sect4"><a href="zend.service.yahoo.html#zend.service.yahoo.classes.image.properties">48.29.6.11.1. Properties</a></span></dt></dl></dd>
+</dl></dd>
+</dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.service.introduction"></a>48.1. 简介</h2></div></div></div>
+<p>
+        <code class="code">Zend_Service</code> 是一个抽象类，Zend用它来作为实现web service（如：XML-RPC）的基础。
+        .
+    </p>
+<p>
+        通过<a href=""><code class="code">Zend_Service_Rest</code></a>类,
+        <code class="code">Zend_Service</code>可以支持任何基于REST的web服务。
+        .
+    </p>
+<p>
+        除了可以扩展 <code class="code">Zend_Service</code> 并对基于REST的web services使用 <code class="code">Zend_Service_Rest</code>
+        类进行操作之外，Zend也同时提供对流行的web services的支持，如
+        <a href="zend.service.amazon.html" title="48.3. Zend_Service_Amazon">Amazon</a>,
+        <a href="zend.service.flickr.html" title="48.19. Zend_Service_Flickr">Flickr</a>, 和
+        <a href="zend.service.yahoo.html" title="48.29. Zend_Service_Yahoo">Yahoo!</a>. 而且也许不久会加入更多的web serivces哦．
+    </p>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.server.reflection.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.service.akismet.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">47.2. Zend_Server_Reflection </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 48.2. Zend_Service_Akismet</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

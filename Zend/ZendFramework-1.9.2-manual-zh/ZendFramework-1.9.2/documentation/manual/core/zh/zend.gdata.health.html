@@ -1,0 +1,527 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>24.7. Using Google Health</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="prev" href="zend.gdata.docs.html" title="24.6. Using Google Documents List Data API">
+<link rel="next" href="zend.gdata.spreadsheets.html" title="24.8. Using Google Spreadsheets">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="subsection" href="zend.gdata.health.html#zend.gdata.health.connect" title="24.7.1. Connect To The Health Service">
+<link rel="subsection" href="zend.gdata.health.html#zend.gdata.health.profilefeed" title="24.7.2. Profile Feed">
+<link rel="subsection" href="zend.gdata.health.html#zend.gdata.health.profilelist" title="24.7.3. Profile List Feed">
+<link rel="subsection" href="zend.gdata.health.html#zend.gdata.health.notice" title="24.7.4. Sending Notices to the Register Feed">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">24.7. Using Google Health</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.gdata.docs.html">上一页</a> </td>
+<th width="60%" align="center">第 24 章 Zend_Gdata</th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.gdata.spreadsheets.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.gdata.health"></a>24.7. Using Google Health</h2></div></div></div>
+<p>
+        The Google Health Data <acronym class="acronym">API</acronym> is designed to enable developers to do two things:
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                    Read a user's Google Health profile or query for medical records that match particular criteria and then
+                    use the results to provide personalized functionality based on the data.
+                </p></li>
+<li><p>
+                    Add new medical records to a user's profile by including CCR data when sending a notice to a user's profile. Note: The CCR data is stored as an <acronym class="acronym">XML</acronym> blob
+                    within the &lt;atom&gt; entry. The library does not provide direct accessors to the object model but it does have helpers for extracting specific fields.
+                </p></li>
+</ul></div>
+<p>
+    </p>
+<p>
+        There are three main feeds, each of which requires authentication. Unlike other Google Data <acronym class="acronym">API</acronym>s, each Google Health feed has a limited set of
+        <acronym class="acronym">HTTP</acronym> operations you can perform on it, depending on which authentication method you are using (ClientLogin or AuthSub/OAuth).
+        For a list of permitted operations, see <a href="http://code.google.com/apis/health/reference.html#Authentication" target="_top">http://code.google.com/apis/health/reference.html#Authentication</a>.
+        </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                  <em class="firstterm">Profile Feed</em>
+                  use the profile feed to query a user's health profile for specific information.
+                </p></li>
+<li><p>
+                  <em class="firstterm">Register Feed</em>
+                  use the register feed to reconcile new CCR data into a profile.
+                </p></li>
+<li><p>
+                  <em class="firstterm">Profile List Feed</em>
+                    the profile list feed should be used to determine which of the user's Health profiles to interact with.
+                    This feed is only available when using ClientLogin.
+                </p></li>
+</ul></div>
+<p>
+    </p>
+<p>
+        See <a href="http://code.google.com/apis/health/" target="_top">http://code.google.com/apis/health</a>
+        for more information about the Google Health <acronym class="acronym">API</acronym>.
+    </p>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.health.connect"></a>24.7.1. Connect To The Health Service</h3></div></div></div>
+<p>
+            The Google Health <acronym class="acronym">API</acronym>, like all Google Data <acronym class="acronym">API</acronym>s, is based off of the Atom Publishing Protocol (APP), an <acronym class="acronym">XML</acronym> based format for managing web-based resources.
+            Traffic between a client and the Google Health servers occurs over <acronym class="acronym">HTTP</acronym> and allows for authenticated connections.
+        </p>
+<p>
+            Before any transactions can occur, a connection needs to be made. Creating a connection to the Health servers involves two steps: creating an <acronym class="acronym">HTTP</acronym> client
+            and binding a <code class="classname">Zend_Gdata_Health</code> service instance to that client.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.health.connect.authentication"></a>24.7.1.1. Authentication</h4></div></div></div>
+<p>
+                The Google Health <acronym class="acronym">API</acronym> allows programmatic access to a user's Health profile. There are three authentication schemes that are supported by Google Health:
+            </p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+                        <em class="firstterm">ClientLogin</em>
+                        provides direct username/password authentication to the Health servers. Since this method requires that users provide your application
+                        with their password, this authentication scheme is only recommended for installed/desktop applications.
+                    </p></li>
+<li><p>
+                        <em class="firstterm">AuthSub</em>
+                        allows a user to authorize the sharing of their private data. This provides the same level of convenience as ClientLogin but without the
+                        security risk, making it an ideal choice for web-based applications. For Google Health, AuthSub must be used
+                        in registered and secure mode--meaning that all requests to the <acronym class="acronym">API</acronym> must be digitally signed.
+                    </p></li>
+<li><p>
+                        <em class="firstterm">OAuth</em>
+                        is an alternative to AuthSub. Although this authentication scheme is not discussed in this document, more information can
+                        be found in the <a href="http://code.google.com/apis/health/developers_guide_protocol.html#OAuth" target="_top">Health Data <acronym class="acronym">API</acronym> Developer's Guide</a>.
+                    </p></li>
+</ul></div>
+<p>
+                See
+                <a href="http://code.google.com/apis/gdata/auth.html" target="_top">Authentication Overview in the Google Data <acronym class="acronym">API</acronym> documentation</a> for more
+                information on each authentication method.
+            </p>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.health.connect.service"></a>24.7.1.2. Create A Health Service Instance</h4></div></div></div>
+<p>
+                In order to interact with Google Health, the client library provides the
+                <code class="classname">Zend_Gdata_Health</code>
+                service class. This class provides a common interface to the Google Data and Atom Publishing Protocol models and assists in marshaling
+                requests to and from the Health <acronym class="acronym">API</acronym>.
+            </p>
+<p>
+                Once you've decided on an authentication scheme, the next step is to create an instance of
+                <code class="classname">Zend_Gdata_Health</code>
+                . This class should be passed an instance of
+                <code class="classname">Zend_Gdata_HttpClient</code>. This provides an interface for AuthSub/OAuth and ClientLogin to create a special
+                authenticated <acronym class="acronym">HTTP</acronym> client.
+            </p>
+<p>
+                To test against the H9 Developer's (/h9) instead of Google Health (/health), the
+                <code class="classname">Zend_Gdata_Health</code> constructor takes an optional third argument for you to specify the H9 service name 'weaver'.
+            </p>
+<p>
+                The example below shows how to create a Health service class using ClientLogin authentication:
+            </p>
+<pre class="programlisting">
+// Parameters for ClientLogin authentication
+$healthServiceName = Zend_Gdata_Health::HEALTH_SERVICE_NAME;
+//$h9ServiceName = Zend_Gdata_Health::H9_SANDBOX_SERVICE_NAME;
+$user = "user@gmail.com";
+$pass = "pa$$w0rd";
+
+// Create an authenticated HTTP client
+$client = Zend_Gdata_ClientLogin::getHttpClient($user,
+                                                $pass,
+                                                $healthServiceName);
+
+// Create an instance of the Health service
+$service = new Zend_Gdata_Health($client);
+</pre>
+<p>
+              A Health service using AuthSub can be created in a similar, though slightly more lengthy fashion. AuthSub is the
+              recommend interface to communicate with Google Health because each token is directly linked to a specific profile in
+              the user's account. Unlike other Google Data <acronym class="acronym">API</acronym>s, it is required that all requests from your application be digitally signed.
+            </p>
+<pre class="programlisting">
+/*
+ * Retrieve the current URL so that the AuthSub server knows where to
+ * redirect the user after authentication is complete.
+ */
+function getCurrentUrl() {
+    $phpRequestUri = htmlentities(substr($_SERVER['REQUEST_URI'],
+                                         0,
+                                         strcspn($_SERVER['REQUEST_URI'],
+                                                 "\n\r")),
+                                  ENT_QUOTES);
+
+    if (isset($_SERVER['HTTPS']) &amp;&amp; strtolower($_SERVER['HTTPS']) == 'on') {
+        $protocol = 'https://';
+    } else {
+        $protocol = 'http://';
+    }
+    $host = $_SERVER['HTTP_HOST'];
+    if ($_SERVER['SERVER_PORT'] != '' &amp;&amp;
+       (($protocol == 'http://' &amp;&amp; $_SERVER['SERVER_PORT'] != '80') ||
+       ($protocol == 'https://' &amp;&amp; $_SERVER['SERVER_PORT'] != '443'))) {
+        $port = ':' . $_SERVER['SERVER_PORT'];
+    } else {
+        $port = '';
+    }
+    return $protocol . $host . $port . $phpRequestUri;
+}
+
+/*
+ * Redirect a user to AuthSub if they do not have a valid session token.
+ * If they're coming back from AuthSub with a single-use token, instantiate
+ * a new HTTP client and exchange the token for a long-lived session token
+ * instead.
+ */
+function setupClient($singleUseToken = null) {
+    $client = null;
+
+    // Fetch a new AuthSub token?
+    if (!$singleUseToken) {
+        $next = getCurrentUrl();
+        $scope = 'https://www.google.com/health/feeds';
+        $authSubHandler = 'https://www.google.com/health/authsub';
+        $secure = 1;
+        $session = 1;
+        $authSubURL =  Zend_Gdata_AuthSub::getAuthSubTokenUri($next,
+                                                              $scope,
+                                                              $secure,
+                                                              $session,
+                                                              $authSubHandler);
+
+         // 1 - allows posting notices &amp;&amp; allows reading profile data
+        $permission = 1;
+        $authSubURL .= '&amp;permission=' . $permission;
+
+        echo '&lt;a href="' . $authSubURL . '"&gt;Your Google Health Account&lt;/a&gt;';
+    } else {
+        $client = new Zend_Gdata_HttpClient();
+
+        // This sets your private key to be used to sign subsequent requests
+        $client-&gt;setAuthSubPrivateKeyFile('/path/to/your/rsa_private_key.pem',
+                                          null,
+                                          true);
+
+        $sessionToken =
+            Zend_Gdata_AuthSub::getAuthSubSessionToken(trim($singleUseToken),
+                                                       $client);
+
+        // Set the long-lived session token for subsequent requests
+        $client-&gt;setAuthSubToken($sessionToken);
+    }
+    return $client;
+}
+
+// -&gt; Script execution begins here &lt;-
+
+session_start();
+
+$client = setupClient(@$_GET['token']);
+
+// Create an instance of the Health service
+$userH9Sandbox = false;
+$healthService = new Zend_Gdata_Health($client,
+                                       'googleInc-MyTestAppName-v1.0',
+                                       $userH9Sandbox);
+</pre>
+<p>NOTE: the remainder of this document will assume you are using AuthSub for authentication.</p>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.health.profilefeed"></a>24.7.2. Profile Feed</h3></div></div></div>
+<p>
+            To query the user's profile feed, make sure your initial AuthSub token was requested with the <code class="code">permission=1</code> parameter set.
+            The process of extracting data from the profile requires two steps, sending a query and iterating through the resulting feed.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.health.profilefeed.query"></a>24.7.2.1. Send a Structured Query</h4></div></div></div>
+<p>
+                You can send structured queries to retrieve specific records from a user's profile.
+            </p>
+<p>
+                When retrieving the profile using the Health <acronym class="acronym">API</acronym>, specifically constructed query <acronym class="acronym">URL</acronym>s are used to describe what (CCR) data
+                should be returned. The <code class="classname">Zend_Gdata_Health_Query</code> class helps simplify this task by automatically constructing a query
+                <acronym class="acronym">URL</acronym> based on the parameters you set.
+            </p>
+<div class="sect4" lang="zh-cn">
+<div class="titlepage"><div><div><h5 class="title">
+<a name="zend.gdata.health.profilefeed.query.construct"></a>24.7.2.1.1. Query The Feed</h5></div></div></div>
+<p>
+                    To execute a query against the profile feed, invoke a new instance of an <code class="classname">Zend_Gdata_Health_Query</code> and
+                    call the service's <code class="methodname">getHealthProfileFeed()</code> method:
+                </p>
+<pre class="programlisting">
+$healthService = new Zend_Gdata_Health($client);
+
+// example query for the top 10 medications with 2 items each
+$query = new Zend_Gdata_Health_Query();
+$query-&gt;setDigest("true");
+$query-&gt;setGrouped("true");
+$query-&gt;setMaxResultsGroup(10);
+$query-&gt;setMaxResultsInGroup(2);
+$query-&gt;setCategory("medication");
+
+$profileFeed = $healthService-&gt;getHealthProfileFeed($query);
+</pre>
+<p>Using <code class="methodname">setDigest("true")</code> returns all of user's CCR data in a single Atom <code class="code">&lt;entry&gt;</code>.</p>
+<p>The <code class="methodname">setCategory()</code> helper can be passed an additional parameter to return more specific CCR
+                information. For example, to return just the medication Lipitor, use <code class="methodname">setCategory("medication", "Lipitor")</code>. The same
+                methodology can be applied to other categories such as conditions, allergies, lab results, etc.</p>
+<p>
+                    A full list of supported query parameters is available in the <a href="http://code.google.com/apis/health/reference.html#Parameters" target="_top">query parameters section</a>
+                    of the Health <acronym class="acronym">API</acronym> Reference Guide.
+                </p>
+</div>
+</div>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.health.profilefeed.iterate"></a>24.7.2.2. Iterate Through The Profile Entries</h4></div></div></div>
+<p>
+                Each Google Health entry contains CCR data, however, using the <code class="code">digest=true</code> query parameter will
+                consolidate all of the CCR elements (that match your query) into a single Atom <code class="code">&lt;entry&gt;</code>.
+            </p>
+<p>
+                To retrieve the full CCR information from an entry, make a call to the <code class="classname">Zend_Gdata_Health_ProfileEntry</code> class's <code class="methodname">getCcr()</code> method.
+                That returns a <code class="classname">Zend_Gdata_Health_Extension_CCR</code>:
+            </p>
+<pre class="programlisting">
+$entries = $profileFeed-&gt;getEntries();
+foreach ($entries as $entry) {
+    $medications = $entry-&gt;getCcr()-&gt;getMedications();
+    //$conditions = $entry-&gt;getCcr()-&gt;getConditions();
+    //$immunizations = $entry-&gt;getCcr()-&gt;getImmunizations();
+
+    // print the CCR xml (this will just be the entry's medications)
+    foreach ($medications as $med) {
+        $xmlStr = $med-&gt;ownerDocument-&gt;saveXML($med);
+        echo "&lt;pre&gt;" . $xmlStr . "&lt;/pre&gt;";
+    }
+}
+</pre>
+<p>
+              Here, the <code class="methodname">getCcr()</code> method is used in conjunction with a magic helper to drill down and extract just the
+              medication data from the entry's CCR. The formentioned magic helper takes the form <code class="methodname">getCATEGORYNAME()</code>, where
+              <code class="constant">CATEGORYNAME</code> is a supported Google Health category. See the
+              <a href="http://code.google.com/apis/health/reference.html#CatQueries" target="_top">Google Health reference Guide</a> for the possible categories.
+            </p>
+<p>
+               To be more efficient, you can also use category queries to only return the necessary CCR from the Google Health servers. Then, iterate through those results:
+            </p>
+<pre class="programlisting">
+$query = new Zend_Gdata_Health_Query();
+$query-&gt;setDigest("true");
+$query-&gt;setCategory("condition");
+$profileFeed = $healthService-&gt;getHealthProfileFeed($query);
+
+// Since the query contained digest=true, only one Atom entry is returned
+$entry = $profileFeed-&gt;entry[0];
+$conditions = $entry-&gt;getCcr()-&gt;getConditions();
+
+// print the CCR xml (this will just be the profile's conditions)
+foreach ($conditions as $cond) {
+    $xmlStr = $cond-&gt;ownerDocument-&gt;saveXML($cond);
+    echo "&lt;pre&gt;" . $xmlStr . "&lt;/pre&gt;";
+}
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.health.profilelist"></a>24.7.3. Profile List Feed</h3></div></div></div>
+<p>NOTE: This feed is only available when using ClientLogin</p>
+<p>
+            Since ClientLogin requires a profile ID with each of its feeds, applications will likely want to query this feed first in order
+            to select the appropriate profile. The profile list feed returns Atom entries corresponding each profile in the user's
+            Google Health account. The profile ID is returned in the Atom <code class="code">&lt;content&gt;</code> and the profile name in the
+            <code class="code">&lt;title&gt;</code> element.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.health.profilelist.query"></a>24.7.3.1. Query The Feed</h4></div></div></div>
+<p>
+                To execute a query against the profile list feed, call the service's <code class="methodname">getHealthProfileListFeed()</code> method:
+            </p>
+<pre class="programlisting">
+$client = Zend_Gdata_ClientLogin::getHttpClient('user@gmail.com',
+                                                'pa$$word',
+                                                'health');
+$healthService = new Zend_Gdata_Health($client);
+$feed = $healthService-&gt;getHealthProfileListFeed();
+
+// print each profile's name and id
+$entries = $feed-&gt;getEntries();
+foreach ($entries as $entry) {
+    echo '&lt;p&gt;Profile name: ' . $entry-&gt;getProfileName() . '&lt;br&gt;';
+    echo 'profile ID: ' . $entry-&gt;getProfileID() . '&lt;/p&gt;';
+}
+</pre>
+<p>
+              Once you've determined which profile to use, call <code class="methodname">setProfileID()</code> with the profileID as an argument.
+              This will restrict subsequent <acronym class="acronym">API</acronym> requests to be against that particular profile:
+            </p>
+<pre class="programlisting">
+// use the first profile
+$profileID = $feed-&gt;entry[0]-&gt;getProfileID();
+$healthService-&gt;setProfileID($profileID);
+
+$profileFeed = $healthService-&gt;getHealthProfileFeed();
+
+$profileID = $healthService-&gt;getProfileID();
+echo '&lt;p&gt;&lt;b&gt;Queried profileID&lt;/b&gt;: ' . $profileID . '&lt;/p&gt;';
+</pre>
+</div>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.gdata.health.notice"></a>24.7.4. Sending Notices to the Register Feed</h3></div></div></div>
+<p>
+            Individual posts to the register feed are known as notices. Notice are sent from third-party applications to inform the user
+            of a new event. With AuthSub/OAuth, notices are the single means by which your application can add new CCR information
+            into a user's profile. Notices can contain plain text (including certain <acronym class="acronym">XHTML</acronym> elements), a CCR document, or both. As an example,
+            notices might be sent to remind users to pick up a prescription, or they might contain lab results in the CCR format.
+        </p>
+<div class="sect3" lang="zh-cn">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="zend.gdata.health.notice.send"></a>24.7.4.1. Sending a notice</h4></div></div></div>
+<p>
+              Notices can be sent by using the <code class="methodname">sendHealthNotice()</code> method for the Health service:
+          </p>
+<pre class="programlisting">
+$healthService = new Zend_Gdata_Health($client);
+
+$subject = "Title of your notice goes here";
+$body = "Notice body can contain &lt;b&gt;html&lt;/b&gt; entities";
+$ccr = '&lt;ContinuityOfCareRecord xmlns="urn:astm-org:CCR"&gt;
+  &lt;Body&gt;
+   &lt;Problems&gt;
+    &lt;Problem&gt;
+      &lt;DateTime&gt;
+        &lt;Type&gt;&lt;Text&gt;Start date&lt;/Text&gt;&lt;/Type&gt;
+        &lt;ExactDateTime&gt;2007-04-04T07:00:00Z&lt;/ExactDateTime&gt;
+      &lt;/DateTime&gt;
+      &lt;Description&gt;
+        &lt;Text&gt;Aortic valve disorders&lt;/Text&gt;
+        &lt;Code&gt;
+          &lt;Value&gt;410.10&lt;/Value&gt;
+          &lt;CodingSystem&gt;ICD9&lt;/CodingSystem&gt;
+          &lt;Version&gt;2004&lt;/Version&gt;
+        &lt;/Code&gt;
+      &lt;/Description&gt;
+      &lt;Status&gt;&lt;Text&gt;Active&lt;/Text&gt;&lt;/Status&gt;
+    &lt;/Problem&gt;
+  &lt;/Problems&gt;
+  &lt;/Body&gt;
+&lt;/ContinuityOfCareRecord&gt;';
+
+$responseEntry = $healthService-&gt;sendHealthNotice($subject,
+                                                  $body,
+                                                  "html",
+                                                  $ccr);
+</pre>
+</div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.gdata.docs.html">上一页</a> </td>
+<td width="20%" align="center"><a accesskey="u" href="zend.gdata.html">上一级</a></td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.gdata.spreadsheets.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">24.6. Using Google Documents List Data API </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 24.8. Using Google Spreadsheets</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>第 25 章 Zend_Http</title>
+<link rel="stylesheet" href="dbstyle.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.72.0">
+<link rel="start" href="index.html" title="Zend Framework手册 中文版">
+<link rel="up" href="index.html" title="Zend Framework手册 中文版">
+<link rel="prev" href="zend.gdata.exception.html" title="24.13. Catching Gdata Exceptions">
+<link rel="next" href="zend.http.client.advanced.html" title="25.2. Zend_Http_Client - Advanced Usage">
+<link rel="chapter" href="introduction.html" title="第 1 章 Zend Framework简介">
+<link rel="chapter" href="zend.acl.html" title="第 2 章 Zend_Acl">
+<link rel="chapter" href="zend.amf.html" title="第 3 章 Zend_Amf">
+<link rel="chapter" href="zend.application.html" title="第 4 章 Zend_Application">
+<link rel="chapter" href="zend.auth.html" title="第 5 章 Zend_Auth">
+<link rel="chapter" href="zend.cache.html" title="第 6 章 Zend_Cache">
+<link rel="chapter" href="zend.captcha.html" title="第 7 章 Zend_Captcha">
+<link rel="chapter" href="zend.codegenerator.html" title="第 8 章 Zend_CodeGenerator">
+<link rel="chapter" href="zend.config.html" title="第 9 章 Zend_Config">
+<link rel="chapter" href="zend.config.writer.html" title="第 10 章 Zend_Config_Writer">
+<link rel="chapter" href="zend.console.getopt.html" title="第 11 章 Zend_Console_Getopt">
+<link rel="chapter" href="zend.controller.html" title="第 12 章 Zend_Controller">
+<link rel="chapter" href="zend.currency.html" title="第 13 章 Zend_Currency">
+<link rel="chapter" href="zend.date.html" title="第 14 章 Zend_Date">
+<link rel="chapter" href="zend.db.html" title="第 15 章 Zend_Db">
+<link rel="chapter" href="zend.debug.html" title="第 16 章 Zend_Debug">
+<link rel="chapter" href="zend.dojo.html" title="第 17 章 Zend_Dojo">
+<link rel="chapter" href="zend.dom.html" title="第 18 章 Zend_Dom">
+<link rel="chapter" href="zend.exception.html" title="第 19 章 Zend_Exception">
+<link rel="chapter" href="zend.feed.html" title="第 20 章 Zend_Feed">
+<link rel="chapter" href="zend.file.html" title="第 21 章 Zend_File">
+<link rel="chapter" href="zend.filter.html" title="第 22 章 Zend_Filter">
+<link rel="chapter" href="zend.form.html" title="第 23 章 Zend_Form">
+<link rel="chapter" href="zend.gdata.html" title="第 24 章 Zend_Gdata">
+<link rel="chapter" href="zend.http.html" title="第 25 章 Zend_Http">
+<link rel="chapter" href="zend.infocard.html" title="第 26 章 Zend_InfoCard">
+<link rel="chapter" href="zend.json.html" title="第 27 章 Zend_Json">
+<link rel="chapter" href="zend.layout.html" title="第 28 章 Zend_Layout">
+<link rel="chapter" href="zend.ldap.html" title="第 29 章 Zend_Ldap">
+<link rel="chapter" href="zend.loader.html" title="第 30 章 Zend_Loader">
+<link rel="chapter" href="zend.locale.html" title="第 31 章 Zend_Locale">
+<link rel="chapter" href="zend.log.html" title="第 32 章 Zend_Log">
+<link rel="chapter" href="zend.mail.html" title="第 33 章 Zend_Mail">
+<link rel="chapter" href="zend.measure.html" title="第 34 章 Zend_Measure">
+<link rel="chapter" href="zend.memory.html" title="第 35 章 Zend_Memory">
+<link rel="chapter" href="zend.mime.html" title="第 36 章 Zend_Mime">
+<link rel="chapter" href="zend.navigation.html" title="第 37 章 Zend_Navigation">
+<link rel="chapter" href="zend.openid.html" title="第 38 章 Zend_OpenId">
+<link rel="chapter" href="zend.paginator.html" title="第 39 章 Zend_Paginator">
+<link rel="chapter" href="zend.pdf.html" title="第 40 章 Zend_Pdf">
+<link rel="chapter" href="zend.progressbar.html" title="第 41 章 Zend_ProgressBar">
+<link rel="chapter" href="zend.queue.html" title="第 42 章 Zend_Queue">
+<link rel="chapter" href="zend.reflection.html" title="第 43 章 Zend_Reflection">
+<link rel="chapter" href="zend.registry.html" title="第 44 章 Zend_Registry">
+<link rel="chapter" href="zend.rest.html" title="第 45 章 Zend_Rest">
+<link rel="chapter" href="zend.search.lucene.html" title="第 46 章 Zend_Search_Lucene">
+<link rel="chapter" href="zend.server.html" title="第 47 章 Zend_Server">
+<link rel="chapter" href="zend.service.html" title="第 48 章 Zend_Service">
+<link rel="chapter" href="zend.session.html" title="第 49 章 Zend_Session">
+<link rel="chapter" href="zend.soap.html" title="第 50 章 Zend_Soap">
+<link rel="chapter" href="zend.tag.html" title="第 51 章 Zend_Tag">
+<link rel="chapter" href="zend.test.html" title="第 52 章 Zend_Test">
+<link rel="chapter" href="zend.text.html" title="第 53 章 Zend_Text">
+<link rel="chapter" href="zend.timesync.html" title="第 54 章 Zend_TimeSync">
+<link rel="chapter" href="zend.tool.framework.html" title="第 55 章 Zend_Tool_Framework">
+<link rel="chapter" href="zend.tool.project.html" title="第 56 章 Zend_Tool_Project">
+<link rel="chapter" href="zend.translate.html" title="第 57 章 Zend_Translate">
+<link rel="chapter" href="zend.uri.html" title="第 58 章 Zend_Uri">
+<link rel="chapter" href="zend.validate.html" title="第 59 章 Zend_Validate">
+<link rel="chapter" href="zend.version.html" title="第 60 章 Zend_Version">
+<link rel="chapter" href="zend.view.html" title="第 61 章 Zend_View">
+<link rel="chapter" href="zend.wildfire.html" title="第 62 章 Zend_Wildfire">
+<link rel="chapter" href="zend.xmlrpc.html" title="第 63 章 Zend_XmlRpc">
+<link rel="chapter" href="zendx.console.process.unix.html" title="第 64 章 ZendX_Console_Process_Unix">
+<link rel="chapter" href="zendx.jquery.html" title="第 65 章 ZendX_JQuery">
+<link rel="appendix" href="requirements.html" title="附录 A. 系统需求">
+<link rel="appendix" href="coding-standard.html" title="附录 B. Zend Framework 的 PHP 编码标准">
+<link rel="appendix" href="doc-standard.html" title="附录 C. Zend Framework Documentation Standard">
+<link rel="appendix" href="project-structure.html" title="附录 D. Recommended Project Structure for Zend Framework MVC Applications">
+<link rel="appendix" href="performance.html" title="附录 E. Zend Framework Performance Guide">
+<link rel="appendix" href="copyrights.html" title="附录 F. 版权信息">
+<link rel="index" href="the.index.html" title="索引">
+<link rel="section" href="zend.http.html#zend.http.client" title="25.1. Zend_Http_Client - 介绍">
+<link rel="section" href="zend.http.client.advanced.html" title="25.2. Zend_Http_Client - Advanced Usage">
+<link rel="section" href="zend.http.client.adapters.html" title="25.3. Zend_Http_Client - Connection Adapters">
+<link rel="section" href="zend.http.client.migration.html" title="25.4. Migrating from previous versions">
+<link rel="section" href="zend.http.cookies.html" title="25.5. Zend_Http_Cookie and Zend_Http_CookieJar">
+<link rel="section" href="zend.http.response.html" title="25.6. Zend_Http_Response">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="navheader"><table width="100%" summary="Navigation header">
+<tr><th colspan="3" align="center">第 25 章 Zend_Http</th></tr>
+<tr>
+<td width="20%" align="left">
+<a accesskey="p" href="zend.gdata.exception.html">上一页</a> </td>
+<th width="60%" align="center"> </th>
+<td width="20%" align="right"> <a accesskey="n" href="zend.http.client.advanced.html">下一页</a>
+</td>
+</tr>
+</table></div>
+<div class="chapter" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="zend.http"></a>第 25 章 Zend_Http</h2></div></div></div>
+<div class="toc">
+<p><b>目录</b></p>
+<dl>
+<dt><span class="sect1"><a href="zend.http.html#zend.http.client">25.1. Zend_Http_Client - 介绍</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.http.html#zend.http.client.introduction">25.1.1. 介绍</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.html#zend.http.client.configuration">25.1.2. 配置参数</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.html#zend.http.client.basic-requests">25.1.3. 执行基本 HTTP 请求</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.html#zend.http.client.parameters">25.1.4. 添加 GET 和 POST 参数 </a></span></dt>
+<dt><span class="sect2"><a href="zend.http.html#zend.http.client.accessing_last">25.1.5. 访问最后一次的请求和响应</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.http.client.advanced.html">25.2. Zend_Http_Client - Advanced Usage</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.http.client.advanced.html#zend.http.client.redirections">25.2.1. HTTP Redirections</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.advanced.html#zend.http.client.cookies">25.2.2. Adding Cookies and Using Cookie Persistence</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.advanced.html#zend.http.client.custom_headers">25.2.3. Setting Custom Request Headers</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.advanced.html#zend.http.client.file_uploads">25.2.4. File Uploads</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.advanced.html#zend.http.client.raw_post_data">25.2.5. Sending Raw POST Data</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.advanced.html#zend.http.client.http_authentication">25.2.6. HTTP Authentication</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.advanced.html#zend.http.client.multiple_requests">25.2.7. Sending Multiple Requests With the Same Client</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.http.client.adapters.html">25.3. Zend_Http_Client - Connection Adapters</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.http.client.adapters.html#zend.http.client.adapters.overview">25.3.1. Overview</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.adapters.html#zend.http.client.adapters.socket">25.3.2. The Socket Adapter</a></span></dt>
+<dd><dl><dt><span class="sect3"><a href="zend.http.client.adapters.html#zend.http.client.adapters.socket.streamcontext">25.3.2.1. Customizing and accessing the Socket adapter stream context</a></span></dt></dl></dd>
+<dt><span class="sect2"><a href="zend.http.client.adapters.html#zend.http.client.adapters.proxy">25.3.3. The Proxy Adapter</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.adapters.html#zend.http.client.adapters.curl">25.3.4. The cURL Adapter</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.adapters.html#zend.http.client.adapters.test">25.3.5. The Test Adapter</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.client.adapters.html#zend.http.client.adapters.extending">25.3.6. Creating your own connection adapters</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.http.client.migration.html">25.4. Migrating from previous versions</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.http.client.migration.html#zend.http.client.migration.tozf19">25.4.1. Migrating from 1.8 or older to 1.9 or newer</a></span></dt>
+<dd><dl>
+<dt><span class="sect3"><a href="zend.http.client.migration.html#zend.http.client.migration.tozf19.fileuploadsarray">25.4.1.1. Changes to internal uploaded file information storage</a></span></dt>
+<dt><span class="sect3"><a href="zend.http.client.migration.html#zend.http.client.migration.tozf19.getparamsrecursize">25.4.1.2. Deprecation of Zend_Http_Client::_getParametersRecursive()</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.http.cookies.html">25.5. Zend_Http_Cookie and Zend_Http_CookieJar</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="zend.http.cookies.html#zend.http.cookies.introduction">25.5.1. Introduction</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.cookies.html#zend.http.cookies.cookie.instantiating">25.5.2. Instantiating Zend_Http_Cookie Objects</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.cookies.html#zend.http.cookies.cookie.accessors">25.5.3. Zend_Http_Cookie getter methods</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.cookies.html#zend.http.cookies.cookie.matching">25.5.4. Zend_Http_Cookie: Matching against a scenario</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.cookies.html#zend.http.cookies.cookiejar">25.5.5. The Zend_Http_CookieJar Class: Instantiation</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.cookies.html#zend.http.cookies.cookiejar.adding_cookies">25.5.6. Adding Cookies to a Zend_Http_CookieJar object</a></span></dt>
+<dt><span class="sect2"><a href="zend.http.cookies.html#zend.http.cookies.cookiejar.getting_cookies">25.5.7. Retrieving Cookies From a Zend_Http_CookieJar object</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="zend.http.response.html">25.6. Zend_Http_Response</a></span></dt>
+<dd><dl><dt><span class="sect2"><a href="zend.http.response.html#zend.http.response.introduction">25.6.1. 简介</a></span></dt></dl></dd>
+</dl>
+</div>
+<div class="sect1" lang="zh-cn">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="zend.http.client"></a>25.1. Zend_Http_Client - 介绍</h2></div></div></div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.http.client.introduction"></a>25.1.1. 介绍</h3></div></div></div>
+<p>
+            Zend_Http_Client 提供了一个简单的界面来执行HTTP请求。Zend_Http_Client 支持
+            作为一个 HTTP 客户端应有的大多数简单功能，也包括象HTTP认证和文件上传等更加
+            复杂的功能。成功的请求和大多数失败的请求将返回一个 Zend_Http_Response 对象，
+            该对象提供了对响应的头部信息和主体信息的访问。
+            （见<a href="zend.http.response.html" title="25.6. Zend_Http_Response">第 25.6 节 “Zend_Http_Response”</a>）
+        </p>
+<p>
+            构造器类可选的第一个参数可以是一个URL（字符串或者 Zend_Uri_Http 对象），
+            第二个可选参数是一个包含配置参数的数组。这两个参数也可以全空，之后由
+            setUri()和setConfig()方法提供。
+            </p>
+<div class="example">
+<a name="zend.http.client.introduction.example-1"></a><p class="title"><b>例 25.1. 初始化一个 Zend_Http_Client 对象</b></p>
+<div class="example-contents"><pre class="programlisting">
+$client = new Zend_Http_Client('http://example.org', array(
+    'maxredirects' =&gt; 0,
+    'timeout'      =&gt; 30));
+
+// 上述代码和下面的代码是两种不同的写法
+$client = new Zend_Http_Client();
+$client-&gt;setUri('http://example.org');
+$client-&gt;setConfig(array(
+    'maxredirects' =&gt; 0,
+    'timeout'      =&gt; 30));
+
+                </pre></div>
+</div>
+<p><br class="example-break">
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.http.client.configuration"></a>25.1.2. 配置参数</h3></div></div></div>
+<p>
+            构造器和 setConfig() 方法接受一个复合的配置参数数组，因为这些配置参数
+            有一个缺省值，所以是否配置这些参数都是可选的。
+            </p>
+<div class="table">
+<a name="zend.http.client.configuration.table"></a><p class="title"><b>表 25.1. Zend_Http_Client 配置参数</b></p>
+<div class="table-contents"><table summary="Zend_Http_Client 配置参数" border="1">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>参数</th>
+<th>描述</th>
+<th>值的类型</th>
+<th>缺省值</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>maxredirects</td>
+<td>随后的重定向的最大值 (0 = none)</td>
+<td>整数</td>
+<td>5</td>
+</tr>
+<tr>
+<td>strict</td>
+<td>是否执行头部名称的确认，当设置为 False 时，将忽略确认，通常情况下不应改变这个参数的值。</td>
+<td>布尔值</td>
+<td>true</td>
+</tr>
+<tr>
+<td>strictredirects</td>
+<td>重定向时是否严格遵守 RFC (见 <a href="zend.http.client.advanced.html#zend.http.client.redirections" title="25.2.1. HTTP Redirections">第 25.2.1 节 “HTTP Redirections”</a>)</td>
+<td>布尔值</td>
+<td>false</td>
+</tr>
+<tr>
+<td>useragent</td>
+<td>用户代理的识别字符串（含在请求的头部信息内）</td>
+<td>字符串</td>
+<td>'Zend_Http_Client'</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>连接超时 (单位是秒)</td>
+<td>整数</td>
+<td>10</td>
+</tr>
+<tr>
+<td>httpversion</td>
+<td>HTTP 协议版本 (通常是 '1.1' 或 '1.0')</td>
+<td>字符串</td>
+<td>'1.1'</td>
+</tr>
+<tr>
+<td>adapter</td>
+<td>连接适配器类时使用（见 <a href="zend.http.client.adapters.html" title="25.3. Zend_Http_Client - Connection Adapters">第 25.3 节 “Zend_Http_Client - Connection Adapters”</a>）</td>
+<td>多种类型</td>
+<td>'Zend_Http_Client_Adapter_Socket'</td>
+</tr>
+<tr>
+<td>keepalive</td>
+<td>是否允许与服务器之间的 keep-alive 连接。如果在同一台服务器上
+                            执行几个互相关联的请求时，keep-alive 连接是有用的而且有可能提高性能。</td>
+<td>布尔值</td>
+<td>false</td>
+</tr>
+<tr>
+<td>storeresponse</td>
+<td>是否保存上次的响应结果，以备今后使用getLastResponse()重新获取。如果设置为 false，getLastResponse() 将返回空。</td>
+<td>布尔值</td>
+<td>true</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p><br class="table-break">
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.http.client.basic-requests"></a>25.1.3. 执行基本 HTTP 请求</h3></div></div></div>
+<p>
+            使用 request() 方法执行简单 HTTP 请求是件非常容易的事情，3行代码即可搞定：
+            </p>
+<div class="example">
+<a name="zend.http.client.basic-requests.example-1"></a><p class="title"><b>例 25.2. 执行一个简单的 GET 请求</b></p>
+<div class="example-contents"><pre class="programlisting">
+$client = new Zend_Http_Client('http://example.org');
+$response = $client-&gt;request();
+
+                </pre></div>
+</div>
+<p><br class="example-break">
+            request() 带一个可选的参数 - 请求方法，它可以是 GET, POST, PUT, HEAD,
+            DELETE, TRACE, OPTIONS 或 CONNECT 等由 HTTP 协议定义的方法。
+            <sup>[<a name="id2950860" href="#ftn.id2950860">1</a>]</sup>.
+            为了方便起见，这些都被定义为类的常量：即
+            Zend_Http_Request::GET, Zend_Http_Request::POST 等等。
+        </p>
+<p>
+            如果没有指定请求方法，则使用最后一次 setMethod() 设定的请求方法。
+            如果从未使用 setMethod()，那么缺省的请求方法是 GET（见上述的例子）。
+            </p>
+<div class="example">
+<a name="zend.http.client.basic-requests.example-2"></a><p class="title"><b>例 25.3. 使用 GET 以外的请求方法</b></p>
+<div class="example-contents"><pre class="programlisting">
+// 执行一个 POST 请求
+$response = $client-&gt;request('POST');
+
+// 另外一种执行 POST 请求的方式
+$client-&gt;setMethod(Zend_Http_Client::POST);
+$response = $client-&gt;request();
+
+                </pre></div>
+</div>
+<p><br class="example-break">
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.http.client.parameters"></a>25.1.4. 添加 GET 和 POST 参数 </h3></div></div></div>
+<p>
+            在一个HTTP请求中添加GET参数是非常简单的，既可以通过把参数指定为
+            URL的一部分，也可以通过使用 setParameterGet() 方法来添加。这个方
+            法把把GET参数的名称作为它的第一个参数，把GET参数的值作为它的第二
+            个参数。为了方便起见，setParameterGet() 方法也能接受单个复合数组
+            （名称 =&gt; 值）的 GET 参数，这种方式对于需要设置几个 GET 参数时更
+            加方便。
+            </p>
+<div class="example">
+<a name="zend.http.client.parameters.example-1"></a><p class="title"><b>例 25.4. 设置 GET 参数</b></p>
+<div class="example-contents"><pre class="programlisting">
+// 使用 setParameterGet 方法设置一个 GET 参数
+$client-&gt;setParameterGet('knight', 'lancelot');
+
+// 设置 URL 的等效方法
+$client-&gt;setUri('http://example.com/index.php?knight=lancelot');
+
+// 一次添加几个参数
+$client-&gt;setParameterGet(array(
+    'first_name'  =&gt; 'Bender',
+    'middle_name' =&gt; 'Bending'
+    'made_in'     =&gt; 'Mexico',
+));
+
+                </pre></div>
+</div>
+<p><br class="example-break">
+        </p>
+<p>
+            虽然 GET 参数可以和任何请求方法一起发送，但 POST 参数只能在 POST
+            请求内发送。给一个请求添加 POST 参数与添加 GET 参数非常类似，是由
+            setParameterPost() 方法完成的，该方法在结构上与 setParameterGet()
+            方法很相似。
+            </p>
+<div class="example">
+<a name="zend.http.client.parameters.example-2"></a><p class="title"><b>例 25.5. 设置 POST 参数</b></p>
+<div class="example-contents"><pre class="programlisting">
+// 设置一个 POST 参数
+$client-&gt;setParameterPost('language', 'fr');
+
+// 设置几个 POST 参数，其中的一个参数有几个值
+$client-&gt;setParameterPost(array(
+    'language'  =&gt; 'es',
+    'country'   =&gt; 'ar',
+    'selection' =&gt; array(45, 32, 80)
+));
+
+                </pre></div>
+</div>
+<p><br class="example-break">
+            需要注意的是，当发送 POST 请求时，即可设置GET参数，也可设置POST参数。
+            另一方面，如果针对一个非 POST 请求设置 POST 参数，将不会被触发或给出
+            报错，因为它是没有用的。除非请求是一个 POST 请求，POST 参数都会被简
+            单地忽略掉。
+        </p>
+</div>
+<div class="sect2" lang="zh-cn">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="zend.http.client.accessing_last"></a>25.1.5. 访问最后一次的请求和响应</h3></div></div></div>
+<p>
+            Zend_Http_Client 提供了访问客户端最后一次发送的请求和访问客户端最后
+            一次接收到的响应的方法。
+            <code class="code">Zend_Http_Client-&gt;getLastRequest()</code> 不需要设置参数，同时
+            返回最后一次客户端发送的HTTP请求字符串。同样，
+            <code class="code">Zend_Http_Client-&gt;getLastResponse()</code> 返回客户端接收到的
+            最后一次<a href="zend.http.response.html" title="25.6. Zend_Http_Response">Zend_Http_Response</a> 对象。
+        </p>
+</div>
+</div>
+<div class="footnotes">
+<br><hr width="100" align="left">
+<div class="footnote"><p><sup>[<a name="ftn.id2950860" href="#id2950860">1</a>] </sup>
+                见 RFC 2616 - <a href="http://www.w3.org/Protocols/rfc2616/rfc2616.html" target="_top">http://www.w3.org/Protocols/rfc2616/rfc2616.html</a>.
+              </p></div>
+</div>
+</div>
+<div class="navfooter"><table width="100%" summary="Navigation footer">
+<tr>
+<td width="40%" align="left">
+<a accesskey="p" href="zend.gdata.exception.html">上一页</a> </td>
+<td width="20%" align="center"> </td>
+<td width="40%" align="right"> <a accesskey="n" href="zend.http.client.advanced.html">下一页</a>
+</td>
+</tr>
+<tr>
+<td width="40%" align="left" valign="top">24.13. Catching Gdata Exceptions </td>
+<td width="20%" align="center"><a accesskey="h" href="index.html">起始页</a></td>
+<td width="40%" align="right" valign="top"> 25.2. Zend_Http_Client - Advanced Usage</td>
+</tr>
+</table></div>
+<div class="revinfo"></div>
+</body>
+</html>
