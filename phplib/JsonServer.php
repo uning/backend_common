@@ -39,7 +39,7 @@ class JsonServer{
 		if($this->_req)
 			return $this->_req;
 		$this->_req['method']=$_POST['method'];
-		$this->_req['params']=json_decode($_POST['params']);
+		$this->_req['params']=json_decode($_POST['params'],true);
 		
 		
 		//*
@@ -91,7 +91,7 @@ class JsonServer{
 	 * the controller must has the class name save as file name
 	 *
 	 */
-	protected function _handle($req)
+	protected function _handle(&$req)
 	{
 		//just add method map here
 		static $exist_methods=array(
