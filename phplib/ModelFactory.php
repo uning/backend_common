@@ -4,7 +4,7 @@
  * 
  */
 
-require_once LIB_ROOT.'DbModel.php';
+require_once LIB_ROOT.'DBModel.php';
 
 class ModelFactory
 {
