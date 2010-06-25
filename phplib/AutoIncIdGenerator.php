@@ -49,17 +49,17 @@ class AutoIncIdGenerator
 	 *
 	 */
 	
-	static function genid($strKey,$strKeyName='userid')
+	static function genid($strKey,$valueName='keyvalue',$strKeyName='userid')
 	{
 		if(!$strKey)
 			return 0;
-		$id=self::getid($strKey,$strKeyName);
+		$id=self::getid($strKey,$valueName,$strKeyName);
 		if($id>0){ //alredy generated
 			return $id;
 		}
 		if(!$id){
 		    $db=ServerConfig::connect_mysql(BasicConfig::$genid_mysql_db);
-			$db->insert($strKeyName,array('keyvalue'=>$strKey));
+			$db->insert($strKeyName,array($valueName=>$strKey));
 			$id= $db->lastInsertId();
 		}
 		if($id>0){ // generated
@@ -74,13 +74,13 @@ class AutoIncIdGenerator
 	 * just query
 	 *
 	 */
-	static function getid($strKey,$strKeyName='userid')
+	static function getid($strKey,$valueName='keyvalue',$strKeyName='userid')
 	{
 		$id=self::cache_get($strKey,$strKeyName);
 		if($id)
 		 return $id;
 		$db=ServerConfig::connect_mysql(BasicConfig::$genid_mysql_db);
-		$sql="select `id` from `$strKeyName` where `keyvalue`='$strKey' ";
+		$sql="select `id` from `$strKeyName` where `$valueName`='$strKey' ";
 		$id = $db->fetchOne($sql);
 		if($id>0){ //alredy generated
 			self::cache_set($id,$strKey,$strKeyName);
@@ -103,7 +103,7 @@ class AutoIncIdGenerator
 	/*
 	 *根据id 获取该id的key(获取platform_id
 	 */
-	static function getPlatformId($id)
+	static function getPlatformId($id,$valueName='keyvalue',$strKeyName='userid')
 	{
 		if(!$id)
 			return 0;
@@ -113,7 +113,7 @@ class AutoIncIdGenerator
 			return $pid;
 		}
 
-		$sql="select keyvalue from `userid` where `id`=$id";
+		$sql="select $valueName from `$strKeyName` where `id`=$id";
 		$db=ServerConfig::connect_mysql(BasicConfig::$genid_mysql_db);
 		$pid = $db->fetchOne($sql);
 		if($pid){
@@ -127,13 +127,13 @@ class AutoIncIdGenerator
 	 *use by correct data
 	 *
 	 */
-	static function setid($id,$strKey,$strKeyName='userid')
+	static function setid($id,$strKey,$valueName='keyvalue',$strKeyName='userid')
 	{
 		$db=ServerConfig::connect_mysql(BasicConfig::$genid_mysql_db);
 		$db->delete($strKeyName,"`id`=$id");
-		$db->delete($strKeyName,"keyvalue='$strKey'");
+		$db->delete($strKeyName,"$valueName='$strKey'");
 
-		$db->insert($strKeyName,array('keyvalue'=>$strKey,'id'=>$id));
+		$db->insert($strKeyName,array($valueName=>$strKey,'id'=>$id));
 		$id= $db->lastInsertId();
 		if($id>0){ //alredy generated
 			self::cache_set($id,$strKey,$strKeyName);
