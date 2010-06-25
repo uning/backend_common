@@ -1,0 +1,43 @@
+before insert 
+Array
+(
+    [name] => user1
+    [time] => 1277196290
+)
+after insert get
+Array
+(
+    [00000000-0000-0000-0000-000000000000] => user1
+)
+after insert get
+Array
+(
+    [00000000-0000-0000-0000-000000000000] => user12 modify
+)
+
+Warning: Missing argument 3 for CassandraClient::batch_mutate(), called in D:\work\backend_common\phplib\cassandra\phpcassa.php on line 490 and defined in D:\work\backend_common\phplib\cassandra\thrift\packages\cassandra\Cassandra.php on line 734
+after delete cols  get
+Array
+(
+    [00000000-0000-0000-0000-000000000000] => user12 modify
+)
+after insert 10 super cols  get
+Array
+(
+    [6bafa460-7dda-11df-98cb-557365724d65] => Array
+        (
+            [00000000-0000-0000-0000-000000000000] => user12 modify
+        )
+
+    [6bb51db0-7dda-11df-a366-557365724d65] => Array
+        (
+            [00000000-0000-0000-0000-000000000000] => time 
+            [6bb4f710-7dda-11df-8072-6e6f64650000] => Array
+                (
+                    [0] => dfdf
+                    [1] => dfd
+                )
+
+        )
+
+)

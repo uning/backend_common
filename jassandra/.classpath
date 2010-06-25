@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="org.softao.jassandra/src"/>
+	<classpathentry kind="lib" path="allibs/apache-cassandra-0.6.2.jar"/>
+	<classpathentry kind="lib" path="allibs/commons-pool-1.5.3.jar"/>
+	<classpathentry kind="lib" path="allibs/google-collections-1.0.jar"/>
+	<classpathentry kind="lib" path="allibs/hector-0.6.0-10.jar"/>
+	<classpathentry kind="lib" path="allibs/jug-asl-2.0.0.jar"/>
+	<classpathentry kind="lib" path="allibs/libthrift-r917130.jar"/>
+	<classpathentry kind="lib" path="allibs/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="allibs/org.softao.jassandra-1.1.1.jar"/>
+	<classpathentry kind="lib" path="allibs/perf4j-0.9.12.jar"/>
+	<classpathentry kind="lib" path="allibs/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="allibs/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/apache-cassandra-0.6.2.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/commons-pool-1.5.3.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/google-collections-1.0.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/hector-0.6.0-10.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/jug-asl-2.0.0.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/libthrift-r917130.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/perf4j-0.9.12.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/slf4j-api-1.5.8.jar"/>
+	<classpathentry kind="lib" path="org.softao.jassandra/libs/slf4j-log4j12-1.5.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
