@@ -77,6 +77,7 @@ class JsonServer{
 			$req=$this->getRequest();
 		if(!$this->auth($req['key'],$req['auth']))
 			throw new JsonServerExecption( "auth failed ");
+		
 		$r=$this->_handle($req);
 		if($this->_debug)
 		  $r['request'] = $req;
@@ -95,6 +96,9 @@ class JsonServer{
 	{
 		//just add method map here
 		static $exist_methods=array(
+			'TestJson.echo'=>array('TestJson','sendback'),
+		);
+		static $exist_objs=array(
 			'TestJson.echo'=>array('TestJson','sendback'),
 		);
 		$method=$req['method'];
