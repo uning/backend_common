@@ -1,0 +1,33 @@
+<project name="jassandra" default="build">
+	<property file="build.properties"></property>
+	
+	<target name="build" depends="clean, compile, jar">
+	</target>
+
+	<target name="clean">
+		<delete dir="./temp" failonerror="true">
+		</delete>
+		<mkdir dir="./temp" />
+		<mkdir dir="./temp/bin"/>
+	</target>
+
+	<target name="compile">
+		<javac srcdir="./src" destdir="./temp/bin" source="1.6" fork="true">
+			<classpath>
+				<pathelement path="./libs/apache-cassandra-0.6.1.jar" />
+				<pathelement path="./libs/google-collections-1.0.jar" />
+				<pathelement path="./libs/jug-asl-2.0.0.jar" />
+				<pathelement path="./libs/libthrift-r917130.jar" />
+				<pathelement path="./libs/hector-0.6.0-10.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="jar">
+		<jar destfile="./libs/org.softao.jassandra-${jassandra.version}.jar">
+			<fileset dir="./temp/bin">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+	</target>
+</project>

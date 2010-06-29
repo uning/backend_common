@@ -130,6 +130,33 @@ class UUID {
         return self::$conv($uuid);
     }
 
+<<<<<<< HEAD:phplib/cassandra/uuid.php
+=======
+    
+   public static function toStr($uuid) {
+        if (self::isBinary($uuid)) {
+            $unpacked_string = unpack("H8a/H4b/H4c/H4d/H12e", $uuid);
+            return(implode("-", $unpacked_string));
+        }
+        return $uuid;
+    }
+
+    public static function toBin($uuid) {
+        if (!self::isBinary($uuid)) {
+            $reduced_uuid = str_replace("-", "", $uuid);
+            return (pack("H*", $reduced_uuid));
+        }
+        return $uuid;
+    }
+
+    public static function validUUID($uuidStr) {
+        return preg_match('/^\{?[0-9a-f]{8}\-?[0-9a-f]{4}\-?[0-9a-f]{4}\-?[0-9a-f]{4}\-?[0-9a-f]{12}\}?$/i', $uuidStr);
+    }
+
+    public static function isBinary($uuid) {
+        return preg_match('/((?![\x20-\x7E]).)/', $uuid);
+    }
+>>>>>>> 9b2350d9a285f55773f5f179fcc2def60327a700:phplib/cassandra/uuid.php
     /*
      * Public API, convert a UUID from one format to another
      */

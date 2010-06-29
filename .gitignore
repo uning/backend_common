@@ -1,0 +1,11 @@
+*bin-debug*
+*-debug*
+*\.bak
+*\.*~
+
+*.log
+*::*
+
+
+\.svn/*
+*/bin/*
