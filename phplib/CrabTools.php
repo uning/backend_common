@@ -93,6 +93,13 @@ class CrabTools
 		return;
 		file_put_contents($file,serialize($data));
 		self::myprint($data,$file.'.read');
+	}
+	
+     static function myload($file="/tmp/mydump")
+	 {
+	
+		return @unserialize(file_get_contents($file));
+	
 
 	}
 

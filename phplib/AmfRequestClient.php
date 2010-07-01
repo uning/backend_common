@@ -9,7 +9,7 @@ class AmfRequestClient extends Zend_Amf_Request{
 
 	/**
 	 *  @var Zend_Amf_Parse_OutputStream
-	 * 
+	 *
 	 */
 
 	protected $_objectEncoding;
@@ -73,7 +73,7 @@ class AmfRequestClient extends Zend_Amf_Request{
 
 	/**
 	 */
-	
+
 	public function doRequest()
 	{
 		$host_info=parse_url($this->amf_gateway);

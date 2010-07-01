@@ -1,6 +1,6 @@
 <?php
-if(!defined('LOG_PATH') ){
-	echo("error:zend not defined");
+if(!defined('LOG_ROOT') ){
+	echo("error:LOG_ROOT not define ,not know where to log");
 	exit();
 }
 
