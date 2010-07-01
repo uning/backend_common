@@ -1,102 +1,6 @@
 <?php
 
-// Setting up nodes:
-//
-// CassandraConn::add_node('192.168.1.1', 9160);
-// CassandraConn::add_node('192.168.1.2', 5000);
-//
 
-// Querying:
-//
-// $users = new CassandraCF('Keyspace1', 'Users');
-// $users->put('1', array('email' => 'hoan.tonthat@gmail.com', 'password' => 'test'));
-// $users->get('1');
-// $users->multiget(array(1, 2));
-// $users->get_count('1');
-// $users->get_range('1', '10');
-// $users->remove('1');
-// $users->remove('1', 'password');
-//
-
-class CassandraConn {
-    const DEFAULT_THRIFT_PORT = 9160;
-
-    static private $connections = array();
-    static private $last_error;
-    static private $last_get = null;
-
-    static public function add_node($host, $port=self::DEFAULT_THRIFT_PORT) {
-        try {
-            // Create Thrift transport and binary protocol cassandra client
-            $transport = new TBufferedTransport(new TSocket($host, $port), 1024, 1024);
-            $client    = new CassandraClient(new TBinaryProtocolAccelerated($transport));
-
-            // Store it in the connections
-            self::$connections[] = array(
-                'transport' => $transport,
-                'client'    => $client
-            );
-
-            // Done
-            return TRUE;
-        } catch (TException $tx) {
-            self::$last_error = 'TException: '.$tx->getMessage() . "\n";
-        }
-        return FALSE;
-    }
-
-    
-    // Default client
-    static public function get_client($write_mode = false) {
-        // * Try to connect to every cassandra node in order
-        // * Failed connections will be retried
-        // * Once a connection is opened, it stays open
-        // * TODO: add random and round robin order
-        // * TODO: add write-preferred and read-preferred nodes
-        
-    	
-    	if(self::$last_get instanceof CassandraClient )
-    	   return self::$last_get;
-    	   
-        shuffle(self::$connections);
-        foreach(self::$connections as $connection) {
-            try {
-                $transport = $connection['transport'];
-                $client    = $connection['client'];
-
-                if(!$transport->isOpen()) {
-                    $transport->open();
-                }
-                
-              
-                self::$last_get = $client;
-                return $client;
-            } catch (TException $tx) {
-                self::$last_error = 'TException: '.$tx->getMessage() . "\n";
-                continue;
-            }
-        }
-        throw new Exception("Could not connect to a cassandra server");
-    }
-}
-
-class CassandraUtil {
-    // UUID
-    static public function uuid1($node="", $ns="") {
-        return UUID::generate(UUID::UUID_TIME,UUID::FMT_STRING, $node, $ns);
-    }
-
-    // Time
-    static public function get_time() {
-        // By Zach Buller (zachbuller@gmail.com)
-        $time1 = microtime();
-        settype($time1, 'string'); //needs converted to string, otherwise will omit trailing zeroes
-        $time2 = explode(" ", $time1);
-        $time2[0] = preg_replace('/0./', '', $time2[0], 1);
-        $time3 = ($time2[1].$time2[0])/100;
-        return $time3;
-    }
-}
 
 class CassandraCF {
     const DEFAULT_ROW_LIMIT = 100; // default max # of rows for get_range()
@@ -427,7 +331,7 @@ class CassandraCF {
      * @param $columns
      * @return unknown_type
      */
-    public function _put($key, $columns) {
+    public function _put($key, &$columns) {
         $timestamp = CassandraUtil::get_time();
         $cfmap = array();
        // $cfmap[$this->column_family] =$this->array_to_mutations($columns, $this->is_super,$timestamp,$this->column_type);
@@ -435,9 +339,8 @@ class CassandraCF {
         ,$this->subcolumn_type);
       
     
-        $client = CassandraConn::get_client();        
-        
-        $resp = $client->batch_mutate($this->keyspace,$cfmap, $this->write_consistency_level);
+        $client = CassandraConn::get_client();     
+        $resp = $client->batch_mutate($this->keyspace,&$cfmap, $this->write_consistency_level);
         return $resp;
     }
 
@@ -547,7 +450,7 @@ class CassandraCF {
                 self::to_column_value($c_or_sc->column,$name,$value,$type);
                 $c_or_sc->column->timestamp = $timestamp;
             }
-            $ret[] = &$c_or_sc;
+            $ret[] = $c_or_sc;
         }
         return $ret;
     }
@@ -577,9 +480,11 @@ class CassandraCF {
   $type=CassandraCF::CT_BytesType,$subtype=CassandraCF::CT_BytesType
   ) {
         if(empty($timestamp)) $timestamp = CassandraUtil::get_time();
-        $ret = null;
+        $ret = array();
         foreach($array as $name => $value){
-        	$c_or_sc = new cassandra_ColumnOrSuperColumn();
+        	 $mutation  = new cassandra_Mutation();
+             $c_or_sc = &$mutation->column_or_supercolumn ;
+        	 $c_or_sc = new cassandra_ColumnOrSuperColumn();
             if($is_super && is_array($value)) {
                 $c_or_sc->super_column = new cassandra_SuperColumn();
                 $c_or_sc->super_column->name = self::unparse_column_name($name,$type);
@@ -592,12 +497,13 @@ class CassandraCF {
                 self::to_column_value($c_or_sc->column,$name,$value,$type);
                 $c_or_sc->column->timestamp = $timestamp;
             }
-            $mutation  = new cassandra_Mutation();
-            $mutation->column_or_supercolumn = &$c_or_sc;
-            $ret[] = &$mutation;
+            
+           
+            $ret[] = $mutation;
+         
         }
-       
-        return $ret;
+
+                return $ret;
     }
     
  
@@ -605,7 +511,9 @@ class CassandraCF {
 
     static protected  function to_column_value(&$col,&$name,&$value,$type=CassandraCF::CT_BytesType,$needSV=true) {
        
+    	//$col =new cassandra_Column();
     	$col->name = self::unparse_column_name($name, $type);
+    
         if($needSV
            && (is_array($value)||is_object($value))
         ){
@@ -613,6 +521,7 @@ class CassandraCF {
         }else{
         	$col->value = $value;
         }
+        
     }
     
     

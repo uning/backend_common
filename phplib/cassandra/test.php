@@ -2,6 +2,15 @@
 require_once 'config.php';
 CassandraConn::add_node('localhost', 9160);
 
+function record_time($start,$usage="")
+{
+    $end  = microtime(true); 
+    $cost=$end-$start;
+    $cost=ceil(1000000*$cost);
+    if($usage)
+        echo "$usage use time $cost us\n";
+    return $end;
+}
 
 class Test{
 	
@@ -81,11 +90,11 @@ class Test{
 	     $data['msg']="time $now";
 	     //$id = UUID::generate(UUID::UUID_TIME,UUID::FMT_STRING,'node','ns');
 	     //$data[$id] = array('dfdf','dfd');
-	     $t->put_super($data,$key);
+	    // $t->put_super($data,$key);
 	     $ret[]=$data;
 		}
 		
-		//$ret=$t->putmulti_super($ret,$key);
+		$ret=$t->putmulti_super($ret,$key);
 		$retdata = $t->get($key,$scname);
 		echo "after insert 10 super cols  get\n";
 		print_r($retdata);
@@ -99,10 +108,75 @@ class Test{
 		
 		
 	}
+	
+	
+	
+	static function testCF()
+	{
+		$key =  time();
+		$t = new CassandraCF('mall', 'UserInfos'); 
+		$cdata = array('name'=>'user1','time'=>time(),'arr'=>array('dfd','dfds'));
+		echo "before insert \n";
+		print_r($cdata);
+	    $t->put($cdata,$key);
+		
+		$retdata = $t->get($key);
+		echo "after insert get\n";
+		print_r($retdata);
+		$udata['name'] = 'user12 modify';
+		$udata['newcol'] = 'neww colvalue';
+		$scname = $t->put($udata,$key);
+		
+		$retdata = $t->get($key);
+		echo "after update get\n";
+		print_r($retdata);
+		
+		
+		
+		
+		
+		
+		
+		
+		echo '$t->get_count($key) = '.$t->get_count($key)."\n";
+		$t->erase($key,array('name','time'));
+		$retdata = $t->get($key);
+		echo "after delete cols  get\n";
+		print_r($retdata);
+	
+		echo '$t->get_count($key) = '.$t->get_count($key)."\n";	
+	}
+	
+	
+     static function getSlice()
+	{
+		$key =  2;
+		$t = new CassandraCF('mall', 'UserInfos'); 
+		for($i=0;$i<13;$i++)
+		{
+		   $arr["add$i"]="add$i";
+		}
+	    for($i=0;$i<13;$i++)
+		{
+		   $arr["bdd$i"]="bdd$i";
+		}
+		$t->put($arr,$key);
+		
+		echo "get slice from='' to=''\n";
+	    $ret = $t->get($key);
+	    print_r($ret);
+		echo "get slice from='add' to=''\n";
+	    $ret = $t->get($key,null,false,1000,'add','');
+	    print_r($ret);
+	    echo "get slice from='add' to='bdd'\n";
+	    $ret = $t->get($key,null,false,1000,'add','bdd');
+	    print_r($ret);
+	}
 }
 try{
    // Test::testSuperUpdate();
-    Test::testMultiPutSupper();
+    Test::getSlice();
+   // Test::testCF();
 
 }catch (Exception $e){
 	print_r($e);

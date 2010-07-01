@@ -1,5 +1,5 @@
 <?php
-if(!defined('ZEND_ROOT') ){
+if(!defined('LOG_PATH') ){
 	echo("error:zend not defined");
 	exit();
 }
