@@ -41,7 +41,7 @@ class CassandraCF {
 	 TimeUUIDType: a 128bit version 1 UUID, compared by timestamp
 	 */
 
-	public function __construct($keyspace, $column_family,
+	public function CassandraCF($keyspace, $column_family,
 	$is_super=false,
 	$column_type=self::DEFAULT_COLUMN_TYPE,
 	$subcolumn_type=self::DEFAULT_SUBCOLUMN_TYPE,
