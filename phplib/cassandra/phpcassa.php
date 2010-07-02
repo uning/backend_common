@@ -24,12 +24,12 @@ class CassandraCF {
 	public $parse_columns;
 
 	/**
-	 * valueÊÇ·ñÓĞ¸´ºÏ½á¹¹
-	 * ×¢Òâname
+	 * valueæ˜¯å¦æœ‰å¤åˆç»“æ„
+	 * æ³¨æ„name
 	 * @var bool
 	 */
 	public   $needSV=true;
-	const    SV_PRE='@';//Ãû³Æº¬¸ÃÖµµÄÊ±ºò£¬valueĞèÒªĞòÁĞ»¯
+	const    SV_PRE='@';//åç§°å«è¯¥å€¼çš„æ—¶å€™ï¼Œvalueéœ€è¦åºåˆ—åŒ–
 	public   $id_name = 'id';
 
 	/*
@@ -65,7 +65,7 @@ class CassandraCF {
 	}
 
 	/**
-	 * »ñÈ¡Ò»ÁĞ
+	 * è·å–ä¸€åˆ—
 	 * @param $key
 	 * @param $super_column
 	 * @param $column_reversed
@@ -105,7 +105,7 @@ class CassandraCF {
 	}
 
 	/**
-	 * »ñÈ¡¶àĞĞ£¬¿ÉÖ¸¶¨ÁĞ
+	 * è·å–å¤šè¡Œï¼Œå¯æŒ‡å®šåˆ—
 	 * @param $keys
 	 * @param $colnames
 	 * @return array
@@ -135,7 +135,7 @@ class CassandraCF {
 	}
 
 	/**
-	 * »ñÈ¡¶àĞĞ
+	 * è·å–å¤šè¡Œ
 	 * @param $keys
 	 * @param $slice_start
 	 * @param $slice_finish
@@ -164,7 +164,7 @@ class CassandraCF {
 	}
 
 	/**
-	 * »ñÈ¡ÁĞÊı
+	 * è·å–åˆ—æ•°
 	 * @param $key
 	 * @param $super_column
 	 * @return unknown_type
@@ -181,7 +181,7 @@ class CassandraCF {
 	}
 
 	/**
-	 * »ñÈ¡¶àĞĞ
+	 * è·å–å¤šè¡Œ
 	 * @param $start_key
 	 * @param $finish_key
 	 * @param $row_count
@@ -213,7 +213,7 @@ class CassandraCF {
 	}
 
 	/**
-	 * ÒÔlistµÄĞÎÊ½»ñÈ¡
+	 * ä»¥listçš„å½¢å¼è·å–
 	 * @param $key_name
 	 * @param $start_key
 	 * @param $finish_key
@@ -237,7 +237,7 @@ class CassandraCF {
 
 
 	/**
-	 * ²åÈë»ò¸üĞÂÒ»ĞĞ£¬²»Ö¸¶¨id£¬ÔòÉú³Éid
+	 * æ’å…¥æˆ–æ›´æ–°ä¸€è¡Œï¼Œä¸æŒ‡å®šidï¼Œåˆ™ç”Ÿæˆid
 	 * @param $data
 	 * @param $id
 	 * @return unknown_type
@@ -260,27 +260,27 @@ class CassandraCF {
 	}
 
 	/**
-	 * ²åÈëÒ»¸ö×ÓĞĞ
+	 * æ’å…¥ä¸€ä¸ªå­è¡Œ
 	 * @param $data
 	 * @param $pid
 	 * @param $id
 	 * @return unknown_type
 	 */
-	public function put_super($data,$pid,$idname='id',$id = null)
+	public function put_super($data,$key,$idname='id',$id = null)
 	{
 		$id = $this->checkid($this->column_type,$data,$id,$idname);
 		$p[$id] = &$data;
-		$this->_put($pid,$p);
+		$this->_put($key,$p);
 		return $id;
 	}
 
 	/**
-	 * ²åÈë¶à¸ö×ÓĞĞ
+	 * æ’å…¥å¤šä¸ªå­è¡Œ
 	 * @param $datas
 	 * @param $pid
 	 * @return unknown_type
 	 */
-	public function putmulti_super(&$datas,$pid,$idname='id')
+	public function putmulti_super(&$datas,$key,$idname='id')
 	{
 		foreach($datas as $k=>$data){
 			$id = null;
@@ -290,13 +290,13 @@ class CassandraCF {
 			 
 		}
 		 
-		$this->_put($pid,$p);
+		$this->_put($key,$p);
 		 
 		return $ret;
 	}
 
 	/**
-	 * ¼ì²éĞĞid£¬ÎŞ×Ô¶¯Éú³É
+	 * æ£€æŸ¥è¡Œidï¼Œæ— è‡ªåŠ¨ç”Ÿæˆ
 	 * @param $type
 	 * @param $data
 	 * @param $id
@@ -326,7 +326,7 @@ class CassandraCF {
 	 
 
 	/**
-	 * ²åÈëÊı¾İ
+	 * æ’å…¥æ•°æ®
 	 * @param $key
 	 * @param $columns
 	 * @return unknown_type
@@ -366,7 +366,7 @@ class CassandraCF {
 
 
 	/**
-	 * Çå³ıÖ¸¶¨colnames
+	 * æ¸…é™¤æŒ‡å®šcolnames
 	 * @param $key
 	 * @param $super
 	 * @param $colnames
@@ -471,7 +471,7 @@ class CassandraCF {
 
 
 	/**
-	 * Éú³Émutation
+	 * ç”Ÿæˆmutation
 	 * @param $array
 	 * @param $timestamp
 	 * @return unknown_type
@@ -526,7 +526,7 @@ class CassandraCF {
 
 
 	/**
-	 * ½«Ò»¸öcol×ª»¯ÎªÒ»¸öpair
+	 * å°†ä¸€ä¸ªcolè½¬åŒ–ä¸ºä¸€ä¸ªpair
 	 * @param $arr
 	 * @param $col
 	 * @param $type

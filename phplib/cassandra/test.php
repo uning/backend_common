@@ -83,6 +83,7 @@ class Test{
 	static public function testMultiPutSupper()
 	{
 		$key =  time();
+		$now = $key;
 		$t = new CassandraCF('mall', 'UserMessages',true,CassandraCF::CT_TimeUUIDType,CassandraCF::CT_BytesType);
 		for($u=1;$u<10;++$u){
 			$data=array();
@@ -150,11 +151,11 @@ class Test{
 
 	static function getSlice()
 	{
-		$key =  2;
+		$key =  3;
 		$t = new CassandraCF('mall', 'UserInfos');
 		for($i=0;$i<13;$i++)
 		{
-			$arr["add$i"]="add$i";
+			$arr["add$i"]=array('dfd'=>"add$i");
 		}
 		for($i=0;$i<13;$i++)
 		{
@@ -171,11 +172,15 @@ class Test{
 		echo "get slice from='add' to='bdd'\n";
 		$ret = $t->get($key,null,false,1000,'add','bdd');
 		print_r($ret);
+		
+		echo "get clos from='add1,bdd1'\n";
+		$ret = $t->getcols(array($key),array('add1','bdd1'));
+		print_r($ret);
 	}
 }
 try{
 	// Test::testSuperUpdate();
-	Test::getSlice();
+	Test::testSuper();
 	// Test::testCF();
 
 }catch (Exception $e){
