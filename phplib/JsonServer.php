@@ -78,7 +78,7 @@ class JsonServer{
 		$this->_debug = true;
 		$this->_req['method']=$m;
 		$this->_req['params']=$params;
-		return $this->_handle();
+		return $this->_handle($this->_req);
 	}
 
 
