@@ -54,14 +54,14 @@ class TSocket extends TTransport {
 	 *
 	 * @var int
 	 */
-	private $sendTimeout_ = 100;
+	private $sendTimeout_ = 1000;
 
 	/**
 	 * Recv timeout in milliseconds
 	 *
 	 * @var int
 	 */
-	private $recvTimeout_ = 750;
+	private $recvTimeout_ = 7500;
 
 	/**
 	 * Is send timeout set?

@@ -3,7 +3,7 @@
 
 
 class CassandraCF {
-	const DEFAULT_ROW_LIMIT = 100; // default max # of rows for get_range()
+	const DEFAULT_ROW_LIMIT = 1000; // default max # of rows for get_range()
 	const DEFAULT_COLUMN_TYPE = "UTF8String";
 	const DEFAULT_SUBCOLUMN_TYPE = null;
 
@@ -74,7 +74,7 @@ class CassandraCF {
 	 * @param $slice_finish
 	 * @return unknown_type
 	 */
-	public function get($key, $super_column=NULL, $column_reversed=false, $column_count=100, $slice_start="", $slice_finish="") {
+	public function get($key, $super_column=NULL, $column_reversed=false, $column_count=self::DEFAULT_ROW_LIMIT, $slice_start="", $slice_finish="") {
 		$column_parent = new cassandra_ColumnParent();
 		$column_parent->column_family = $this->column_family;
 		$column_parent->super_column = $this->unparse_column_name($super_column, $this->column_type);
@@ -93,7 +93,7 @@ class CassandraCF {
 	}
 
 	// Wrappers
-	public function get_list($key,  $column_reversed=false,$key_name='key',  $column_count=100,$slice_start="", $slice_finish="") {
+	public function get_list($key,  $column_reversed=false,$key_name='key',  $column_count=self::DEFAULT_ROW_LIMIT,$slice_start="", $slice_finish="") {
 		// Must be on supercols!
 		$resp = $this->get($key, NULL,$reversed, $column_reversed, $column_count,$slice_start, $slice_finish);
 		$ret = array();
@@ -110,7 +110,7 @@ class CassandraCF {
 	 * @param $colnames
 	 * @return array
 	 */
-	public function getcols($keys, $colnames=array())
+	public function multigetcols($keys, $colnames=array())
 	{
 		$predicate = new cassandra_SlicePredicate();
 		if($colnames){
@@ -119,7 +119,7 @@ class CassandraCF {
 			$predicate->slice_range = new cassandra_SliceRange();
 			$predicate->slice_range->start = '';
 			$predicate->slice_range->finish ='';
-			$predicate->slice_range->count ='300';
+			$predicate->slice_range->count = self::DEFAULT_ROW_LIMIT;
 			$predicate->slice_range->reversed = false;
 		}
 		$column_parent = new cassandra_ColumnParent();
@@ -132,6 +132,18 @@ class CassandraCF {
 			$ret[$k] = $this->supercolumns_or_columns_to_array($resp[$k]);
 		}
 		return $ret;
+	}
+	
+	/**
+	 * 获取指定列
+	 * @param $key
+	 * @param $colnames
+	 * @return unknown_type
+	 */
+    public function getcols($key, $colnames=array())
+	{
+		$ret = $this->multigetcols(array($key), $colnames);
+		return $ret[$key];
 	}
 
 	/**
