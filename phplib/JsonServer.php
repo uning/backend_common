@@ -13,6 +13,7 @@ class JsonServer{
 	
 	
 	static $exist_methods;
+	static $help_infos;
 	
 	/**
 	 * 注册处理函数
@@ -37,6 +38,7 @@ class JsonServer{
 			$ms = $cc->getMethods();
 		    foreach($ms as $m){
 		    	self::$exist_methods[$m->class.'.'.$m->name] = array($c,$m->name);
+		    	self::$help_infos[$m->class.'.'.$m->name] = $m->getDocComment();
 		    }
 	}
 	
@@ -45,11 +47,12 @@ class JsonServer{
 		return array_keys(self::$exist_methods);
 	}
 	
-	static function getMethodDebug($name)
+	static function getMethodHelp($name)
 	{
-		$str.= "params:\n";
+		$str.= self::$help_infos[$name];
+		$str.= "\nparams:\n";
 		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.param');
-		$str.="response:\n";
+		$str.="\nresponse:\n";
 		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.resp');
 		return $str;
 	}
