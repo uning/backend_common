@@ -6,6 +6,7 @@ class JsonServer{
 
 	protected  $_req     = array() ;/*struct req*/
 	protected  $_do_auth = false;
+	
 	protected  $_debug   = true;/* when in debug mod ,result contain the request*/
 	protected  $_use_deflate = false;
 	
