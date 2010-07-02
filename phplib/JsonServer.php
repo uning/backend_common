@@ -51,7 +51,7 @@ class JsonServer{
 	{
 		$str.= self::$help_infos[$name];
 		$str.= "\nparams:\n";
-		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.param');
+		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.param.read');
 		$str.="response:\n";
 		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.resp');
 		return $str;
