@@ -70,7 +70,7 @@ class JsonServer{
 	 * @param $params
 	 * @return unknown_type
 	 */
-	public  function doRequest($m,$params)
+	public  function doRequest($m,&$params)
 	{
 		$this->_debug = true;
 		$this->_req['method']=$m;
@@ -147,12 +147,6 @@ class JsonServer{
 	protected function _handle(&$req)
 	{
 		//just add method map here
-		static $exist_methods=array(
-			'TestJson.echo'=>array('TestJson','sendback'),
-		);
-		static $exist_objs=array(
-			'TestJson.echo'=>array('TestJson','sendback'),
-		);
 		$method=$req['method'];
 		$mypre=$method;
 		if($this->_debug){
@@ -160,7 +154,7 @@ class JsonServer{
 		}
 
 		
-		if(isset($exist_methods[$method])){
+		if(isset(self::$exist_methods[$method])){
 			$caller=$exist_methods[$method];
 			$c=&$caller[0];
 			$m=$caller[1];
