@@ -52,7 +52,7 @@ class JsonServer{
 		$str.= self::$help_infos[$name];
 		$str.= "\nparams:\n";
 		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.param');
-		$str.="\nresponse:\n";
+		$str.="response:\n";
 		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.resp');
 		return $str;
 	}
@@ -78,7 +78,7 @@ class JsonServer{
 		$this->_debug = true;
 		$this->_req['method']=$m;
 		$this->_req['params']=$params;
-		return $this->handle();
+		return $this->_handle();
 	}
 
 
@@ -158,7 +158,7 @@ class JsonServer{
 
 		
 		if(isset(self::$exist_methods[$method])){
-			$caller=$exist_methods[$method];
+			$caller= &self::$exist_methods[$method];
 			$c=&$caller[0];
 			$m=$caller[1];
 
@@ -180,7 +180,8 @@ class JsonServer{
 		if($this->_debug){
 		  CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
 		}
-		$exist_methods[$method]=array($c,$m);
+		self::$exist_methods[$method][0]=&$c;
+		self::$exist_methods[$method][1]=&$m;
 		return $ret;
 	}
 	
