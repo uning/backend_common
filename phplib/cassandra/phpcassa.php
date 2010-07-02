@@ -340,7 +340,7 @@ class CassandraCF {
 
 
 		$client = CassandraConn::get_client();
-		$resp = $client->batch_mutate($this->keyspace,&$cfmap, $this->write_consistency_level);
+		$resp = $client->batch_mutate($this->keyspace,$cfmap, $this->write_consistency_level);
 		return $resp;
 	}
 
