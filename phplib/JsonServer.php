@@ -6,8 +6,53 @@ class JsonServer{
 
 	protected  $_req     = array() ;/*struct req*/
 	protected  $_do_auth = false;
+	
 	protected  $_debug   = true;/* when in debug mod ,result contain the request*/
 	protected  $_use_deflate = false;
+	
+	
+	
+	static $exist_methods;
+	
+	/**
+	 * 注册处理函数
+	 * @param $method
+	 * @param $obj
+	 * @param $shortm
+	 * @return unknown_type
+	 */
+	static function register($method,&$obj,$shortm){
+		self::$exist_methods[$method] = array($obj,$shortm);
+	}
+	
+	/**
+	 * 注册controller
+	 * @param $name
+	 * @return 
+	 */
+    static function registerController($name){
+            require_once CONTROLLER_ROOT."$name.php";
+            $c= new $name;
+			$cc=new ReflectionClass($name); 
+			$ms = $cc->getMethods();
+		    foreach($ms as $m){
+		    	self::$exist_methods[$m->class.'.'.$m->name] = array($c,$m->name);
+		    }
+	}
+	
+	static function getAllMethod()
+	{
+		return array_keys(self::$exist_methods);
+	}
+	
+	static function getMethodDebug($name)
+	{
+		$str.= "params:\n";
+		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.param');
+		$str.="response:\n";
+		@$str.=file_get_contents(REQ_DATA_ROOT.$name.'.resp');
+		return $str;
+	}
 
 	/**
 	 * 验证，先使用不变的session
@@ -20,10 +65,17 @@ class JsonServer{
 		return md5($key.$secret)==$auth;
 	}
 	
-	/*
-	*/
-	public function JsonServer()
+    /**
+	 * @param $m
+	 * @param $params
+	 * @return unknown_type
+	 */
+	public  function doRequest($m,&$params)
 	{
+		$this->_debug = true;
+		$this->_req['method']=$m;
+		$this->_req['params']=$params;
+		return $this->handle();
 	}
 
 
@@ -95,34 +147,27 @@ class JsonServer{
 	protected function _handle(&$req)
 	{
 		//just add method map here
-		static $exist_methods=array(
-			'TestJson.echo'=>array('TestJson','sendback'),
-		);
-		static $exist_objs=array(
-			'TestJson.echo'=>array('TestJson','sendback'),
-		);
 		$method=$req['method'];
 		$mypre=$method;
 		if($this->_debug){
 		   CrabTools::mydump($req['params'],REQ_DATA_ROOT.$mypre.'.param');
-		   CrabTools::myprint($req['params'],REQ_DATA_ROOT.$mypre.'.param.read');
 		}
 
-		if(isset($exist_methods[$method])){
+		
+		if(isset(self::$exist_methods[$method])){
 			$caller=$exist_methods[$method];
-			$cn=$caller[0];
+			$c=&$caller[0];
 			$m=$caller[1];
-			require_once CONTROLLER_ROOT."$cn.php";
-			$c=new $cn;
 
 		}else{
 			$caller=explode('.',$method);
 			$cn=$caller[0];
 			$m=$caller[1];
-			if(!file_exists(CONTROLLER_ROOT."$cn.php")){
+			$file = CONTROLLER_ROOT."$cn.php";
+			if(!file_exists($file )){
 				throw new JsonServerExecption( "method $method file not exist:(".CONTROLLER_ROOT."$cn.php)");
 			}
-			require_once CONTROLLER_ROOT."$cn.php";
+			@require_once $file;
 			$c=new $cn;
 			if(!method_exists($c,$m)){
 				throw new JsonServerExecption( "$cn don't has callable method $m");
@@ -130,9 +175,12 @@ class JsonServer{
 		}
 		$ret=$c->$m($req['params']);
 		if($this->_debug){
-		 CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
+		  CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
 		}
-		$exist_methods[$method]=array($cn,$m);
+		$exist_methods[$method]=array($c,$m);
 		return $ret;
 	}
+	
+	
+	
 }

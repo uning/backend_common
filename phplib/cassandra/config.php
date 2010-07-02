@@ -13,6 +13,12 @@ require_once CASSANDRA_ROOT.'/thrift/transport/TBufferedTransport.php';
 
 
 
+<<<<<<< HEAD
 
 include_once CASSANDRA_ROOT. '/phpcassa.php';
 include_once CASSANDRA_ROOT. '/uuid.php';
+=======
+require_once CASSANDRA_ROOT. '/uuid.php';
+require_once CASSANDRA_ROOT. '/phpcassa.php';
+require_once CASSANDRA_ROOT. '/helper.php';
+>>>>>>> 4019c588905308f616e8a78f1b949c36856b0a75

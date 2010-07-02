@@ -1,8 +1,8 @@
 <?php
 
 /**
- * 
- * use mysql and memcache to save dbtext  
+ *
+ * use mysql and memcache to save dbtext
  *
  */
 
@@ -10,8 +10,8 @@ class DbText
 {
 	/**
 	 *
-	 * @param string $strKey 
-	 * @param int    $lvid  ,text last version id 
+	 * @param string $strKey
+	 * @param int    $lvid  ,text last version id
 	 *
 	 * @return the record;
 	 *
@@ -19,10 +19,10 @@ class DbText
 	static function save($strKey,$lvid=0)
 	{
 
-	    if(!$strKey)
-		 return array();
-		 //if(!$lvid)
-		 //$lvid=0;
+		if(!$strKey)
+		return array();
+		//if(!$lvid)
+		//$lvid=0;
 		$db=ServerConfig::connect_mysql(BasicConfig::$text_mysql_db);
 		$md5str=md5($strKey);
 		$data=array(
@@ -30,10 +30,10 @@ class DbText
 			'string'=>$strKey,
 			'lvid'=>$lvid
 		);
-		
+
 		$row = self::getMd5($md5str);
 		if($row)
-			return $row;
+		return $row;
 
 		$db->insert('texts',$data);
 		$id=$db->lastInsertId();
@@ -48,15 +48,15 @@ class DbText
 	}
 
 	/**
-	 * 
+	 *
 	 * @param int id
-	 * @return md5,id,lvid 
+	 * @return md5,id,lvid
 	 *
 	 */
 	static function get($id)
 	{
 		if(!$id)
-		  return array();
+		return array();
 		$mc=ServerConfig::connect_memcached('cache_server');
 		$key='dt_'.$id;
 		if($mc)
@@ -68,22 +68,22 @@ class DbText
 		$sql="select * from `texts` where id='$id' ";
 		$row = $db->fetchRow($sql);
 		if($row){ //alredy generated
-		   if($mc)
+			if($mc)
 			$mc->add($key,$row);
 			return $row;
 		}
 		return $row;
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param $md5
 	 * @return unknown_type
 	 */
-    static function getMd5($md5)
+	static function getMd5($md5)
 	{
 		if(!$md5)
-		  return array();
+		return array();
 		$mc=ServerConfig::connect_memcached('cache_server');
 		$key=$md5;
 		if($mc)
@@ -95,16 +95,16 @@ class DbText
 		$sql="select * from `texts` where md5sign='$md5' ";
 		$row = $db->fetchRow($sql);
 		if($row){ //alredy generated
-		   if($mc)
+			if($mc)
 			$mc->add($key,$row);
 			return $row;
 		}
 		return $row;
 	}
-	
-	
+
+
 	/**
-	 * 
+	 *
 	 * @param $id
 	 * @return mixed
 	 */
@@ -112,22 +112,22 @@ class DbText
 	{
 		$data=self::get($id);
 		if(isset($data['string']))
-		 return unserialize($data['string']);
+		return unserialize($data['string']);
 		return array();
 	}
-	
+
 	/**
 	 * @param bigint $id
 	 * @param bigint $lvid
 	 * @return the id to get the obj
 	 */
-    static public function saveObject($obj,$lvid=0)
+	static public function saveObject($obj,$lvid=0)
 	{
 		$str=serialize($obj);
 		$ret=self::save($str,lvid);
-		return $ret['id'];		
+		return $ret['id'];
 	}
-	
+
 }
 
 //return;
