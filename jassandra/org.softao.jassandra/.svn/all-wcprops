@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/69/trunk/org.softao.jassandra
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/53/trunk/org.softao.jassandra/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/org.softao.jassandra/.project
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/68/trunk/org.softao.jassandra/build.properties
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/69/trunk/org.softao.jassandra/build.xml
+END

@@ -612,11 +612,7 @@ class CassandraClient implements CassandraIf {
   public function batch_insert($keyspace, $key, $cfmap, $consistency_level)
   {
     $this->send_batch_insert($keyspace, $key, $cfmap, $consistency_level);
-<<<<<<< HEAD:phplib/cassandra/thrift/packages/cassandra/Cassandra.php
-    $this->recv_batch_insert();
-=======
     return  $this->recv_batch_insert();
->>>>>>> 9b2350d9a285f55773f5f179fcc2def60327a700:phplib/cassandra/thrift/packages/cassandra/Cassandra.php
   }
 
   public function send_batch_insert($keyspace, $key, $cfmap, $consistency_level)
@@ -629,10 +625,7 @@ class CassandraClient implements CassandraIf {
     $bin_accel = ($this->output_ instanceof TProtocol::$TBINARYPROTOCOLACCELERATED) && function_exists('thrift_protocol_write_binary');
     if ($bin_accel)
     {
-<<<<<<< HEAD:phplib/cassandra/thrift/packages/cassandra/Cassandra.php
-=======
     
->>>>>>> 9b2350d9a285f55773f5f179fcc2def60327a700:phplib/cassandra/thrift/packages/cassandra/Cassandra.php
       thrift_protocol_write_binary($this->output_, 'batch_insert', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
     }
     else
@@ -674,11 +667,7 @@ class CassandraClient implements CassandraIf {
     if ($result->te !== null) {
       throw $result->te;
     }
-<<<<<<< HEAD:phplib/cassandra/thrift/packages/cassandra/Cassandra.php
-    return;
-=======
     return $result;
->>>>>>> 9b2350d9a285f55773f5f179fcc2def60327a700:phplib/cassandra/thrift/packages/cassandra/Cassandra.php
   }
 
   public function remove($keyspace, $key, $column_path, $timestamp, $consistency_level)

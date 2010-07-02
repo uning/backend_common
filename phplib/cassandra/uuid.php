@@ -130,8 +130,6 @@ class UUID {
         return self::$conv($uuid);
     }
 
-<<<<<<< HEAD:phplib/cassandra/uuid.php
-=======
     
    public static function toStr($uuid) {
         if (self::isBinary($uuid)) {
@@ -156,7 +154,6 @@ class UUID {
     public static function isBinary($uuid) {
         return preg_match('/((?![\x20-\x7E]).)/', $uuid);
     }
->>>>>>> 9b2350d9a285f55773f5f179fcc2def60327a700:phplib/cassandra/uuid.php
     /*
      * Public API, convert a UUID from one format to another
      */

@@ -1,31 +1,10 @@
 <?php
+
+error_reporting(E_ALL & ~E_NOTICE);
 require_once 'config.php';
 CassandraConn::add_node('localhost', 9160);
 
 
-<<<<<<< HEAD:phplib/cassandra/test.php
-//测试CT_TimeUUIDType 排序
-$t = new CassandraCF('Keyspace1', 'Standard1',false,CassandraCF::CT_BytesType);
-$t = new CassandraCF('Keyspace1', 'StandardByLongType',false,CassandraCF::CT_LongType);
-$t = new CassandraCF('Keyspace1', 'StandardByUUID1',false,CassandraCF::CT_TimeUUIDType); // ColumnFamily
-
-//print_r($t->get(1150));
-$keyID = 'PandraTestUUID1';
-echo 'print_r($t->get_list($keyID))'."\n";
-print_r($t->get_list($keyID));
-
-echo 'print_r($t->get_range())'."\n";
-print_r($t->get_range(null,null,10));
-//$date= date(time());
-exit;
-try{
-for($u=1;$u<20;++$u){
-	$data['id'] = "$u";
-	$data['name'] = " name user $u";
-	$data['insert_at'] = "$u";
-   echo "$u id: ".$t->put($data)."\n";
-}
-=======
 class Test{
 	
 	static function testUUID()
@@ -179,23 +158,12 @@ try{
     
 }
   //print_r($t->putmulti_super($ret,$newid));
->>>>>>> 9b2350d9a285f55773f5f179fcc2def60327a700:phplib/cassandra/test.php
 }
 catch (Exception $e){
 	print_r($e);
 	echo $e->getMessage()."\n";
 	
 }
-<<<<<<< HEAD:phplib/cassandra/test.php
-echo 'print_r($t->get_list(1))'."\n";
-print_r($t->get_list(1));
-
-echo 'print_r($t->get_range())'."\n";
-print_r($t->get_range(null,null,3));
-
-echo 'print_r($t->get_range(10))'."\n";
-print_r($t->get_range(10,null,3));
-=======
 //*
 echo 'print_r($t->get($newid,null,false,3))=';
 print_r($t->get($newid,null,false,3));
@@ -214,4 +182,3 @@ exit;
 //* test get cout
 echo '$t->get_count($newid) = '.$t->get_count($newid)."\n";
 echo '$t->get_count(1,"7fffffff-7d1c-11df-9b94-6e6f64650000") = '.$t->get_count(1,'7fffffff-7d1c-11df-9b94-6e6f64650000')."\n";
->>>>>>> 9b2350d9a285f55773f5f179fcc2def60327a700:phplib/cassandra/test.php

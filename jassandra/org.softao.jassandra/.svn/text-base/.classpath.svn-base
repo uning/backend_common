@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_18"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="libs/google-collections-1.0.jar"/>
+	<classpathentry kind="lib" path="libs/jug-asl-2.0.0.jar"/>
+	<classpathentry kind="lib" path="libs/libthrift-r917130.jar"/>
+	<classpathentry kind="lib" path="libs/hector-0.6.0-10.jar" sourcepath="C:/Dopsun/temp/downloads/firefox/hector-0.6.0-10/hector-0.6.0-10/hector-0.6.0-10-sources.jar"/>
+	<classpathentry kind="lib" path="libs/perf4j-0.9.12.jar"/>
+	<classpathentry kind="lib" path="libs/apache-cassandra-0.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
