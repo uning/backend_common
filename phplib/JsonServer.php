@@ -37,8 +37,10 @@ class JsonServer{
 			$cc=new ReflectionClass($name); 
 			$ms = $cc->getMethods();
 		    foreach($ms as $m){
-		    	self::$exist_methods[$m->class.'.'.$m->name] = array($c,$m->name);
-		    	self::$help_infos[$m->class.'.'.$m->name] = $m->getDocComment();
+		    	if($m->isPublic()){
+		    	  self::$exist_methods[$m->class.'.'.$m->name] = array($c,$m->name);
+		    	  self::$help_infos[$m->class.'.'.$m->name] = $m->getDocComment();
+		    	}
 		    }
 	}
 	

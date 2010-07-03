@@ -1,92 +1,59 @@
-get slice from='' to=''
+before insert 
 Array
 (
-    [@birth] => {"y":"2009","m":"5","d":2}
-    [add0] => add0
-    [add1] => add1
-    [add10] => add10
-    [add11] => add11
-    [add12] => add12
-    [add2] => add2
-    [add3] => add3
-    [add4] => add4
-    [add5] => add5
-    [add6] => add6
-    [add7] => add7
-    [add8] => add8
-    [add9] => add9
-    [bdd0] => bdd0
-    [bdd1] => bdd1
-    [bdd10] => bdd10
-    [bdd11] => bdd11
-    [bdd12] => bdd12
-    [bdd2] => bdd2
-    [bdd3] => bdd3
-    [bdd4] => bdd4
-    [bdd5] => bdd5
-    [bdd6] => bdd6
-    [bdd7] => bdd7
-    [bdd8] => bdd8
-    [bdd9] => bdd9
-    [created_at] => 1276404557
-    [id] => 2
-    [name] =>  name user 2
-    [svid] => "user2"
-    [svname] => " name user 2"
-    [svsc1] => {"name":"user1","created_at":"1276822566","birth":{"y":"2009","m":"5","d":1}}
-    [svsc2] => {"name":"user2","created_at":"1276822566","birth":{"y":"2009","m":"5","d":2}}
+    [name] => user1
+    [time] => 1278070986
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
 )
-get slice from='add' to=''
+after insert get
 Array
 (
-    [add0] => add0
-    [add1] => add1
-    [add10] => add10
-    [add11] => add11
-    [add12] => add12
-    [add2] => add2
-    [add3] => add3
-    [add4] => add4
-    [add5] => add5
-    [add6] => add6
-    [add7] => add7
-    [add8] => add8
-    [add9] => add9
-    [bdd0] => bdd0
-    [bdd1] => bdd1
-    [bdd10] => bdd10
-    [bdd11] => bdd11
-    [bdd12] => bdd12
-    [bdd2] => bdd2
-    [bdd3] => bdd3
-    [bdd4] => bdd4
-    [bdd5] => bdd5
-    [bdd6] => bdd6
-    [bdd7] => bdd7
-    [bdd8] => bdd8
-    [bdd9] => bdd9
-    [created_at] => 1276404557
-    [id] => 2
-    [name] =>  name user 2
-    [svid] => "user2"
-    [svname] => " name user 2"
-    [svsc1] => {"name":"user1","created_at":"1276822566","birth":{"y":"2009","m":"5","d":1}}
-    [svsc2] => {"name":"user2","created_at":"1276822566","birth":{"y":"2009","m":"5","d":2}}
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
+    [id] => faea93c0-85ce-11df-8c65-557365724672
+    [name] => user1
+    [time] => 1278070986
 )
-get slice from='add' to='bdd'
+after update get
 Array
 (
-    [add0] => add0
-    [add1] => add1
-    [add10] => add10
-    [add11] => add11
-    [add12] => add12
-    [add2] => add2
-    [add3] => add3
-    [add4] => add4
-    [add5] => add5
-    [add6] => add6
-    [add7] => add7
-    [add8] => add8
-    [add9] => add9
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
+    [id] => faea93c0-85ce-11df-8c65-557365724672
+    [name] => user12 modify
+    [newcol] => neww colvalue
+    [time] => 1278070986
 )
+$t->get_count($key) = 1
+insert a new super col
+$t->get_count($key) = 2
+$t->get_count($key,$scname) = 5
+after delete cols  get
+Array
+(
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
+    [id] => faea93c0-85ce-11df-8c65-557365724672
+    [newcol] => neww colvalue
+)
+$t->get_count($key,$scname) = 3
+$t->get_count($key) = 2
+after delete a new super col
+$t->get_count($key) = 1

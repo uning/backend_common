@@ -32,7 +32,7 @@ class Test{
 	static public function  testSuper()
 	{
 		$key =  time();
-		$t = new CassandraCF('mall', 'UserMessages',true,CassandraCF::CT_TimeUUIDType,CassandraCF::CT_BytesType);
+		$t = new CassandraCF('mall', 'UserFriend',true,CassandraCF::CT_TimeUUIDType,CassandraCF::CT_BytesType);
 		$cdata = array('name'=>'user1','time'=>time(),'arr'=>array('dfd','dfds'));
 		echo "before insert \n";
 		print_r($cdata);
@@ -86,7 +86,7 @@ class Test{
 	{
 		$key =  time();
 		$now = $key;
-		$t = new CassandraCF('mall', 'UserMessages',true,CassandraCF::CT_TimeUUIDType,CassandraCF::CT_BytesType);
+		$t = new CassandraCF('mall', 'UserMessage',true,CassandraCF::CT_TimeUUIDType,CassandraCF::CT_BytesType);
 		for($u=1;$u<10;++$u){
 			$data=array();
 			$data['user'] = $u;
@@ -117,7 +117,7 @@ class Test{
 	static function testCF()
 	{
 		$key =  time();
-		$t = new CassandraCF('mall', 'UserInfos');
+		$t = new CassandraCF('mall', 'UserInfo');
 		$cdata = array('name'=>'user1','time'=>time(),'arr'=>array('dfd','dfds'));
 		echo "before insert \n";
 		print_r($cdata);
@@ -154,7 +154,7 @@ class Test{
 	static function getSlice()
 	{
 		$key =  3;
-		$t = new CassandraCF('mall', 'UserInfos');
+		$t = new CassandraCF('mall', 'UserInfo');
 		for($i=0;$i<13;$i++)
 		{
 			$arr["add$i"]=array('dfd'=>"add$i");
@@ -176,7 +176,7 @@ class Test{
 		print_r($ret);
 		
 		echo "get clos from='add1,bdd1'\n";
-		$ret = $t->getcols(array($key),array('add1','bdd1'));
+		$ret = $t->getcols($key,array('add1','bdd1'));
 		print_r($ret);
 	}
 }
