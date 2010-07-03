@@ -1,7 +1,9 @@
-<?php
+<?php 
+
 class JsonServerExecption extends Exception
 {
 };
+
 class JsonServer{
 
 	protected  $_req     = array() ;/*struct req*/
@@ -16,7 +18,7 @@ class JsonServer{
 	static $help_infos;
 	
 	/**
-	 * 注册处理函数
+	 * 
 	 * @param $method
 	 * @param $obj
 	 * @param $shortm
@@ -27,7 +29,7 @@ class JsonServer{
 	}
 	
 	/**
-	 * 注册controller
+	 * controller
 	 * @param $name
 	 * @return 
 	 */
@@ -60,11 +62,11 @@ class JsonServer{
 	}
 
 	/**
-	 * 验证，先使用不变的session
+	 * 
 	 */
-	protected function auth($key,$auth)
+	protected function auth($key)
 	{
-		if($this->_do_auth==false)
+		if($this->_do_auth==false || $this->_debug )
 			return true;
 		static $secret='playcrab';
 		return md5($key.$secret)==$auth;
@@ -78,31 +80,32 @@ class JsonServer{
 	public  function doRequest($m,&$params)
 	{
 		$this->_debug = true;
-		$this->_req['method']=$m;
-		$this->_req['params']=$params;
+		$this->_req['m']=$m;
+		$this->_req['p']=$params;
 		return $this->_handle($this->_req);
 	}
 
 
 	/*
-	 * 获取请求信息,使用http post
-	 * 合法post req 包含
-	 * method，classnaem.mfunction
-	 * auth, key,验证用字段
-	 * params,调用服务器端方法的参数
+	 *http post
+	 * 
+	 * method
+	 * auth, 
+	 * params,�
 	 */
 	public function getRequest()
 	{
 		if($this->_req)
 			return $this->_req;
-		$this->_req['method']=$_POST['method'];
-		$this->_req['params']=json_decode($_POST['params'],true);
+	
 		
-		
-		//*
 
-		//$jsonstr = file_get_contents('php://input');
-		//$r=json_decode($jsonstr,true);//返回数组
+		$jsonstr = file_get_contents('php://input');
+		$this->_req = json_decode($jsonstr,true);
+		if(!isset($this->_req['m'])){
+		  throw new JsonServerExecption( ' no method get:'.$jsonstr);
+        }		
+		
 		if(function_exists('json_last_error')){
 			switch(json_last_error()){
 			case JSON_ERROR_DEPTH:
@@ -125,19 +128,33 @@ class JsonServer{
 
 
 	/*
-	 * 执行
+	 * 
 	 *
 	 */
 	public function handle($req=null)
 	{
-		if(!$req)
-			$req=$this->getRequest();
-		if(!$this->auth($req['key'],$req['auth']))
-			throw new JsonServerExecption( "auth failed ");
+	    try{
+		  if(!$req)
+			$req= & $this->getRequest();
+		  if(!$req){
+		    $r['s']='KO';
+			$r['msg']='null request';
+		  }
+		  else if(!$this->auth($req['k'])){
+		    $r['s']='KO';
+			$r['msg']='auth failed';
+		  }
+		  else{
+		  $r=$this->_handle($req);
+		 }
+		}catch (Exception $e){
+	       $ret['s']='KO';
+	       $ret['msg']=$e->getMessage();
+        }
 		
-		$r=$this->_handle($req);
-		if($this->_debug)
+	    if($this->_debug)
 		  $r['request'] = $req;
+		$r['k'] = "kkkk";//todo:add generate logic
 		if($this->_use_deflate) 
 		   return gzdeflate(json_encode($r));
 		return json_encode($r);
@@ -145,17 +162,17 @@ class JsonServer{
 
 
 	/*
-	 * 获取controller,we don't make more check
+	 * controller,we don't make more check
 	 * the controller must has the class name save as file name
 	 *
 	 */
 	protected function _handle(&$req)
 	{
 		//just add method map here
-		$method=$req['method'];
+		$method=$req['m'];
 		$mypre=$method;
 		if($this->_debug){
-		   CrabTools::mydump($req['params'],REQ_DATA_ROOT.$mypre.'.param');
+		   CrabTools::mydump($req['p'],REQ_DATA_ROOT.$mypre.'.param');
 		}
 
 		
@@ -178,7 +195,7 @@ class JsonServer{
 				throw new JsonServerExecption( "$cn don't has callable method $m");
 			}
 		}
-		$ret=$c->$m($req['params']);
+		$ret=$c->$m($req['p']);
 		if($this->_debug){
 		  CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
 		}
@@ -186,7 +203,4 @@ class JsonServer{
 		self::$exist_methods[$method][1]=&$m;
 		return $ret;
 	}
-	
-	
-	
 }
