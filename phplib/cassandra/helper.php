@@ -29,7 +29,7 @@ class CassandraConn {
 		try {
 			// Create Thrift transport and binary protocol cassandra client
 			$sock = new TSocket($host, $port,$perist);
-			$sock->setRecvTimeout($read_timeoutms);
+			$sock->setRecvTimeout(10000);
 			$sock->setDebug('error_log');
 			$transport = new TBufferedTransport($sock, 10240, 10240);
 			$client    = new CassandraClient(new TBinaryProtocolAccelerated($transport));
