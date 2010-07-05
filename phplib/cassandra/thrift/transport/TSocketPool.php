@@ -65,7 +65,6 @@ class TSocketPool extends TSocket {
 
 	/**
 	 * Max consecutive failures before marking a host down.
-	 *
 	 * @var int
 	 */
 	private $maxConsecutiveFailures_ = 1;
