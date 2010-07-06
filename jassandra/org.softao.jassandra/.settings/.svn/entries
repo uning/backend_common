@@ -1,0 +1,41 @@
+8
+
+dir
+74
+http://jassandra.googlecode.com/svn/trunk/org.softao.jassandra/.settings
+http://jassandra.googlecode.com/svn
+
+
+
+2010-04-08T14:47:48.366426Z
+3
+dopsun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+fb92b529-c811-60ed-d792-78578cb783fd
+
+org.eclipse.jdt.core.prefs
+file
+
+
+
+
+2010-06-22T11:22:43.000000Z
+5a212e703d43714534705201ee51d6db
+2010-04-08T14:47:48.366426Z
+3
+dopsun
+has-props
+

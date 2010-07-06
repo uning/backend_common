@@ -1,4 +1,6 @@
 <?php
+
+error_reporting(E_ALL & ~E_NOTICE);
 require_once 'config.php';
 CassandraConn::add_node('localhost', 9160);
 

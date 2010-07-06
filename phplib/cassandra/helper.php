@@ -23,11 +23,15 @@ class CassandraConn {
 	static private $connections = array();
 	static private $last_error;
 	static private $last_get = null;
+	//static private $sock_pool = new TSocketPool(null,null,true);
 
-	static public function add_node($host, $port=self::DEFAULT_THRIFT_PORT) {
+	static public function add_node($host, $port=self::DEFAULT_THRIFT_PORT,$perist=true,$read_timeoutms=300) {
 		try {
 			// Create Thrift transport and binary protocol cassandra client
-			$transport = new TBufferedTransport(new TSocket($host, $port), 1024, 1024);
+			$sock = new TSocket($host, $port,$perist);
+			$sock->setRecvTimeout(10000);
+			$sock->setDebug('error_log');
+			$transport = new TBufferedTransport($sock, 10240, 10240);
 			$client    = new CassandraClient(new TBinaryProtocolAccelerated($transport));
 
 			// Store it in the connections

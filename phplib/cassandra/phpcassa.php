@@ -82,10 +82,16 @@ class CassandraCF {
 		$slice_range = new cassandra_SliceRange();
 		$slice_range->count = $column_count;
 		$slice_range->reversed = $column_reversed;
-		$slice_range->start  = $slice_start  ;//? $this->unparse_column_name($slice_start,   $this->column_type) : "";
-		$slice_range->finish = $slice_finish ;//? $this->unparse_column_name($slice_finish,  $this->column_type) : "";
+		if($super_column==null){
+		$slice_range->start  = $slice_start  ? $this->unparse_column_name($slice_start,   $this->column_type) : "";
+		$slice_range->finish = $slice_finish ? $this->unparse_column_name($slice_finish,  $this->column_type) : "";
+		}else{
+			$slice_range->start  = $slice_start  ? $this->unparse_column_name($slice_start,   $this->subcolumn_type) : "";
+		$slice_range->finish = $slice_finish ? $this->unparse_column_name($slice_finish,  $this->subcolumn_type) : "";
+			
+		}
 		$predicate = new cassandra_SlicePredicate();
-		$predicate->slice_range = $slice_range;
+		$predicate->slice_range = &$slice_range;
 
 		$client = CassandraConn::get_client();
 		$resp = $client->get_slice($this->keyspace, $key, $column_parent, $predicate, $this->read_consistency_level);
@@ -548,7 +554,7 @@ class CassandraCF {
 
 		$name = self::parse_column_name($col->name,$type);
 
-		if($needSV && substr_compare($col->value,self::SV_PRE,0,1,false)==0){
+		if($this->needSV && substr_compare($col->value,self::SV_PRE,0,1,false)==0){
 			try{
 				$arr[$name] = json_decode(substr($col->value,1),true);
 			}catch (Exception $e){

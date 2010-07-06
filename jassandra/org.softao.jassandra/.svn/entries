@@ -1,0 +1,95 @@
+8
+
+dir
+74
+http://jassandra.googlecode.com/svn/trunk/org.softao.jassandra
+http://jassandra.googlecode.com/svn
+
+
+
+2010-06-14T13:51:50.300159Z
+69
+dopsun
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+fb92b529-c811-60ed-d792-78578cb783fd
+
+test
+dir
+
+.classpath
+file
+
+
+
+
+2010-06-22T11:22:43.000000Z
+5558371510b4ff1240156abc30c0eab5
+2010-04-20T14:14:02.503456Z
+53
+dopsun
+has-props
+
+.project
+file
+
+
+
+
+2010-06-22T11:22:43.000000Z
+63398396f1a357aa57165c1edd4b64f9
+2010-04-08T14:47:48.366426Z
+3
+dopsun
+has-props
+
+src
+dir
+
+javadoc
+dir
+
+libs
+dir
+
+build.properties
+file
+
+
+
+
+2010-06-22T11:22:43.000000Z
+34b621405ae265a7a1bdbb90ce1247f7
+2010-06-10T13:50:04.535115Z
+68
+dopsun
+has-props
+
+.settings
+dir
+
+build.xml
+file
+
+
+
+
+2010-06-22T11:22:43.000000Z
+5c5377076c3879230809c3b859fabbf4
+2010-06-14T13:51:50.300159Z
+69
+dopsun
+has-props
+
