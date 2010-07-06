@@ -24,6 +24,10 @@ class ServerConfig
 {
     public static  $language='';
 	public static  $languages=array('zh','ru','pt','en');
+	
+	const    TT_TokyoTyrant      ='TokyoTyrant';
+	const    TT_TokyoTyrantTable = 'TokyoTyrantTable';
+	
 	static public function setLang($lang)
 	{
 	   self::$language=$lang;
@@ -56,7 +60,8 @@ class ServerConfig
 	/**
 	 * return Memcached obj on success,name must be varible in this config
 	 *
-	 * */
+	 *
+	 */
 	public static  function & connect_memcached_old($name)
 	{
 		if(!extension_loaded('memcached'))
@@ -135,6 +140,37 @@ class ServerConfig
 		if($userid)
 			return ServerConfig::connect_shop_mysql($userid,1); 
 	}
+	
+	
+	
+	
+	static protected function get_tt($name,$uid,&$config,$type,$obj)
+	{
+		static $inst;
+		static $byhost;
+		
+		    
+		$id = floor($uid/USERNUM_PERTTDB);
+		$ret = &$inst[$name.':'.$type.':'.$id];
+		if( $ret )
+		    return $ret;
+		
+		
+		$wc = count($config[$id][$type]);
+		$r = rand()%$wc;
+		$r= $config[$id][$type][$r];
+		
+		
+		$con = &$byhost[$r['host'].$r['port']];
+		if($con ){
+			$ret = $con;
+			return $ret;
+		}
+		$con = new $obj($r['host'],$r['port']);
+		$ret = $con;
+		return $ret;
+	}
+	
 	
 }
 
