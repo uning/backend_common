@@ -554,7 +554,7 @@ class CassandraCF {
 
 		$name = self::parse_column_name($col->name,$type);
 
-		if($this->needSV && substr_compare($col->value,self::SV_PRE,0,1,false)==0){
+		if(self::$needSV && substr_compare($col->value,self::SV_PRE,0,1,false)==0){
 			try{
 				$arr[$name] = json_decode(substr($col->value,1),true);
 			}catch (Exception $e){
