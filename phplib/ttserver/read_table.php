@@ -26,6 +26,15 @@ try {
 
 	$u = $tt->get($id);
 	record_time($st,"get"); 
+        $data[uniqid()]='new col';
+        $data[uniqid()]='new col2';
+	$uid = $tt->putCat($id,$data);
+	record_time($st,"put"); 
+	$un = $tt->get($id);
+	record_time($st,"get"); 
+        print_r($un);
+
+           
 
 
 

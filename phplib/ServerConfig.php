@@ -135,7 +135,6 @@ class ServerConfig
 
 	public static function getdb_by_platformid($platformid)
 	{
-		require_once 'lib/AutoIncIdGenerator.php';
 		$userid=AutoIncIdGenerator::genid($platformid);
 		if($userid)
 			return ServerConfig::connect_shop_mysql($userid,1); 
@@ -156,6 +155,7 @@ class ServerConfig
 		    return $ret;
 		
 		
+
 		$wc = count($config[$id][$type]);
 		$r = rand()%$wc;
 		$r= $config[$id][$type][$r];
