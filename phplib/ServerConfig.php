@@ -25,8 +25,6 @@ class ServerConfig
     public static  $language='';
 	public static  $languages=array('zh','ru','pt','en');
 	
-	const    TT_TokyoTyrant      ='TokyoTyrant';
-	const    TT_TokyoTyrantTable = 'TokyoTyrantTable';
 	
 	static public function setLang($lang)
 	{
@@ -142,34 +140,6 @@ class ServerConfig
 	
 	
 	
-	
-	static protected function get_tt($name,$uid,&$config,$type,$obj)
-	{
-		static $inst;
-		static $byhost;
-		
-		    
-		$id = floor($uid/USERNUM_PERTTDB);
-		$ret = &$inst[$name.':'.$type.':'.$id];
-		if( $ret )
-		    return $ret;
-		
-		
-
-		$wc = count($config[$id][$type]);
-		$r = rand()%$wc;
-		$r= $config[$id][$type][$r];
-		
-		
-		$con = &$byhost[$r['host'].$r['port']];
-		if($con ){
-			$ret = $con;
-			return $ret;
-		}
-		$con = new $obj($r['host'],$r['port']);
-		$ret = $con;
-		return $ret;
-	}
 	
 	
 }

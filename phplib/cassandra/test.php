@@ -1,18 +1,18 @@
 <?php
 
-error_reporting(E_ALL & ~E_NOTICE);
-require_once 'config.php';
-CassandraConn::add_node('localhost', 9160);
-
-function record_time($start,$usage="")
+function record_time(&$start,$usage="")
 {
 	$end  = microtime(true);
 	$cost=$end-$start;
 	$cost=ceil(1000000*$cost);
 	if($usage)
 	echo "$usage use time $cost us\n";
-	return $end;
+	$start  = $end;
 }
+echo "<pre>\n";
+record_time($start,"");
+require_once 'config.php';
+CassandraConn::add_node('localhost', 9160);
 
 class Test{
 
@@ -136,11 +136,6 @@ class Test{
 
 
 
-
-
-
-
-
 		echo '$t->get_count($key) = '.$t->get_count($key)."\n";
 		$t->erase($key,array('name','time'));
 		$retdata = $t->get($key);
@@ -180,10 +175,12 @@ class Test{
 		print_r($ret);
 	}
 }
+record_time($start,"init");
 try{
 	// Test::testSuperUpdate();
 	Test::testSuper();
 	// Test::testCF();
+record_time($start,"testSuper");
 
 }catch (Exception $e){
 	print_r($e);

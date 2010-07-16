@@ -22,7 +22,7 @@ try {
 		$data['field'.$j]= uniqid();
 	}
 
-	$start = $tt->num();
+	$start = floor($tt->num()/100);
         echo "start=$start \n";
 	for($i=1;$i<100000;$i++)
 	{

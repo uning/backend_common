@@ -61,6 +61,11 @@ class JsonServer{
 		return $str;
 	}
 
+	static function getMethodLastCallParam($name)
+	{
+		@$str=unserialize(file_get_contents(REQ_DATA_ROOT.$name.'.param'));
+		return $str;
+	}
 	/**
 	 * 
 	 */

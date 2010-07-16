@@ -1,4 +1,5 @@
 <?php
-require_once('TTable.php');
-require_once('TTkv.php');
+require_once('TTMain.php');
+require_once('TTStat.php');
 require_once('TTLog.php');
+require_once('TTGenid.php');

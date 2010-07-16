@@ -18,6 +18,8 @@ try {
 	$tt = new TokyoTyrantTable("localhost", 10000);
 	record_time($st,"connect"); 
 
+        echo "num of records:".$tt->num()."\n";
+	record_time($st,"record"); 
         $q = $tt->getQuery();
 	record_time($st,"getQuery"); 
 
