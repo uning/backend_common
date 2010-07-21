@@ -27,7 +27,6 @@ class Logger {
 		$formatter = new Zend_Log_Formatter_Simple($format);
 		$writer->setFormatter($formatter);
 		Logger::registerLogger('default', $writer ,null, true);
-
 	}
 
 	/**
@@ -291,7 +290,7 @@ class Logger {
 		self::log($message, $logLevel, $loggerName);
 	}
 
-	/* php 5.3 and above
+	 //php 5.3 and above
 	 public static function __callStatic($methodCalled, $arguments)
 	 {
 	 switch ($methodCalled) {
@@ -323,7 +322,5 @@ class Logger {
 	 if (!array_key_exists(1,$arguments)) $arguments[1] = null;
 	 self::log($arguments[0], $logLevel, $arguments[1]);
 	 }
-	 */
 }
 
-?>

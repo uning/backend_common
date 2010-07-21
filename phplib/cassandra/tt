@@ -1,0 +1,61 @@
+init use time 90761 us
+before insert 
+Array
+(
+    [name] => user1
+    [time] => 1279187287
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
+)
+after insert get
+Array
+(
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
+    [id] => 12757f8c-8ff6-11df-8d40-557365724672
+    [name] => user1
+    [time] => 1279187287
+)
+after update get
+Array
+(
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
+    [id] => 12757f8c-8ff6-11df-8d40-557365724672
+    [name] => user12 modify
+    [newcol] => neww colvalue
+    [time] => 1279187287
+)
+$t->get_count($key) = 1
+insert a new super col
+$t->get_count($key) = 2
+$t->get_count($key,$scname) = 5
+after delete cols  get
+Array
+(
+    [arr] => Array
+        (
+            [0] => dfd
+            [1] => dfds
+        )
+
+    [id] => 12757f8c-8ff6-11df-8d40-557365724672
+    [newcol] => neww colvalue
+)
+$t->get_count($key,$scname) = 3
+$t->get_count($key) = 2
+after delete a new super col
+$t->get_count($key) = 1
+testSuper use time 168424 us
