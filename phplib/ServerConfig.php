@@ -6,19 +6,6 @@ global 函数
 缓存配置及连接获取
  */
  
- function get_server($name='test')
- {
-    if(!IS_PRODUCTION)
-	  $name='test';
-    $cname=ucfirst($name).'_Amf_Server';
-
-    $file=AMF_SERVER_ROOT.$cname.'.php';
-	if(@require_once($file)){
-	 return new $cname;
-	}
-	require_once 'Zend/Amf/Server.php';
-	return new Zend_Amf_Server();
- }
 
 class ServerConfig 
 {
@@ -55,50 +42,22 @@ class ServerConfig
 		return $db;
 	}
 
-	/**
-	 * return Memcached obj on success,name must be varible in this config
-	 *
-	 *
-	 */
-	public static  function & connect_memcached_old($name)
-	{
-		if(!extension_loaded('memcached'))
-		{
-			$emsg = "Memcached not installed";
-			Logger::error($emsg);
-			return false;
-		}
-		
-		if(!isset(BasicConfig::$$name)){
-			Logger::error("get connect_memcached:$name failed");
-			return false;
-		}
-		static $insts=array();
-		if(isset($insts[$name]))
-			return $insts[$name];
-		$inst=new Memcached($name);
-		//set some other option
-		$inst->setOption(Memcached::OPT_LIBKETAMA_COMPATIBLE, true);
-		$inst->setOption(Memcached::OPT_DISTRIBUTION, Memcached::DISTRIBUTION_CONSISTENT);
-		$inst->addServers(BasicConfig::$$name);
-		$insts[$name]=&$inst;
-		return $inst;
-	}
 	
 	/**/
 	public static  function & connect_memcached($name)
 	{	
-		if(!isset(BasicConfig::$$name)){
-			Logger::error("get connect_memcached:$name failed");
-			return false;
-		}
 		static $insts=array();
 		if(isset($insts[$name]))
 			return $insts[$name];
+		require_once('MemcacheClient.php');
+		if(!isset(self::$$name)){
+			Logger::error("get connect_memcached:$name failed");
+			return false;
+		}
 		$inst=new MemcacheClient($name);
 		//set some other option
-	    foreach(BasicConfig::$$name as $h){
-		    $inst->addServer($h[0],$h[1]);
+		foreach(BasicConfig::$$name as $h){
+			$inst->addServer($h[0],$h[1]);
 		}
 		$insts[$name]=$inst;
 		return $inst;
@@ -107,8 +66,9 @@ class ServerConfig
 
 	/**
 	 * connect to mysql
-	 * */
-	public static  function connect_main_mysql($id,$flag=0)
+	 *
+	 */
+	public static  function connect_main($id,$flag=0)
 	{
 		if ($flag==1){//useid 
 			$id=floor($id/USERNUM_PERDB);
@@ -137,11 +97,26 @@ class ServerConfig
 		if($userid)
 			return ServerConfig::connect_shop_mysql($userid,1); 
 	}
-	
-	
-	
-	
-	
+
+
+	static function get_server($name='test')
+	{
+		if(!IS_PRODUCTION)
+			$name='test';
+		$cname=ucfirst($name).'_Amf_Server';
+
+		$file=AMF_SERVER_ROOT.$cname.'.php';
+		if(@require_once($file)){
+			return new $cname;
+		}
+		require_once 'Zend/Amf/Server.php';
+		return new Zend_Amf_Server();
+	}
+
+
+
+
+
 }
 
 
