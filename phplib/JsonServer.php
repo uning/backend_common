@@ -204,8 +204,10 @@ class JsonServer{
 		if($this->_debug){
 		  CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
 		}
-		self::$exist_methods[$method][0]=&$c;
-		self::$exist_methods[$method][1]=&$m;
+		if(!$ret){
+				$ret['s']='nnnll';
+				$ret['msg'] = "$cn don't has callable method $m";
+		}
 		return $ret;
 	}
 }
