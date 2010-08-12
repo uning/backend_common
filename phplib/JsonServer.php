@@ -181,14 +181,53 @@ class JsonServer{
 				throw new JsonServerExecption( "$cn don't has callable method $m");
 			}
 		}
+		$log_method=array(
+				'Achieve.get'=>1,
+				'Achieve.finish'=>1,
+				'Advert.buy'=>1,
+				'Advert.set'=>1,
+				'Cinema.enter'=>1,
+				'Cinema.pick'=>1,
+				'Gift.send'=>1,
+				'Gift.accept'=>1,
+				'Man.update'=>1,
+				'UserController.login'=>1,
+				'UserController.precheckout'=>1,
+				'UserController.update_friends'=>1,
+				'UserController.enlarge_mall'=>1,
+				'ItemController.buy'=>1,
+				'ItemController.sale'=>1,
+				'CarController.buy'=>1,
+				'CarController.sale'=>1,
+				'CarController.go_goods'=>1,
+				'CarController.enlarge_garage'=>1,
+				'GoodsController.buy'=>1,
+				'GoodsController.remove'=>1,
+				'GoodsController.exhibit_goods'=>1,
+				'GoodsController.checkshop'=>1,
+				'GoodsController.checkout'=>1,
+				'TaskController.share'=>1,
+				'TaskController.request'=>1,
+				'TaskController.accept'=>1,
+				'TaskController.update'=>1,
+				'TaskController.finish'=>1,
+				'TaskController.get_award'=>1,
+				'Friend.dis_neighbor'=>1,
+				'Friend.invite_neighbor'=>1,
+				'Friend.accept_neighbor'=>1,
+					);
 		$ret=$c->$m($req['p']);
 		if($this->_debug){
 			CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
 		}
-		//self::$exist_methods[$method][0]=&$c;
-		//self::$exist_methods[$method][1]=&$m;
 		if(!$ret){
+			$ret['s']= "KO";
 			$ret['msg']= "$cn::$m return null";
+		}
+		if($ret['s']=='OK'){
+			if(array_key_exists($method,$log_method)){
+				TTLog::record(array('m'=>$method,'p'=>json_encode($params)));
+			}
 		}
 		return $ret;
 	}
