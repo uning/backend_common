@@ -8,15 +8,15 @@ class JsonServer{
 
 	protected  $_req     = array() ;/*struct req*/
 	protected  $_do_auth = false;
-	
+
 	protected  $_debug   = true;/* when in debug mod ,result contain the request*/
 	protected  $_use_deflate = false;
-	
-	
-	
+
+
+
 	static $exist_methods;
 	static $help_infos;
-	
+
 	/**
 	 * 
 	 * @param $method
@@ -27,30 +27,30 @@ class JsonServer{
 	static function register($method,&$obj,$shortm){
 		self::$exist_methods[$method] = array($obj,$shortm);
 	}
-	
+
 	/**
 	 * controller
 	 * @param $name
 	 * @return 
 	 */
-    static function registerController($name){
-            require_once CONTROLLER_ROOT."$name.php";
-            $c= new $name;
-			$cc=new ReflectionClass($name); 
-			$ms = $cc->getMethods();
-		    foreach($ms as $m){
-		    	if($m->isPublic()){
-		    	  self::$exist_methods[$m->class.'.'.$m->name] = array($c,$m->name);
-		    	  self::$help_infos[$m->class.'.'.$m->name] = $m->getDocComment();
-		    	}
-		    }
+	static function registerController($name){
+		require_once CONTROLLER_ROOT."$name.php";
+		$c= new $name;
+		$cc=new ReflectionClass($name); 
+		$ms = $cc->getMethods();
+		foreach($ms as $m){
+			if($m->isPublic()){
+				self::$exist_methods[$m->class.'.'.$m->name] = array($c,$m->name);
+				self::$help_infos[$m->class.'.'.$m->name] = $m->getDocComment();
+			}
+		}
 	}
-	
+
 	static function getAllMethod()
 	{
 		return array_keys(self::$exist_methods);
 	}
-	
+
 	static function getMethodHelp($name)
 	{
 		$str.= self::$help_infos[$name];
@@ -76,8 +76,8 @@ class JsonServer{
 		static $secret='playcrab';
 		return md5($key.$secret)==$auth;
 	}
-	
-    /**
+
+	/**
 	 * @param $m
 	 * @param $params
 	 * @return unknown_type
@@ -102,32 +102,12 @@ class JsonServer{
 	{
 		if($this->_req)
 			return $this->_req;
-	
-		
-
 		$jsonstr = file_get_contents('php://input');
 		$this->_req = json_decode($jsonstr,true);
-		if(!isset($this->_req['m'])){
-		  throw new JsonServerExecption( ' no method get:'.$jsonstr);
-        }		
-		
-		if(function_exists('json_last_error')){
-			switch(json_last_error()){
-			case JSON_ERROR_DEPTH:
-				throw new JsonServerExecption( ' - Maximum stack depth exceeded');
-				break;
-			case JSON_ERROR_CTRL_CHAR:
-				throw new JsonServerExecption( ' - Unexpected control character found');
-				break;
-			case JSON_ERROR_SYNTAX:
-				throw new JsonServerExecption( ' - Syntax error, malformed JSON');
-				break;
-			case JSON_ERROR_NONE:
-				break;
-			}
-		}
+		if(!$this->_req||!isset($this->_req['m'])){
+			throw new JsonServerExecption( 'params error:'.$jsonstr);
+		}		
 		return $this->_req;
-		//*/
 	}
 
 
@@ -138,30 +118,32 @@ class JsonServer{
 	 */
 	public function handle($req=null)
 	{
-	    try{
-		  if(!$req)
-			$req= & $this->getRequest();
-		  if(!$req){
-		    $r['s']='KO';
-			$r['msg']='null request';
-		  }
-		  else if(!$this->auth($req['k'])){
-		    $r['s']='KO';
-			$r['msg']='auth failed';
-		  }
-		  else{
-		  $r=$this->_handle($req);
-		 }
+		try{
+			if(!$req)
+				$req= & $this->getRequest();
+			if(!$req){
+				$r['s']='norequest';
+				return  json_encode($r);
+			}
+			if(!$this->auth($req['k'])){
+				$r['s']='auth';
+				return  json_encode($r);
+			}
+			$r=$this->_handle($req);
+				
+				
 		}catch (Exception $e){
-	       $ret['s']='KO';
-	       $ret['msg']=$e->getMessage();
-        }
-		
-	    if($this->_debug)
-		  $r['request'] = $req;
+			$r['s']='exc';
+			$r['msg']=$e->getMessage();
+			$r['exce']=$e->getTrace();
+			return  json_encode($r);
+		}
+
+		if($this->_debug)
+			$r['request'] = $req;
 		$r['k'] = "kkkk";//todo:add generate logic
 		if($this->_use_deflate) 
-		   return gzdeflate(json_encode($r));
+			return gzdeflate(json_encode($r));
 		return json_encode($r);
 	}
 
@@ -177,10 +159,9 @@ class JsonServer{
 		$method=$req['m'];
 		$mypre=$method;
 		if($this->_debug){
-		   CrabTools::mydump($req['p'],REQ_DATA_ROOT.$mypre.'.param');
+			CrabTools::mydump($req['p'],REQ_DATA_ROOT.$mypre.'.param');
 		}
 
-		
 		if(isset(self::$exist_methods[$method])){
 			$caller= &self::$exist_methods[$method];
 			$c=&$caller[0];
@@ -202,10 +183,13 @@ class JsonServer{
 		}
 		$ret=$c->$m($req['p']);
 		if($this->_debug){
-		  CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
+			CrabTools::myprint($ret,REQ_DATA_ROOT.$mypre.'.resp');
 		}
-		self::$exist_methods[$method][0]=&$c;
-		self::$exist_methods[$method][1]=&$m;
+		//self::$exist_methods[$method][0]=&$c;
+		//self::$exist_methods[$method][1]=&$m;
+		if(!$ret){
+			$ret['msg']= "$cn::$m return null";
+		}
 		return $ret;
 	}
 }

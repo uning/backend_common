@@ -39,9 +39,10 @@ class DBModel
 	 * @param string $table_name
 	 *
 	 **/
-	public function DBModel(  $table_name='')
+	public function DBModel(  $table_name='',$use_cache=true)
 	{
 		$this->table_name    = $table_name;
+		$this->_use_cache    = $use_cache;
 	}
 
 	/**
@@ -292,6 +293,7 @@ class DBModel
 		if (!is_array($dbrow)){  //now from db
 			$this->check_db_die($db,__METHOD__);
 			$dbrow = $this->_db->fetchRow("SELECT * FROM {$this->table_name} where $keyname=? limit 1", $key);
+			//echo "key $keyname $key \n";
 			if($dbrow)
 			$this->setCache($key,$dbrow,$keyname);
 		}
@@ -350,6 +352,12 @@ class DBModel
 		return $id;
 	}
 
+	//
+	public function put($data)
+	{
+
+		$this->_db->insert($this->table_name,$data);
+	}
 
 	/**
 	 *
@@ -635,7 +643,10 @@ class DBModel
 	public function getTableFields($db=null)
 	{
 		$sql="desc $this->table_name";
-		return $this->_db->fetchAll($sql);
+		$ret = $this->_db->fetchAll($sql);
+		foreach($ret as $v)
+                  $r[]=$v['Field'];
+               return $r;
 
 	}
 	
